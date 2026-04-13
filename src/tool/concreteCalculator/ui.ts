@@ -1,0 +1,35 @@
+export interface ConcreteCalculatorUI extends Record<string, string> {
+  mixH200Label: string;
+  mixH200Hint: string;
+  mixM40Label: string;
+  mixM40Hint: string;
+  mixM80Label: string;
+  mixM80Hint: string;
+  modeDimsLabel: string;
+  modeDirectLabel: string;
+  labelLength: string;
+  labelWidth: string;
+  labelThickness: string;
+  labelVolume: string;
+  binderCementLabel: string;
+  binderLimeLabel: string;
+  summaryLabel: string;
+  resUnitSacks: string;
+  resUnitShovels: string;
+  resUnitLitres: string;
+  resLabelCement: string;
+  resLabelLime: string;
+  resLabelSand: string;
+  resLabelWater: string;
+  proportionsTitle: string;
+  propLabelSand: string;
+  propLabelGravel: string;
+  adviceH200: string;
+  adviceM40: string;
+  adviceM80: string;
+  adviceLimeH200: string;
+  priceTotalLabel: string;
+  priceSackLabel: string;
+  priceSandLabel: string;
+  priceDisclaimer: string;
+}

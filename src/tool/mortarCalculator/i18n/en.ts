@@ -2,10 +2,10 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
 
-const slug = 'nhl-lime-mortar-calculator';
-const title = 'NHL Lime Mortar Mix Ratios: Proportions for Heritage Render and Plaster';
+const slug = 'lime-mortar-calculator';
+const title = 'Lime Mortar Mix Ratios: Proportions for Heritage Render and Plaster';
 const description =
-  'Calculate exact NHL lime mortar mix ratios for traditional render, scratch coat and finish coat. Based on Vitruvian proportions used in heritage restoration.';
+  'Calculate exact lime mortar mix ratios for traditional render, scratch coat and finish coat. Based on Vitruvian proportions used in heritage restoration.';
 
 const faqData = [
   {

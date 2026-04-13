@@ -1,30 +1,28 @@
 ---
-import type { KnownLocale } from '../../types';
-import { mortarCalculator } from './index';
+import type { MortarCalculatorUI } from './ui';
 
 interface Props {
-  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
 }
-const { locale = 'es' } = Astro.props;
-const content = await mortarCalculator.i18n[locale]?.();
-const ui = content?.ui ?? {};
+const { ui } = Astro.props;
+const t = (ui ?? {}) as MortarCalculatorUI;
 ---
 
 <div
   class="mc-container"
   data-mc-root
-  data-mc-desc-trullissatio={ui.phaseDescTrullissatio}
-  data-mc-desc-arenato={ui.phaseDescArenato}
-  data-mc-desc-marmorato={ui.phaseDescMarmorato}
-  data-mc-singular={ui.layersSingular}
-  data-mc-plural={ui.layersPlural}
-  data-mc-mat-cal={ui.materialCal}
-  data-mc-mat-arena={ui.materialArena}
-  data-mc-mat-marmol={ui.materialMarmol}
+  data-mc-desc-trullissatio={t.phaseDescTrullissatio}
+  data-mc-desc-arenato={t.phaseDescArenato}
+  data-mc-desc-marmorato={t.phaseDescMarmorato}
+  data-mc-singular={t.layersSingular}
+  data-mc-plural={t.layersPlural}
+  data-mc-mat-cal={t.materialCal}
+  data-mc-mat-arena={t.materialArena}
+  data-mc-mat-marmol={t.materialMarmol}
 >
   <div class="mc-canvas">
     <div class="mc-panel mc-panel-left">
-      <h2 class="mc-panel-title">{ui.leftTitle}</h2>
+      <h2 class="mc-panel-title">{t.leftTitle}</h2>
       <svg class="mc-column-svg" viewBox="0 0 200 480" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id="mc-brick" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
@@ -66,20 +64,20 @@ const ui = content?.ui ?? {};
       </svg>
       <div class="mc-phase-info">
         <h3 data-mc-phase-name>Trullissatio</h3>
-        <p data-mc-phase-desc>{ui.phaseDescTrullissatio}</p>
+        <p data-mc-phase-desc>{t.phaseDescTrullissatio}</p>
       </div>
     </div>
 
     <div class="mc-panel mc-panel-center">
-      <h2 class="mc-panel-title">{ui.centerTitle}</h2>
+      <h2 class="mc-panel-title">{t.centerTitle}</h2>
       <div class="mc-material-selector">
         <button class="mc-material-btn mc-active" data-mc-mat="cal">
           <svg viewBox="0 0 24 24" class="mc-btn-icon" aria-hidden="true"><path fill="currentColor" d="M12 3C9.8 3 8 4.8 8 7C8 8.4 8.7 9.7 9.8 10.5L7 22H17L14.2 10.5C15.3 9.7 16 8.4 16 7C16 4.8 14.2 3 12 3Z"/></svg>
-          {ui.btnCal}
+          {t.btnCal}
         </button>
         <button class="mc-material-btn" data-mc-mat="arena">
           <svg viewBox="0 0 24 24" class="mc-btn-icon" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 4C14.8 4 17.2 5.5 18.6 7.8L7.8 18.6C5.5 17.2 4 14.8 4 12C4 7.6 7.6 4 12 4M12 20C9.2 20 6.8 18.5 5.4 16.2L16.2 5.4C18.5 6.8 20 9.2 20 12C20 16.4 16.4 20 12 20Z"/></svg>
-          {ui.btnArena}
+          {t.btnArena}
         </button>
       </div>
       <div class="mc-cal-toggle" data-mc-cal-toggle>
@@ -87,8 +85,8 @@ const ui = content?.ui ?? {};
           <input type="checkbox" data-mc-cal-switch />
           <span class="mc-toggle-slider"></span>
           <span class="mc-toggle-text">
-            <span class="mc-type-pasta">{ui.labelCalPasta}</span>
-            <span class="mc-type-polvo">{ui.labelCalPolvo}</span>
+            <span class="mc-type-pasta">{t.labelCalPasta}</span>
+            <span class="mc-type-polvo">{t.labelCalPolvo}</span>
           </span>
         </label>
       </div>
@@ -102,23 +100,23 @@ const ui = content?.ui ?? {};
         </div>
       </div>
       <div class="mc-quantity-display">
-        <span class="mc-quantity-label">{ui.labelQuantity}</span>
+        <span class="mc-quantity-label">{t.labelQuantity}</span>
         <span data-mc-quantity class="mc-quantity-value">150</span>
         <span class="mc-quantity-unit">kg</span>
       </div>
       <div class="mc-complementary">
         <div class="mc-complementary-header">
           <svg viewBox="0 0 24 24" class="mc-arrow-icon" aria-hidden="true"><path fill="currentColor" d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/></svg>
-          <span>{ui.labelNeedsAlso}</span>
+          <span>{t.labelNeedsAlso}</span>
         </div>
         <div class="mc-complementary-content">
           <div class="mc-complementary-item">
-            <span data-mc-comp-label class="mc-comp-label">{ui.materialArena}</span>
+            <span data-mc-comp-label class="mc-comp-label">{t.materialArena}</span>
             <span data-mc-comp-val class="mc-comp-value">450</span>
             <span class="mc-comp-unit">kg</span>
           </div>
           <div class="mc-ratio-row">
-            <span class="mc-ratio-text">{ui.labelProportion}</span>
+            <span class="mc-ratio-text">{t.labelProportion}</span>
             <span data-mc-ratio class="mc-ratio-value">1:3</span>
           </div>
         </div>
@@ -126,7 +124,7 @@ const ui = content?.ui ?? {};
     </div>
 
     <div class="mc-panel mc-panel-right">
-      <h2 class="mc-panel-title">{ui.rightTitle}</h2>
+      <h2 class="mc-panel-title">{t.rightTitle}</h2>
       <svg id="mc-living-wall" viewBox="0 0 300 400" class="mc-wall-svg">
         <defs>
           <pattern id="mc-wall-brick" x="0" y="0" width="60" height="30" patternUnits="userSpaceOnUse">
@@ -150,33 +148,33 @@ const ui = content?.ui ?? {};
         <rect id="mc-mortar-texture" x="150" y="200" width="0" height="0" fill="url(#mc-texture-rough)"></rect>
       </svg>
       <div class="mc-coverage-display">
-        <div class="mc-coverage-label">{ui.labelCoverage}</div>
+        <div class="mc-coverage-label">{t.labelCoverage}</div>
         <span data-mc-coverage class="mc-coverage-value">0</span>
         <span class="mc-coverage-unit">m²</span>
       </div>
       <div class="mc-technical-details">
         <div class="mc-detail-row">
-          <span class="mc-detail-label">{ui.labelThickness}</span>
+          <span class="mc-detail-label">{t.labelThickness}</span>
           <span data-mc-thickness class="mc-detail-value">30 mm</span>
         </div>
         <div class="mc-detail-row">
-          <span class="mc-detail-label">{ui.labelLayers}</span>
+          <span class="mc-detail-label">{t.labelLayers}</span>
           <span data-mc-layers class="mc-detail-value">2</span>
         </div>
         <div class="mc-detail-row">
-          <span class="mc-detail-label">{ui.labelWasteFactor}</span>
+          <span class="mc-detail-label">{t.labelWasteFactor}</span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="mc-granulometry-section">
-    <h2 class="mc-section-title">{ui.granulometryTitle}</h2>
+    <h2 class="mc-section-title">{t.granulometryTitle}</h2>
     <div class="mc-granulometry-cards">
       <div class="mc-grain-card mc-active" data-mc-grain="trullissatio">
         <div class="mc-grain-header">
-          <h3 class="mc-grain-title">{ui.grainTitleCoarse}</h3>
-          <span class="mc-grain-subtitle">{ui.grainSubtitleCoarse}</span>
+          <h3 class="mc-grain-title">{t.grainTitleCoarse}</h3>
+          <span class="mc-grain-subtitle">{t.grainSubtitleCoarse}</span>
         </div>
         <div class="mc-grain-visual">
           <svg viewBox="0 0 200 120" class="mc-grain-svg">
@@ -201,15 +199,15 @@ const ui = content?.ui ?? {};
         </div>
         <div class="mc-grain-specs">
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-label">{t.specSize}</span>
             <span class="mc-spec-value">2-5 mm</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specUse}</span>
-            <span class="mc-spec-value">{ui.grainUsageCoarse}</span>
+            <span class="mc-spec-label">{t.specUse}</span>
+            <span class="mc-spec-value">{t.grainUsageCoarse}</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-label">{t.specDensity}</span>
             <span class="mc-spec-value">1.6 kg/L</span>
           </div>
         </div>
@@ -217,8 +215,8 @@ const ui = content?.ui ?? {};
 
       <div class="mc-grain-card" data-mc-grain="arenato">
         <div class="mc-grain-header">
-          <h3 class="mc-grain-title">{ui.grainTitleMedium}</h3>
-          <span class="mc-grain-subtitle">{ui.grainSubtitleMedium}</span>
+          <h3 class="mc-grain-title">{t.grainTitleMedium}</h3>
+          <span class="mc-grain-subtitle">{t.grainSubtitleMedium}</span>
         </div>
         <div class="mc-grain-visual">
           <svg viewBox="0 0 200 120" class="mc-grain-svg">
@@ -248,15 +246,15 @@ const ui = content?.ui ?? {};
         </div>
         <div class="mc-grain-specs">
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-label">{t.specSize}</span>
             <span class="mc-spec-value">0.5-2 mm</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specUse}</span>
-            <span class="mc-spec-value">{ui.grainUsageMedium}</span>
+            <span class="mc-spec-label">{t.specUse}</span>
+            <span class="mc-spec-value">{t.grainUsageMedium}</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-label">{t.specDensity}</span>
             <span class="mc-spec-value">1.5 kg/L</span>
           </div>
         </div>
@@ -264,8 +262,8 @@ const ui = content?.ui ?? {};
 
       <div class="mc-grain-card" data-mc-grain="marmorato">
         <div class="mc-grain-header">
-          <h3 class="mc-grain-title">{ui.grainTitleFine}</h3>
-          <span class="mc-grain-subtitle">{ui.grainSubtitleFine}</span>
+          <h3 class="mc-grain-title">{t.grainTitleFine}</h3>
+          <span class="mc-grain-subtitle">{t.grainSubtitleFine}</span>
         </div>
         <div class="mc-grain-visual">
           <svg viewBox="0 0 200 120" class="mc-grain-svg">
@@ -290,15 +288,15 @@ const ui = content?.ui ?? {};
         </div>
         <div class="mc-grain-specs">
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-label">{t.specSize}</span>
             <span class="mc-spec-value">&lt; 0.5 mm</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specUse}</span>
-            <span class="mc-spec-value">{ui.grainUsageFine}</span>
+            <span class="mc-spec-label">{t.specUse}</span>
+            <span class="mc-spec-value">{t.grainUsageFine}</span>
           </div>
           <div class="mc-spec-item">
-            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-label">{t.specDensity}</span>
             <span class="mc-spec-value">1.2 kg/L</span>
           </div>
         </div>

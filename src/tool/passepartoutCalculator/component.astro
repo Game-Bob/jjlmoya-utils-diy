@@ -1,0 +1,741 @@
+---
+import type { PassepartoutCalculatorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+const { ui } = Astro.props;
+const t = (ui ?? {}) as PassepartoutCalculatorUI;
+---
+
+<div class="pp-root" data-pp-root>
+  <div class="pp-grid">
+    <div class="pp-inputs">
+      <div class="pp-section-header">
+        <h2 class="pp-section-title">{t.sectionTitle}</h2>
+        <p class="pp-section-desc">{t.sectionDesc}</p>
+      </div>
+
+      <div class="pp-field-group">
+        <div class="pp-group-label pp-label-frame">
+          <svg viewBox="0 0 24 24" class="pp-group-icon" aria-hidden="true">
+            <path fill="currentColor" d="M3 3h18v18H3V3m2 2v14h14V5H5Z"/>
+          </svg>
+          <span>{t.frameSizeTitle}</span>
+        </div>
+        <div class="pp-row">
+          <div class="pp-field">
+            <label class="pp-label">{t.labelWidth}</label>
+            <input type="number" data-pp-input data-pp-frame-w class="pp-input" value="40" min="0" step="0.1" />
+          </div>
+          <div class="pp-field">
+            <label class="pp-label">{t.labelHeight}</label>
+            <input type="number" data-pp-input data-pp-frame-h class="pp-input" value="50" min="0" step="0.1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-field-group">
+        <div class="pp-group-label pp-label-art">
+          <svg viewBox="0 0 24 24" class="pp-group-icon" aria-hidden="true">
+            <path fill="currentColor" d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m0 2v14h14V5H5m3 3h8v2H8V8m0 4h8v2H8v-2"/>
+          </svg>
+          <span>{t.artSizeTitle}</span>
+        </div>
+        <div class="pp-row">
+          <div class="pp-field">
+            <label class="pp-label">{t.labelWidth}</label>
+            <input type="number" data-pp-input data-pp-art-w class="pp-input" value="28" min="0" step="0.1" />
+          </div>
+          <div class="pp-field">
+            <label class="pp-label">{t.labelHeight}</label>
+            <input type="number" data-pp-input data-pp-art-h class="pp-input" value="38" min="0" step="0.1" />
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-toggle-row">
+        <label class="pp-toggle-label">
+          <div class="pp-toggle-text">
+            <span class="pp-toggle-name">{t.labelBottomWeighting}</span>
+            <span class="pp-toggle-desc">{t.descBottomWeighting}</span>
+          </div>
+          <input type="checkbox" data-pp-input data-pp-weighted class="pp-checkbox" checked />
+          <span class="pp-toggle-track" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="pp-offset-ctrl" data-pp-offset-ctrl>
+        <label class="pp-label">{t.labelOffset}</label>
+        <div class="pp-offset-row">
+          <input type="range" data-pp-input data-pp-offset-range class="pp-range" min="1" max="20" value="5" />
+          <span data-pp-offset-val class="pp-offset-val">5%</span>
+        </div>
+      </div>
+
+      <div class="pp-error" data-pp-error>
+        <svg viewBox="0 0 24 24" class="pp-error-icon" aria-hidden="true">
+          <path fill="currentColor" d="M13 13H11V7H13M13 17H11V15H13M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2Z"/>
+        </svg>
+        <span>{t.errorMsg}</span>
+      </div>
+    </div>
+
+    <div class="pp-preview">
+      <div class="pp-dots-bg" aria-hidden="true"></div>
+      <div class="pp-frame-wrapper">
+        <div class="pp-border-label pp-border-top">
+          <span class="pp-border-tag">{t.labelTop}</span>
+          <span data-pp-top class="pp-border-val">6.00</span>
+          <span class="pp-border-unit">cm</span>
+        </div>
+        <div class="pp-border-label pp-border-bottom">
+          <span class="pp-border-unit">cm</span>
+          <span data-pp-bottom class="pp-border-val">6.00</span>
+          <span class="pp-border-tag">{t.labelBottom}</span>
+        </div>
+        <div class="pp-border-label pp-border-left">
+          <span class="pp-border-tag">{t.labelLeft}</span>
+          <span data-pp-left class="pp-border-val">6.00</span>
+          <span class="pp-border-unit">cm</span>
+        </div>
+        <div class="pp-border-label pp-border-right">
+          <span class="pp-border-tag">{t.labelRight}</span>
+          <span data-pp-right class="pp-border-val">6.00</span>
+          <span class="pp-border-unit">cm</span>
+        </div>
+        <div class="pp-frame" data-pp-frame style="aspect-ratio: 40/50;">
+          <div class="pp-mat"></div>
+          <div class="pp-art" data-pp-art>
+            <span class="pp-art-placeholder">{t.artPlaceholder}</span>
+            <div class="pp-art-dim pp-art-dim-w">
+              <div class="pp-dim-line"></div>
+              <span data-pp-art-w-display class="pp-dim-label">28cm</span>
+            </div>
+            <div class="pp-art-dim pp-art-dim-h">
+              <div class="pp-dim-line pp-dim-line-v"></div>
+              <span data-pp-art-h-display class="pp-dim-label pp-dim-label-v">38cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pp-root {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  :global(.theme-dark) .pp-root {
+    background: #1e1e2e;
+    border-color: #2d2d3f;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .pp-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    .pp-grid {
+      grid-template-columns: 5fr 8fr;
+    }
+  }
+
+  .pp-inputs {
+    padding: 2rem;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-right: 1px solid #e2e8f0;
+  }
+
+  :global(.theme-dark) .pp-inputs {
+    background: #16161e;
+    border-right-color: #2d2d3f;
+  }
+
+  .pp-section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pp-section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  :global(.theme-dark) .pp-section-title {
+    color: #e2e8f0;
+  }
+
+  .pp-section-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+
+  :global(.theme-dark) .pp-section-desc {
+    color: #94a3b8;
+  }
+
+  .pp-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pp-group-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .pp-label-frame {
+    color: #4f46e5;
+  }
+
+  :global(.theme-dark) .pp-label-frame {
+    color: #818cf8;
+  }
+
+  .pp-label-art {
+    color: #db2777;
+  }
+
+  :global(.theme-dark) .pp-label-art {
+    color: #f472b6;
+  }
+
+  .pp-group-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .pp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .pp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .pp-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-left: 0.25rem;
+  }
+
+  :global(.theme-dark) .pp-label {
+    color: #94a3b8;
+  }
+
+  .pp-input {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #0f172a;
+    font-size: 1.125rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .pp-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  }
+
+  :global(.theme-dark) .pp-input {
+    background: #1e1e2e;
+    border-color: #3d3d50;
+    color: #e2e8f0;
+  }
+
+  :global(.theme-dark) .pp-input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+  }
+
+  .pp-toggle-row {
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  :global(.theme-dark) .pp-toggle-row {
+    border-top-color: #2d2d3f;
+  }
+
+  .pp-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 1rem;
+  }
+
+  .pp-toggle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .pp-toggle-name {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  :global(.theme-dark) .pp-toggle-name {
+    color: #e2e8f0;
+  }
+
+  .pp-toggle-desc {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  :global(.theme-dark) .pp-toggle-desc {
+    color: #94a3b8;
+  }
+
+  .pp-checkbox {
+    width: 3rem;
+    height: 1.75rem;
+    appearance: none;
+    background: #cbd5e1;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex-shrink: 0;
+  }
+
+  .pp-checkbox:checked {
+    background: #4f46e5;
+  }
+
+  .pp-checkbox::after {
+    content: '';
+    position: absolute;
+    width: 1.375rem;
+    height: 1.375rem;
+    background: #fff;
+    border-radius: 50%;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    transition: left 0.3s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .pp-checkbox:checked::after {
+    left: 1.4375rem;
+  }
+
+  .pp-toggle-track {
+    display: none;
+  }
+
+  .pp-offset-ctrl {
+    display: none;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  :global(.theme-dark) .pp-offset-ctrl {
+    border-top-color: #2d2d3f;
+  }
+
+  .pp-offset-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .pp-range {
+    flex: 1;
+    height: 0.5rem;
+    accent-color: #4f46e5;
+    cursor: pointer;
+  }
+
+  .pp-offset-val {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0f172a;
+    min-width: 2.5rem;
+    text-align: right;
+  }
+
+  :global(.theme-dark) .pp-offset-val {
+    color: #e2e8f0;
+  }
+
+  .pp-error {
+    display: none;
+    padding: 1rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.75rem;
+    color: #dc2626;
+    font-size: 0.875rem;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  :global(.theme-dark) .pp-error {
+    background: #2d1515;
+    border-color: #7f1d1d;
+    color: #fca5a5;
+  }
+
+  .pp-error-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+
+  .pp-preview {
+    background: #f1f5f9;
+    padding: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+  }
+
+  :global(.theme-dark) .pp-preview {
+    background: #0f172a;
+  }
+
+  .pp-dots-bg {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.15) 1px, transparent 0);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  :global(.theme-dark) .pp-dots-bg {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  }
+
+  .pp-frame-wrapper {
+    position: relative;
+    height: 100%;
+    max-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pp-frame {
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    height: 100%;
+    max-height: 60vh;
+    transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  :global(.theme-dark) .pp-frame {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .pp-mat {
+    position: absolute;
+    inset: 0;
+    background: #e2e2e2;
+  }
+
+  :global(.theme-dark) .pp-mat {
+    background: #334155;
+  }
+
+  .pp-art {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  :global(.theme-dark) .pp-art {
+    background: #1e293b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .pp-art-placeholder {
+    font-style: italic;
+    color: #94a3b8;
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    user-select: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  :global(.theme-dark) .pp-art-placeholder {
+    color: #475569;
+  }
+
+  .pp-art-dim {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .pp-art-dim-w {
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .pp-art-dim-h {
+    top: 0;
+    bottom: 0;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .pp-dim-line {
+    height: 1px;
+    width: 60%;
+    background: #0f172a;
+  }
+
+  :global(.theme-dark) .pp-dim-line {
+    background: #e2e8f0;
+  }
+
+  .pp-dim-line-v {
+    width: 1px;
+    height: 60%;
+  }
+
+  .pp-dim-label {
+    font-size: 0.5rem;
+    color: #0f172a;
+  }
+
+  :global(.theme-dark) .pp-dim-label {
+    color: #e2e8f0;
+  }
+
+  .pp-dim-label-v {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .pp-border-label {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.125rem;
+    color: #4f46e5;
+    z-index: 10;
+  }
+
+  :global(.theme-dark) .pp-border-label {
+    color: #818cf8;
+  }
+
+  .pp-border-top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 0.5rem;
+  }
+
+  .pp-border-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    padding-top: 0.5rem;
+  }
+
+  .pp-border-left {
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    padding-right: 1rem;
+    color: #db2777;
+  }
+
+  :global(.theme-dark) .pp-border-left {
+    color: #f472b6;
+  }
+
+  .pp-border-right {
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    padding-left: 1rem;
+    color: #db2777;
+  }
+
+  :global(.theme-dark) .pp-border-right {
+    color: #f472b6;
+  }
+
+  .pp-border-val {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .pp-border-tag {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+  }
+
+  .pp-border-unit {
+    font-size: 0.6rem;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1023px) {
+    .pp-preview {
+      padding: 4rem 3rem;
+    }
+  }
+</style>
+
+<script>
+  type PpSizes = { fw: number; fh: number; aw: number; ah: number };
+  type PpMargins = { top: number; bottom: number; left: number; right: number };
+
+  function ppInput(root: Element, sel: string): number {
+    return parseFloat(root.querySelector<HTMLInputElement>(sel)?.value ?? '') || 0;
+  }
+
+  function ppParse(root: Element): PpSizes {
+    return {
+      fw: ppInput(root, '[data-pp-frame-w]'),
+      fh: ppInput(root, '[data-pp-frame-h]'),
+      aw: ppInput(root, '[data-pp-art-w]'),
+      ah: ppInput(root, '[data-pp-art-h]'),
+    };
+  }
+
+  function ppWeighted(root: Element): { weighted: boolean; offset: number } {
+    const cb = root.querySelector<HTMLInputElement>('[data-pp-weighted]');
+    const range = root.querySelector<HTMLInputElement>('[data-pp-offset-range]');
+    return {
+      weighted: cb?.checked ?? true,
+      offset: parseFloat(range?.value ?? '5') / 100,
+    };
+  }
+
+  function ppMargins(s: PpSizes, weighted: boolean, offset: number): PpMargins {
+    const wDiff = s.fw - s.aw;
+    const hDiff = s.fh - s.ah;
+    const side = wDiff / 2;
+    if (!weighted) return { top: hDiff / 2, bottom: hDiff / 2, left: side, right: side };
+    const shift = s.fh * offset;
+    return { top: hDiff / 2 - shift, bottom: hDiff / 2 + shift, left: side, right: side };
+  }
+
+  function ppUpdateLabels(root: Element, m: PpMargins): void {
+    const set = (sel: string, v: number) => {
+      const el = root.querySelector(sel);
+      if (el) el.textContent = v.toFixed(2);
+    };
+    set('[data-pp-top]', m.top);
+    set('[data-pp-bottom]', m.bottom);
+    set('[data-pp-left]', m.left);
+    set('[data-pp-right]', m.right);
+  }
+
+  function ppUpdateVisual(root: Element, s: PpSizes, m: PpMargins): void {
+    const frame = root.querySelector<HTMLElement>('[data-pp-frame]');
+    const art = root.querySelector<HTMLElement>('[data-pp-art]');
+    const wEl = root.querySelector('[data-pp-art-w-display]');
+    const hEl = root.querySelector('[data-pp-art-h-display]');
+    if (!frame || !art) return;
+    frame.style.aspectRatio = `${s.fw}/${s.fh}`;
+    art.style.width = `${(s.aw / s.fw) * 100}%`;
+    art.style.height = `${(s.ah / s.fh) * 100}%`;
+    art.style.top = `${(m.top / s.fh) * 100}%`;
+    art.style.left = `${(m.left / s.fw) * 100}%`;
+    if (wEl) wEl.textContent = `${s.aw}cm`;
+    if (hEl) hEl.textContent = `${s.ah}cm`;
+  }
+
+  function ppUpdateOffset(root: Element, weighted: boolean, offset: number): void {
+    const ctrl = root.querySelector<HTMLElement>('[data-pp-offset-ctrl]');
+    const val = root.querySelector('[data-pp-offset-val]');
+    if (ctrl) ctrl.style.display = weighted ? 'block' : 'none';
+    if (val) val.textContent = `${Math.round(offset * 100)}%`;
+  }
+
+  function ppCalc(root: Element): void {
+    const s = ppParse(root);
+    const { weighted, offset } = ppWeighted(root);
+    const error = root.querySelector<HTMLElement>('[data-pp-error]');
+    if (s.aw >= s.fw || s.ah >= s.fh || s.fw <= 0 || s.fh <= 0) {
+      if (error) error.style.display = 'flex';
+      return;
+    }
+    if (error) error.style.display = 'none';
+    const m = ppMargins(s, weighted, offset);
+    ppUpdateLabels(root, m);
+    ppUpdateVisual(root, s, m);
+    ppUpdateOffset(root, weighted, offset);
+  }
+
+  function ppAttach(root: Element): void {
+    root.querySelectorAll<HTMLInputElement>('[data-pp-input]').forEach((el) => {
+      el.addEventListener('input', () => ppCalc(root));
+      el.addEventListener('change', () => ppCalc(root));
+    });
+  }
+
+  function ppInit(root: Element): void {
+    ppAttach(root);
+    ppCalc(root);
+  }
+
+  document.querySelectorAll('[data-pp-root]').forEach(ppInit);
+</script>

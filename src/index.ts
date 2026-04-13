@@ -28,3 +28,9 @@ export { BALUSTER_CALCULATOR_TOOL } from './tool/balusterCalculator/index';
 
 export { MortarCalculatorComponent, MortarCalculatorSEO, MortarCalculatorBibliography } from './tool/mortarCalculator';
 export { MORTAR_CALCULATOR_TOOL } from './tool/mortarCalculator/index';
+
+export { PassepartoutCalculatorComponent, PassepartoutCalculatorSEO, PassepartoutCalculatorBibliography } from './tool/passepartoutCalculator';
+export { PASSEPARTOUT_CALCULATOR_TOOL } from './tool/passepartoutCalculator/index';
+
+export { ConcreteCalculatorComponent, ConcreteCalculatorSEO, ConcreteCalculatorBibliography } from './tool/concreteCalculator';
+export { CONCRETE_CALCULATOR_TOOL } from './tool/concreteCalculator/index';

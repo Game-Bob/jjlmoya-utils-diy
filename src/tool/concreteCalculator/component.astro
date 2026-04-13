@@ -1,0 +1,1089 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { ConcreteCalculatorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+const { ui } = Astro.props;
+const t = (ui ?? {}) as ConcreteCalculatorUI;
+---
+
+<div
+  class="cc-root"
+  data-cc-root
+  data-cc-advice-h200={t.adviceH200}
+  data-cc-advice-m40={t.adviceM40}
+  data-cc-advice-m80={t.adviceM80}
+  data-cc-advice-lime={t.adviceLimeH200}
+  data-cc-label-cement={t.resLabelCement}
+  data-cc-label-lime={t.resLabelLime}
+  data-cc-binder-cement={t.binderCementLabel}
+  data-cc-binder-lime={t.binderLimeLabel}
+>
+  <div class="cc-card">
+
+    <div class="cc-mix-selector">
+      <button class="cc-mix-btn cc-active" data-cc-mix="H200" title={t.mixH200Hint}>
+        <Icon name="mdi:mortar-pestle-plus" />
+        <span>{t.mixH200Label}</span>
+      </button>
+      <button class="cc-mix-btn" data-cc-mix="M40" title={t.mixM40Hint}>
+        <Icon name="mdi:wall" />
+        <span>{t.mixM40Label}</span>
+      </button>
+      <button class="cc-mix-btn" data-cc-mix="M80" title={t.mixM80Hint}>
+        <Icon name="mdi:floor-plan" />
+        <span>{t.mixM80Label}</span>
+      </button>
+    </div>
+
+    <div class="cc-volume-control">
+      <div class="cc-mode-selector">
+        <button class="cc-mode-btn cc-active" data-cc-mode="dims">
+          <Icon name="mdi:ruler" />
+          <span>{t.modeDimsLabel}</span>
+        </button>
+        <button class="cc-mode-btn" data-cc-mode="direct">
+          <Icon name="mdi:cube-outline" />
+          <span>{t.modeDirectLabel}</span>
+        </button>
+      </div>
+
+      <div class="cc-dims-panel cc-active" data-cc-mode-panel="dims">
+        <div class="cc-dim-inputs">
+          <div class="cc-dim-field">
+            <label>{t.labelLength}</label>
+            <div class="cc-dim-input-wrap">
+              <input type="number" data-cc-length data-cc-dim value="5" step="0.5" />
+              <span class="cc-dim-unit">m</span>
+            </div>
+          </div>
+          <div class="cc-dim-field">
+            <label>{t.labelWidth}</label>
+            <div class="cc-dim-input-wrap">
+              <input type="number" data-cc-width data-cc-dim value="3" step="0.5" />
+              <span class="cc-dim-unit">m</span>
+            </div>
+          </div>
+          <div class="cc-dim-field">
+            <label>{t.labelThickness}</label>
+            <div class="cc-dim-input-wrap">
+              <input type="number" data-cc-thickness data-cc-dim value="10" step="1" />
+              <span class="cc-dim-unit">cm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-direct-panel" data-cc-mode-panel="direct">
+        <div class="cc-input-header">
+          <label>{t.labelVolume}</label>
+        </div>
+        <div class="cc-vol-input-wrap">
+          <input type="number" data-cc-volume value="1.5" step="0.1" min="0" />
+          <span class="cc-unit-tag">m³</span>
+        </div>
+      </div>
+
+      <div class="cc-binder-selector">
+        <div class="cc-binder-option cc-active" data-cc-binder="cement">
+          <div class="cc-binder-circle"><div class="cc-binder-inner"></div></div>
+          <span class="cc-binder-label">{t.binderCementLabel}</span>
+        </div>
+        <div class="cc-binder-option" data-cc-binder="lime">
+          <div class="cc-binder-circle"><div class="cc-binder-inner"></div></div>
+          <span class="cc-binder-label">{t.binderLimeLabel}</span>
+        </div>
+      </div>
+
+      <div class="cc-summary">
+        <span class="cc-summary-label">{t.summaryLabel}</span>
+        <div class="cc-summary-value-wrap">
+          <span class="cc-summary-value" data-cc-summary-vol>1.50</span>
+          <span class="cc-summary-unit">m³</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-results-grid">
+      <div class="cc-result-card">
+        <Icon name="mdi:cube-outline" />
+        <div class="cc-result-info">
+          <span class="cc-result-value" data-cc-res-cement>0</span>
+          <span class="cc-result-unit">{t.resUnitSacks}</span>
+        </div>
+        <span class="cc-result-label" data-cc-res-binder-label>{t.resLabelCement}</span>
+      </div>
+      <div class="cc-result-card">
+        <Icon name="mdi:shovel" />
+        <div class="cc-result-info">
+          <span class="cc-result-value" data-cc-res-sand>0</span>
+          <span class="cc-result-unit">{t.resUnitShovels}</span>
+        </div>
+        <span class="cc-result-label">{t.resLabelSand}</span>
+      </div>
+      <div class="cc-result-card">
+        <Icon name="mdi:water-outline" />
+        <div class="cc-result-info">
+          <span class="cc-result-value" data-cc-res-water>0</span>
+          <span class="cc-result-unit">{t.resUnitLitres}</span>
+        </div>
+        <span class="cc-result-label">{t.resLabelWater}</span>
+      </div>
+    </div>
+
+    <div class="cc-proportions-banner">
+      <div class="cc-proportion-header">
+        <Icon name="mdi:information-outline" />
+        <span>{t.proportionsTitle}</span>
+      </div>
+      <div class="cc-proportion-bar">
+        <div class="cc-bar-segment cc-seg-cement" data-cc-prop-cement style="width: 15%;"></div>
+        <div class="cc-bar-segment cc-seg-sand" data-cc-prop-sand style="width: 40%;"></div>
+        <div class="cc-bar-segment cc-seg-gravel" data-cc-prop-gravel style="width: 45%;"></div>
+      </div>
+      <div class="cc-proportion-labels">
+        <div class="cc-prop-label">
+          <span class="cc-dot cc-seg-cement"></span>
+          <span data-cc-prop-binder-label>{t.binderCementLabel}</span>
+        </div>
+        <div class="cc-prop-label">
+          <span class="cc-dot cc-seg-sand"></span>
+          <span>{t.propLabelSand}</span>
+        </div>
+        <div class="cc-prop-label" data-cc-label-gravel>
+          <span class="cc-dot cc-seg-gravel"></span>
+          <span>{t.propLabelGravel}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-info-banner">
+      <Icon name="mdi:alert-circle-outline" />
+      <p data-cc-mix-advice></p>
+    </div>
+
+    <div class="cc-price-card">
+      <span class="cc-price-label">{t.priceTotalLabel}</span>
+      <div class="cc-price-value-wrap">
+        <span class="cc-price-value" data-cc-res-total-price>0</span>
+        <span class="cc-price-unit">€</span>
+      </div>
+      <div class="cc-price-inputs-grid">
+        <div class="cc-price-input-field">
+          <label>
+            {t.priceSackLabel}
+            <span data-cc-binder-type>{t.binderCementLabel}</span> (25kg)
+          </label>
+          <div class="cc-editable-price-wrap">
+            <input
+              type="number"
+              data-cc-price-binder
+              class="cc-editable-price"
+              value="5.50"
+              step="0.1"
+            />
+            <span class="cc-editable-unit">€</span>
+          </div>
+        </div>
+        <div class="cc-price-input-field">
+          <label>{t.priceSandLabel}</label>
+          <div class="cc-editable-price-wrap">
+            <input
+              type="number"
+              data-cc-price-sand
+              class="cc-editable-price"
+              value="35.00"
+              step="1"
+            />
+            <span class="cc-editable-unit">€</span>
+          </div>
+        </div>
+      </div>
+      <p class="cc-price-disclaimer">{t.priceDisclaimer}</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  interface CcDosage {
+    cementSacks: number;
+    sandPaladas: number;
+    gravelPaladas: number;
+    waterLitros: number;
+    ratio: string;
+    parts: { cement: number; sand: number; gravel: number };
+  }
+
+  interface CcState {
+    mix: string;
+    mode: string;
+    binder: string;
+  }
+
+  const CC_DOSAGES: Record<string, CcDosage> = {
+    H200: {
+      cementSacks: 14, sandPaladas: 180, gravelPaladas: 240, waterLitros: 180,
+      ratio: '1 : 2.5 : 3', parts: { cement: 15, sand: 40, gravel: 45 },
+    },
+    M40: {
+      cementSacks: 11, sandPaladas: 400, gravelPaladas: 0, waterLitros: 160,
+      ratio: '1 : 4', parts: { cement: 20, sand: 80, gravel: 0 },
+    },
+    M80: {
+      cementSacks: 16, sandPaladas: 320, gravelPaladas: 0, waterLitros: 190,
+      ratio: '1 : 3', parts: { cement: 25, sand: 75, gravel: 0 },
+    },
+  };
+
+  function ccNum(el: Element | null): number {
+    if (!(el instanceof HTMLInputElement)) return 0;
+    return parseFloat(el.value) || 0;
+  }
+
+  function ccAttr(root: Element, key: string): string {
+    return root.getAttribute(key) ?? '';
+  }
+
+  function ccSetText(el: Element | null, v: string): void {
+    if (el) el.textContent = v;
+  }
+
+  function ccSetWidth(el: Element | null, pct: number): void {
+    if (el instanceof HTMLElement) el.style.width = `${pct}%`;
+  }
+
+  function ccFromDims(root: Element): number {
+    const l = ccNum(root.querySelector('[data-cc-length]'));
+    const w = ccNum(root.querySelector('[data-cc-width]'));
+    const t = ccNum(root.querySelector('[data-cc-thickness]'));
+    return (l * w * t) / 100;
+  }
+
+  function ccVol(root: Element, state: CcState): number {
+    if (state.mode === 'dims') return ccFromDims(root);
+    return ccNum(root.querySelector('[data-cc-volume]'));
+  }
+
+  function ccSummary(root: Element, vol: number): void {
+    ccSetText(root.querySelector('[data-cc-summary-vol]'), vol.toFixed(2));
+  }
+
+  function ccResults(root: Element, vol: number, cfg: CcDosage, sacks: number): void {
+    const shovels = Math.ceil((cfg.sandPaladas + cfg.gravelPaladas) * vol);
+    const water = Math.ceil(cfg.waterLitros * vol);
+    ccSetText(root.querySelector('[data-cc-res-cement]'), sacks.toString());
+    ccSetText(root.querySelector('[data-cc-res-sand]'), shovels.toString());
+    ccSetText(root.querySelector('[data-cc-res-water]'), water.toString());
+  }
+
+  function ccBinderLabels(root: Element, state: CcState): void {
+    const isCement = state.binder === 'cement';
+    const resLabel = isCement ? ccAttr(root, 'data-cc-label-cement') : ccAttr(root, 'data-cc-label-lime');
+    const binderName = isCement ? ccAttr(root, 'data-cc-binder-cement') : ccAttr(root, 'data-cc-binder-lime');
+    ccSetText(root.querySelector('[data-cc-res-binder-label]'), resLabel);
+    ccSetText(root.querySelector('[data-cc-prop-binder-label]'), binderName);
+    root.querySelectorAll('[data-cc-binder-type]').forEach((el) => {
+      el.textContent = binderName;
+    });
+  }
+
+  function ccPrice(root: Element, vol: number, sacks: number): void {
+    const pb = ccNum(root.querySelector('[data-cc-price-binder]'));
+    const ps = ccNum(root.querySelector('[data-cc-price-sand]'));
+    ccSetText(root.querySelector('[data-cc-res-total-price]'), (sacks * pb + vol * ps).toFixed(2));
+  }
+
+  function ccProportions(root: Element, cfg: CcDosage): void {
+    ccSetWidth(root.querySelector('[data-cc-prop-cement]'), cfg.parts.cement);
+    ccSetWidth(root.querySelector('[data-cc-prop-sand]'), cfg.parts.sand);
+    ccSetWidth(root.querySelector('[data-cc-prop-gravel]'), cfg.parts.gravel);
+    const gravel = root.querySelector('[data-cc-label-gravel]') as HTMLElement | null;
+    if (gravel) gravel.style.display = cfg.parts.gravel > 0 ? 'flex' : 'none';
+  }
+
+  function ccAdvice(root: Element, cfg: CcDosage, state: CcState): void {
+    const advKey = `data-cc-advice-${state.mix.toLowerCase()}`;
+    let advice = ccAttr(root, advKey);
+    if (state.binder === 'lime' && state.mix === 'H200') {
+      advice = ccAttr(root, 'data-cc-advice-lime');
+    }
+    ccSetText(root.querySelector('[data-cc-mix-advice]'), `${advice} (${cfg.ratio})`);
+  }
+
+  function ccCalc(root: Element, state: CcState): void {
+    const vol = ccVol(root, state);
+    const cfg = CC_DOSAGES[state.mix] ?? CC_DOSAGES.H200;
+    const sacks = Math.ceil(cfg.cementSacks * vol);
+    ccSummary(root, vol);
+    ccResults(root, vol, cfg, sacks);
+    ccBinderLabels(root, state);
+    ccPrice(root, vol, sacks);
+    ccProportions(root, cfg);
+    ccAdvice(root, cfg, state);
+  }
+
+  function ccOnMix(root: Element, state: CcState, el: Element): void {
+    root.querySelectorAll('[data-cc-mix]').forEach((b) => b.classList.remove('cc-active'));
+    el.classList.add('cc-active');
+    state.mix = (el as HTMLElement).dataset.ccMix ?? 'H200';
+    ccCalc(root, state);
+  }
+
+  function ccOnMode(root: Element, state: CcState, el: Element): void {
+    root.querySelectorAll('[data-cc-mode]').forEach((b) => b.classList.remove('cc-active'));
+    el.classList.add('cc-active');
+    state.mode = (el as HTMLElement).dataset.ccMode ?? 'dims';
+    const isDims = state.mode === 'dims';
+    root.querySelector('[data-cc-mode-panel="dims"]')?.classList.toggle('cc-active', isDims);
+    root.querySelector('[data-cc-mode-panel="direct"]')?.classList.toggle('cc-active', !isDims);
+    ccCalc(root, state);
+  }
+
+  function ccOnBinder(root: Element, state: CcState, el: Element): void {
+    root.querySelectorAll('[data-cc-binder]').forEach((o) => o.classList.remove('cc-active'));
+    el.classList.add('cc-active');
+    state.binder = (el as HTMLElement).dataset.ccBinder ?? 'cement';
+    const pb = root.querySelector('[data-cc-price-binder]') as HTMLInputElement | null;
+    if (pb) pb.value = state.binder === 'lime' ? '8.50' : '5.50';
+    ccCalc(root, state);
+  }
+
+  function ccAttachBtns(root: Element, state: CcState): void {
+    root.querySelectorAll('[data-cc-mix]').forEach((btn) => {
+      btn.addEventListener('click', () => ccOnMix(root, state, btn));
+    });
+    root.querySelectorAll('[data-cc-mode]').forEach((btn) => {
+      btn.addEventListener('click', () => ccOnMode(root, state, btn));
+    });
+    root.querySelectorAll('[data-cc-binder]').forEach((opt) => {
+      opt.addEventListener('click', () => ccOnBinder(root, state, opt));
+    });
+  }
+
+  function ccAttachInputs(root: Element, state: CcState): void {
+    root.querySelectorAll('[data-cc-dim]').forEach((inp) => {
+      inp.addEventListener('input', () => ccCalc(root, state));
+    });
+    root.querySelector('[data-cc-volume]')?.addEventListener('input', () => ccCalc(root, state));
+    root.querySelector('[data-cc-price-binder]')?.addEventListener('input', () => ccCalc(root, state));
+    root.querySelector('[data-cc-price-sand]')?.addEventListener('input', () => ccCalc(root, state));
+  }
+
+  function ccInit(root: Element): void {
+    const state: CcState = { mix: 'H200', mode: 'dims', binder: 'cement' };
+    ccAttachBtns(root, state);
+    ccAttachInputs(root, state);
+    ccCalc(root, state);
+  }
+
+  document.querySelectorAll('[data-cc-root]').forEach(ccInit);
+</script>
+
+<style>
+  .cc-root {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+  }
+
+  .cc-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    animation: cc-slide-in 0.4s ease;
+  }
+
+  @keyframes cc-slide-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  :global(.theme-dark) .cc-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .cc-mix-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .cc-mix-btn {
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid transparent;
+    background: rgba(241, 245, 249, 0.5);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #64748b;
+  }
+
+  :global(.theme-dark) .cc-mix-btn {
+    background: rgba(30, 41, 59, 0.5);
+  }
+
+  .cc-mix-btn svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .cc-mix-btn span {
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  .cc-mix-btn.cc-active {
+    background: #f0fdf4;
+    border-color: #22c55e;
+    color: #166534;
+    box-shadow: 0 10px 20px rgba(34, 197, 94, 0.1);
+    transform: translateY(-2px);
+  }
+
+  :global(.theme-dark) .cc-mix-btn.cc-active {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+  }
+
+  .cc-volume-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .cc-mode-selector {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(241, 245, 249, 0.8);
+    padding: 0.4rem;
+    border-radius: 1rem;
+    align-self: flex-start;
+  }
+
+  :global(.theme-dark) .cc-mode-selector {
+    background: rgba(30, 41, 59, 0.8);
+  }
+
+  .cc-mode-btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cc-mode-btn svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cc-mode-btn.cc-active {
+    background: #fff;
+    color: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .cc-mode-btn.cc-active {
+    background: #1e293b;
+    color: #fff;
+  }
+
+  .cc-dims-panel,
+  .cc-direct-panel {
+    display: none;
+  }
+
+  .cc-dims-panel.cc-active {
+    display: flex;
+    background: rgba(241, 245, 249, 0.5);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px dashed #cbd5e1;
+  }
+
+  .cc-direct-panel.cc-active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global(.theme-dark) .cc-dims-panel.cc-active {
+    background: rgba(30, 41, 59, 0.3);
+    border-color: #334155;
+  }
+
+  .cc-dim-inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .cc-dim-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cc-dim-field label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+  }
+
+  .cc-dim-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .cc-dim-input-wrap input {
+    width: 100%;
+    padding: 0.75rem;
+    padding-right: 2.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid #e2e8f0;
+    background: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    outline: none;
+  }
+
+  :global(.theme-dark) .cc-dim-input-wrap input {
+    background: #0f172a;
+    border-color: #1e293b;
+    color: #fff;
+  }
+
+  .cc-dim-unit {
+    position: absolute;
+    right: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #94a3b8;
+  }
+
+  .cc-input-header {
+    margin-bottom: 1rem;
+  }
+
+  .cc-input-header label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .cc-vol-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .cc-vol-input-wrap input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 4rem;
+    border-radius: 1rem;
+    border: 2px solid #e2e8f0;
+    background: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .cc-vol-input-wrap input {
+    background: #0f172a;
+    border-color: #1e293b;
+    color: #fff;
+  }
+
+  .cc-vol-input-wrap input:focus {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.1);
+  }
+
+  .cc-unit-tag {
+    position: absolute;
+    right: 1.5rem;
+    font-weight: 900;
+    color: #94a3b8;
+    font-size: 1.25rem;
+  }
+
+  .cc-binder-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cc-binder-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+    background: rgba(241, 245, 249, 0.5);
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+  }
+
+  :global(.theme-dark) .cc-binder-option {
+    background: rgba(30, 41, 59, 0.5);
+  }
+
+  .cc-binder-option.cc-active {
+    background: #fff;
+    border-color: #10b981;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  :global(.theme-dark) .cc-binder-option.cc-active {
+    background: #1e293b;
+    border-color: #10b981;
+  }
+
+  .cc-binder-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+
+  .cc-binder-option.cc-active .cc-binder-circle {
+    border-color: #10b981;
+    background: #10b981;
+  }
+
+  .cc-binder-inner {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #fff;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+  }
+
+  .cc-binder-option.cc-active .cc-binder-inner {
+    transform: scale(1);
+  }
+
+  .cc-binder-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #64748b;
+  }
+
+  .cc-binder-option.cc-active .cc-binder-label {
+    color: #1e293b;
+  }
+
+  :global(.theme-dark) .cc-binder-option.cc-active .cc-binder-label {
+    color: #fff;
+  }
+
+  .cc-summary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+    margin-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cc-summary::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cc-summary-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    margin-bottom: 0.25rem;
+  }
+
+  .cc-summary-value-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .cc-summary-value {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .cc-summary-unit {
+    font-size: 1.25rem;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+
+  .cc-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .cc-result-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  :global(.theme-dark) .cc-result-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .cc-result-card svg {
+    width: 2rem;
+    height: 2rem;
+    color: #22c55e;
+  }
+
+  .cc-result-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cc-result-value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1e293b;
+    line-height: 1;
+  }
+
+  :global(.theme-dark) .cc-result-value {
+    color: #fff;
+  }
+
+  .cc-result-unit {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  .cc-result-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  :global(.theme-dark) .cc-result-label {
+    color: #94a3b8;
+  }
+
+  .cc-proportions-banner {
+    background: #f8fafc;
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  :global(.theme-dark) .cc-proportions-banner {
+    background: rgba(30, 41, 59, 0.3);
+  }
+
+  .cc-proportion-header {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .cc-proportion-header svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .cc-proportion-bar {
+    height: 1.5rem;
+    background: #e2e8f0;
+    border-radius: 0.5rem;
+    display: flex;
+    overflow: hidden;
+  }
+
+  :global(.theme-dark) .cc-proportion-bar {
+    background: #1e293b;
+  }
+
+  .cc-bar-segment {
+    height: 100%;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .cc-seg-cement {
+    background: #64748b;
+  }
+
+  .cc-seg-sand {
+    background: #fbbf24;
+  }
+
+  .cc-seg-gravel {
+    background: #94a3b8;
+  }
+
+  .cc-proportion-labels {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .cc-prop-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  :global(.theme-dark) .cc-prop-label {
+    color: #94a3b8;
+  }
+
+  .cc-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .cc-info-banner {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: #f0fdf4;
+    border-radius: 1.25rem;
+    color: #166534;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  :global(.theme-dark) .cc-info-banner {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+  }
+
+  .cc-info-banner svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .cc-info-banner p {
+    margin: 0;
+  }
+
+  .cc-price-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+    margin-top: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cc-price-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .cc-price-label {
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .cc-price-value-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+
+  .cc-price-value {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .cc-price-unit {
+    font-size: 1.5rem;
+    font-weight: 800;
+    opacity: 0.9;
+  }
+
+  .cc-price-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .cc-price-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+
+  .cc-price-input-field label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .cc-editable-price-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .cc-editable-price {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.75rem;
+    padding: 0.6rem 0.75rem;
+    padding-right: 1.5rem;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+
+  .cc-editable-price:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #fff;
+  }
+
+  .cc-editable-unit {
+    position: absolute;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    opacity: 0.7;
+  }
+
+  .cc-price-disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    opacity: 0.6;
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .cc-results-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cc-mix-selector {
+      grid-template-columns: 1fr;
+    }
+
+    .cc-card {
+      padding: 1.5rem;
+    }
+
+    .cc-price-inputs-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cc-binder-selector {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+</style>
