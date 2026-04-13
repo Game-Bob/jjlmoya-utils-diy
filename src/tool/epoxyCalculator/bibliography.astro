@@ -1,0 +1,14 @@
+---
+import { Bibliography as SharedBibliography } from '@jjlmoya/utils-shared';
+import { epoxyCalculator } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+
+const { locale = 'es' } = Astro.props;
+const content = await epoxyCalculator.i18n[locale]?.();
+---
+
+{content && <SharedBibliography links={content.bibliography} />}

@@ -1,0 +1,1141 @@
+---
+import type { KnownLocale } from '../../types';
+import { mortarCalculator } from './index';
+
+interface Props {
+  locale?: KnownLocale;
+}
+const { locale = 'es' } = Astro.props;
+const content = await mortarCalculator.i18n[locale]?.();
+const ui = content?.ui ?? {};
+---
+
+<div
+  class="mc-container"
+  data-mc-root
+  data-mc-desc-trullissatio={ui.phaseDescTrullissatio}
+  data-mc-desc-arenato={ui.phaseDescArenato}
+  data-mc-desc-marmorato={ui.phaseDescMarmorato}
+  data-mc-singular={ui.layersSingular}
+  data-mc-plural={ui.layersPlural}
+  data-mc-mat-cal={ui.materialCal}
+  data-mc-mat-arena={ui.materialArena}
+  data-mc-mat-marmol={ui.materialMarmol}
+>
+  <div class="mc-canvas">
+    <div class="mc-panel mc-panel-left">
+      <h2 class="mc-panel-title">{ui.leftTitle}</h2>
+      <svg class="mc-column-svg" viewBox="0 0 200 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="mc-brick" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+            <rect width="40" height="20" fill="#8b7355"></rect>
+            <rect x="0" y="0" width="19" height="9" fill="#a0826d" stroke="#6b5d4f" stroke-width="0.5"></rect>
+            <rect x="20" y="0" width="19" height="9" fill="#a0826d" stroke="#6b5d4f" stroke-width="0.5"></rect>
+            <rect x="10" y="10" width="19" height="9" fill="#a0826d" stroke="#6b5d4f" stroke-width="0.5"></rect>
+          </pattern>
+        </defs>
+        <rect x="10" y="50" width="180" height="400" fill="url(#mc-brick)" stroke="#333" stroke-width="2"></rect>
+        <g class="mc-column-section mc-active" data-mc-phase="marmorato">
+          <rect x="10" y="50" width="180" height="25" fill="#f8f8f8" stroke="#333" stroke-width="2"></rect>
+          <line x1="15" y1="55" x2="185" y2="55" stroke="#fff" stroke-width="0.5" opacity="0.6"></line>
+          <line x1="15" y1="65" x2="185" y2="65" stroke="#fff" stroke-width="0.3" opacity="0.4"></line>
+          <text x="100" y="63" class="mc-column-label" font-size="10">Marmorato</text>
+          <text x="100" y="72" class="mc-column-sublabel" font-size="7">1:1 (4mm)</text>
+        </g>
+        <g class="mc-column-section" data-mc-phase="arenato">
+          <rect x="10" y="75" width="180" height="100" fill="#e6d5c0" stroke="#333" stroke-width="2"></rect>
+          <line x1="15" y1="95" x2="185" y2="95" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="115" x2="185" y2="115" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="135" x2="185" y2="135" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="155" x2="185" y2="155" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <text x="100" y="120" class="mc-column-label" font-size="11">Arenato</text>
+          <text x="100" y="132" class="mc-column-sublabel" font-size="8">1:2 (16mm)</text>
+        </g>
+        <g class="mc-column-section mc-active" data-mc-phase="trullissatio">
+          <rect x="10" y="175" width="180" height="200" fill="#d4c5b0" stroke="#333" stroke-width="2"></rect>
+          <line x1="15" y1="200" x2="185" y2="200" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="230" x2="185" y2="230" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="260" x2="185" y2="260" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="290" x2="185" y2="290" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="320" x2="185" y2="320" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <line x1="15" y1="350" x2="185" y2="350" stroke="#333" stroke-width="0.5" opacity="0.3"></line>
+          <text x="100" y="270" class="mc-column-label" font-size="12">Trullissatio</text>
+          <text x="100" y="285" class="mc-column-sublabel" font-size="9">1:3 (30mm)</text>
+        </g>
+        <rect x="5" y="375" width="190" height="75" fill="#78716c" stroke="#333" stroke-width="2"></rect>
+      </svg>
+      <div class="mc-phase-info">
+        <h3 data-mc-phase-name>Trullissatio</h3>
+        <p data-mc-phase-desc>{ui.phaseDescTrullissatio}</p>
+      </div>
+    </div>
+
+    <div class="mc-panel mc-panel-center">
+      <h2 class="mc-panel-title">{ui.centerTitle}</h2>
+      <div class="mc-material-selector">
+        <button class="mc-material-btn mc-active" data-mc-mat="cal">
+          <svg viewBox="0 0 24 24" class="mc-btn-icon" aria-hidden="true"><path fill="currentColor" d="M12 3C9.8 3 8 4.8 8 7C8 8.4 8.7 9.7 9.8 10.5L7 22H17L14.2 10.5C15.3 9.7 16 8.4 16 7C16 4.8 14.2 3 12 3Z"/></svg>
+          {ui.btnCal}
+        </button>
+        <button class="mc-material-btn" data-mc-mat="arena">
+          <svg viewBox="0 0 24 24" class="mc-btn-icon" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 4C14.8 4 17.2 5.5 18.6 7.8L7.8 18.6C5.5 17.2 4 14.8 4 12C4 7.6 7.6 4 12 4M12 20C9.2 20 6.8 18.5 5.4 16.2L16.2 5.4C18.5 6.8 20 9.2 20 12C20 16.4 16.4 20 12 20Z"/></svg>
+          {ui.btnArena}
+        </button>
+      </div>
+      <div class="mc-cal-toggle" data-mc-cal-toggle>
+        <label class="mc-toggle-label">
+          <input type="checkbox" data-mc-cal-switch />
+          <span class="mc-toggle-slider"></span>
+          <span class="mc-toggle-text">
+            <span class="mc-type-pasta">{ui.labelCalPasta}</span>
+            <span class="mc-type-polvo">{ui.labelCalPolvo}</span>
+          </span>
+        </label>
+      </div>
+      <svg id="mc-material-bodegon" viewBox="0 0 300 200" class="mc-bodegon-svg">
+        <g id="mc-sack-pile"></g>
+      </svg>
+      <div class="mc-slider-container">
+        <input type="range" data-mc-slider min="5" max="500" value="150" step="5" class="mc-slider" />
+        <div class="mc-ruler-marks">
+          <span>5</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span>
+        </div>
+      </div>
+      <div class="mc-quantity-display">
+        <span class="mc-quantity-label">{ui.labelQuantity}</span>
+        <span data-mc-quantity class="mc-quantity-value">150</span>
+        <span class="mc-quantity-unit">kg</span>
+      </div>
+      <div class="mc-complementary">
+        <div class="mc-complementary-header">
+          <svg viewBox="0 0 24 24" class="mc-arrow-icon" aria-hidden="true"><path fill="currentColor" d="M4 11V13H16L10.5 18.5L11.92 19.92L19.84 12L11.92 4.08L10.5 5.5L16 11H4Z"/></svg>
+          <span>{ui.labelNeedsAlso}</span>
+        </div>
+        <div class="mc-complementary-content">
+          <div class="mc-complementary-item">
+            <span data-mc-comp-label class="mc-comp-label">{ui.materialArena}</span>
+            <span data-mc-comp-val class="mc-comp-value">450</span>
+            <span class="mc-comp-unit">kg</span>
+          </div>
+          <div class="mc-ratio-row">
+            <span class="mc-ratio-text">{ui.labelProportion}</span>
+            <span data-mc-ratio class="mc-ratio-value">1:3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mc-panel mc-panel-right">
+      <h2 class="mc-panel-title">{ui.rightTitle}</h2>
+      <svg id="mc-living-wall" viewBox="0 0 300 400" class="mc-wall-svg">
+        <defs>
+          <pattern id="mc-wall-brick" x="0" y="0" width="60" height="30" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="60" height="30" fill="none" stroke="#78716c" stroke-width="1"></rect>
+            <line x1="30" y1="0" x2="30" y2="30" stroke="#78716c" stroke-width="1"></line>
+          </pattern>
+          <pattern id="mc-texture-rough" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1" fill="#000" opacity="0.1"></circle>
+            <circle cx="7" cy="7" r="1" fill="#000" opacity="0.1"></circle>
+          </pattern>
+          <pattern id="mc-texture-medium" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="0.5" fill="#000" opacity="0.08"></circle>
+            <circle cx="5" cy="5" r="0.5" fill="#000" opacity="0.08"></circle>
+          </pattern>
+          <pattern id="mc-texture-smooth" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="0.3" fill="#000" opacity="0.05"></circle>
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="300" height="400" fill="url(#mc-wall-brick)" opacity="0.3"></rect>
+        <rect id="mc-mortar-coverage" x="150" y="200" width="0" height="0" fill="#d4c5b0" opacity="0.9"></rect>
+        <rect id="mc-mortar-texture" x="150" y="200" width="0" height="0" fill="url(#mc-texture-rough)"></rect>
+      </svg>
+      <div class="mc-coverage-display">
+        <div class="mc-coverage-label">{ui.labelCoverage}</div>
+        <span data-mc-coverage class="mc-coverage-value">0</span>
+        <span class="mc-coverage-unit">m²</span>
+      </div>
+      <div class="mc-technical-details">
+        <div class="mc-detail-row">
+          <span class="mc-detail-label">{ui.labelThickness}</span>
+          <span data-mc-thickness class="mc-detail-value">30 mm</span>
+        </div>
+        <div class="mc-detail-row">
+          <span class="mc-detail-label">{ui.labelLayers}</span>
+          <span data-mc-layers class="mc-detail-value">2</span>
+        </div>
+        <div class="mc-detail-row">
+          <span class="mc-detail-label">{ui.labelWasteFactor}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mc-granulometry-section">
+    <h2 class="mc-section-title">{ui.granulometryTitle}</h2>
+    <div class="mc-granulometry-cards">
+      <div class="mc-grain-card mc-active" data-mc-grain="trullissatio">
+        <div class="mc-grain-header">
+          <h3 class="mc-grain-title">{ui.grainTitleCoarse}</h3>
+          <span class="mc-grain-subtitle">{ui.grainSubtitleCoarse}</span>
+        </div>
+        <div class="mc-grain-visual">
+          <svg viewBox="0 0 200 120" class="mc-grain-svg">
+            <circle cx="30" cy="40" r="8" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="60" cy="35" r="7" fill="#c9985e" opacity="0.9"></circle>
+            <circle cx="90" cy="45" r="9" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="120" cy="38" r="8" fill="#b8895a" opacity="0.9"></circle>
+            <circle cx="150" cy="42" r="7" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="170" cy="40" r="8" fill="#c9985e" opacity="0.9"></circle>
+            <circle cx="45" cy="65" r="8" fill="#b8895a" opacity="0.9"></circle>
+            <circle cx="75" cy="70" r="9" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="105" cy="68" r="7" fill="#c9985e" opacity="0.9"></circle>
+            <circle cx="135" cy="72" r="8" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="165" cy="65" r="8" fill="#b8895a" opacity="0.9"></circle>
+            <circle cx="30" cy="95" r="9" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="60" cy="100" r="7" fill="#c9985e" opacity="0.9"></circle>
+            <circle cx="90" cy="98" r="8" fill="#b8895a" opacity="0.9"></circle>
+            <circle cx="120" cy="95" r="9" fill="#d4a574" opacity="0.9"></circle>
+            <circle cx="150" cy="100" r="7" fill="#c9985e" opacity="0.9"></circle>
+            <circle cx="170" cy="95" r="8" fill="#d4a574" opacity="0.9"></circle>
+          </svg>
+        </div>
+        <div class="mc-grain-specs">
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-value">2-5 mm</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specUse}</span>
+            <span class="mc-spec-value">{ui.grainUsageCoarse}</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-value">1.6 kg/L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mc-grain-card" data-mc-grain="arenato">
+        <div class="mc-grain-header">
+          <h3 class="mc-grain-title">{ui.grainTitleMedium}</h3>
+          <span class="mc-grain-subtitle">{ui.grainSubtitleMedium}</span>
+        </div>
+        <div class="mc-grain-visual">
+          <svg viewBox="0 0 200 120" class="mc-grain-svg">
+            <circle cx="25" cy="30" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="55" cy="28" r="3.5" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="85" cy="32" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="115" cy="30" r="3.5" fill="#cdb89a" opacity="0.9"></circle>
+            <circle cx="145" cy="33" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="175" cy="30" r="3.5" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="40" cy="58" r="4" fill="#cdb89a" opacity="0.9"></circle>
+            <circle cx="70" cy="56" r="3.5" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="100" cy="59" r="4" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="130" cy="57" r="3.5" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="160" cy="58" r="4" fill="#cdb89a" opacity="0.9"></circle>
+            <circle cx="25" cy="85" r="3.5" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="55" cy="83" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="85" cy="86" r="3.5" fill="#cdb89a" opacity="0.9"></circle>
+            <circle cx="115" cy="84" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="145" cy="85" r="3.5" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="175" cy="83" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="40" cy="108" r="3.5" fill="#d9c4a8" opacity="0.9"></circle>
+            <circle cx="70" cy="110" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="100" cy="108" r="3.5" fill="#cdb89a" opacity="0.9"></circle>
+            <circle cx="130" cy="110" r="4" fill="#e6d5c0" opacity="0.9"></circle>
+            <circle cx="160" cy="109" r="3.5" fill="#cdb89a" opacity="0.9"></circle>
+          </svg>
+        </div>
+        <div class="mc-grain-specs">
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-value">0.5-2 mm</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specUse}</span>
+            <span class="mc-spec-value">{ui.grainUsageMedium}</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-value">1.5 kg/L</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mc-grain-card" data-mc-grain="marmorato">
+        <div class="mc-grain-header">
+          <h3 class="mc-grain-title">{ui.grainTitleFine}</h3>
+          <span class="mc-grain-subtitle">{ui.grainSubtitleFine}</span>
+        </div>
+        <div class="mc-grain-visual">
+          <svg viewBox="0 0 200 120" class="mc-grain-svg">
+            <defs>
+              <pattern id="mc-fine-powder" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="0.8" fill="#f8f8f8" opacity="0.9"></circle>
+                <circle cx="6" cy="3" r="0.7" fill="#f0f0f0" opacity="0.9"></circle>
+                <circle cx="4" cy="6" r="0.8" fill="#f8f8f8" opacity="0.9"></circle>
+                <circle cx="8" cy="7" r="0.7" fill="#e8e8e8" opacity="0.9"></circle>
+              </pattern>
+            </defs>
+            <rect x="10" y="10" width="180" height="100" fill="url(#mc-fine-powder)"></rect>
+            <circle cx="40" cy="35" r="1.5" fill="#f8f8f8" opacity="0.9"></circle>
+            <circle cx="80" cy="45" r="1.5" fill="#f0f0f0" opacity="0.9"></circle>
+            <circle cx="120" cy="40" r="1.5" fill="#f8f8f8" opacity="0.9"></circle>
+            <circle cx="160" cy="50" r="1.5" fill="#e8e8e8" opacity="0.9"></circle>
+            <circle cx="50" cy="75" r="1.5" fill="#f0f0f0" opacity="0.9"></circle>
+            <circle cx="90" cy="80" r="1.5" fill="#f8f8f8" opacity="0.9"></circle>
+            <circle cx="130" cy="85" r="1.5" fill="#f0f0f0" opacity="0.9"></circle>
+            <circle cx="170" cy="75" r="1.5" fill="#e8e8e8" opacity="0.9"></circle>
+          </svg>
+        </div>
+        <div class="mc-grain-specs">
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specSize}</span>
+            <span class="mc-spec-value">&lt; 0.5 mm</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specUse}</span>
+            <span class="mc-spec-value">{ui.grainUsageFine}</span>
+          </div>
+          <div class="mc-spec-item">
+            <span class="mc-spec-label">{ui.specDensity}</span>
+            <span class="mc-spec-value">1.2 kg/L</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mc-container {
+    position: relative;
+  }
+
+  .mc-canvas {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .mc-canvas {
+      grid-template-columns: 1fr 1.2fr 1fr;
+    }
+  }
+
+  .mc-panel {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 2px solid #e7e5e4;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  :global(.theme-dark) .mc-panel {
+    background: rgba(26, 26, 26, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .mc-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  }
+
+  .mc-panel-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #292524;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  :global(.theme-dark) .mc-panel-title {
+    color: #f5f1e8;
+  }
+
+  .mc-column-svg {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .mc-column-section {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .mc-column-section:hover {
+    filter: brightness(1.1);
+  }
+
+  .mc-column-section.mc-active {
+    filter: drop-shadow(0 0 10px rgba(193, 105, 79, 0.6));
+  }
+
+  .mc-column-label {
+    font-size: 14px;
+    font-weight: 700;
+    text-anchor: middle;
+    fill: #292524;
+    pointer-events: none;
+  }
+
+  :global(.theme-dark) .mc-column-label {
+    fill: #f5f1e8;
+  }
+
+  .mc-column-sublabel {
+    font-size: 10px;
+    text-anchor: middle;
+    fill: #78716c;
+    pointer-events: none;
+  }
+
+  .mc-phase-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(245, 241, 232, 0.5);
+    border-radius: 1rem;
+    border: 1px solid #e7e5e4;
+  }
+
+  :global(.theme-dark) .mc-phase-info {
+    background: rgba(40, 35, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .mc-phase-info h3 {
+    font-size: 1.25rem;
+    color: #c1694f;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .mc-phase-info p {
+    font-size: 0.875rem;
+    color: #57534e;
+    line-height: 1.6;
+  }
+
+  :global(.theme-dark) .mc-phase-info p {
+    color: #a8a29e;
+  }
+
+  .mc-material-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mc-material-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(245, 241, 232, 0.5);
+    border: 2px solid #e7e5e4;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: #57534e;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  :global(.theme-dark) .mc-material-btn {
+    background: rgba(40, 35, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #a8a29e;
+  }
+
+  .mc-material-btn.mc-active {
+    background: #c1694f;
+    border-color: #c1694f;
+    color: #fff;
+  }
+
+  .mc-btn-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .mc-cal-toggle {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(245, 241, 232, 0.5);
+    border-radius: 0.75rem;
+    border: 1px solid #e7e5e4;
+  }
+
+  :global(.theme-dark) .mc-cal-toggle {
+    background: rgba(40, 35, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mc-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+  }
+
+  .mc-toggle-label input[type="checkbox"] {
+    width: 2.5rem;
+    height: 1.25rem;
+    appearance: none;
+    background: #e7e5e4;
+    border-radius: 9999px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex-shrink: 0;
+  }
+
+  .mc-toggle-label input[type="checkbox"]:checked {
+    background: #c1694f;
+  }
+
+  .mc-toggle-label input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border-radius: 50%;
+    top: 0.125rem;
+    left: 0.125rem;
+    transition: left 0.3s;
+  }
+
+  .mc-toggle-label input[type="checkbox"]:checked::after {
+    left: 1.375rem;
+  }
+
+  .mc-toggle-text {
+    font-size: 0.875rem;
+    color: #57534e;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  :global(.theme-dark) .mc-toggle-text {
+    color: #a8a29e;
+  }
+
+  .mc-type-pasta {
+    font-weight: 600;
+    color: #292524;
+  }
+
+  :global(.theme-dark) .mc-type-pasta {
+    color: #f5f1e8;
+  }
+
+  .mc-type-polvo {
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  .mc-bodegon-svg {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #e7e5e4;
+    border-radius: 0.75rem;
+    background: rgba(245, 241, 232, 0.3);
+    margin-bottom: 1rem;
+  }
+
+  :global(.theme-dark) .mc-bodegon-svg {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.3);
+  }
+
+  .mc-slider-container {
+    margin-bottom: 0.75rem;
+  }
+
+  .mc-slider {
+    width: 100%;
+    accent-color: #c1694f;
+  }
+
+  .mc-ruler-marks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #78716c;
+    margin-top: 0.25rem;
+  }
+
+  .mc-quantity-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    color: #57534e;
+  }
+
+  :global(.theme-dark) .mc-quantity-display {
+    color: #a8a29e;
+  }
+
+  .mc-quantity-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #c1694f;
+  }
+
+  .mc-quantity-unit {
+    font-weight: 600;
+    color: #78716c;
+  }
+
+  .mc-complementary {
+    padding: 1rem;
+    background: rgba(245, 241, 232, 0.5);
+    border-radius: 0.75rem;
+    border: 1px solid #e7e5e4;
+  }
+
+  :global(.theme-dark) .mc-complementary {
+    background: rgba(40, 35, 30, 0.5);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mc-complementary-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #78716c;
+    margin-bottom: 0.75rem;
+  }
+
+  :global(.theme-dark) .mc-complementary-header {
+    color: #a8a29e;
+  }
+
+  .mc-arrow-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #c1694f;
+  }
+
+  .mc-complementary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mc-complementary-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mc-comp-label {
+    font-weight: 600;
+    color: #292524;
+    min-width: 4rem;
+  }
+
+  :global(.theme-dark) .mc-comp-label {
+    color: #f5f1e8;
+  }
+
+  .mc-comp-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #c1694f;
+  }
+
+  .mc-comp-unit {
+    color: #78716c;
+  }
+
+  .mc-ratio-row {
+    font-size: 0.875rem;
+    color: #78716c;
+  }
+
+  :global(.theme-dark) .mc-ratio-row {
+    color: #a8a29e;
+  }
+
+  .mc-ratio-value {
+    font-weight: 700;
+    color: #292524;
+  }
+
+  :global(.theme-dark) .mc-ratio-value {
+    color: #f5f1e8;
+  }
+
+  .mc-wall-svg {
+    width: 100%;
+    height: 300px;
+    border-radius: 1rem;
+    border: 1px solid #e7e5e4;
+    background: #fafaf9;
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.theme-dark) .mc-wall-svg {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: #0a0a0a;
+  }
+
+  #mc-mortar-coverage,
+  #mc-mortar-texture {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mc-coverage-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mc-coverage-label {
+    font-size: 0.875rem;
+    color: #78716c;
+    font-weight: 600;
+  }
+
+  :global(.theme-dark) .mc-coverage-label {
+    color: #a8a29e;
+  }
+
+  .mc-coverage-value {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #c1694f;
+    line-height: 1;
+  }
+
+  .mc-coverage-unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #78716c;
+  }
+
+  .mc-technical-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .mc-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e7e5e4;
+    font-size: 0.875rem;
+  }
+
+  :global(.theme-dark) .mc-detail-row {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .mc-detail-row:last-child {
+    border-bottom: none;
+  }
+
+  .mc-detail-label {
+    color: #78716c;
+    font-weight: 500;
+  }
+
+  :global(.theme-dark) .mc-detail-label {
+    color: #a8a29e;
+  }
+
+  .mc-detail-value {
+    font-weight: 700;
+    color: #292524;
+  }
+
+  :global(.theme-dark) .mc-detail-value {
+    color: #f5f1e8;
+  }
+
+  .mc-granulometry-section {
+    max-width: 1400px;
+    margin: 4rem auto 2rem;
+  }
+
+  .mc-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #292524;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  :global(.theme-dark) .mc-section-title {
+    color: #f5f1e8;
+  }
+
+  .mc-section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c1694f, transparent);
+    margin: 0.75rem auto 0;
+  }
+
+  .mc-granulometry-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .mc-grain-card {
+    background: #fafaf9;
+    border: 2px solid #e7e5e4;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.6;
+    transform: scale(0.98);
+  }
+
+  :global(.theme-dark) .mc-grain-card {
+    background: #1c1917;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .mc-grain-card:hover {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  .mc-grain-card.mc-active {
+    opacity: 1;
+    transform: scale(1.02);
+    border-color: #c1694f;
+    box-shadow: 0 8px 32px rgba(193, 105, 79, 0.2);
+    background: #fff;
+  }
+
+  :global(.theme-dark) .mc-grain-card.mc-active {
+    background: #292524;
+    border-color: #c1694f;
+    box-shadow: 0 8px 32px rgba(193, 105, 79, 0.3);
+  }
+
+  .mc-grain-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .mc-grain-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #292524;
+    margin: 0 0 0.5rem;
+  }
+
+  :global(.theme-dark) .mc-grain-title {
+    color: #f5f1e8;
+  }
+
+  .mc-grain-subtitle {
+    font-size: 0.875rem;
+    color: #78716c;
+    font-weight: 500;
+  }
+
+  :global(.theme-dark) .mc-grain-subtitle {
+    color: #a8a29e;
+  }
+
+  .mc-grain-visual {
+    background: #f5f5f4;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e7e5e4;
+  }
+
+  :global(.theme-dark) .mc-grain-visual {
+    background: #0a0a0a;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .mc-grain-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .mc-grain-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mc-spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e7e5e4;
+  }
+
+  :global(.theme-dark) .mc-spec-item {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .mc-spec-item:last-child {
+    border-bottom: none;
+  }
+
+  .mc-spec-label {
+    font-size: 0.875rem;
+    color: #78716c;
+    font-weight: 500;
+  }
+
+  :global(.theme-dark) .mc-spec-label {
+    color: #a8a29e;
+  }
+
+  .mc-spec-value {
+    font-size: 0.875rem;
+    color: #292524;
+    font-weight: 600;
+  }
+
+  :global(.theme-dark) .mc-spec-value {
+    color: #f5f1e8;
+  }
+</style>
+
+<script>
+  type McPhase = 'trullissatio' | 'arenato' | 'marmorato';
+  type McCalType = 'pasta' | 'polvo';
+  type McMaterial = 'cal' | 'arena';
+
+  const MC_PHASES = {
+    trullissatio: { ratio: { cal: 1, agg: 3 }, aggName: 'arena', thickness: 30, layers: 2, density: 1.6, color: '#d4c5b0', texture: 'texture-rough' },
+    arenato: { ratio: { cal: 1, agg: 2 }, aggName: 'arena', thickness: 16, layers: 2, density: 1.5, color: '#e6d5c0', texture: 'texture-medium' },
+    marmorato: { ratio: { cal: 1, agg: 1 }, aggName: 'marmol', thickness: 4, layers: 1, density: 1.2, color: '#f8f8f8', texture: 'texture-smooth' },
+  } as const;
+
+  const MC_CAL_DENSITY: Record<McCalType, number> = { pasta: 1.3, polvo: 0.65 };
+  const MC_WASTE = 1.2;
+
+  let mcPhase: McPhase = 'trullissatio';
+  let mcMaterial: McMaterial = 'cal';
+  let mcCalType: McCalType = 'pasta';
+  let mcKg = 150;
+
+  function mcCoverage(): number {
+    const phase = MC_PHASES[mcPhase];
+    const t = phase.thickness / 1000;
+    if (mcMaterial === 'cal') {
+      const calVol = mcKg / MC_CAL_DENSITY[mcCalType];
+      const calFrac = phase.ratio.cal / (phase.ratio.cal + phase.ratio.agg);
+      return calVol / (t * calFrac * 1000 * MC_WASTE);
+    }
+    return mcKg / phase.density / (t * 1000 * MC_WASTE);
+  }
+
+  function mcComplementary(): { amount: number; name: string; ratio: string } {
+    const phase = MC_PHASES[mcPhase];
+    const ratioStr = `${phase.ratio.cal}:${phase.ratio.agg}`;
+    if (mcMaterial === 'cal') {
+      const calVol = mcKg / MC_CAL_DENSITY[mcCalType];
+      const aggVol = calVol * phase.ratio.agg;
+      return { amount: aggVol * phase.density, name: phase.aggName, ratio: ratioStr };
+    }
+    const aggVol = mcKg / phase.density;
+    const calVol = aggVol * (phase.ratio.cal / phase.ratio.agg);
+    return { amount: calVol * MC_CAL_DENSITY[mcCalType], name: 'cal', ratio: ratioStr };
+  }
+
+  function mcUpdatePhase(root: Element): void {
+    root.querySelectorAll('[data-mc-phase]').forEach((el) => {
+      el.classList.toggle('mc-active', el.getAttribute('data-mc-phase') === mcPhase);
+    });
+    const nameEl = root.querySelector('[data-mc-phase-name]');
+    const descEl = root.querySelector('[data-mc-phase-desc]');
+    const cap = mcPhase.charAt(0).toUpperCase() + mcPhase.slice(1);
+    if (nameEl) nameEl.textContent = cap;
+    if (descEl) descEl.textContent = root.getAttribute(`data-mc-desc-${mcPhase}`) ?? '';
+  }
+
+  function mcUpdateMaterial(root: Element): void {
+    root.querySelectorAll('[data-mc-mat]').forEach((el) => {
+      el.classList.toggle('mc-active', el.getAttribute('data-mc-mat') === mcMaterial);
+    });
+    const calToggle = root.querySelector<HTMLElement>('[data-mc-cal-toggle]');
+    if (calToggle) calToggle.style.display = mcMaterial === 'cal' ? 'block' : 'none';
+  }
+
+  function mcUpdateCoverage(root: Element): number {
+    const cov = mcCoverage();
+    const covEl = root.querySelector('[data-mc-coverage]');
+    if (covEl) covEl.textContent = cov.toFixed(1);
+    return cov;
+  }
+
+  function mcUpdateComplement(root: Element): void {
+    const comp = mcComplementary();
+    const labelEl = root.querySelector('[data-mc-comp-label]');
+    const valEl = root.querySelector('[data-mc-comp-val]');
+    const ratioEl = root.querySelector('[data-mc-ratio]');
+    if (labelEl) labelEl.textContent = root.getAttribute(`data-mc-mat-${comp.name}`) ?? comp.name;
+    if (valEl) valEl.textContent = Math.round(comp.amount).toString();
+    if (ratioEl) ratioEl.textContent = comp.ratio;
+  }
+
+  function mcUpdateDetails(root: Element): void {
+    const phase = MC_PHASES[mcPhase];
+    const qEl = root.querySelector('[data-mc-quantity]');
+    const thEl = root.querySelector('[data-mc-thickness]');
+    const lyEl = root.querySelector('[data-mc-layers]');
+    if (qEl) qEl.textContent = mcKg.toString();
+    if (thEl) thEl.textContent = `${phase.thickness} mm`;
+    if (lyEl) {
+      const s = root.getAttribute('data-mc-singular') ?? '';
+      const p = root.getAttribute('data-mc-plural') ?? '';
+      lyEl.textContent = `${phase.layers} ${phase.layers === 1 ? s : p}`;
+    }
+  }
+
+  function mcUpdateWall(root: Element, cov: number): void {
+    const phase = MC_PHASES[mcPhase];
+    const covEl = root.querySelector('#mc-mortar-coverage');
+    const texEl = root.querySelector('#mc-mortar-texture');
+    if (!covEl || !texEl) return;
+    const ratio = Math.min(cov / 50, 1);
+    const w = 300 * Math.sqrt(ratio);
+    const h = 400 * Math.sqrt(ratio);
+    const x = (300 - w) / 2;
+    const y = (400 - h) / 2;
+    for (const el of [covEl, texEl]) {
+      el.setAttribute('x', x.toString());
+      el.setAttribute('y', y.toString());
+      el.setAttribute('width', w.toString());
+      el.setAttribute('height', h.toString());
+    }
+    covEl.setAttribute('fill', phase.color);
+    texEl.setAttribute('fill', `url(#mc-${phase.texture})`);
+  }
+
+  function mcSackPos(i: number): { x: number; y: number } {
+    return { x: 30 + (i % 4) * 50, y: 150 - Math.floor(i / 4) * 40 };
+  }
+
+  function mcFullSack(x: number, y: number, color: string): string {
+    return `<rect x="${x}" y="${y}" width="40" height="50" fill="${color}" stroke="#333" stroke-width="1.5" rx="3"/>` +
+      `<line x1="${x + 5}" y1="${y + 15}" x2="${x + 35}" y2="${y + 15}" stroke="#333" stroke-width="1" opacity="0.3"/>` +
+      `<line x1="${x + 5}" y1="${y + 25}" x2="${x + 35}" y2="${y + 25}" stroke="#333" stroke-width="1" opacity="0.3"/>`;
+  }
+
+  function mcHalfSack(x: number, y: number, color: string, light: string): string {
+    const pts = `${x},${y} ${x + 40},${y} ${x + 40},${y + 50} ${x},${y + 25}`;
+    return `<defs><clipPath id="mc-half-clip"><polygon points="${pts}"/></clipPath></defs>` +
+      `<rect x="${x}" y="${y}" width="40" height="50" fill="${light}" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3" rx="3"/>` +
+      `<rect x="${x}" y="${y}" width="40" height="50" fill="${color}" clip-path="url(#mc-half-clip)" stroke="none"/>` +
+      `<line x1="${x}" y1="${y + 25}" x2="${x + 40}" y2="${y + 50}" stroke="#333" stroke-width="1.5"/>`;
+  }
+
+  function mcUpdateSacks(root: Element): void {
+    const pileEl = root.querySelector('#mc-sack-pile');
+    if (!pileEl) return;
+    const total = mcKg / 25;
+    const full = Math.floor(total);
+    const color = mcMaterial === 'cal' ? '#f5f5f5' : '#e6c288';
+    const light = mcMaterial === 'cal' ? '#fafafa' : '#f0d5a8';
+    let svg = '';
+    for (let i = 0; i < full; i++) {
+      const { x, y } = mcSackPos(i);
+      svg += mcFullSack(x, y, color);
+    }
+    if (total - full >= 0.25) {
+      const { x, y } = mcSackPos(full);
+      svg += mcHalfSack(x, y, color, light);
+    }
+    pileEl.innerHTML = svg;
+  }
+
+  function mcUpdateGrain(root: Element): void {
+    root.querySelectorAll('[data-mc-grain]').forEach((el) => {
+      el.classList.toggle('mc-active', el.getAttribute('data-mc-grain') === mcPhase);
+    });
+  }
+
+  function mcUpdate(root: Element): void {
+    mcUpdatePhase(root);
+    mcUpdateMaterial(root);
+    const cov = mcUpdateCoverage(root);
+    mcUpdateComplement(root);
+    mcUpdateDetails(root);
+    mcUpdateWall(root, cov);
+    mcUpdateSacks(root);
+    mcUpdateGrain(root);
+  }
+
+  function mcAttachColumn(root: Element): void {
+    root.querySelectorAll('[data-mc-phase]').forEach((el) => {
+      el.addEventListener('click', () => {
+        mcPhase = (el.getAttribute('data-mc-phase') ?? 'trullissatio') as McPhase;
+        mcUpdate(root);
+      });
+    });
+  }
+
+  function mcAttachMaterial(root: Element): void {
+    root.querySelectorAll('[data-mc-mat]').forEach((el) => {
+      el.addEventListener('click', () => {
+        mcMaterial = (el.getAttribute('data-mc-mat') ?? 'cal') as McMaterial;
+        mcUpdate(root);
+      });
+    });
+  }
+
+  function mcAttachControls(root: Element): void {
+    const toggle = root.querySelector<HTMLInputElement>('[data-mc-cal-switch]');
+    const slider = root.querySelector<HTMLInputElement>('[data-mc-slider]');
+    if (toggle) toggle.addEventListener('change', () => {
+      mcCalType = toggle.checked ? 'polvo' : 'pasta';
+      mcUpdate(root);
+    });
+    if (slider) slider.addEventListener('input', () => {
+      mcKg = parseInt(slider.value);
+      mcUpdate(root);
+    });
+  }
+
+  function mcInit(root: Element): void {
+    mcPhase = 'trullissatio';
+    mcMaterial = 'cal';
+    mcCalType = 'pasta';
+    mcKg = 150;
+    mcAttachColumn(root);
+    mcAttachMaterial(root);
+    mcAttachControls(root);
+    mcUpdate(root);
+  }
+
+  document.querySelectorAll('[data-mc-root]').forEach(mcInit);
+</script>

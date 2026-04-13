@@ -1,0 +1,888 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { KnownLocale } from '../../types';
+import type { EpoxyCalculatorUI } from './ui';
+
+interface Props {
+  locale?: KnownLocale;
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as EpoxyCalculatorUI;
+---
+
+<div
+  class="ec-root"
+  data-shape-rect-label={t.shapeRectLabel}
+  data-shape-cylinder-label={t.shapeCylinderLabel}
+  data-shape-sphere-label={t.shapeSphereLabel}
+>
+  <div class="ec-grid">
+    <div class="ec-panel-left">
+      <div class="ec-tabs">
+        <button class="ec-tab-btn" data-ec-shape="rect" data-ec-active="true">
+          <Icon name="mdi:cube-outline" class="ec-tab-icon" />
+          {t.shapeRect}
+        </button>
+        <button class="ec-tab-btn" data-ec-shape="cylinder">
+          <Icon name="mdi:cylinder" class="ec-tab-icon" />
+          {t.shapeCylinder}
+        </button>
+        <button class="ec-tab-btn" data-ec-shape="sphere">
+          <Icon name="mdi:circle-outline" class="ec-tab-icon" />
+          {t.shapeSphere}
+        </button>
+      </div>
+
+      <div class="ec-inputs-grid">
+        <div class="ec-input-group ec-rect-input">
+          <label class="ec-label">{t.labelLength}</label>
+          <input type="number" id="ec-length" value="30" class="ec-input" />
+        </div>
+        <div class="ec-input-group ec-rect-input">
+          <label class="ec-label">{t.labelWidth}</label>
+          <input type="number" id="ec-width" value="20" class="ec-input" />
+        </div>
+        <div class="ec-input-group ec-cylinder-input ec-hidden">
+          <label class="ec-label">{t.labelDiameter}</label>
+          <input type="number" id="ec-diameter" value="15" class="ec-input" />
+        </div>
+        <div class="ec-input-group ec-sphere-input ec-hidden">
+          <label class="ec-label">{t.labelDiameter}</label>
+          <input type="number" id="ec-sphere-diameter" value="10" class="ec-input" />
+        </div>
+        <div class="ec-input-group ec-depth-input">
+          <label class="ec-label">{t.labelDepth}</label>
+          <input type="number" id="ec-depth" value="5" class="ec-input" />
+        </div>
+      </div>
+
+      <div class="ec-divider"></div>
+
+      <div class="ec-ratio-section">
+        <div class="ec-ratio-header">
+          <span class="ec-label">{t.labelRatio}</span>
+          <span id="ec-ratio-display" class="ec-ratio-badge">2:1</span>
+        </div>
+        <div class="ec-slider-wrapper">
+          <input type="range" id="ec-ratio-slider" min="1" max="5" step="0.5" value="2" class="ec-slider" />
+          <div class="ec-ratio-marks">
+            <span>1:1</span><span>2:1</span><span>3:1</span><span>4:1</span><span>5:1</span>
+          </div>
+        </div>
+        <label class="ec-custom-check-row">
+          <input type="checkbox" id="ec-custom-check" class="ec-checkbox" />
+          <span>{t.labelCustomRatio}</span>
+        </label>
+        <div id="ec-custom-inputs" class="ec-custom-grid ec-hidden">
+          <div>
+            <label class="ec-label">{t.labelResinA}</label>
+            <input type="number" id="ec-ratio-a" value="100" class="ec-input ec-input-sm" />
+          </div>
+          <div>
+            <label class="ec-label">{t.labelHardenerB}</label>
+            <input type="number" id="ec-ratio-b" value="50" class="ec-input ec-input-sm" />
+          </div>
+        </div>
+      </div>
+
+      <div class="ec-waste-row">
+        <div class="ec-waste-info">
+          <div class="ec-waste-icon">
+            <Icon name="mdi:flask-outline" />
+          </div>
+          <div>
+            <p class="ec-waste-title">{t.labelWasteTitle}</p>
+            <p class="ec-waste-desc">{t.labelWasteDesc}</p>
+          </div>
+        </div>
+        <label class="ec-toggle">
+          <input type="checkbox" id="ec-waste-margin" checked class="ec-toggle-input" />
+          <span class="ec-toggle-track"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="ec-panel-right">
+      <div class="ec-result-card">
+        <div class="ec-result-blob"></div>
+        <div class="ec-result-inner">
+          <div>
+            <p class="ec-result-label">{t.labelTotalVolume}</p>
+            <div class="ec-result-total">
+              <span id="ec-total-volume" class="ec-total-number">0</span>
+              <span class="ec-total-unit">ml</span>
+            </div>
+          </div>
+          <div class="ec-parts-grid">
+            <div class="ec-part-card ec-part-a">
+              <p class="ec-part-label">{t.labelPartA}</p>
+              <p id="ec-part-a" class="ec-part-value">0 ml</p>
+            </div>
+            <div class="ec-part-card ec-part-b">
+              <p class="ec-part-label">{t.labelPartB}</p>
+              <p id="ec-part-b" class="ec-part-value">0 ml</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ec-viz-card">
+        <p class="ec-viz-label">{t.labelVisualization}</p>
+        <div class="ec-visual-stage">
+          <div id="ec-visual-shape" class="ec-visual-shape ec-shape-rect">
+            <div id="ec-liquid-fill" class="ec-liquid-fill">
+              <div class="ec-liquid-shimmer"></div>
+              <div class="ec-bubble ec-bubble-1"></div>
+              <div class="ec-bubble ec-bubble-2"></div>
+            </div>
+          </div>
+          <div id="ec-visual-label" class="ec-shape-label">{t.shapeRectLabel}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let ecShape = 'rect';
+  let ecCustomRatio = false;
+  let ecLengthEl: HTMLInputElement | null = null;
+  let ecWidthEl: HTMLInputElement | null = null;
+  let ecDepthEl: HTMLInputElement | null = null;
+  let ecDiameterEl: HTMLInputElement | null = null;
+  let ecSphereDiamEl: HTMLInputElement | null = null;
+  let ecRatioSlider: HTMLInputElement | null = null;
+  let ecCustomA: HTMLInputElement | null = null;
+  let ecCustomB: HTMLInputElement | null = null;
+  let ecWasteMargin: HTMLInputElement | null = null;
+  let ecTotalEl: HTMLElement | null = null;
+  let ecPartAEl: HTMLElement | null = null;
+  let ecPartBEl: HTMLElement | null = null;
+  let ecLiquidFill: HTMLElement | null = null;
+  let ecVisualShape: HTMLElement | null = null;
+  let ecVisualLabel: HTMLElement | null = null;
+  let ecRatioDisplay: HTMLElement | null = null;
+  let ecRoot: HTMLElement | null = null;
+
+  function parseInput(el: HTMLInputElement | null, fallback = 0): number {
+    return parseFloat(el?.value ?? '') || fallback;
+  }
+
+  function getVolume(): number {
+    if (ecShape === 'rect') {
+      return parseInput(ecLengthEl) * parseInput(ecWidthEl) * parseInput(ecDepthEl);
+    }
+    if (ecShape === 'cylinder') {
+      const r = parseInput(ecDiameterEl) / 2;
+      return Math.PI * r * r * parseInput(ecDepthEl);
+    }
+    const r = parseInput(ecSphereDiamEl) / 2;
+    return (4 / 3) * Math.PI * r * r * r;
+  }
+
+  function getRatio(): { rA: number; rB: number } {
+    if (ecCustomRatio) {
+      return { rA: parseInput(ecCustomA, 1), rB: parseInput(ecCustomB, 1) };
+    }
+    return { rA: parseInput(ecRatioSlider, 2), rB: 1 };
+  }
+
+  function animateValue(el: HTMLElement, end: number) {
+    const start = parseFloat(el.textContent ?? '0') || 0;
+    const startTs = performance.now();
+    const duration = 500;
+    const step = (ts: number) => {
+      const p = Math.min((ts - startTs) / duration, 1);
+      el.textContent = String(Math.floor(p * (end - start) + start));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  function updateUI(total: number, partA: number, partB: number) {
+    if (ecTotalEl) animateValue(ecTotalEl, total);
+    if (ecPartAEl) ecPartAEl.textContent = `${Math.round(partA)} ml`;
+    if (ecPartBEl) ecPartBEl.textContent = `${Math.round(partB)} ml`;
+    if (ecLiquidFill) ecLiquidFill.style.height = '85%';
+  }
+
+  function calculate() {
+    let volume = getVolume();
+    if (ecWasteMargin?.checked) volume *= 1.05;
+    const { rA, rB } = getRatio();
+    const total = rA + rB;
+    if (!total) return;
+    updateUI(volume, (volume / total) * rA, (volume / total) * rB);
+  }
+
+  function updateShapeBtns(root: HTMLElement, shape: string) {
+    root.querySelectorAll('[data-ec-shape]').forEach((btn) => {
+      const isActive = btn.getAttribute('data-ec-shape') === shape;
+      (btn as HTMLElement).dataset.ecActive = isActive ? 'true' : 'false';
+    });
+  }
+
+  function showInputs(root: HTMLElement, shape: string) {
+    root.querySelectorAll('.ec-rect-input').forEach((el) => el.classList.toggle('ec-hidden', shape !== 'rect'));
+    root.querySelectorAll('.ec-cylinder-input').forEach((el) => el.classList.toggle('ec-hidden', shape !== 'cylinder'));
+    root.querySelectorAll('.ec-sphere-input').forEach((el) => el.classList.toggle('ec-hidden', shape !== 'sphere'));
+    root.querySelectorAll('.ec-depth-input').forEach((el) => el.classList.toggle('ec-hidden', shape === 'sphere'));
+  }
+
+  function updateVisual(shape: string) {
+    if (!ecVisualShape || !ecVisualLabel || !ecRoot) return;
+    ecVisualShape.className = `ec-visual-shape ec-shape-${shape}`;
+    const key = `dataShape${shape.charAt(0).toUpperCase()}${shape.slice(1)}Label` as keyof typeof ecRoot.dataset;
+    ecVisualLabel.textContent = ecRoot.dataset[key] ?? shape;
+  }
+
+  function setShape(root: HTMLElement, shape: string) {
+    ecShape = shape;
+    updateShapeBtns(root, shape);
+    showInputs(root, shape);
+    updateVisual(shape);
+    calculate();
+  }
+
+  function attachShapeListeners(root: HTMLElement) {
+    root.querySelectorAll('[data-ec-shape]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        setShape(root, btn.getAttribute('data-ec-shape') ?? 'rect');
+      });
+    });
+  }
+
+  function attachCustomRatioListener(root: HTMLElement) {
+    const customCheck = root.querySelector<HTMLInputElement>('#ec-custom-check');
+    customCheck?.addEventListener('change', () => {
+      ecCustomRatio = customCheck.checked;
+      root.querySelector('#ec-custom-inputs')?.classList.toggle('ec-hidden', !ecCustomRatio);
+      const sliderWrapper = root.querySelector('.ec-slider-wrapper');
+      sliderWrapper?.classList.toggle('ec-disabled', ecCustomRatio);
+      if (ecRatioSlider) ecRatioSlider.disabled = ecCustomRatio;
+      calculate();
+    });
+  }
+
+  function attachRatioSliderListener(root: HTMLElement) {
+    root.querySelector<HTMLInputElement>('#ec-ratio-slider')?.addEventListener('input', (e) => {
+      const val = (e.target as HTMLInputElement).value;
+      if (ecRatioDisplay) ecRatioDisplay.textContent = `${val}:1`;
+      calculate();
+    });
+  }
+
+  function attachInputListeners(root: HTMLElement) {
+    const inputIds = ['#ec-length', '#ec-width', '#ec-depth', '#ec-diameter', '#ec-sphere-diameter', '#ec-ratio-a', '#ec-ratio-b', '#ec-waste-margin'];
+    inputIds.forEach((id) => {
+      root.querySelector(id)?.addEventListener('input', calculate);
+    });
+  }
+
+  function initEpoxyCalculator(root: HTMLElement) {
+    ecRoot = root;
+    ecLengthEl = root.querySelector('#ec-length');
+    ecWidthEl = root.querySelector('#ec-width');
+    ecDepthEl = root.querySelector('#ec-depth');
+    ecDiameterEl = root.querySelector('#ec-diameter');
+    ecSphereDiamEl = root.querySelector('#ec-sphere-diameter');
+    ecRatioSlider = root.querySelector('#ec-ratio-slider');
+    ecCustomA = root.querySelector('#ec-ratio-a');
+    ecCustomB = root.querySelector('#ec-ratio-b');
+    ecWasteMargin = root.querySelector('#ec-waste-margin');
+    ecTotalEl = root.querySelector('#ec-total-volume');
+    ecPartAEl = root.querySelector('#ec-part-a');
+    ecPartBEl = root.querySelector('#ec-part-b');
+    ecLiquidFill = root.querySelector('#ec-liquid-fill');
+    ecVisualShape = root.querySelector('#ec-visual-shape');
+    ecVisualLabel = root.querySelector('#ec-visual-label');
+    ecRatioDisplay = root.querySelector('#ec-ratio-display');
+
+    attachShapeListeners(root);
+    attachCustomRatioListener(root);
+    attachRatioSliderListener(root);
+    attachInputListeners(root);
+    calculate();
+  }
+
+  function init() {
+    document.querySelectorAll<HTMLElement>('.ec-root').forEach(initEpoxyCalculator);
+  }
+
+  document.addEventListener('astro:page-load', init);
+  init();
+</script>
+
+<style>
+  .ec-root {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .ec-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    .ec-grid {
+      grid-template-columns: 7fr 5fr;
+    }
+  }
+
+  .ec-panel-left {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(120, 60, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ec-tabs {
+    display: flex;
+    gap: 0.375rem;
+    background: rgba(241, 245, 249, 0.5);
+    padding: 0.375rem;
+    border-radius: 1rem;
+  }
+
+  .ec-tab-btn {
+    flex: 1;
+    padding: 0.625rem 1rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .ec-tab-btn[data-ec-active="true"] {
+    background: #1e293b;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .ec-tab-icon {
+    font-size: 1.25rem;
+  }
+
+  .ec-inputs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .ec-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ec-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    display: block;
+  }
+
+  .ec-input {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: #334155;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .ec-input:focus {
+    border-color: #fbbf24;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15);
+  }
+
+  .ec-input-sm {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .ec-hidden {
+    display: none;
+  }
+
+  .ec-divider {
+    height: 1px;
+    background: #f1f5f9;
+  }
+
+  .ec-ratio-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ec-ratio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ec-ratio-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #d97706;
+    background: #fef3c7;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.4rem;
+  }
+
+  .ec-slider-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ec-slider-wrapper.ec-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .ec-slider {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    appearance: none;
+    cursor: pointer;
+    accent-color: #f59e0b;
+    outline: none;
+  }
+
+  .ec-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #f59e0b;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #fff;
+    box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+  }
+
+  .ec-ratio-marks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.625rem;
+    color: #94a3b8;
+  }
+
+  .ec-custom-check-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #475569;
+    cursor: pointer;
+  }
+
+  .ec-checkbox {
+    width: 16px;
+    height: 16px;
+    accent-color: #f59e0b;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .ec-custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .ec-waste-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #f1f5f9;
+  }
+
+  .ec-waste-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .ec-waste-icon {
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    color: #f59e0b;
+    font-size: 1.25rem;
+    display: flex;
+  }
+
+  .ec-waste-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin: 0;
+  }
+
+  .ec-waste-desc {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin: 0;
+  }
+
+  .ec-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .ec-toggle-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .ec-toggle-track {
+    width: 44px;
+    height: 24px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    transition: background 0.2s;
+    position: relative;
+  }
+
+  .ec-toggle-track::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .ec-toggle-input:checked ~ .ec-toggle-track {
+    background: #f59e0b;
+  }
+
+  .ec-toggle-input:checked ~ .ec-toggle-track::after {
+    transform: translateX(20px);
+  }
+
+  .ec-panel-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .ec-result-card {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    border-radius: 1.5rem;
+    padding: 0.25rem;
+    box-shadow: 0 12px 40px rgba(234, 88, 12, 0.25);
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  .ec-result-blob {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 12rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(40px);
+    transform: translate(30%, -30%);
+    pointer-events: none;
+  }
+
+  .ec-result-inner {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .ec-result-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(254, 243, 199, 0.9);
+    margin: 0 0 0.25rem;
+  }
+
+  .ec-result-total {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .ec-total-number {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .ec-total-unit {
+    font-size: 1.25rem;
+    color: rgba(254, 243, 199, 0.8);
+  }
+
+  .ec-parts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .ec-part-card {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .ec-part-a {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .ec-part-b {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .ec-part-label {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(254, 243, 199, 0.9);
+    margin: 0 0 0.25rem;
+  }
+
+  .ec-part-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .ec-viz-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ec-viz-label {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #cbd5e1;
+    margin: 0;
+  }
+
+  .ec-visual-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    perspective: 1000px;
+  }
+
+  .ec-visual-shape {
+    width: 8rem;
+    height: 8rem;
+    border: 4px solid rgba(30, 41, 59, 0.15);
+    background: #f8fafc;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  .ec-shape-rect {
+    border-radius: 4px;
+    height: 5rem;
+    transform: rotateX(10deg) rotateY(10deg);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .ec-shape-cylinder {
+    border-radius: 4px 4px 20px 20px;
+    width: 6rem;
+    transform: rotateX(5deg);
+  }
+
+  .ec-shape-sphere {
+    border-radius: 50%;
+    transform: scale(1.1);
+    box-shadow: inset -10px -10px 40px rgba(0, 0, 0, 0.08);
+  }
+
+  .ec-liquid-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(251, 191, 36, 0.8);
+    transition: height 0.7s ease-in-out;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+  }
+
+  .ec-liquid-shimmer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: ec-pulse 2s ease-in-out infinite;
+  }
+
+  .ec-bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+  }
+
+  .ec-bubble-1 {
+    bottom: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    animation: ec-bounce 1s ease-in-out infinite;
+  }
+
+  .ec-bubble-2 {
+    bottom: 20px;
+    right: 16px;
+    width: 4px;
+    height: 4px;
+    animation: ec-pulse 1.5s ease-in-out infinite;
+  }
+
+  .ec-shape-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+
+  @keyframes ec-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes ec-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
+  :global(.theme-dark) .ec-panel-left {
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(51, 65, 85, 0.6);
+  }
+
+  :global(.theme-dark) .ec-tabs {
+    background: rgba(30, 41, 59, 0.6);
+  }
+
+  :global(.theme-dark) .ec-tab-btn {
+    color: #94a3b8;
+  }
+
+  :global(.theme-dark) .ec-tab-btn[data-ec-active="true"] {
+    background: #f59e0b;
+    color: #0f172a;
+  }
+
+  :global(.theme-dark) .ec-input {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+  }
+
+  :global(.theme-dark) .ec-input:focus {
+    border-color: #f59e0b;
+  }
+
+  :global(.theme-dark) .ec-slider {
+    background: #334155;
+  }
+
+  :global(.theme-dark) .ec-custom-check-row {
+    color: #94a3b8;
+  }
+
+  :global(.theme-dark) .ec-waste-row {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(51, 65, 85, 0.4);
+  }
+
+  :global(.theme-dark) .ec-waste-icon {
+    background: #1e293b;
+  }
+
+  :global(.theme-dark) .ec-waste-title {
+    color: #e2e8f0;
+  }
+
+  :global(.theme-dark) .ec-viz-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  :global(.theme-dark) .ec-visual-shape {
+    background: #0f172a;
+    border-color: rgba(148, 163, 184, 0.15);
+  }
+</style>

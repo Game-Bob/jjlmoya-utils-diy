@@ -1,0 +1,37 @@
+export interface MortarCalculatorUI extends Record<string, string> {
+  leftTitle: string;
+  centerTitle: string;
+  rightTitle: string;
+  btnCal: string;
+  btnArena: string;
+  labelCalPasta: string;
+  labelCalPolvo: string;
+  labelQuantity: string;
+  labelNeedsAlso: string;
+  labelProportion: string;
+  labelCoverage: string;
+  labelThickness: string;
+  labelLayers: string;
+  labelWasteFactor: string;
+  layersSingular: string;
+  layersPlural: string;
+  materialCal: string;
+  materialArena: string;
+  materialMarmol: string;
+  phaseDescTrullissatio: string;
+  phaseDescArenato: string;
+  phaseDescMarmorato: string;
+  granulometryTitle: string;
+  grainTitleCoarse: string;
+  grainSubtitleCoarse: string;
+  grainUsageCoarse: string;
+  grainTitleMedium: string;
+  grainSubtitleMedium: string;
+  grainUsageMedium: string;
+  grainTitleFine: string;
+  grainSubtitleFine: string;
+  grainUsageFine: string;
+  specSize: string;
+  specUse: string;
+  specDensity: string;
+}

@@ -1,8 +1,12 @@
 import type { DiyCategoryEntry } from '../types';
+import { clayCalculator } from '../tool/clayCalculator/index';
+import { epoxyCalculator } from '../tool/epoxyCalculator/index';
+import { balusterCalculator } from '../tool/balusterCalculator/index';
+import { mortarCalculator } from '../tool/mortarCalculator/index';
 
 export const diyCategory: DiyCategoryEntry = {
   icon: 'mdi:hand',
-  tools: [],
+  tools: [clayCalculator, epoxyCalculator, balusterCalculator, mortarCalculator],
   i18n: {
     es: () => import('./i18n/es').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),
