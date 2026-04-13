@@ -1,0 +1,825 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { CutOptimizerUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+const { ui } = Astro.props;
+const t = (ui ?? {}) as CutOptimizerUI;
+---
+
+<div
+  class="co-root"
+  data-co-root
+  data-co-stock-label={t.stockLabel}
+  data-co-panel-label={t.panelLabel}
+  data-co-waste-label={t.wasteLabel}
+  data-co-eff-label={t.effLabel}
+  data-co-empty={t.emptyState}
+  data-co-no-cuts={t.noValidCuts}
+  data-co-no-panels={t.noValidPanels}
+>
+  <div class="co-grid">
+
+    <div class="co-sidebar">
+      <div class="co-card">
+        <h3 class="co-card-title">
+          <Icon name="mdi:cog" />
+          {t.configTitle}
+        </h3>
+
+        <div class="co-mode-toggle">
+          <button class="co-mode-btn" data-co-mode-btn="linear">{t.modeLinearLabel}</button>
+          <button class="co-mode-btn" data-co-mode-btn="panel">{t.modePanelLabel}</button>
+        </div>
+
+        <div class="co-fields">
+          <div class="co-field">
+            <label class="co-field-label">{t.labelStockLength}</label>
+            <input type="number" data-co-stock-len data-co-cfg-inp value="2400" class="co-input" />
+          </div>
+          <div class="co-field co-hidden" data-co-stock-wid-wrap>
+            <label class="co-field-label">{t.labelStockWidth}</label>
+            <input type="number" data-co-stock-wid data-co-cfg-inp value="1200" class="co-input" />
+          </div>
+          <div class="co-field">
+            <label class="co-field-label">{t.labelKerf}</label>
+            <input type="number" data-co-kerf data-co-cfg-inp value="3" class="co-input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="co-card">
+        <div class="co-card-title-row">
+          <h3 class="co-card-title">
+            <Icon name="mdi:format-list-bulleted" />
+            {t.cutsTitle}
+          </h3>
+          <button class="co-btn-add" data-co-btn-add title="+">
+            <Icon name="mdi:plus" />
+          </button>
+        </div>
+        <div class="co-cut-list" data-co-list></div>
+      </div>
+    </div>
+
+    <div class="co-main">
+      <div class="co-stats-grid">
+        <div class="co-stat-card">
+          <div class="co-stat-label">{t.statStockUsed}</div>
+          <div class="co-stat-value" data-co-stat-used>0</div>
+        </div>
+        <div class="co-stat-card">
+          <div class="co-stat-label">{t.statTotalCuts}</div>
+          <div class="co-stat-value" data-co-stat-cuts>0</div>
+        </div>
+        <div class="co-stat-card">
+          <div class="co-stat-label">{t.statWaste}</div>
+          <div class="co-stat-value co-stat-red" data-co-stat-waste>0</div>
+        </div>
+        <div class="co-stat-card">
+          <div class="co-stat-label">{t.statEfficiency}</div>
+          <div class="co-stat-value co-stat-green" data-co-stat-eff>0%</div>
+        </div>
+      </div>
+
+      <div class="co-card co-viz-card">
+        <h3 class="co-card-title">
+          <Icon name="mdi:eye-outline" />
+          {t.vizTitle}
+        </h3>
+        <div class="co-viz" data-co-viz>
+          <div class="co-empty-state" data-co-initial-empty>{t.emptyState}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <template data-co-row-tmpl>
+    <div class="co-row">
+      <div class="co-row-len-wrap">
+        <input type="number" data-co-inp-len placeholder={t.placeholderLength} class="co-row-input" />
+        <span class="co-row-unit">mm</span>
+      </div>
+      <div class="co-row-wid-wrap co-hidden" data-co-wid-wrap>
+        <input type="number" data-co-inp-wid placeholder={t.placeholderWidth} class="co-row-input co-row-input-blue" />
+        <span class="co-row-unit">mm</span>
+      </div>
+      <div class="co-row-qty-wrap">
+        <input type="number" data-co-inp-qty placeholder={t.placeholderQty} value="1" class="co-row-input co-row-input-qty" />
+      </div>
+      <button class="co-btn-rm" data-co-btn-rm title={t.btnRemoveTitle}>
+        <Icon name="mdi:close" />
+      </button>
+    </div>
+  </template>
+</div>
+
+<script>
+  import { optimize1D, optimize2D } from './optimizer';
+  import type { CutRequest, OptimizationResult, OptimizedPiece, Rect } from './optimizer';
+
+  interface CoState {
+    mode: string;
+    cuts: CutRequest[];
+    calc: () => void;
+  }
+
+  interface CoCfg {
+    stockLen: number;
+    stockWid: number;
+    kerf: number;
+  }
+
+  function coNum(el: Element | null): number {
+    if (!(el instanceof HTMLInputElement)) return 0;
+    return parseFloat(el.value) || 0;
+  }
+
+  function coAttr(root: Element, key: string): string {
+    return root.getAttribute(key) ?? '';
+  }
+
+  function coSetText(root: Element, sel: string, text: string): void {
+    const el = root.querySelector(sel);
+    if (el) el.textContent = text;
+  }
+
+  function coDebounce(fn: () => void, ms: number): () => void {
+    let timer = 0;
+    return () => { clearTimeout(timer); timer = window.setTimeout(fn, ms); };
+  }
+
+  function coCfg(root: Element): CoCfg {
+    return {
+      stockLen: coNum(root.querySelector('[data-co-stock-len]')) || 2400,
+      stockWid: coNum(root.querySelector('[data-co-stock-wid]')) || 1200,
+      kerf: coNum(root.querySelector('[data-co-kerf]')),
+    };
+  }
+
+  function coValidCuts(state: CoState): CutRequest[] {
+    if (state.mode === 'linear') {
+      return state.cuts.filter((c) => c.length > 0 && c.quantity > 0);
+    }
+    return state.cuts.filter((c) => c.length > 0 && c.width > 0 && c.quantity > 0);
+  }
+
+  function coStats1D(root: Element, result: OptimizationResult, stockLen: number): void {
+    const totalUsed = result.stockPieces.reduce((a, p) => a + (p.stockLength - p.waste), 0);
+    const total = result.totalStockUsed * stockLen;
+    const eff = total > 0 ? ((totalUsed / total) * 100).toFixed(1) : '0.0';
+    coSetText(root, '[data-co-stat-used]', result.totalStockUsed.toString());
+    coSetText(root, '[data-co-stat-cuts]', result.totalCuts.toString());
+    coSetText(root, '[data-co-stat-waste]', `${result.totalWaste.toFixed(0)} mm`);
+    coSetText(root, '[data-co-stat-eff]', `${eff}%`);
+  }
+
+  function coStats2D(root: Element, result: OptimizationResult, cfg: CoCfg): void {
+    const totalArea = result.totalStockUsed * cfg.stockLen * cfg.stockWid;
+    const usedArea = totalArea - result.totalWaste;
+    const eff = totalArea > 0 ? ((usedArea / totalArea) * 100).toFixed(1) : '0.0';
+    coSetText(root, '[data-co-stat-used]', result.totalStockUsed.toString());
+    coSetText(root, '[data-co-stat-cuts]', result.totalCuts.toString());
+    coSetText(root, '[data-co-stat-waste]', `${(result.totalWaste / 1_000_000).toFixed(4)} m²`);
+    coSetText(root, '[data-co-stat-eff]', `${eff}%`);
+  }
+
+  function coMakeSegment(cutLen: number, stockMax: number): HTMLElement {
+    const seg = document.createElement('div');
+    seg.className = 'co-seg';
+    seg.style.width = `${(cutLen / stockMax) * 100}%`;
+    seg.title = `${cutLen}mm`;
+    seg.textContent = cutLen < 50 ? '' : `${cutLen}`;
+    return seg;
+  }
+
+  function coMakeBar1D(root: Element, piece: OptimizedPiece, stockMax: number): HTMLElement {
+    const wrap = document.createElement('div');
+    wrap.className = 'co-bar-wrap';
+    const hdr = document.createElement('div');
+    hdr.className = 'co-bar-hdr';
+    hdr.innerHTML = `<span>${coAttr(root, 'data-co-stock-label')} #${piece.stockId}</span><span>${coAttr(root, 'data-co-waste-label')} ${piece.waste.toFixed(0)}mm</span>`;
+    const bar = document.createElement('div');
+    bar.className = 'co-bar';
+    (piece.cuts as number[]).forEach((c) => bar.appendChild(coMakeSegment(c, stockMax)));
+    wrap.appendChild(hdr);
+    wrap.appendChild(bar);
+    return wrap;
+  }
+
+  function coRender1D(root: Element, pieces: OptimizedPiece[], stockMax: number): void {
+    const viz = root.querySelector('[data-co-viz]') as HTMLElement | null;
+    if (!viz) return;
+    viz.innerHTML = '';
+    if (pieces.length === 0) {
+      viz.innerHTML = `<div class="co-empty-state">${coAttr(root, 'data-co-no-cuts')}</div>`;
+      return;
+    }
+    pieces.forEach((p) => viz.appendChild(coMakeBar1D(root, p, stockMax)));
+  }
+
+  function coMakeRect(rect: Rect, stockLen: number, stockWid: number): HTMLElement {
+    const el = document.createElement('div');
+    el.className = 'co-rect';
+    el.style.left = `${(rect.x / stockLen) * 100}%`;
+    el.style.top = `${(rect.y / stockWid) * 100}%`;
+    el.style.width = `${(rect.w / stockLen) * 100}%`;
+    el.style.height = `${(rect.h / stockWid) * 100}%`;
+    el.title = `${rect.w} x ${rect.h}`;
+    if (rect.w > 50 && rect.h > 50) el.textContent = `${rect.w}×${rect.h}`;
+    return el;
+  }
+
+  function coMakePanel2D(root: Element, piece: OptimizedPiece, stockLen: number, stockWid: number): HTMLElement {
+    const wrap = document.createElement('div');
+    wrap.className = 'co-panel-wrap';
+    const hdr = document.createElement('div');
+    hdr.className = 'co-bar-hdr';
+    hdr.innerHTML = `<span>${coAttr(root, 'data-co-panel-label')} #${piece.stockId}</span><span>${coAttr(root, 'data-co-eff-label')} ${((piece.utilization ?? 0) * 100).toFixed(1)}%</span>`;
+    const sheet = document.createElement('div');
+    sheet.className = 'co-sheet';
+    sheet.style.aspectRatio = `${stockLen}/${stockWid}`;
+    (piece.cuts as Rect[]).forEach((r) => sheet.appendChild(coMakeRect(r, stockLen, stockWid)));
+    wrap.appendChild(hdr);
+    wrap.appendChild(sheet);
+    return wrap;
+  }
+
+  function coRender2D(root: Element, pieces: OptimizedPiece[], stockLen: number, stockWid: number): void {
+    const viz = root.querySelector('[data-co-viz]') as HTMLElement | null;
+    if (!viz) return;
+    viz.innerHTML = '';
+    if (pieces.length === 0) {
+      viz.innerHTML = `<div class="co-empty-state">${coAttr(root, 'data-co-no-panels')}</div>`;
+      return;
+    }
+    pieces.forEach((p) => viz.appendChild(coMakePanel2D(root, p, stockLen, stockWid)));
+  }
+
+  function coCalc(root: Element, state: CoState): void {
+    const cfg = coCfg(root);
+    const valid = coValidCuts(state);
+    const empty: OptimizationResult = { totalStockUsed: 0, totalWaste: 0, totalCuts: 0, stockPieces: [] };
+    if (state.mode === 'linear') {
+      const res = valid.length > 0 ? optimize1D(valid, cfg.stockLen, cfg.kerf) : empty;
+      coStats1D(root, res, cfg.stockLen);
+      coRender1D(root, res.stockPieces, cfg.stockLen);
+    } else {
+      const res = valid.length > 0 ? optimize2D(valid, cfg.stockLen, cfg.stockWid, cfg.kerf) : empty;
+      coStats2D(root, res, cfg);
+      coRender2D(root, res.stockPieces, cfg.stockLen, cfg.stockWid);
+    }
+  }
+
+  function coMakeRow(root: Element, state: CoState, index: number): Element {
+    const tmpl = root.querySelector('[data-co-row-tmpl]') as HTMLTemplateElement;
+    const clone = tmpl.content.cloneNode(true) as DocumentFragment;
+    const row = clone.querySelector('div')!;
+    const len = row.querySelector('[data-co-inp-len]') as HTMLInputElement;
+    const wid = row.querySelector('[data-co-inp-wid]') as HTMLInputElement;
+    const qty = row.querySelector('[data-co-inp-qty]') as HTMLInputElement;
+    const widWrap = row.querySelector('[data-co-wid-wrap]') as HTMLElement;
+    widWrap?.classList.toggle('co-hidden', state.mode !== 'panel');
+    len.value = state.cuts[index].length.toString();
+    wid.value = state.cuts[index].width.toString();
+    qty.value = state.cuts[index].quantity.toString();
+    len.addEventListener('input', () => { state.cuts[index].length = coNum(len); state.calc(); });
+    wid.addEventListener('input', () => { state.cuts[index].width = coNum(wid); state.calc(); });
+    qty.addEventListener('input', () => { state.cuts[index].quantity = coNum(qty); state.calc(); });
+    row.querySelector('[data-co-btn-rm]')?.addEventListener('click', () => {
+      state.cuts.splice(index, 1); coRenderRows(root, state); state.calc();
+    });
+    return row;
+  }
+
+  function coRenderRows(root: Element, state: CoState): void {
+    const container = root.querySelector('[data-co-list]') as HTMLElement | null;
+    if (!container) return;
+    container.innerHTML = '';
+    state.cuts.forEach((_, i) => container.appendChild(coMakeRow(root, state, i)));
+  }
+
+  function coSetMode(root: Element, state: CoState, mode: string): void {
+    state.mode = mode;
+    root.querySelectorAll('[data-co-mode-btn]').forEach((btn) => {
+      btn.classList.toggle('co-mode-active', (btn as HTMLElement).dataset.coModeBtn === mode);
+    });
+    const widWrap = root.querySelector('[data-co-stock-wid-wrap]') as HTMLElement | null;
+    if (widWrap) widWrap.classList.toggle('co-hidden', mode !== 'panel');
+    coRenderRows(root, state);
+    state.calc();
+  }
+
+  function coAttach(root: Element, state: CoState): void {
+    root.querySelectorAll('[data-co-mode-btn]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        coSetMode(root, state, (btn as HTMLElement).dataset.coModeBtn ?? 'linear');
+      });
+    });
+    root.querySelector('[data-co-btn-add]')?.addEventListener('click', () => {
+      state.cuts.push({ id: crypto.randomUUID(), length: 0, width: 0, quantity: 1 });
+      coRenderRows(root, state);
+    });
+    root.querySelectorAll('[data-co-cfg-inp]').forEach((inp) => {
+      inp.addEventListener('input', state.calc);
+    });
+  }
+
+  function coInit(root: Element): void {
+    const state: CoState = {
+      mode: 'linear',
+      cuts: [
+        { id: '1', length: 800, width: 400, quantity: 2 },
+        { id: '2', length: 450, width: 300, quantity: 3 },
+      ],
+      calc: () => {},
+    };
+    state.calc = coDebounce(() => coCalc(root, state), 300);
+    coAttach(root, state);
+    coSetMode(root, state, 'linear');
+    coCalc(root, state);
+  }
+
+  document.querySelectorAll('[data-co-root]').forEach(coInit);
+</script>
+
+<style>
+  .co-root {
+    max-width: 1200px;
+    margin: 0 auto;
+    user-select: none;
+  }
+
+  .co-hidden {
+    display: none;
+  }
+
+  .co-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+  }
+
+  .co-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .co-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .co-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f1f5f9;
+  }
+
+  :global(.theme-dark) .co-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .co-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 1rem;
+  }
+
+  :global(.theme-dark) .co-card-title {
+    color: #fff;
+  }
+
+  .co-card-title svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #94a3b8;
+  }
+
+  .co-card-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .co-card-title-row .co-card-title {
+    margin-bottom: 0;
+  }
+
+  .co-mode-toggle {
+    display: flex;
+    gap: 0;
+    background: #f1f5f9;
+    padding: 0.375rem;
+    border-radius: 0.625rem;
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.theme-dark) .co-mode-toggle {
+    background: rgba(30, 41, 59, 0.8);
+  }
+
+  .co-mode-btn {
+    flex: 1;
+    padding: 0.375rem 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    border-radius: 0.375rem;
+    border: none;
+    background: transparent;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .co-mode-btn.co-mode-active {
+    background: #f97316;
+    color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+
+  :global(.theme-dark) .co-mode-btn {
+    color: #94a3b8;
+  }
+
+  :global(.theme-dark) .co-mode-btn.co-mode-active {
+    color: #fff;
+  }
+
+  .co-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .co-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .co-field-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .co-input {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.15s ease;
+    box-sizing: border-box;
+  }
+
+  .co-input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+  }
+
+  :global(.theme-dark) .co-input {
+    background: #0f172a;
+    border-color: #334155;
+    color: #fff;
+  }
+
+  .co-btn-add {
+    padding: 0.5rem;
+    background: #fff7ed;
+    color: #ea580c;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .co-btn-add:hover {
+    background: #fed7aa;
+  }
+
+  .co-btn-add svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  :global(.theme-dark) .co-btn-add {
+    background: rgba(249, 115, 22, 0.15);
+    color: #fb923c;
+  }
+
+  .co-cut-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.25rem;
+  }
+
+  .co-cut-list::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .co-cut-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .co-cut-list::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.4);
+    border-radius: 20px;
+  }
+
+  .co-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .co-row-len-wrap,
+  .co-row-wid-wrap {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .co-row-qty-wrap {
+    position: relative;
+    width: 5rem;
+  }
+
+  .co-row-input {
+    width: 100%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1e293b;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .co-row-input:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.1);
+  }
+
+  .co-row-input-blue:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+
+  .co-row-input-qty {
+    text-align: center;
+  }
+
+  :global(.theme-dark) .co-row-input {
+    background: #0f172a;
+    border-color: #334155;
+    color: #fff;
+  }
+
+  .co-row-unit {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #94a3b8;
+    pointer-events: none;
+  }
+
+  .co-btn-rm {
+    padding: 0.4rem;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .co-btn-rm:hover {
+    color: #ef4444;
+  }
+
+  .co-btn-rm svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .co-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .co-stat-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+  }
+
+  :global(.theme-dark) .co-stat-card {
+    background: #1e293b;
+    border-color: #334155;
+  }
+
+  .co-stat-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .co-stat-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-top: 0.25rem;
+    line-height: 1;
+  }
+
+  :global(.theme-dark) .co-stat-value {
+    color: #fff;
+  }
+
+  .co-stat-red {
+    color: #ef4444;
+  }
+
+  :global(.theme-dark) .co-stat-red {
+    color: #f87171;
+  }
+
+  .co-stat-green {
+    color: #22c55e;
+  }
+
+  :global(.theme-dark) .co-stat-green {
+    color: #4ade80;
+  }
+
+  .co-viz-card {
+    min-height: 400px;
+  }
+
+  .co-viz {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: 16rem;
+  }
+
+  :global(.co-empty-state) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16rem;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-style: italic;
+    text-align: center;
+  }
+
+  :global(.co-bar-wrap) {
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #f1f5f9;
+  }
+
+  :global(.theme-dark .co-bar-wrap) {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: #1e293b;
+  }
+
+  :global(.co-bar-hdr) {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.co-bar) {
+    height: 3rem;
+    background: #e2e8f0;
+    border-radius: 0.25rem;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+
+  :global(.theme-dark .co-bar) {
+    background: #334155;
+  }
+
+  :global(.co-seg) {
+    height: 100%;
+    background: linear-gradient(to bottom, #fb923c, #ea580c);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  :global(.co-panel-wrap) {
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #f1f5f9;
+  }
+
+  :global(.theme-dark .co-panel-wrap) {
+    background: rgba(15, 23, 42, 0.5);
+    border-color: #1e293b;
+  }
+
+  :global(.co-sheet) {
+    position: relative;
+    background: #e2e8f0;
+    width: 100%;
+    border: 1px solid #cbd5e1;
+  }
+
+  :global(.theme-dark .co-sheet) {
+    background: #334155;
+    border-color: #475569;
+  }
+
+  :global(.co-rect) {
+    position: absolute;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.625rem;
+    font-weight: 700;
+    overflow: hidden;
+    cursor: default;
+    transition: filter 0.15s ease;
+  }
+
+  :global(.co-rect:hover) {
+    filter: brightness(1.1);
+  }
+
+  @media (max-width: 1024px) {
+    .co-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .co-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .co-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .co-card {
+      padding: 1rem;
+    }
+  }
+</style>

@@ -34,3 +34,12 @@ export { PASSEPARTOUT_CALCULATOR_TOOL } from './tool/passepartoutCalculator/inde
 
 export { ConcreteCalculatorComponent, ConcreteCalculatorSEO, ConcreteCalculatorBibliography } from './tool/concreteCalculator';
 export { CONCRETE_CALCULATOR_TOOL } from './tool/concreteCalculator/index';
+
+export { CutOptimizerComponent, CutOptimizerSEO, CutOptimizerBibliography } from './tool/cutOptimizer';
+export { CUT_OPTIMIZER_TOOL } from './tool/cutOptimizer/index';
+
+export { VoltageDropCalculatorComponent, VoltageDropCalculatorSEO, VoltageDropCalculatorBibliography } from './tool/voltageDropCalculator';
+export { VOLTAGE_DROP_CALCULATOR_TOOL } from './tool/voltageDropCalculator/index';
+
+export { FurnitureFitComponent, FurnitureFitSEO, FurnitureFitBibliography } from './tool/furnitureFit';
+export { FURNITURE_FIT_TOOL } from './tool/furnitureFit/index';
