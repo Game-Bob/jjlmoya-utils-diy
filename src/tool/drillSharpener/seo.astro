@@ -1,48 +1,14 @@
 ---
+import { SEORenderer } from '@jjlmoya/utils-shared';
+import { drillSharpener } from './index';
+import type { KnownLocale } from '../../types';
+
+interface Props {
+  locale?: KnownLocale;
+}
+const { locale = 'es' } = Astro.props;
+const content = await drillSharpener.i18n[locale]?.();
+if (!content) return null;
 ---
 
-<section class="ds-seo">
-  <h2>Afilado Maestro de Brocas: Guía Técnica y Galga de Precisión</h2>
-  <p>El afilado de brocas es una de las habilidades más valiosas en cualquier taller mecánico o de bricolaje. Una broca correctamente afilada no solo mejora la calidad del orificio, sino que protege la vida útil de tus herramientas eléctricas y garantiza la seguridad del operario.</p>
-
-  <h3>Los Pilares del Afilado: El Ángulo de Punta</h3>
-  <p>El ángulo de punta es la geometría que define cómo la broca ataca el material. Los ángulos estándar son 118° para aceros suave, 135° para inoxidable y 140° para aceros duros. Cada material requiere un ángulo diferente para maximizar la penetración sin comprometer la resistencia de los filos.</p>
-
-  <h3>El Gran Olvidado: Ángulo de Incidencia</h3>
-  <p>El error más común en el afilado manual no es el ángulo de punta, sino el <strong>Ángulo de Incidencia</strong> o destalonado. Si la superficie metálica que sigue al filo de corte está a la misma altura (plana), la broca simplemente rozará contra el material, generando un calor extremo que destemplará el acero HSS en segundos.</p>
-
-  <h3>Simetría y Centrado: El Secreto de la Precisión</h3>
-  <p>Para que una broca no "baile" o haga agujeros más grandes de lo esperado, los dos labios de corte deben ser exactamente iguales en longitud y ángulo. Si un labio es más largo que otro, el eje de rotación se desplaza, forzando la broca hacia el exterior del orificio.</p>
-
-  <h3>Parámetros Críticos de Corte</h3>
-  <p>Una vez afilada la herramienta, su rendimiento depende de las Revoluciones por Minuto (RPM) y la refrigeración. El acero al cobalto soporta mejor el calor, pero aun así requiere una gestión térmica adecuada mediante el uso de taladrina o aceites de corte.</p>
-</section>
-
-<style>
-  .ds-seo {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    line-height: 1.8;
-    color: var(--sc-neutral, #1e293b);
-  }
-
-  .ds-seo h2 {
-    font-size: 1.875rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 800;
-  }
-
-  .ds-seo h3 {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-    color: var(--sc-primary, #6366f1);
-  }
-
-  .ds-seo p {
-    margin-bottom: 1rem;
-  }
-</style>
+<SEORenderer content={{ locale: locale as string, sections: content.seo }} />

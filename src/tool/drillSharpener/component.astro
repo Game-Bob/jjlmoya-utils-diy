@@ -7,10 +7,10 @@ const { ui } = Astro.props;
 const t = (ui ?? {}) as DrillSharpenerUI;
 ---
 
-<div class="ds-root" id="drill-app">
-  <div class="ds-layout">
-    <section class="ds-gauge">
-      <svg class="ds-svg" viewBox="0 0 500 500" id="gauge-svg">
+<div class="drillsharp-root" id="drill-app">
+  <div class="drillsharp-layout">
+    <section class="drillsharp-gauge">
+      <svg class="drillsharp-svg" viewBox="0 0 500 500" id="gauge-svg">
         <line
           x1="250"
           y1="20"
@@ -30,7 +30,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
         <rect x="249" y="250" width="2" height="230" fill="currentColor" rx="1"
         ></rect>
         <g
-          class="ds-guide-circles"
+          class="drillsharp-guide-circles"
           fill="none"
           stroke="currentColor"
           stroke-width="1"
@@ -41,14 +41,14 @@ const t = (ui ?? {}) as DrillSharpenerUI;
           <circle cx="250" cy="250" r="130" data-val="13"></circle>
           <circle cx="250" cy="250" r="200" data-val="20"></circle>
         </g>
-        <g id="ds-gauge-lines" class="ds-gauge-lines">
+        <g id="drillsharp-gauge-lines" class="drillsharp-gauge-lines">
           <line
             id="gl"
             x1="250"
             y1="250"
             x2="50"
             y2="100"
-            stroke="var(--ds-accent)"
+            stroke="var(--drillsharp-accent)"
             stroke-width="3"
             stroke-linecap="round"></line>
           <line
@@ -57,67 +57,67 @@ const t = (ui ?? {}) as DrillSharpenerUI;
             y1="250"
             x2="450"
             y2="100"
-            stroke="var(--ds-accent)"
+            stroke="var(--drillsharp-accent)"
             stroke-width="3"
             stroke-linecap="round"></line>
-          <circle cx="250" cy="250" r="6" fill="var(--ds-accent)"></circle>
+          <circle cx="250" cy="250" r="6" fill="var(--drillsharp-accent)"></circle>
         </g>
         <text
-          id="ds-angle-text"
+          id="drillsharp-angle-text"
           x="250"
           y="235"
           text-anchor="middle"
-          fill="var(--ds-accent)"
+          fill="var(--drillsharp-accent)"
           font-size="28"
           font-weight="900">118°</text
         >
       </svg>
-      <div class="ds-instruction">
+      <div class="drillsharp-instruction">
         <span>{t.gaugeInstruction}</span>
       </div>
     </section>
 
-    <aside class="ds-controls">
-      <div class="ds-group">
+    <aside class="drillsharp-controls">
+      <div class="drillsharp-group">
         <h4>{t.labelMaterial}</h4>
-        <div class="ds-material-grid">
+        <div class="drillsharp-material-grid">
           <button
-            class="ds-mat-btn active"
+            class="drillsharp-mat-btn active"
             data-angle="118"
             data-vc="25"
             data-label="Acero / Hierro"
             data-id="steel">{t.matSteel}</button
           >
           <button
-            class="ds-mat-btn"
+            class="drillsharp-mat-btn"
             data-angle="135"
             data-vc="12"
             data-label="Inoxidable"
             data-id="inox">{t.matInox}</button
           >
           <button
-            class="ds-mat-btn"
+            class="drillsharp-mat-btn"
             data-angle="140"
             data-vc="8"
             data-label="Aceros Duros"
             data-id="hard">{t.matHard}</button
           >
           <button
-            class="ds-mat-btn"
+            class="drillsharp-mat-btn"
             data-angle="90"
             data-vc="40"
             data-label="Latón / Cobre"
             data-id="brass">{t.matBrass}</button
           >
           <button
-            class="ds-mat-btn"
+            class="drillsharp-mat-btn"
             data-angle="60"
             data-vc="60"
             data-label="Plásticos"
             data-id="plastic">{t.matPlastic}</button
           >
           <button
-            class="ds-mat-btn"
+            class="drillsharp-mat-btn"
             data-angle="80"
             data-vc="35"
             data-label="Madera"
@@ -126,10 +126,10 @@ const t = (ui ?? {}) as DrillSharpenerUI;
         </div>
       </div>
 
-      <div class="ds-group">
+      <div class="drillsharp-group">
         <h4>{t.labelDiameter}</h4>
-        <div class="ds-stepper">
-          <button type="button" class="ds-step-btn" id="btn-minus">−</button>
+        <div class="drillsharp-stepper">
+          <button type="button" class="drillsharp-step-btn" id="btn-minus">−</button>
           <input
             type="number"
             id="diam-input"
@@ -138,24 +138,24 @@ const t = (ui ?? {}) as DrillSharpenerUI;
             min="1"
             max="50"
           />
-          <button type="button" class="ds-step-btn" id="btn-plus">+</button>
+          <button type="button" class="drillsharp-step-btn" id="btn-plus">+</button>
         </div>
 
-        <div class="ds-results">
-          <div class="ds-res-item">
-            <span class="ds-res-label">{t.labelVelocity}</span>
-            <div class="ds-res-value-box">
-              <span class="ds-res-value" id="rpm-display">796</span>
-              <span class="ds-res-unit">{t.unitRpm}</span>
+        <div class="drillsharp-results">
+          <div class="drillsharp-res-item">
+            <span class="drillsharp-res-label">{t.labelVelocity}</span>
+            <div class="drillsharp-res-value-box">
+              <span class="drillsharp-res-value" id="rpm-display">796</span>
+              <span class="drillsharp-res-unit">{t.unitRpm}</span>
             </div>
           </div>
-          <div class="ds-res-item">
-            <span class="ds-res-label">{t.labelCooling}</span>
-            <div class="ds-res-value-box">
+          <div class="drillsharp-res-item">
+            <span class="drillsharp-res-label">{t.labelCooling}</span>
+            <div class="drillsharp-res-value-box">
               <span
-                class="ds-res-value"
+                class="drillsharp-res-value"
                 id="cooling-display"
-                style="font-size: 0.8rem; color: var(--ds-accent);"
+                style="font-size: 0.8rem; color: var(--drillsharp-accent);"
                 >TALADRINA</span
               >
             </div>
@@ -164,7 +164,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
       </div>
 
       <button
-        class="ds-diag-btn"
+        class="drillsharp-diag-btn"
         id="trigger-diag"
         title="Si la broca no corta, pulsa aquí"
       >
@@ -173,16 +173,16 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     </aside>
   </div>
 
-  <div class="ds-modal" id="diag-modal">
-    <div class="ds-modal-header">
+  <div class="drillsharp-modal" id="diag-modal">
+    <div class="drillsharp-modal-header">
       <h3>{t.diagTitle}</h3>
-      <button type="button" class="ds-modal-close" id="close-modal">×</button>
+      <button type="button" class="drillsharp-modal-close" id="close-modal">×</button>
     </div>
 
-    <div class="ds-diag-item">
+    <div class="drillsharp-diag-item">
       <strong>{t.diagIssue1}</strong>
       <p>{t.diagIssue1Desc}</p>
-      <div class="ds-diag-img">
+      <div class="drillsharp-diag-img">
         <svg viewBox="0 0 160 60" width="100%">
           <path
             d="M10,45 L40,15 L70,45 Z"
@@ -217,12 +217,12 @@ const t = (ui ?? {}) as DrillSharpenerUI;
       </div>
     </div>
 
-    <div class="ds-diag-item">
+    <div class="drillsharp-diag-item">
       <strong>{t.diagIssue2}</strong>
       <p>{t.diagIssue2Desc}</p>
     </div>
 
-    <div class="ds-diag-item">
+    <div class="drillsharp-diag-item">
       <strong>{t.diagIssue3}</strong>
       <p>{t.diagIssue3Desc}</p>
     </div>
@@ -237,7 +237,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
   const ui = {
     gaugeL: document.getElementById("gl") as SVGLineElement,
     gaugeR: document.getElementById("gr") as SVGLineElement,
-    angleText: document.getElementById("ds-angle-text") as SVGTextElement,
+    angleText: document.getElementById("drillsharp-angle-text") as SVGTextElement,
     rpmDisplay: document.getElementById("rpm-display") as HTMLElement,
     coolingDisplay: document.getElementById("cooling-display") as HTMLElement,
     diamInput: document.getElementById("diam-input") as HTMLInputElement,
@@ -275,10 +275,10 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     updateResults();
   }
 
-  document.querySelectorAll(".ds-mat-btn").forEach((btn) => {
+  document.querySelectorAll(".drillsharp-mat-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       document
-        .querySelectorAll(".ds-mat-btn")
+        .querySelectorAll(".drillsharp-mat-btn")
         .forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       state.angle = parseInt(btn.getAttribute("data-angle") || "118");
@@ -319,49 +319,49 @@ const t = (ui ?? {}) as DrillSharpenerUI;
 
 <style>
   :root {
-    --ds-primary: #38bdf8;
-    --ds-accent: #38bdf8;
-    --ds-text: #f8fafc;
-    --ds-text-muted: #94a3b8;
-    --ds-bg-dark: #000;
-    --ds-bg-panel: #0a0f1d;
-    --ds-border: #1e293b;
-    --ds-button-bg: #1e293b;
-    --ds-button-hover: #334155;
+    --drillsharp-primary: #0284c7;
+    --drillsharp-accent: #0284c7;
+    --drillsharp-text: #0f172a;
+    --drillsharp-text-muted: #475569;
+    --drillsharp-bg-dark: #f1f5f9;
+    --drillsharp-bg-panel: #fff;
+    --drillsharp-border: #cbd5e1;
+    --drillsharp-button-bg: #e2e8f0;
+    --drillsharp-button-hover: #cbd5e1;
+  }
+  
+  :global(.theme-dark) {
+    --drillsharp-primary: #38bdf8;
+    --drillsharp-accent: #38bdf8;
+    --drillsharp-text: #f8fafc;
+    --drillsharp-text-muted: #94a3b8;
+    --drillsharp-bg-dark: #000;
+    --drillsharp-bg-panel: #0a0f1d;
+    --drillsharp-border: #1e293b;
+    --drillsharp-button-bg: #1e293b;
+    --drillsharp-button-hover: #334155;
   }
 
-  :global(.theme-light) {
-    --ds-primary: #0284c7;
-    --ds-accent: #0284c7;
-    --ds-text: #0f172a;
-    --ds-text-muted: #475569;
-    --ds-bg-dark: #f1f5f9;
-    --ds-bg-panel: #fff;
-    --ds-border: #cbd5e1;
-    --ds-button-bg: #e2e8f0;
-    --ds-button-hover: #cbd5e1;
-  }
-
-  .ds-root {
+  .drillsharp-root {
     max-width: 1200px;
     margin: 1rem auto;
     padding: 0 1rem;
-    color: var(--ds-text);
+    color: var(--drillsharp-text);
   }
 
-  .ds-layout {
+  .drillsharp-layout {
     display: grid;
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: minmax(0, 1fr) 340px;
     gap: 1.5rem;
-    background: var(--ds-bg-dark);
+    background: var(--drillsharp-bg-dark);
     border-radius: 2.5rem;
     padding: 2rem;
-    border: 1px solid var(--ds-border);
-    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--drillsharp-border);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
 
-  .ds-gauge {
+  .drillsharp-gauge {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -369,80 +369,86 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     justify-content: center;
     background: radial-gradient(
       circle at center,
-      var(--ds-bg-panel) 0%,
-      var(--ds-bg-dark) 100%
+      var(--drillsharp-bg-panel) 0%,
+      var(--drillsharp-bg-dark) 100%
     );
     border-radius: 2rem;
     min-height: 550px;
-    border: 1px solid var(--ds-border);
+    border: 1px solid var(--drillsharp-border);
+    transition: background 0.3s ease;
   }
 
-  .ds-svg {
+  .drillsharp-svg {
     width: 95%;
     height: 95%;
     max-height: 600px;
-    color: var(--ds-text);
+    color: var(--drillsharp-text);
   }
 
-  .ds-gauge-lines {
-    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.5));
+  .drillsharp-gauge-lines {
+    filter: drop-shadow(0 0 2px var(--drillsharp-accent));
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .ds-instruction {
+  .drillsharp-instruction {
     position: absolute;
     bottom: 2rem;
     text-align: center;
     width: 100%;
     pointer-events: none;
+    padding: 0 1rem;
   }
 
-  .ds-instruction span {
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--ds-accent);
+  .drillsharp-instruction span {
+    background: var(--drillsharp-bg-panel);
+    color: var(--drillsharp-accent);
     padding: 0.6rem 2rem;
     border-radius: 2rem;
     font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid var(--drillsharp-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
-  .ds-controls {
+  .drillsharp-controls {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
-  .ds-group {
-    background: var(--ds-bg-panel);
-    padding: 1.25rem;
-    border-radius: 1.5rem;
-    border: 1px solid var(--ds-border);
+  .drillsharp-group {
+    background: var(--drillsharp-bg-panel);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--drillsharp-border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
   }
 
-  .ds-group h4 {
-    font-size: 0.65rem;
+  .drillsharp-group h4 {
+    font-size: 0.7rem;
     text-transform: uppercase;
-    color: var(--ds-text-muted);
-    margin-bottom: 1rem;
+    color: var(--drillsharp-primary);
+    margin-bottom: 1.25rem;
     font-weight: 900;
     letter-spacing: 0.1em;
   }
 
-  .ds-material-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+  .drillsharp-material-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 
-  .ds-mat-btn {
-    background: var(--ds-button-bg);
-    border: 1px solid var(--ds-border);
+  .drillsharp-mat-btn {
+    background: var(--drillsharp-button-bg);
+    border: 1px solid var(--drillsharp-border);
     border-radius: 1.25rem;
     padding: 1rem 0.5rem;
-    color: var(--ds-text-muted);
+    color: var(--drillsharp-text-muted);
     cursor: pointer;
     font-weight: 800;
     font-size: 0.8rem;
@@ -450,28 +456,28 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     text-transform: uppercase;
   }
 
-  .ds-mat-btn.active {
-    background: var(--ds-accent);
-    color: var(--ds-bg-dark);
-    border-color: var(--ds-accent);
+  .drillsharp-mat-btn.active {
+    background: var(--drillsharp-accent);
+    color: var(--drillsharp-bg-dark);
+    border-color: var(--drillsharp-accent);
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
   }
 
-  .ds-stepper {
+  .drillsharp-stepper {
     display: flex;
     align-items: center;
-    background: var(--ds-bg-dark);
+    background: var(--drillsharp-bg-dark);
     border-radius: 1.25rem;
     padding: 0.4rem;
-    border: 1px solid var(--ds-border);
+    border: 1px solid var(--drillsharp-border);
   }
 
-  .ds-step-btn {
+  .drillsharp-step-btn {
     width: 54px;
     height: 54px;
-    background: var(--ds-button-bg);
+    background: var(--drillsharp-button-bg);
     border: none;
-    color: var(--ds-text);
+    color: var(--drillsharp-text);
     border-radius: 1rem;
     cursor: pointer;
     font-size: 1.5rem;
@@ -481,16 +487,16 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     transition: all 0.2s;
   }
 
-  .ds-step-btn:active {
+  .drillsharp-step-btn:active {
     transform: scale(0.95);
-    background: var(--ds-button-hover);
+    background: var(--drillsharp-button-hover);
   }
 
-  .ds-stepper input {
+  .drillsharp-stepper input {
     flex: 1;
     background: transparent;
     border: none;
-    color: var(--ds-accent);
+    color: var(--drillsharp-accent);
     text-align: center;
     font-size: 2rem;
     font-weight: 950;
@@ -498,50 +504,50 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     outline: none;
   }
 
-  .ds-results {
+  .drillsharp-results {
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
     margin-top: 1.5rem;
   }
 
-  .ds-res-item {
-    background: var(--ds-bg-dark);
+  .drillsharp-res-item {
+    background: var(--drillsharp-bg-dark);
     padding: 1.25rem;
     border-radius: 1.5rem;
-    border: 1px solid var(--ds-border);
+    border: 1px solid var(--drillsharp-border);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
   }
 
-  .ds-res-label {
+  .drillsharp-res-label {
     font-size: 0.65rem;
-    color: var(--ds-text-muted);
+    color: var(--drillsharp-text-muted);
     font-weight: 700;
     text-transform: uppercase;
   }
 
-  .ds-res-value-box {
+  .drillsharp-res-value-box {
     display: flex;
     align-items: baseline;
     gap: 0.25rem;
   }
 
-  .ds-res-value {
+  .drillsharp-res-value {
     font-size: 1.5rem;
     font-weight: 900;
-    color: var(--ds-text);
+    color: var(--drillsharp-text);
   }
 
-  .ds-res-unit {
+  .drillsharp-res-unit {
     font-size: 0.7rem;
-    color: var(--ds-accent);
+    color: var(--drillsharp-accent);
     font-weight: 800;
   }
 
-  .ds-diag-btn {
+  .drillsharp-diag-btn {
     width: 100%;
     padding: 1.25rem;
     background: rgba(239, 68, 68, 0.1);
@@ -555,22 +561,22 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     text-transform: uppercase;
   }
 
-  .ds-diag-btn:hover {
+  .drillsharp-diag-btn:hover {
     background: rgba(239, 68, 68, 0.2);
     border-style: solid;
     transform: translateY(-2px);
   }
-  .ds-diag-btn:active {
+  .drillsharp-diag-btn:active {
     transform: translateY(0);
   }
 
-  .ds-modal {
+  .drillsharp-modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--ds-bg-panel);
-    border: 1px solid var(--ds-border);
+    background: var(--drillsharp-bg-panel);
+    border: 1px solid var(--drillsharp-border);
     padding: 2.5rem;
     border-radius: 2.5rem;
     z-index: 1000;
@@ -580,12 +586,12 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
   }
 
-  .ds-modal.active {
+  .drillsharp-modal.active {
     display: block;
-    animation: ds-modal-in 0.3s ease-out;
+    animation: drillsharp-modal-in 0.3s ease-out;
   }
 
-  @keyframes ds-modal-in {
+  @keyframes drillsharp-modal-in {
     from {
       opacity: 0;
       transform: translate(-50%, -45%) scale(0.95);
@@ -596,16 +602,16 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     }
   }
 
-  .ds-modal-header {
+  .drillsharp-modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-    border-bottom: 1px solid var(--ds-border);
+    border-bottom: 1px solid var(--drillsharp-border);
     padding-bottom: 1rem;
   }
 
-  .ds-modal-header h3 {
+  .drillsharp-modal-header h3 {
     font-size: 1rem;
     color: #ef4444;
     text-transform: uppercase;
@@ -613,11 +619,11 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     margin: 0;
   }
 
-  .ds-modal-close {
+  .drillsharp-modal-close {
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--ds-text-muted);
+    color: var(--drillsharp-text-muted);
     cursor: pointer;
     transition: color 0.2s;
     padding: 0;
@@ -628,59 +634,79 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     justify-content: center;
   }
 
-  .ds-modal-close:hover {
-    color: var(--ds-text);
+  .drillsharp-modal-close:hover {
+    color: var(--drillsharp-text);
   }
 
-  .ds-diag-item {
+  .drillsharp-diag-item {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 2rem;
   }
 
-  .ds-diag-item:last-child {
+  .drillsharp-diag-item:last-child {
     margin-bottom: 0;
   }
 
-  .ds-diag-item strong {
-    color: var(--ds-accent);
+  .drillsharp-diag-item strong {
+    color: var(--drillsharp-accent);
     font-size: 0.85rem;
     text-transform: uppercase;
   }
 
-  .ds-diag-item p {
+  .drillsharp-diag-item p {
     font-size: 0.75rem;
-    color: var(--ds-text-muted);
+    color: var(--drillsharp-text-muted);
     line-height: 1.5;
     margin: 0;
   }
 
-  .ds-diag-img {
-    background: var(--ds-bg-dark);
+  .drillsharp-diag-img {
+    background: var(--drillsharp-bg-dark);
     border-radius: 1rem;
     padding: 1rem;
-    border: 1px solid var(--ds-border);
+    border: 1px solid var(--drillsharp-border);
   }
 
   @media (max-width: 1000px) {
-    .ds-layout {
+    .drillsharp-layout {
       grid-template-columns: 1fr;
       padding: 1rem;
+      border-radius: 1.5rem;
     }
-    .ds-gauge {
-      min-height: 400px;
+    .drillsharp-gauge {
+      min-height: 380px;
     }
   }
 
   @media (max-width: 480px) {
-    .ds-mat-btn {
-      font-size: 0.7rem;
-      padding: 0.75rem 0.25rem;
+    .drillsharp-root {
+      padding: 0 0.5rem;
     }
-    .ds-step-btn {
-      width: 44px;
-      height: 44px;
+    .drillsharp-layout {
+      padding: 0.75rem;
+      gap: 1rem;
+    }
+    .drillsharp-gauge {
+      min-height: 320px;
+    }
+    .drillsharp-mat-btn {
+      font-size: 0.75rem;
+      padding: 0.8rem 0.5rem;
+    }
+    .drillsharp-step-btn {
+      width: 48px;
+      height: 48px;
+    }
+    .drillsharp-group {
+      padding: 1.25rem;
+    }
+    .drillsharp-res-item {
+      padding: 1rem;
+    }
+    .drillsharp-res-value {
+      font-size: 1.25rem;
     }
   }
 </style>
