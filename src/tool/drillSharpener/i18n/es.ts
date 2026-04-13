@@ -2,8 +2,8 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
 
-const slug = 'afilador-maestro-brocas';
-const title = 'Afilador Maestro de Brocas: Galga de Precisión';
+const slug = 'afilado-maestro-brocas';
+const title = 'Afilado Maestro de Brocas: Galga de Precisión';
 const description = 'Guía interactiva para afilar brocas HSS. Galga digital en pantalla para verificar ángulos de 118° y 135°. Calcula RPM y diagnostica errores de corte.';
 
 const faqData = [
