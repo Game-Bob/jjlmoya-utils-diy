@@ -1,0 +1,409 @@
+---
+import type { StairCalculatorUI } from './ui';
+interface Props { ui?: StairCalculatorUI; }
+const { ui } = Astro.props;
+const t = (ui ?? {}) as StairCalculatorUI;
+---
+
+<div class="sc-root" data-adjusted-note={t.adjustedNote} data-ui={JSON.stringify(t)}>
+  <div class="sc-card">
+    <aside class="sc-sidebar">
+      <div class="sc-section">
+        <h3>{t.labelGeometry}</h3>
+        <div class="sc-input-group">
+          <label for="sc-total-height">{t.labelTotalHeight} <small>(cm)</small></label>
+          <div class="sc-stepper">
+            <button type="button" class="sc-step-btn minus" data-input="sc-total-height">-</button>
+            <input type="number" id="sc-total-height" value="300" step="1" min="10">
+            <button type="button" class="sc-step-btn plus" data-input="sc-total-height">+</button>
+          </div>
+        </div>
+
+        <div class="sc-input-group">
+          <label for="sc-total-length">{t.labelAvailableLength} <small>(cm)</small></label>
+          <div class="sc-stepper">
+            <input type="number" id="sc-total-length" value="442" step="1" min="0">
+          </div>
+          <small style="opacity:0.6">{t.labelAvailableLengthHint}</small>
+        </div>
+
+        <div class="sc-input-group">
+          <label for="sc-num-steps">{t.labelNumSteps}</label>
+          <div class="sc-stepper">
+            <button type="button" class="sc-step-btn minus" data-input="sc-num-steps">-</button>
+            <input type="number" id="sc-num-steps" value="17" step="1" min="1">
+            <button type="button" class="sc-step-btn plus" data-input="sc-num-steps">+</button>
+          </div>
+          <button type="button" id="sc-btn-optimize" class="sc-optimize-btn">{t.labelOptimize}</button>
+        </div>
+      </div>
+
+      <div class="sc-section">
+        <h3>{t.labelWork}</h3>
+        <div class="sc-input-group">
+          <label for="sc-slab-thickness">{t.labelSlabThickness} <small>(cm)</small></label>
+          <div class="sc-stepper">
+            <input type="number" id="sc-slab-thickness" value="15" step="1" min="8">
+          </div>
+        </div>
+        <div class="sc-input-group">
+          <label for="sc-finish-thickness">{t.labelFinishThickness} <small>(cm)</small></label>
+          <div class="sc-stepper">
+            <input type="number" id="sc-finish-thickness" value="3" step="0.5" min="0">
+          </div>
+        </div>
+        <div class="sc-input-group">
+          <label for="sc-ceiling-height">{t.labelCeilingHeight} <small>(cm)</small></label>
+          <div class="sc-stepper">
+            <input type="number" id="sc-ceiling-height" value="0" step="1" min="0">
+          </div>
+        </div>
+        <div class="sc-input-group">
+          <label for="sc-stair-width">{t.labelStairWidth} <small>(cm)</small></label>
+          <input type="number" id="sc-stair-width" value="100" class="sc-select">
+        </div>
+        <div class="sc-input-group">
+          <label for="sc-dosif">{t.labelConcreteStrength}</label>
+          <select id="sc-dosif" class="sc-select">
+            <option value="150">{t.optionH150}</option>
+            <option value="200" selected>{t.optionH200}</option>
+            <option value="250">{t.optionH250}</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="sc-blondel-status" class="sc-blondel-alert warning">
+        <span class="sc-blondel-title" id="sc-blondel-title">{t.msgCalculating}</span>
+        <span class="sc-blondel-msg" id="sc-blondel-text">{t.msgEnterMeasurements}</span>
+      </div>
+    </aside>
+
+    <main class="sc-main">
+      <div class="sc-results-header">
+        <div class="sc-stat-box">
+          <span class="sc-stat-label">{t.labelRiser}</span>
+          <span class="sc-stat-value" id="sc-res-riser">--</span>
+          <span class="sc-stat-unit">cm</span>
+        </div>
+        <div class="sc-stat-box">
+          <span class="sc-stat-label">{t.labelTread}</span>
+          <span class="sc-stat-value" id="sc-res-tread">--</span>
+          <span class="sc-stat-unit">cm</span>
+        </div>
+        <div class="sc-stat-box">
+          <span class="sc-stat-label">{t.labelSlope}</span>
+          <span class="sc-stat-value" id="sc-res-angle">--</span>
+          <span class="sc-stat-unit">º</span>
+        </div>
+        <div class="sc-stat-box">
+          <span class="sc-stat-label">{t.labelRealAdvance}</span>
+          <span class="sc-stat-value" id="sc-res-len">--</span>
+          <span class="sc-stat-unit">cm</span>
+        </div>
+      </div>
+
+      <div class="sc-visualizer-container">
+        <svg id="sc-stair-svg" viewBox="0 0 550 380" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="sc-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" />
+            </marker>
+          </defs>
+          <path id="sc-stair-slab" d="" fill="rgba(79, 70, 229, 0.08)" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="4,2" />
+          <path id="sc-stair-path" d="" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+          <line id="sc-ceiling-line" x1="0" y1="0" x2="0" y2="0" stroke="#f43f5e" stroke-width="2" stroke-dasharray="8,4" />
+          <path id="sc-angle-arc" d="" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6" marker-end="url(#sc-arrow)" />
+          <text id="sc-angle-text" x="0" y="0" font-size="12" font-weight="700" fill="currentColor"></text>
+          <text id="sc-warning-text" x="20" y="30" font-size="14" font-weight="800" fill="#f43f5e"></text>
+        </svg>
+      </div>
+
+      <div class="sc-bottom-grid">
+        <div class="sc-table-card">
+          <h3>{t.labelLayoutTable}</h3>
+          <div class="sc-table-wrapper">
+            <table id="sc-layout-table">
+              <thead>
+                <tr>
+                  <th>{t.colStep}</th>
+                  <th>{t.colConcreteHeight} <small>(cm)</small></th>
+                  <th>{t.colFinishedHeight} <small>(cm)</small></th>
+                  <th>{t.colAdvance} <small>(cm)</small></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sc-materials-card">
+          <h3>{t.labelMaterials}</h3>
+          <div class="sc-material-row">
+            <span>{t.labelTotalConcrete}</span>
+            <div><strong id="sc-mat-volume">0.00</strong> <span>{t.unitM3}</span></div>
+          </div>
+          <div class="sc-material-row">
+            <span>{t.labelCement}</span>
+            <strong id="sc-mat-cement">0</strong>
+          </div>
+          <div class="sc-material-row">
+            <span>{t.labelSand}</span>
+            <strong id="sc-mat-sand">0</strong> {t.unitLiters}
+          </div>
+          <div class="sc-actions-row">
+            <button id="sc-btn-share" class="sc-action-btn sc-btn-primary" style="grid-column: 1 / -1;">{t.btnShare}</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+  import { calculateStairs } from './engine';
+
+  const rootEl = document.querySelector('.sc-root') as HTMLElement;
+  const adjustedNote = rootEl?.getAttribute('data-adjusted-note') || 'Ajustado';
+
+  const inputs = {
+    h: document.getElementById('sc-total-height') as HTMLInputElement,
+    l: document.getElementById('sc-total-length') as HTMLInputElement,
+    n: document.getElementById('sc-num-steps') as HTMLInputElement,
+    slab: document.getElementById('sc-slab-thickness') as HTMLInputElement,
+    finish: document.getElementById('sc-finish-thickness') as HTMLInputElement,
+    ceiling: document.getElementById('sc-ceiling-height') as HTMLInputElement,
+    width: document.getElementById('sc-stair-width') as HTMLInputElement,
+    dosif: document.getElementById('sc-dosif') as HTMLSelectElement
+  };
+
+  const results = {
+    riser: document.getElementById('sc-res-riser') as HTMLElement,
+    tread: document.getElementById('sc-res-tread') as HTMLElement,
+    angle: document.getElementById('sc-res-angle') as HTMLElement,
+    len: document.getElementById('sc-res-len') as HTMLElement,
+    blondelTitle: document.getElementById('sc-blondel-title') as HTMLElement,
+    blondelText: document.getElementById('sc-blondel-text') as HTMLElement,
+    blondelBox: document.getElementById('sc-blondel-status') as HTMLElement,
+    tableBody: document.querySelector('#sc-layout-table tbody') as HTMLElement,
+    svgPath: document.getElementById('sc-stair-path') as unknown as SVGPathElement,
+    slabPath: document.getElementById('sc-stair-slab') as unknown as SVGPathElement,
+    ceilingLine: document.getElementById('sc-ceiling-line') as unknown as SVGLineElement,
+    angleArc: document.getElementById('sc-angle-arc') as unknown as SVGPathElement,
+    angleText: document.getElementById('sc-angle-text') as unknown as SVGTextElement,
+    warningText: document.getElementById('sc-warning-text') as unknown as SVGTextElement,
+    matVol: document.getElementById('sc-mat-volume') as HTMLElement,
+    matCement: document.getElementById('sc-mat-cement') as HTMLElement,
+    matSand: document.getElementById('sc-mat-sand') as HTMLElement
+  };
+
+  function updateCalculations() {
+    const H = parseFloat(inputs.h.value) || 0;
+    const L = parseFloat(inputs.l.value) || 0;
+    const N = parseInt(inputs.n.value) || 1;
+    const slabE = parseFloat(inputs.slab.value) || 15;
+    const finishE = parseFloat(inputs.finish.value) || 0;
+    const ceilingH = parseFloat(inputs.ceiling.value) || 0;
+    const W = parseFloat(inputs.width.value) || 100;
+    const cementFac = parseInt(inputs.dosif.value) || 200;
+
+    const calc = calculateStairs(H, L, N, slabE, finishE, ceilingH, W, cementFac);
+
+    const ui = JSON.parse(rootEl.getAttribute('data-ui') || '{}');
+    const getTranslation = (key: string, val?: number) => {
+      let text = ui[key] || key;
+      if (val !== undefined) text = text.replace('{val}', val.toFixed(1));
+      return text;
+    };
+
+    results.riser.textContent = calc.riser.toFixed(1);
+    results.tread.textContent = calc.tread.toFixed(1);
+    results.angle.textContent = calc.angle.toFixed(0);
+    results.len.textContent = calc.realLength.toFixed(0);
+
+    results.blondelTitle.textContent = getTranslation(calc.blondelTitleKey);
+    results.blondelText.textContent = getTranslation(calc.blondelMessageKey, calc.blondelMessageVal);
+    results.blondelBox.className = `sc-blondel-alert ${calc.blondelStatus}`;
+
+    let tableHTML = '';
+    calc.tableRows.forEach(row => {
+      const extra = row.step === 1 ? ` <small>(${adjustedNote})</small>` : '';
+      tableHTML += `<tr><td>${row.step}</td><td class="sc-col-hl">${row.concreteHeight.toFixed(1)}${extra}</td><td>${row.finishedHeight.toFixed(1)}</td><td>${row.horizontalDistance.toFixed(1)}</td></tr>`;
+    });
+    results.tableBody.innerHTML = tableHTML;
+
+    const svgW = 500, svgH = 320, margin = 50;
+    const angleRad = Math.atan(H / (calc.realLength || 1));
+    const scale = Math.min((svgH - margin * 2) / H, (svgW - margin * 2) / (calc.realLength || 1));
+    const x0 = margin, y0 = svgH - margin;
+
+    let d_stair = `M ${x0} ${y0}`;
+    for (let i = 0; i < N; i++) {
+      d_stair += ` v -${calc.riser * scale} h ${calc.tread * scale}`;
+    }
+    results.svgPath.setAttribute('d', d_stair);
+
+    const slabYOff = slabE * scale / Math.cos(angleRad);
+    const dSlab = d_stair + ` L ${x0 + (calc.realLength * scale) + (calc.tread * scale)} ${y0 - (H * scale) + slabYOff} L ${x0} ${y0 + slabYOff} Z`;
+    results.slabPath.setAttribute('d', dSlab);
+
+    if (ceilingH > 0) {
+      const cy = y0 - (ceilingH * scale);
+      results.ceilingLine.setAttribute('x1', String(x0));
+      results.ceilingLine.setAttribute('y1', String(cy));
+      results.ceilingLine.setAttribute('x2', String(x0 + calc.realLength * scale));
+      results.ceilingLine.setAttribute('y2', String(cy));
+    } else {
+      results.ceilingLine.setAttribute('x1', '0');
+    }
+    results.warningText.textContent = calc.spacingWarningKey ? getTranslation(calc.spacingWarningKey) : '';
+
+    const arcR = 40;
+    results.angleArc.setAttribute('d', `M ${x0 + arcR} ${y0} A ${arcR} ${arcR} 0 0 0 ${x0 + arcR * Math.cos(angleRad)} ${y0 - arcR * Math.sin(angleRad)}`);
+    results.angleText.setAttribute('x', String(x0 + arcR + 5));
+    results.angleText.setAttribute('y', String(y0 - 5));
+    results.angleText.textContent = `${calc.angle.toFixed(0)}°`;
+
+    results.matVol.textContent = calc.volume.toFixed(2);
+    results.matCement.textContent = calc.cement.toString();
+    results.matSand.textContent = calc.sand.toString();
+  }
+
+  document.querySelectorAll('.sc-step-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const inputId = btn.getAttribute('data-input');
+      if (!inputId) return;
+      const input = document.getElementById(inputId) as HTMLInputElement;
+      const step = parseFloat(input.getAttribute('step') || '1');
+      const val = parseFloat(input.value);
+      const min = parseFloat(input.getAttribute('min') || '0');
+      input.value = (btn.classList.contains('plus') ? (val + step) : Math.max(min, val - step)).toString();
+      updateCalculations();
+    });
+  });
+
+  document.getElementById('sc-btn-optimize')?.addEventListener('click', () => {
+    const H_val = parseFloat(inputs.h.value) || 0;
+    if (H_val > 0) {
+      inputs.n.value = Math.round(H_val / 18).toString();
+      updateCalculations();
+    }
+  });
+
+  Object.values(inputs).forEach(input => input?.addEventListener('input', updateCalculations));
+
+  document.getElementById('sc-btn-share')?.addEventListener('click', () => {
+    const ui = JSON.parse(rootEl.getAttribute('data-ui') || '{}');
+    const msg = (ui.shareMessage || '')
+      .replace('{h}', inputs.h.value)
+      .replace('{n}', inputs.n.value)
+      .replace('{ch}', results.riser.textContent || '0')
+      .replace('{vol}', results.matVol.textContent || '0');
+
+    if (navigator.share) {
+      navigator.share({ title: ui.shareTitle, text: msg }).catch(() => {});
+    } else {
+      alert(msg);
+    }
+  });
+
+  updateCalculations();
+</script>
+
+<style>
+  :root {
+    --sc-primary: #6366f1;
+    --sc-primary-dark: #4f46e5;
+    --sc-primary-light: #818cf8;
+    --sc-neutral: #1e293b;
+    --sc-neutral-light: #64748b;
+    --sc-border: #e2e8f0;
+    --sc-bg-light: #f8fafc;
+    --sc-bg-lighter: #f1f5f9;
+    --sc-bg: #ffffff;
+  }
+
+  :global(.theme-dark) {
+    --sc-primary: #818cf8;
+    --sc-primary-dark: #6366f1;
+    --sc-neutral: #f1f5f9;
+    --sc-neutral-light: #9ca3af;
+    --sc-border: rgba(255, 255, 255, 0.1);
+    --sc-bg-light: rgba(255, 255, 255, 0.04);
+    --sc-bg-lighter: rgba(255, 255, 255, 0.02);
+    --sc-bg: rgba(255, 255, 255, 0.01);
+  }
+
+  .sc-root { width: 100%; max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; color: var(--sc-neutral); }
+  .sc-card { background: var(--sc-bg); border-radius: 2rem; overflow: hidden; display: grid; grid-template-columns: 350px 1fr; box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); border: 1px solid var(--sc-border); }
+  .sc-sidebar { background: var(--sc-bg-light); padding: 1.5rem; border-right: 1px solid var(--sc-border); display: flex; flex-direction: column; gap: 1rem; }
+  .sc-section h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--sc-primary); margin-bottom: 1rem; font-weight: 800; }
+  .sc-main { padding: 1.5rem 2rem; display: flex; flex-direction: column; gap: 1.5rem; background: var(--sc-bg); }
+  .sc-results-header { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .sc-stat-box { background: rgba(255, 255, 255, 0.5); padding: 0.75rem 0.5rem; border-radius: 1.25rem; text-align: center; border: 1px solid var(--sc-border); }
+  :global(.theme-dark) .sc-stat-box { background: rgba(255, 255, 255, 0.04); }
+  .sc-stat-label { display: block; font-size: 0.6rem; text-transform: uppercase; color: var(--sc-neutral-light); margin-bottom: 0.25rem; font-weight: 700; }
+  .sc-stat-value { font-size: 1.5rem; font-weight: 800; color: var(--sc-neutral); }
+  .sc-stat-unit { font-size: 0.75rem; color: var(--sc-neutral-light); }
+  .sc-visualizer-container { background: var(--sc-bg-lighter); border-radius: 1.5rem; padding: 1.5rem; position: relative; min-height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--sc-border); overflow: hidden; }
+  #sc-stair-svg { width: 100%; height: 100%; max-height: 400px; color: var(--sc-neutral); }
+  .sc-input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .sc-input-group { margin-bottom: 0.75rem; }
+  .sc-input-group label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--sc-neutral-light); margin-bottom: 0.4rem; }
+  .sc-stepper { display: flex; align-items: center; background: rgba(255, 255, 255, 0.5); border-radius: 1rem; border: 2px solid var(--sc-border); transition: all 0.2s ease; }
+  :global(.theme-dark) .sc-stepper { background: rgba(255, 255, 255, 0.04); }
+  .sc-stepper:focus-within { border-color: var(--sc-primary); box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1); }
+  .sc-step-btn { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--sc-neutral-light); font-size: 1.25rem; cursor: pointer; border-radius: 0.5rem; }
+  .sc-step-btn:hover { background: var(--sc-bg-lighter); color: var(--sc-primary); }
+  .sc-stepper input { flex: 1; background: none; border: none; color: var(--sc-neutral); text-align: center; font-size: 1.1rem; font-weight: 700; height: 44px; padding: 0; appearance: textfield; }
+  .sc-stepper input::-webkit-outer-spin-button, .sc-stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .sc-select { width: 100%; padding: 0.8rem; border-radius: 1rem; border: 2px solid var(--sc-border); background: rgba(255, 255, 255, 0.5); font-weight: 600; font-size: 0.95rem; color: var(--sc-neutral); outline: none; transition: all 0.2s ease; }
+  :global(.theme-dark) .sc-select { background: rgba(255, 255, 255, 0.04); }
+  .sc-optimize-btn { width: 100%; padding: 0.75rem; background: var(--sc-primary-dark); color: white; border: none; border-radius: 0.75rem; font-weight: 700; cursor: pointer; margin-top: 0.5rem; font-size: 0.85rem; }
+  .sc-blondel-alert { padding: 1rem; border-radius: 1rem; font-weight: 700; display: flex; flex-direction: column; gap: 0.4rem; margin-top: auto; }
+  .sc-blondel-title { font-size: 0.65rem; text-transform: uppercase; opacity: 0.8; }
+  .sc-blondel-msg { font-size: 0.85rem; }
+  .sc-blondel-alert.success { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+  .sc-blondel-alert.warning { background: #fef9c3; color: #854d0e; border: 1px solid #fef08a; }
+  .sc-blondel-alert.error { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+  .sc-bottom-grid { display: grid; grid-template-columns: 1fr 300px; gap: 1.25rem; }
+  .sc-table-card { background: rgba(255, 255, 255, 0.5); border-radius: 1.25rem; padding: 1.25rem; border: 1px solid var(--sc-border); }
+  :global(.theme-dark) .sc-table-card { background: rgba(255, 255, 255, 0.03); }
+  .sc-table-card h3 { font-size: 0.8rem; text-transform: uppercase; color: var(--sc-neutral-light); font-weight: 800; margin-bottom: 0.75rem; }
+  .sc-table-wrapper { max-height: 220px; overflow-y: auto; }
+  :global(.sc-table-wrapper table) { width: 100%; }
+  :global(.sc-table-wrapper th) { text-align: left; font-size: 0.55rem; text-transform: uppercase; color: var(--sc-neutral-light); padding: 0.4rem 0.2rem; background: transparent; }
+  :global(.sc-table-wrapper td) { padding: 0.6rem 0.2rem; border-bottom: 1px solid var(--sc-border); font-size: 0.8rem; color: var(--sc-neutral); }
+  .sc-col-hl { color: var(--sc-primary); font-weight: 700; }
+  .sc-materials-card { background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%); color: var(--sc-neutral); border-radius: 1.25rem; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; border: 1px solid var(--sc-primary); }
+  :global(.theme-dark) .sc-materials-card { background: rgba(129, 140, 248, 0.08); }
+  .sc-materials-card h3 { font-size: 0.8rem; text-transform: uppercase; color: var(--sc-primary); font-weight: 800; margin-bottom: 0.5rem; }
+  .sc-material-row { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 0.4rem; border-bottom: 1px solid var(--sc-border); }
+  .sc-material-row span { font-size: 0.7rem; color: var(--sc-neutral-light); }
+  .sc-material-row strong { font-size: 1.15rem; color: var(--sc-primary); }
+  .sc-actions-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: auto; }
+  .sc-action-btn { padding: 0.75rem; border-radius: 0.75rem; font-weight: 800; font-size: 0.8rem; border: none; cursor: pointer; }
+  .sc-btn-primary { background: var(--sc-primary-dark); color: white; }
+  .sc-btn-secondary { background: rgba(255, 255, 255, 0.1); color: white; }
+
+  @media (max-width: 1000px) {
+    .sc-card { grid-template-columns: 1fr; border-radius: 1.5rem; }
+    .sc-sidebar { border-right: none; border-bottom: 1px solid var(--sc-border); padding: 1.25rem; }
+    .sc-main { padding: 1.25rem; }
+  }
+
+  @media (max-width: 768px) {
+    .sc-root { margin: 1rem auto; padding: 0 0.75rem; }
+    .sc-results-header { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+    .sc-bottom-grid { grid-template-columns: 1fr; }
+    .sc-stat-value { font-size: 1.25rem; }
+    .sc-stat-box { padding: 0.5rem; }
+    .sc-visualizer-container { min-height: 250px; padding: 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .sc-results-header { gap: 0.4rem; }
+    .sc-stat-box { padding: 0.4rem; border-radius: 1rem; }
+    .sc-stat-value { font-size: 1.1rem; }
+    .sc-material-row strong { font-size: 1rem; }
+  }
+</style>

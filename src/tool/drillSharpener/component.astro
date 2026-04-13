@@ -1,0 +1,550 @@
+---
+import type { DrillSharpenerUI } from './ui';
+interface Props { ui?: DrillSharpenerUI; }
+const { ui } = Astro.props;
+const t = (ui ?? {}) as DrillSharpenerUI;
+---
+
+<div class="ds-root" id="drill-app">
+  <div class="ds-layout">
+    <section class="ds-gauge">
+      <svg class="ds-svg" viewBox="0 0 500 500" id="gauge-svg">
+        <line x1="250" y1="20" x2="250" y2="480" stroke="currentColor" stroke-width="2" stroke-dasharray="10,10" />
+        <line x1="20" y1="250" x2="480" y2="250" stroke="currentColor" stroke-width="1" stroke-dasharray="10,10" />
+        <rect x="249" y="250" width="2" height="230" fill="currentColor" rx="1" />
+        <g class="ds-guide-circles" fill="none" stroke="currentColor" stroke-width="1">
+          <circle cx="250" cy="250" r="30" data-val="3" />
+          <circle cx="250" cy="250" r="60" data-val="6" />
+          <circle cx="250" cy="250" r="100" data-val="10" />
+          <circle cx="250" cy="250" r="130" data-val="13" />
+          <circle cx="250" cy="250" r="200" data-val="20" />
+        </g>
+        <g id="ds-gauge-lines" class="ds-gauge-lines">
+          <line id="gl" x1="250" y1="250" x2="50" y2="100" stroke="var(--ds-accent)" stroke-width="3" stroke-linecap="round" />
+          <line id="gr" x1="250" y1="250" x2="450" y2="100" stroke="var(--ds-accent)" stroke-width="3" stroke-linecap="round" />
+          <circle cx="250" cy="250" r="6" fill="var(--ds-accent)" />
+        </g>
+        <text id="ds-angle-text" x="250" y="235" text-anchor="middle" fill="var(--ds-accent)" font-size="28" font-weight="900">118°</text>
+      </svg>
+      <div class="ds-instruction">
+        <span>{t.gaugeInstruction}</span>
+      </div>
+    </section>
+
+    <aside class="ds-controls">
+      <div class="ds-group">
+        <h4>{t.labelMaterial}</h4>
+        <div class="ds-material-grid">
+          <button class="ds-mat-btn active" data-angle="118" data-vc="25" data-label="Acero / Hierro" data-id="steel">{t.matSteel}</button>
+          <button class="ds-mat-btn" data-angle="135" data-vc="12" data-label="Inoxidable" data-id="inox">{t.matInox}</button>
+          <button class="ds-mat-btn" data-angle="140" data-vc="8" data-label="Aceros Duros" data-id="hard">{t.matHard}</button>
+          <button class="ds-mat-btn" data-angle="90" data-vc="40" data-label="Latón / Cobre" data-id="brass">{t.matBrass}</button>
+          <button class="ds-mat-btn" data-angle="60" data-vc="60" data-label="Plásticos" data-id="plastic">{t.matPlastic}</button>
+          <button class="ds-mat-btn" data-angle="80" data-vc="35" data-label="Madera" data-id="wood">{t.matWood}</button>
+        </div>
+      </div>
+
+      <div class="ds-group">
+        <h4>{t.labelDiameter}</h4>
+        <div class="ds-stepper">
+          <button type="button" class="ds-step-btn" id="btn-minus">−</button>
+          <input type="number" id="diam-input" value="10" step="0.5" min="1" max="50">
+          <button type="button" class="ds-step-btn" id="btn-plus">+</button>
+        </div>
+
+        <div class="ds-results">
+          <div class="ds-res-item">
+            <span class="ds-res-label">{t.labelVelocity}</span>
+            <div class="ds-res-value-box">
+              <span class="ds-res-value" id="rpm-display">796</span>
+              <span class="ds-res-unit">{t.unitRpm}</span>
+            </div>
+          </div>
+          <div class="ds-res-item">
+            <span class="ds-res-label">{t.labelCooling}</span>
+            <div class="ds-res-value-box">
+              <span class="ds-res-value" id="cooling-display" style="font-size: 0.8rem; color: var(--ds-accent);">TALADRINA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="ds-diag-btn" id="trigger-diag" title="Si la broca no corta, pulsa aquí">
+        🔧 {t.btnDiagnosis}
+      </button>
+    </aside>
+  </div>
+
+  <div class="ds-modal" id="diag-modal">
+    <div class="ds-modal-header">
+      <h3>{t.diagTitle}</h3>
+      <button type="button" class="ds-modal-close" id="close-modal">×</button>
+    </div>
+
+    <div class="ds-diag-item">
+      <strong>{t.diagIssue1}</strong>
+      <p>{t.diagIssue1Desc}</p>
+      <div class="ds-diag-img">
+        <svg viewBox="0 0 160 60" width="100%">
+          <path d="M10,45 L40,15 L70,45 Z" fill="none" stroke="#ef4444" stroke-width="2" />
+          <line x1="40" y1="15" x2="70" y2="15" stroke="#ef444430" stroke-width="1" stroke-dasharray="3,3" />
+          <path d="M90,45 L120,15 L150,25 L150,45 Z" fill="none" stroke="#22c55e" stroke-width="2" />
+          <line x1="120" y1="15" x2="150" y2="15" stroke="#22c55e30" stroke-width="1" stroke-dasharray="3,3" />
+          <text x="10" y="58" fill="#ef4444" font-size="7">MAL: Plano</text>
+          <text x="90" y="58" fill="#22c55e" font-size="7">OK: Destalonado</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ds-diag-item">
+      <strong>{t.diagIssue2}</strong>
+      <p>{t.diagIssue2Desc}</p>
+    </div>
+
+    <div class="ds-diag-item">
+      <strong>{t.diagIssue3}</strong>
+      <p>{t.diagIssue3Desc}</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { calculateSharpener, MATERIALS } from './engine';
+
+  const state = { angle: 118, vc: 25, diameter: 10, materialId: 'steel' };
+
+  const ui = {
+    gaugeL: document.getElementById('gl') as SVGLineElement,
+    gaugeR: document.getElementById('gr') as SVGLineElement,
+    angleText: document.getElementById('ds-angle-text') as SVGTextElement,
+    rpmDisplay: document.getElementById('rpm-display') as HTMLElement,
+    coolingDisplay: document.getElementById('cooling-display') as HTMLElement,
+    diamInput: document.getElementById('diam-input') as HTMLInputElement,
+    btnMinus: document.getElementById('btn-minus') as HTMLElement,
+    btnPlus: document.getElementById('btn-plus') as HTMLElement,
+    diagTrigger: document.getElementById('trigger-diag') as HTMLElement,
+    modal: document.getElementById('diag-modal') as HTMLElement,
+    modalClose: document.getElementById('close-modal') as HTMLElement
+  };
+
+  function updateGauge() {
+    if (!ui.gaugeL || !ui.gaugeR) return;
+    const halfRad = (state.angle / 2) * (Math.PI / 180);
+    const len = 250;
+    const lx2 = 250 - Math.sin(halfRad) * len;
+    const ly2 = 250 + Math.cos(halfRad) * len;
+    const rx2 = 250 + Math.sin(halfRad) * len;
+    const ry2 = 250 + Math.cos(halfRad) * len;
+
+    ui.gaugeL.setAttribute('x2', lx2.toString());
+    ui.gaugeL.setAttribute('y2', ly2.toString());
+    ui.gaugeR.setAttribute('x2', rx2.toString());
+    ui.gaugeR.setAttribute('y2', ry2.toString());
+    if (ui.angleText) ui.angleText.textContent = `${state.angle}°`;
+  }
+
+  function updateResults() {
+    const result = calculateSharpener(state.materialId, state.diameter);
+    if (ui.rpmDisplay) ui.rpmDisplay.textContent = result.rpm.toLocaleString();
+    if (ui.coolingDisplay) ui.coolingDisplay.textContent = result.cooling;
+  }
+
+  function refresh() {
+    updateGauge();
+    updateResults();
+  }
+
+  document.querySelectorAll('.ds-mat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.ds-mat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.angle = parseInt(btn.getAttribute('data-angle') || '118');
+      state.vc = parseInt(btn.getAttribute('data-vc') || '25');
+      state.materialId = btn.getAttribute('data-id') || 'steel';
+      refresh();
+    });
+  });
+
+  ui.diamInput?.addEventListener('input', () => {
+    state.diameter = parseFloat(ui.diamInput.value) || 1;
+    refresh();
+  });
+
+  ui.btnMinus?.addEventListener('click', () => {
+    const v = Math.max(1, parseFloat(ui.diamInput.value) - 0.5);
+    ui.diamInput.value = v.toString();
+    state.diameter = v;
+    refresh();
+  });
+
+  ui.btnPlus?.addEventListener('click', () => {
+    const v = Math.min(50, parseFloat(ui.diamInput.value) + 0.5);
+    ui.diamInput.value = v.toString();
+    state.diameter = v;
+    refresh();
+  });
+
+  ui.diagTrigger?.addEventListener('click', () => ui.modal?.classList.add('active'));
+  ui.modalClose?.addEventListener('click', () => ui.modal?.classList.remove('active'));
+
+  refresh();
+</script>
+
+<style>
+  :root {
+    --ds-primary: #38bdf8;
+    --ds-accent: #38bdf8;
+    --ds-text: #f8fafc;
+    --ds-text-muted: #94a3b8;
+    --ds-bg-dark: #000000;
+    --ds-bg-panel: #0a0f1d;
+    --ds-border: #1e293b;
+    --ds-button-bg: #1e293b;
+    --ds-button-hover: #334155;
+  }
+
+  :global(.theme-light) {
+    --ds-primary: #0ea5e9;
+    --ds-accent: #0ea5e9;
+    --ds-text: #1e293b;
+    --ds-text-muted: #64748b;
+    --ds-bg-dark: #ffffff;
+    --ds-bg-panel: #f8fafc;
+    --ds-border: #e2e8f0;
+    --ds-button-bg: #f1f5f9;
+    --ds-button-hover: #e2e8f0;
+  }
+
+  .ds-root {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    color: var(--ds-text);
+  }
+
+  .ds-layout {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 1.5rem;
+    background: var(--ds-bg-dark);
+    border-radius: 2.5rem;
+    padding: 2rem;
+    border: 1px solid var(--ds-border);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .ds-gauge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, var(--ds-bg-panel) 0%, var(--ds-bg-dark) 70%);
+    border-radius: 2rem;
+    min-height: 550px;
+    border: 1px solid var(--ds-border);
+  }
+
+  .ds-svg {
+    width: 95%;
+    height: 95%;
+    max-height: 600px;
+    color: var(--ds-text);
+  }
+
+  .ds-gauge-lines {
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.5));
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .ds-instruction {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .ds-instruction span {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--ds-accent);
+    padding: 0.6rem 2rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  .ds-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ds-group {
+    background: var(--ds-bg-panel);
+    padding: 1.25rem;
+    border-radius: 1.5rem;
+    border: 1px solid var(--ds-border);
+  }
+
+  .ds-group h4 {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--ds-text-muted);
+    margin-bottom: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+  }
+
+  .ds-material-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .ds-mat-btn {
+    background: var(--ds-button-bg);
+    border: 1px solid var(--ds-border);
+    border-radius: 1.25rem;
+    padding: 1rem 0.5rem;
+    color: var(--ds-text-muted);
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .ds-mat-btn.active {
+    background: var(--ds-accent);
+    color: var(--ds-bg-dark);
+    border-color: var(--ds-accent);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  }
+
+  .ds-stepper {
+    display: flex;
+    align-items: center;
+    background: var(--ds-bg-dark);
+    border-radius: 1.25rem;
+    padding: 0.4rem;
+    border: 1px solid var(--ds-border);
+  }
+
+  .ds-step-btn {
+    width: 54px;
+    height: 54px;
+    background: var(--ds-button-bg);
+    border: none;
+    color: var(--ds-text);
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .ds-step-btn:active {
+    transform: scale(0.95);
+    background: var(--ds-button-hover);
+  }
+
+  .ds-stepper input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--ds-accent);
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 950;
+    width: 60px;
+    outline: none;
+  }
+
+  .ds-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .ds-res-item {
+    background: var(--ds-bg-dark);
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid var(--ds-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ds-res-label {
+    font-size: 0.65rem;
+    color: var(--ds-text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .ds-res-value-box {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+  }
+
+  .ds-res-value {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--ds-text);
+  }
+
+  .ds-res-unit {
+    font-size: 0.7rem;
+    color: var(--ds-accent);
+    font-weight: 800;
+  }
+
+  .ds-diag-btn {
+    width: 100%;
+    padding: 1.25rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px dashed rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    border-radius: 1.5rem;
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .ds-diag-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-style: solid;
+  }
+
+  .ds-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--ds-bg-panel);
+    border: 1px solid var(--ds-border);
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    z-index: 1000;
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  }
+
+  .ds-modal.active {
+    display: block;
+    animation: ds-modalIn 0.3s ease-out;
+  }
+
+  @keyframes ds-modalIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -45%) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .ds-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--ds-border);
+    padding-bottom: 1rem;
+  }
+
+  .ds-modal-header h3 {
+    font-size: 1rem;
+    color: #ef4444;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .ds-modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--ds-text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ds-modal-close:hover {
+    color: var(--ds-text);
+  }
+
+  .ds-diag-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .ds-diag-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .ds-diag-item strong {
+    color: var(--ds-accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+
+  .ds-diag-item p {
+    font-size: 0.75rem;
+    color: var(--ds-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .ds-diag-img {
+    background: var(--ds-bg-dark);
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--ds-border);
+  }
+
+  @media (max-width: 1000px) {
+    .ds-layout {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+    .ds-gauge {
+      min-height: 400px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ds-mat-btn {
+      font-size: 0.7rem;
+      padding: 0.75rem 0.25rem;
+    }
+    .ds-step-btn {
+      width: 44px;
+      height: 44px;
+    }
+  }
+</style>
