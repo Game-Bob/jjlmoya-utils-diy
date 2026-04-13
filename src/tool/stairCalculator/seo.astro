@@ -99,23 +99,113 @@ Espesor Rampa: 15 cm
 </article>
 
 <style>
-    .sc-seo-article { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; color: #1e293b; line-height: 1.6; }
-    .sc-seo-article h2 { font-size: 1.875rem; font-weight: 800; margin: 1.5rem 0 1rem; color: #0f172a; }
-    .sc-seo-article h3 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.75rem; color: #1e293b; }
-    .sc-seo-article h4 { font-size: 1rem; font-weight: 700; margin: 0.75rem 0 0.5rem; }
-    .sc-seo-article p { margin-bottom: 1rem; }
-    .sc-seo-summary { background: #f0f9ff; border-left: 4px solid #4f46e5; padding: 1.25rem; border-radius: 0.5rem; margin: 1.25rem 0; }
-    .sc-seo-summary ul { margin: 0.75rem 0 0; padding-left: 1.5rem; }
-    .sc-seo-summary li { margin-bottom: 0.5rem; }
-    .sc-seo-tip { background: #fef9c3; border-left: 4px solid #f59e0b; padding: 1.25rem; border-radius: 0.5rem; margin: 1.25rem 0; }
-    .sc-seo-tip p { margin: 0; }
-    .sc-seo-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
-    .sc-stat { background: #fff; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; text-align: center; }
-    .sc-stat-label { display: block; font-size: 0.8rem; color: #64748b; margin-bottom: 0.5rem; font-weight: 600; }
-    .sc-stat-value { display: block; font-size: 1.875rem; font-weight: 800; color: #4f46e5; }
-    .sc-stat-unit { display: block; font-size: 0.75rem; color: #64748b; margin-top: 0.25rem; }
-    .sc-seo-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; border: 1px solid #e2e8f0; }
-    .sc-seo-table th { background: #f1f5f9; padding: 0.75rem; text-align: left; font-weight: 700; border-bottom: 2px solid #e2e8f0; }
-    .sc-seo-table td { padding: 0.75rem; border-bottom: 1px solid #e2e8f0; }
-    .sc-seo-code { background: #1e293b; color: #e2e8f0; padding: 1.25rem; border-radius: 0.75rem; overflow-x: auto; margin: 1.25rem 0; font-size: 0.9rem; }
+    .sc-seo-article {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+    .sc-seo-article h2 {
+      font-size: 1.875rem;
+      font-weight: 800;
+      margin: 1.5rem 0 1rem;
+      color: #0f172a;
+    }
+    .sc-seo-article h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 1.5rem 0 0.75rem;
+      color: #1e293b;
+    }
+    .sc-seo-article h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0.75rem 0 0.5rem;
+    }
+    .sc-seo-article p {
+      margin-bottom: 1rem;
+    }
+    .sc-seo-summary {
+      background: #f0f9ff;
+      border-left: 4px solid #4f46e5;
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      margin: 1.25rem 0;
+    }
+    .sc-seo-summary ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.5rem;
+    }
+    .sc-seo-summary li {
+      margin-bottom: 0.5rem;
+    }
+    .sc-seo-tip {
+      background: #fef9c3;
+      border-left: 4px solid #f59e0b;
+      padding: 1.25rem;
+      border-radius: 0.5rem;
+      margin: 1.25rem 0;
+    }
+    .sc-seo-tip p {
+      margin: 0;
+    }
+    .sc-seo-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    .sc-stat {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1rem;
+      text-align: center;
+    }
+    .sc-stat-label {
+      display: block;
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    .sc-stat-value {
+      display: block;
+      font-size: 1.875rem;
+      font-weight: 800;
+      color: #4f46e5;
+    }
+    .sc-stat-unit {
+      display: block;
+      font-size: 0.75rem;
+      color: #64748b;
+      margin-top: 0.25rem;
+    }
+    .sc-seo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      border: 1px solid #e2e8f0;
+    }
+    .sc-seo-table th {
+      background: #f1f5f9;
+      padding: 0.75rem;
+      text-align: left;
+      font-weight: 700;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .sc-seo-table td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .sc-seo-code {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      font-size: 0.9rem;
+    }
 </style>
