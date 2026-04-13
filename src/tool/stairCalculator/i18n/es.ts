@@ -95,15 +95,12 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Un detalle crítico: ¿vas a instalar peldaños de granito de 3 cm? Este dato es fundamental. Si no se prevé correctamente, el primer peldaño quedará 3 cm más alto y el último 3 cm más bajo, creando un riesgo de seguridad real.' },
   ],
   ui: {
-    // Geometría
     labelGeometry: 'Geometría y Hueco',
     labelTotalHeight: 'Desnivel Total (H)',
     labelAvailableLength: 'Longitud Disponible (L)',
     labelAvailableLengthHint: 'Usa 0 para cálculo libre.',
     labelNumSteps: 'Nº Peldaños',
     labelOptimize: 'Optimizar (18cm)',
-
-    // Obra
     labelWork: 'Obra e Instalación',
     labelSlabThickness: 'Losa (e)',
     labelFinishThickness: 'Acabado',
@@ -113,22 +110,16 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     optionH150: 'H-150 (Limpieza)',
     optionH200: 'H-200 (Vivienda)',
     optionH250: 'H-250 (Estructural)',
-
-    // Resultados
     labelRiser: 'Contrahuella',
     labelTread: 'Huella',
     labelSlope: 'Pendiente',
     labelRealAdvance: 'Avance Real',
-
-    // Tabla
     labelLayoutTable: 'Replanteo y Ejecución',
     colStep: 'Peldaño',
     colConcreteHeight: 'H. Hormigón',
     colFinishedHeight: 'H. Terminada',
     colAdvance: 'Avance',
     adjustedNote: 'Ajustado',
-
-    // Materiales
     labelMaterials: 'Cubicación y Pedido',
     labelTotalConcrete: 'Hormigón Total:',
     labelCement: 'Cemento (sacos/25kg):',
@@ -136,12 +127,8 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     unitM3: 'm³',
     unitBags: 'sacos',
     unitLiters: 'L',
-
-    // Botones
     btnShare: 'Compartir',
     btnPrint: 'Imprimir PDF',
-
-    // Estados Blondel
     statusOptimalComfort: 'Confort Óptimo',
     statusMarginLimit: 'Margen Límite',
     statusCriticalDesign: 'Diseño Crítico',

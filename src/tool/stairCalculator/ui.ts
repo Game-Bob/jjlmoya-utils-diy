@@ -1,13 +1,10 @@
 export interface StairCalculatorUI {
-  // Geometría
   labelGeometry: string;
   labelTotalHeight: string;
   labelAvailableLength: string;
   labelAvailableLengthHint: string;
   labelNumSteps: string;
   labelOptimize: string;
-
-  // Obra
   labelWork: string;
   labelSlabThickness: string;
   labelFinishThickness: string;
@@ -17,22 +14,16 @@ export interface StairCalculatorUI {
   optionH150: string;
   optionH200: string;
   optionH250: string;
-
-  // Resultados
   labelRiser: string;
   labelTread: string;
   labelSlope: string;
   labelRealAdvance: string;
-
-  // Tabla
   labelLayoutTable: string;
   colStep: string;
   colConcreteHeight: string;
   colFinishedHeight: string;
   colAdvance: string;
   adjustedNote: string;
-
-  // Materiales
   labelMaterials: string;
   labelTotalConcrete: string;
   labelCement: string;
@@ -40,18 +31,12 @@ export interface StairCalculatorUI {
   unitM3: string;
   unitBags: string;
   unitLiters: string;
-
-  // Botones
   btnShare: string;
   btnPrint: string;
-
-  // Estados Blondel
   statusOptimalComfort: string;
   statusMarginLimit: string;
   statusCriticalDesign: string;
   statusRiserError: string;
-
-  // Mensajes detalle
   msgInvalidValues: string;
   msgInsufficientSpace: string;
   msgDangerousTread: string;
@@ -60,8 +45,6 @@ export interface StairCalculatorUI {
   msgLowCeiling: string;
   msgCalculating: string;
   msgEnterMeasurements: string;
-
-  // Share
   shareTitle: string;
   shareMessage: string;
 }

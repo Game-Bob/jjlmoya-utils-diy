@@ -95,15 +95,12 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'A critical detail: are you installing 3 cm granite steps? This data is fundamental. If not properly accounted for, the first step will be 3 cm higher and the last 3 cm lower, creating a real safety hazard.' },
   ],
   ui: {
-    // Geometry
     labelGeometry: 'Geometry and Opening',
     labelTotalHeight: 'Total Height Difference (H)',
     labelAvailableLength: 'Available Length (L)',
     labelAvailableLengthHint: 'Use 0 for free calculation.',
     labelNumSteps: 'Number of Steps',
     labelOptimize: 'Optimize (18cm)',
-
-    // Work
     labelWork: 'Construction Details',
     labelSlabThickness: 'Slab (e)',
     labelFinishThickness: 'Finish',
@@ -113,22 +110,16 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     optionH150: 'H-150 (Lean)',
     optionH200: 'H-200 (Residential)',
     optionH250: 'H-250 (Structural)',
-
-    // Results
     labelRiser: 'Riser',
     labelTread: 'Tread',
     labelSlope: 'Slope',
     labelRealAdvance: 'Actual Run',
-
-    // Table
     labelLayoutTable: 'Layout and Execution',
     colStep: 'Step',
     colConcreteHeight: 'Concrete Height',
     colFinishedHeight: 'Finished Height',
     colAdvance: 'Run',
     adjustedNote: 'Adjusted',
-
-    // Materials
     labelMaterials: 'Material Estimate',
     labelTotalConcrete: 'Total Concrete:',
     labelCement: 'Cement (bags/25kg):',
@@ -136,12 +127,8 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     unitM3: 'm³',
     unitBags: 'bags',
     unitLiters: 'L',
-
-    // Buttons
     btnShare: 'Share',
     btnPrint: 'Print PDF',
-
-    // Blondel Status
     statusOptimalComfort: 'Optimal Comfort',
     statusMarginLimit: 'Margin Limit',
     statusCriticalDesign: 'Critical Design',

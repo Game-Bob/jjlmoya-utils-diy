@@ -549,6 +549,7 @@ const t = (ui ?? {}) as DrillCalculatorUI;
     animation: dc-spin 2s linear infinite;
     animation-play-state: paused;
   }
+
   @keyframes dc-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
   .dc-status-row { min-height: 32px; display: flex; justify-content: center; margin-top: 0.5rem; gap: 0.5rem; }
@@ -559,8 +560,8 @@ const t = (ui ?? {}) as DrillCalculatorUI;
   :global(.dc-badge-alert) { background: rgba(239, 68, 68, 0.15); color: var(--dc-danger); }
   :global(.theme-dark .dc-badge-alert) { background: rgba(239, 68, 68, 0.25); }
   :global(.dc-badge-icon) { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: inherit; }
-  :global(.dc-badge-icon svg) { width: 100%; height: 100%; stroke: currentColor; fill: currentColor; }
-  :global(.dc-badge-icon path) { stroke: currentColor; fill: currentColor; }
+  :global(.dc-badge-icon svg) { width: 100%; height: 100%; stroke: currentcolor; fill: currentcolor; }
+  :global(.dc-badge-icon path) { stroke: currentcolor; fill: currentcolor; }
 
   .dc-tiles { display: grid; grid-template-columns: 1fr; gap: 1rem; }
   .dc-tile { padding: 1.5rem; background: rgba(255, 255, 255, 0.5); border: 1px solid rgba(255, 255, 255, 0.7); border-radius: 12px; display: flex; flex-direction: row; align-items: flex-start; gap: 1rem; transition: all 0.2s; }
@@ -675,6 +676,7 @@ const t = (ui ?? {}) as DrillCalculatorUI;
     text-align: center;
     animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   @keyframes slideInUp {
     from {
       opacity: 0;

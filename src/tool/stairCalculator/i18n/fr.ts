@@ -95,15 +95,12 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Un détail critique: allez-vous installer des marches en granit de 3 cm? Cette donnée est fondamentale. Si elle n\'est pas correctement prévue, la première marche sera 3 cm plus haute et la dernière 3 cm plus basse, créant un vrai risque de sécurité.' },
   ],
   ui: {
-    // Géométrie
     labelGeometry: 'Géométrie et Ouverture',
     labelTotalHeight: 'Dénivellation Totale (H)',
     labelAvailableLength: 'Longueur Disponible (L)',
     labelAvailableLengthHint: 'Utilisez 0 pour calcul libre.',
     labelNumSteps: 'Nombre de Marches',
     labelOptimize: 'Optimiser (18cm)',
-
-    // Travail
     labelWork: 'Détails de Construction',
     labelSlabThickness: 'Dalle (e)',
     labelFinishThickness: 'Finition',
@@ -113,22 +110,16 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     optionH150: 'H-150 (Béton Maigre)',
     optionH200: 'H-200 (Résidentiel)',
     optionH250: 'H-250 (Structurel)',
-
-    // Résultats
     labelRiser: 'Hauteur de Marche',
     labelTread: 'Giron',
     labelSlope: 'Pente',
     labelRealAdvance: 'Avance Réelle',
-
-    // Tableau
     labelLayoutTable: 'Mise en Plan et Exécution',
     colStep: 'Marche',
     colConcreteHeight: 'Hauteur Béton',
     colFinishedHeight: 'Hauteur Finie',
     colAdvance: 'Avance',
     adjustedNote: 'Ajusté',
-
-    // Matériaux
     labelMaterials: 'Estimation des Matériaux',
     labelTotalConcrete: 'Béton Total:',
     labelCement: 'Ciment (sacs/25kg):',
@@ -136,12 +127,8 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     unitM3: 'm³',
     unitBags: 'sacs',
     unitLiters: 'L',
-
-    // Boutons
     btnShare: 'Partager',
     btnPrint: 'Imprimer PDF',
-
-    // États Blondel
     statusOptimalComfort: 'Confort Optimal',
     statusMarginLimit: 'Limite Marge',
     statusCriticalDesign: 'Conception Critique',

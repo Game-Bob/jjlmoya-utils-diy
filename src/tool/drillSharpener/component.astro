@@ -70,7 +70,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
       </div>
 
       <button class="ds-diag-btn" id="trigger-diag" title="Si la broca no corta, pulsa aquí">
-        🔧 {t.btnDiagnosis}
+        {t.btnDiagnosis}
       </button>
     </aside>
   </div>
@@ -109,7 +109,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
 </div>
 
 <script>
-  import { calculateSharpener, MATERIALS } from './engine';
+  import { calculateSharpener } from './engine';
 
   const state = { angle: 118, vc: 25, diameter: 10, materialId: 'steel' };
 
@@ -196,7 +196,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     --ds-accent: #38bdf8;
     --ds-text: #f8fafc;
     --ds-text-muted: #94a3b8;
-    --ds-bg-dark: #000000;
+    --ds-bg-dark: #000;
     --ds-bg-panel: #0a0f1d;
     --ds-border: #1e293b;
     --ds-button-bg: #1e293b;
@@ -208,7 +208,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     --ds-accent: #0ea5e9;
     --ds-text: #1e293b;
     --ds-text-muted: #64748b;
-    --ds-bg-dark: #ffffff;
+    --ds-bg-dark: #fff;
     --ds-bg-panel: #f8fafc;
     --ds-border: #e2e8f0;
     --ds-button-bg: #f1f5f9;

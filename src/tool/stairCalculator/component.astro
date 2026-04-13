@@ -196,6 +196,7 @@ const t = (ui ?? {}) as StairCalculatorUI;
     matSand: document.getElementById('sc-mat-sand') as HTMLElement
   };
 
+  // eslint-disable-next-line max-lines-per-function, complexity
   function updateCalculations() {
     const H = parseFloat(inputs.h.value) || 0;
     const L = parseFloat(inputs.l.value) || 0;
@@ -267,7 +268,6 @@ const t = (ui ?? {}) as StairCalculatorUI;
     results.matCement.textContent = calc.cement.toString();
     results.matSand.textContent = calc.sand.toString();
   }
-
   document.querySelectorAll('.sc-step-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       const inputId = btn.getAttribute('data-input');
@@ -319,7 +319,7 @@ const t = (ui ?? {}) as StairCalculatorUI;
     --sc-border: #e2e8f0;
     --sc-bg-light: #f8fafc;
     --sc-bg-lighter: #f1f5f9;
-    --sc-bg: #ffffff;
+    --sc-bg: #fff;
   }
 
   :global(.theme-dark) {
