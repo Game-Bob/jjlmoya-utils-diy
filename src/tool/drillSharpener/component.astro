@@ -1,6 +1,8 @@
 ---
-import type { DrillSharpenerUI } from './ui';
-interface Props { ui?: DrillSharpenerUI; }
+import type { DrillSharpenerUI } from "./ui";
+interface Props {
+  ui?: DrillSharpenerUI;
+}
 const { ui } = Astro.props;
 const t = (ui ?? {}) as DrillSharpenerUI;
 ---
@@ -9,22 +11,66 @@ const t = (ui ?? {}) as DrillSharpenerUI;
   <div class="ds-layout">
     <section class="ds-gauge">
       <svg class="ds-svg" viewBox="0 0 500 500" id="gauge-svg">
-        <line x1="250" y1="20" x2="250" y2="480" stroke="currentColor" stroke-width="2" stroke-dasharray="10,10" />
-        <line x1="20" y1="250" x2="480" y2="250" stroke="currentColor" stroke-width="1" stroke-dasharray="10,10" />
-        <rect x="249" y="250" width="2" height="230" fill="currentColor" rx="1" />
-        <g class="ds-guide-circles" fill="none" stroke="currentColor" stroke-width="1">
-          <circle cx="250" cy="250" r="30" data-val="3" />
-          <circle cx="250" cy="250" r="60" data-val="6" />
-          <circle cx="250" cy="250" r="100" data-val="10" />
-          <circle cx="250" cy="250" r="130" data-val="13" />
-          <circle cx="250" cy="250" r="200" data-val="20" />
+        <line
+          x1="250"
+          y1="20"
+          x2="250"
+          y2="480"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-dasharray="10,10"></line>
+        <line
+          x1="20"
+          y1="250"
+          x2="480"
+          y2="250"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-dasharray="10,10"></line>
+        <rect x="249" y="250" width="2" height="230" fill="currentColor" rx="1"
+        ></rect>
+        <g
+          class="ds-guide-circles"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+        >
+          <circle cx="250" cy="250" r="30" data-val="3"></circle>
+          <circle cx="250" cy="250" r="60" data-val="6"></circle>
+          <circle cx="250" cy="250" r="100" data-val="10"></circle>
+          <circle cx="250" cy="250" r="130" data-val="13"></circle>
+          <circle cx="250" cy="250" r="200" data-val="20"></circle>
         </g>
         <g id="ds-gauge-lines" class="ds-gauge-lines">
-          <line id="gl" x1="250" y1="250" x2="50" y2="100" stroke="var(--ds-accent)" stroke-width="3" stroke-linecap="round" />
-          <line id="gr" x1="250" y1="250" x2="450" y2="100" stroke="var(--ds-accent)" stroke-width="3" stroke-linecap="round" />
-          <circle cx="250" cy="250" r="6" fill="var(--ds-accent)" />
+          <line
+            id="gl"
+            x1="250"
+            y1="250"
+            x2="50"
+            y2="100"
+            stroke="var(--ds-accent)"
+            stroke-width="3"
+            stroke-linecap="round"></line>
+          <line
+            id="gr"
+            x1="250"
+            y1="250"
+            x2="450"
+            y2="100"
+            stroke="var(--ds-accent)"
+            stroke-width="3"
+            stroke-linecap="round"></line>
+          <circle cx="250" cy="250" r="6" fill="var(--ds-accent)"></circle>
         </g>
-        <text id="ds-angle-text" x="250" y="235" text-anchor="middle" fill="var(--ds-accent)" font-size="28" font-weight="900">118°</text>
+        <text
+          id="ds-angle-text"
+          x="250"
+          y="235"
+          text-anchor="middle"
+          fill="var(--ds-accent)"
+          font-size="28"
+          font-weight="900">118°</text
+        >
       </svg>
       <div class="ds-instruction">
         <span>{t.gaugeInstruction}</span>
@@ -35,12 +81,48 @@ const t = (ui ?? {}) as DrillSharpenerUI;
       <div class="ds-group">
         <h4>{t.labelMaterial}</h4>
         <div class="ds-material-grid">
-          <button class="ds-mat-btn active" data-angle="118" data-vc="25" data-label="Acero / Hierro" data-id="steel">{t.matSteel}</button>
-          <button class="ds-mat-btn" data-angle="135" data-vc="12" data-label="Inoxidable" data-id="inox">{t.matInox}</button>
-          <button class="ds-mat-btn" data-angle="140" data-vc="8" data-label="Aceros Duros" data-id="hard">{t.matHard}</button>
-          <button class="ds-mat-btn" data-angle="90" data-vc="40" data-label="Latón / Cobre" data-id="brass">{t.matBrass}</button>
-          <button class="ds-mat-btn" data-angle="60" data-vc="60" data-label="Plásticos" data-id="plastic">{t.matPlastic}</button>
-          <button class="ds-mat-btn" data-angle="80" data-vc="35" data-label="Madera" data-id="wood">{t.matWood}</button>
+          <button
+            class="ds-mat-btn active"
+            data-angle="118"
+            data-vc="25"
+            data-label="Acero / Hierro"
+            data-id="steel">{t.matSteel}</button
+          >
+          <button
+            class="ds-mat-btn"
+            data-angle="135"
+            data-vc="12"
+            data-label="Inoxidable"
+            data-id="inox">{t.matInox}</button
+          >
+          <button
+            class="ds-mat-btn"
+            data-angle="140"
+            data-vc="8"
+            data-label="Aceros Duros"
+            data-id="hard">{t.matHard}</button
+          >
+          <button
+            class="ds-mat-btn"
+            data-angle="90"
+            data-vc="40"
+            data-label="Latón / Cobre"
+            data-id="brass">{t.matBrass}</button
+          >
+          <button
+            class="ds-mat-btn"
+            data-angle="60"
+            data-vc="60"
+            data-label="Plásticos"
+            data-id="plastic">{t.matPlastic}</button
+          >
+          <button
+            class="ds-mat-btn"
+            data-angle="80"
+            data-vc="35"
+            data-label="Madera"
+            data-id="wood">{t.matWood}</button
+          >
         </div>
       </div>
 
@@ -48,7 +130,14 @@ const t = (ui ?? {}) as DrillSharpenerUI;
         <h4>{t.labelDiameter}</h4>
         <div class="ds-stepper">
           <button type="button" class="ds-step-btn" id="btn-minus">−</button>
-          <input type="number" id="diam-input" value="10" step="0.5" min="1" max="50">
+          <input
+            type="number"
+            id="diam-input"
+            value="10"
+            step="0.5"
+            min="1"
+            max="50"
+          />
           <button type="button" class="ds-step-btn" id="btn-plus">+</button>
         </div>
 
@@ -63,13 +152,22 @@ const t = (ui ?? {}) as DrillSharpenerUI;
           <div class="ds-res-item">
             <span class="ds-res-label">{t.labelCooling}</span>
             <div class="ds-res-value-box">
-              <span class="ds-res-value" id="cooling-display" style="font-size: 0.8rem; color: var(--ds-accent);">TALADRINA</span>
+              <span
+                class="ds-res-value"
+                id="cooling-display"
+                style="font-size: 0.8rem; color: var(--ds-accent);"
+                >TALADRINA</span
+              >
             </div>
           </div>
         </div>
       </div>
 
-      <button class="ds-diag-btn" id="trigger-diag" title="Si la broca no corta, pulsa aquí">
+      <button
+        class="ds-diag-btn"
+        id="trigger-diag"
+        title="Si la broca no corta, pulsa aquí"
+      >
         {t.btnDiagnosis}
       </button>
     </aside>
@@ -86,12 +184,35 @@ const t = (ui ?? {}) as DrillSharpenerUI;
       <p>{t.diagIssue1Desc}</p>
       <div class="ds-diag-img">
         <svg viewBox="0 0 160 60" width="100%">
-          <path d="M10,45 L40,15 L70,45 Z" fill="none" stroke="#ef4444" stroke-width="2" />
-          <line x1="40" y1="15" x2="70" y2="15" stroke="#ef444430" stroke-width="1" stroke-dasharray="3,3" />
-          <path d="M90,45 L120,15 L150,25 L150,45 Z" fill="none" stroke="#22c55e" stroke-width="2" />
-          <line x1="120" y1="15" x2="150" y2="15" stroke="#22c55e30" stroke-width="1" stroke-dasharray="3,3" />
+          <path
+            d="M10,45 L40,15 L70,45 Z"
+            fill="none"
+            stroke="#ef4444"
+            stroke-width="2"></path>
+          <line
+            x1="40"
+            y1="15"
+            x2="70"
+            y2="15"
+            stroke="#ef444430"
+            stroke-width="1"
+            stroke-dasharray="3,3"></line>
+          <path
+            d="M90,45 L120,15 L150,25 L150,45 Z"
+            fill="none"
+            stroke="#22c55e"
+            stroke-width="2"></path>
+          <line
+            x1="120"
+            y1="15"
+            x2="150"
+            y2="15"
+            stroke="#22c55e30"
+            stroke-width="1"
+            stroke-dasharray="3,3"></line>
           <text x="10" y="58" fill="#ef4444" font-size="7">MAL: Plano</text>
-          <text x="90" y="58" fill="#22c55e" font-size="7">OK: Destalonado</text>
+          <text x="90" y="58" fill="#22c55e" font-size="7">OK: Destalonado</text
+          >
         </svg>
       </div>
     </div>
@@ -109,22 +230,22 @@ const t = (ui ?? {}) as DrillSharpenerUI;
 </div>
 
 <script>
-  import { calculateSharpener } from './engine';
+  import { calculateSharpener } from "./engine";
 
-  const state = { angle: 118, vc: 25, diameter: 10, materialId: 'steel' };
+  const state = { angle: 118, vc: 25, diameter: 10, materialId: "steel" };
 
   const ui = {
-    gaugeL: document.getElementById('gl') as SVGLineElement,
-    gaugeR: document.getElementById('gr') as SVGLineElement,
-    angleText: document.getElementById('ds-angle-text') as SVGTextElement,
-    rpmDisplay: document.getElementById('rpm-display') as HTMLElement,
-    coolingDisplay: document.getElementById('cooling-display') as HTMLElement,
-    diamInput: document.getElementById('diam-input') as HTMLInputElement,
-    btnMinus: document.getElementById('btn-minus') as HTMLElement,
-    btnPlus: document.getElementById('btn-plus') as HTMLElement,
-    diagTrigger: document.getElementById('trigger-diag') as HTMLElement,
-    modal: document.getElementById('diag-modal') as HTMLElement,
-    modalClose: document.getElementById('close-modal') as HTMLElement
+    gaugeL: document.getElementById("gl") as SVGLineElement,
+    gaugeR: document.getElementById("gr") as SVGLineElement,
+    angleText: document.getElementById("ds-angle-text") as SVGTextElement,
+    rpmDisplay: document.getElementById("rpm-display") as HTMLElement,
+    coolingDisplay: document.getElementById("cooling-display") as HTMLElement,
+    diamInput: document.getElementById("diam-input") as HTMLInputElement,
+    btnMinus: document.getElementById("btn-minus") as HTMLElement,
+    btnPlus: document.getElementById("btn-plus") as HTMLElement,
+    diagTrigger: document.getElementById("trigger-diag") as HTMLElement,
+    modal: document.getElementById("diag-modal") as HTMLElement,
+    modalClose: document.getElementById("close-modal") as HTMLElement,
   };
 
   function updateGauge() {
@@ -136,10 +257,10 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     const rx2 = 250 + Math.sin(halfRad) * len;
     const ry2 = 250 + Math.cos(halfRad) * len;
 
-    ui.gaugeL.setAttribute('x2', lx2.toString());
-    ui.gaugeL.setAttribute('y2', ly2.toString());
-    ui.gaugeR.setAttribute('x2', rx2.toString());
-    ui.gaugeR.setAttribute('y2', ry2.toString());
+    ui.gaugeL.setAttribute("x2", lx2.toString());
+    ui.gaugeL.setAttribute("y2", ly2.toString());
+    ui.gaugeR.setAttribute("x2", rx2.toString());
+    ui.gaugeR.setAttribute("y2", ry2.toString());
     if (ui.angleText) ui.angleText.textContent = `${state.angle}°`;
   }
 
@@ -154,38 +275,44 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     updateResults();
   }
 
-  document.querySelectorAll('.ds-mat-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.ds-mat-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      state.angle = parseInt(btn.getAttribute('data-angle') || '118');
-      state.vc = parseInt(btn.getAttribute('data-vc') || '25');
-      state.materialId = btn.getAttribute('data-id') || 'steel';
+  document.querySelectorAll(".ds-mat-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".ds-mat-btn")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.angle = parseInt(btn.getAttribute("data-angle") || "118");
+      state.vc = parseInt(btn.getAttribute("data-vc") || "25");
+      state.materialId = btn.getAttribute("data-id") || "steel";
       refresh();
     });
   });
 
-  ui.diamInput?.addEventListener('input', () => {
+  ui.diamInput?.addEventListener("input", () => {
     state.diameter = parseFloat(ui.diamInput.value) || 1;
     refresh();
   });
 
-  ui.btnMinus?.addEventListener('click', () => {
+  ui.btnMinus?.addEventListener("click", () => {
     const v = Math.max(1, parseFloat(ui.diamInput.value) - 0.5);
     ui.diamInput.value = v.toString();
     state.diameter = v;
     refresh();
   });
 
-  ui.btnPlus?.addEventListener('click', () => {
+  ui.btnPlus?.addEventListener("click", () => {
     const v = Math.min(50, parseFloat(ui.diamInput.value) + 0.5);
     ui.diamInput.value = v.toString();
     state.diameter = v;
     refresh();
   });
 
-  ui.diagTrigger?.addEventListener('click', () => ui.modal?.classList.add('active'));
-  ui.modalClose?.addEventListener('click', () => ui.modal?.classList.remove('active'));
+  ui.diagTrigger?.addEventListener("click", () =>
+    ui.modal?.classList.add("active"),
+  );
+  ui.modalClose?.addEventListener("click", () =>
+    ui.modal?.classList.remove("active"),
+  );
 
   refresh();
 </script>
@@ -204,15 +331,15 @@ const t = (ui ?? {}) as DrillSharpenerUI;
   }
 
   :global(.theme-light) {
-    --ds-primary: #0ea5e9;
-    --ds-accent: #0ea5e9;
-    --ds-text: #1e293b;
-    --ds-text-muted: #64748b;
-    --ds-bg-dark: #fff;
-    --ds-bg-panel: #f8fafc;
-    --ds-border: #e2e8f0;
-    --ds-button-bg: #f1f5f9;
-    --ds-button-hover: #e2e8f0;
+    --ds-primary: #0284c7;
+    --ds-accent: #0284c7;
+    --ds-text: #0f172a;
+    --ds-text-muted: #475569;
+    --ds-bg-dark: #f1f5f9;
+    --ds-bg-panel: #fff;
+    --ds-border: #cbd5e1;
+    --ds-button-bg: #e2e8f0;
+    --ds-button-hover: #cbd5e1;
   }
 
   .ds-root {
@@ -240,7 +367,11 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, var(--ds-bg-panel) 0%, var(--ds-bg-dark) 70%);
+    background: radial-gradient(
+      circle at center,
+      var(--ds-bg-panel) 0%,
+      var(--ds-bg-dark) 100%
+    );
     border-radius: 2rem;
     min-height: 550px;
     border: 1px solid var(--ds-border);
@@ -302,7 +433,7 @@ const t = (ui ?? {}) as DrillSharpenerUI;
 
   .ds-material-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 
@@ -361,9 +492,9 @@ const t = (ui ?? {}) as DrillSharpenerUI;
     border: none;
     color: var(--ds-accent);
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 950;
-    width: 60px;
+    width: 80px;
     outline: none;
   }
 
@@ -377,11 +508,12 @@ const t = (ui ?? {}) as DrillSharpenerUI;
   .ds-res-item {
     background: var(--ds-bg-dark);
     padding: 1.25rem;
-    border-radius: 1.25rem;
+    border-radius: 1.5rem;
     border: 1px solid var(--ds-border);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
   }
 
   .ds-res-label {
@@ -426,6 +558,10 @@ const t = (ui ?? {}) as DrillSharpenerUI;
   .ds-diag-btn:hover {
     background: rgba(239, 68, 68, 0.2);
     border-style: solid;
+    transform: translateY(-2px);
+  }
+  .ds-diag-btn:active {
+    transform: translateY(0);
   }
 
   .ds-modal {
