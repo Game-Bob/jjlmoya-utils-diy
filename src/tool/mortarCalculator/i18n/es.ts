@@ -2,7 +2,7 @@ import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'sche
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
 
-const slug = 'morteros-cal';
+const slug = 'morteros';
 const title = 'Proporciones Morteros de Cal Tradicionales: Enfoscados y Revocos';
 const description =
   'Calculadora gratuita para morteros de cal y arena. Obtén las proporciones exactas para enfoscados, revocos y enlucidos según métodos tradicionales (Vitruvio)';
