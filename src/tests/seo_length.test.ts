@@ -1,8 +1,11 @@
 import { describe, it, expect } from 'vitest';
 import * as DATA from '../data';
 
+import { ALL_TOOLS } from '../tools';
+
 const ENTRIES = [
   { id: 'diyCategory', i18n: DATA.diyCategory.i18n },
+  ...ALL_TOOLS.map(tool => ({ id: tool.entry.id, i18n: tool.entry.i18n }))
 ];
 
 describe('SEO Content Length Validation', () => {
