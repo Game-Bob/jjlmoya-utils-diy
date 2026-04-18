@@ -1,3 +1,4 @@
+import { drillSharpener } from './entry';
 export * from './entry';
 export const DRILL_SHARPENER_TOOL: ToolDefinition = {
   entry: drillSharpener,

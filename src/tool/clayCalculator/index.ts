@@ -1,3 +1,4 @@
+import { clayCalculator } from './entry';
 export * from './entry';
 export const CLAY_CALCULATOR_TOOL: ToolDefinition = {
   entry: clayCalculator,

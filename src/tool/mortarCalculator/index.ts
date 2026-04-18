@@ -1,3 +1,4 @@
+import { mortarCalculator } from './entry';
 export * from './entry';
 export const MORTAR_CALCULATOR_TOOL: ToolDefinition = {
   entry: mortarCalculator,

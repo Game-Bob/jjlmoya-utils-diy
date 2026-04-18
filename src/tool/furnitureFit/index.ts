@@ -1,3 +1,4 @@
+import { furnitureFit } from './entry';
 export * from './entry';
 export const FURNITURE_FIT_TOOL: ToolDefinition = {
   entry: furnitureFit,

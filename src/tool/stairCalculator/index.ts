@@ -1,3 +1,4 @@
+import { stairCalculator } from './entry';
 export * from './entry';
 export const STAIR_CALCULATOR_TOOL: ToolDefinition = {
   entry: stairCalculator,
