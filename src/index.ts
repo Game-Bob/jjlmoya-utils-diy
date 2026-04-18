@@ -15,7 +15,7 @@ export type {
   ToolDefinition,
 } from './types';
 
-export { ALL_TOOLS } from './tools';
+export { ALL_ENTRIES, ALL_TOOLS } from './tools';
 
 export { ClayCalculatorComponent, ClayCalculatorSEO, ClayCalculatorBibliography } from './tool/clayCalculator';
 export { CLAY_CALCULATOR_TOOL } from './tool/clayCalculator/index';
