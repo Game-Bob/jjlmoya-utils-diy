@@ -1,6 +1,5 @@
 import type { DiyToolEntry } from '../../types';
 import type { DrillSharpenerUI } from './ui';
-import { drillSharpenerUI } from './ui';
 
 
 export const drillSharpener: DiyToolEntry<DrillSharpenerUI> = {

@@ -1,6 +1,5 @@
 import type { DiyToolEntry } from '../../types';
 import type { StairCalculatorUI } from './ui';
-import { stairCalculatorUI } from './ui';
 
 
 export const stairCalculator: DiyToolEntry<StairCalculatorUI> = {
