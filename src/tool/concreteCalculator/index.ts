@@ -1,14 +1,6 @@
-import ConcreteCalculatorComponent from './component.astro';
-import ConcreteCalculatorSEO from './seo.astro';
-import ConcreteCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { ConcreteCalculatorUI } from './ui';
 
-export {
-  ConcreteCalculatorComponent,
-  ConcreteCalculatorSEO,
-  ConcreteCalculatorBibliography,
-};
 
 export const concreteCalculator: DiyToolEntry<ConcreteCalculatorUI> = {
   id: 'concrete-calculator',
@@ -34,7 +26,7 @@ export const concreteCalculator: DiyToolEntry<ConcreteCalculatorUI> = {
 
 export const CONCRETE_CALCULATOR_TOOL: ToolDefinition = {
   entry: concreteCalculator,
-  Component: ConcreteCalculatorComponent,
-  SEOComponent: ConcreteCalculatorSEO,
-  BibliographyComponent: ConcreteCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

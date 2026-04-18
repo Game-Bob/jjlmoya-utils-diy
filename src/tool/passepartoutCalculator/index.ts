@@ -1,14 +1,6 @@
-import PassepartoutCalculatorComponent from './component.astro';
-import PassepartoutCalculatorSEO from './seo.astro';
-import PassepartoutCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { PassepartoutCalculatorUI } from './ui';
 
-export {
-  PassepartoutCalculatorComponent,
-  PassepartoutCalculatorSEO,
-  PassepartoutCalculatorBibliography,
-};
 
 export const passepartoutCalculator: DiyToolEntry<PassepartoutCalculatorUI> = {
   id: 'passepartout-calculator',
@@ -34,7 +26,7 @@ export const passepartoutCalculator: DiyToolEntry<PassepartoutCalculatorUI> = {
 
 export const PASSEPARTOUT_CALCULATOR_TOOL: ToolDefinition = {
   entry: passepartoutCalculator,
-  Component: PassepartoutCalculatorComponent,
-  SEOComponent: PassepartoutCalculatorSEO,
-  BibliographyComponent: PassepartoutCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

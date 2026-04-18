@@ -1,14 +1,6 @@
-import DrillCalculatorComponent from './component.astro';
-import DrillCalculatorSEO from './seo.astro';
-import DrillCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { DrillCalculatorUI } from './ui';
 
-export {
-  DrillCalculatorComponent,
-  DrillCalculatorSEO,
-  DrillCalculatorBibliography,
-};
 
 export const drillCalculator: DiyToolEntry<DrillCalculatorUI> = {
   id: 'drill-rpm-calculator',
@@ -34,7 +26,7 @@ export const drillCalculator: DiyToolEntry<DrillCalculatorUI> = {
 
 export const DRILL_CALCULATOR_TOOL: ToolDefinition = {
   entry: drillCalculator,
-  Component: DrillCalculatorComponent,
-  SEOComponent: DrillCalculatorSEO,
-  BibliographyComponent: DrillCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

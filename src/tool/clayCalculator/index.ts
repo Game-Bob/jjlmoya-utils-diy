@@ -1,7 +1,4 @@
 import type { DiyToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import ClayCalculatorComponent from './component.astro';
-import ClayCalculatorSEO from './seo.astro';
-import ClayCalculatorBibliography from './bibliography.astro';
 import type { ClayCalculatorUI } from './ui';
 
 export type ClayCalculatorLocaleContent = ToolLocaleContent<ClayCalculatorUI>;
@@ -31,11 +28,10 @@ export const clayCalculator: DiyToolEntry<ClayCalculatorUI> = {
   },
 };
 
-export { ClayCalculatorComponent, ClayCalculatorSEO, ClayCalculatorBibliography };
 
 export const CLAY_CALCULATOR_TOOL: ToolDefinition = {
   entry: clayCalculator,
-  Component: ClayCalculatorComponent,
-  SEOComponent: ClayCalculatorSEO,
-  BibliographyComponent: ClayCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

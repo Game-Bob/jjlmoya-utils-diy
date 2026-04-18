@@ -1,7 +1,4 @@
 import type { DiyToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import EpoxyCalculatorComponent from './component.astro';
-import EpoxyCalculatorSEO from './seo.astro';
-import EpoxyCalculatorBibliography from './bibliography.astro';
 import type { EpoxyCalculatorUI } from './ui';
 
 export type EpoxyCalculatorLocaleContent = ToolLocaleContent<EpoxyCalculatorUI>;
@@ -31,11 +28,10 @@ export const epoxyCalculator: DiyToolEntry<EpoxyCalculatorUI> = {
   },
 };
 
-export { EpoxyCalculatorComponent, EpoxyCalculatorSEO, EpoxyCalculatorBibliography };
 
 export const EPOXY_CALCULATOR_TOOL: ToolDefinition = {
   entry: epoxyCalculator,
-  Component: EpoxyCalculatorComponent,
-  SEOComponent: EpoxyCalculatorSEO,
-  BibliographyComponent: EpoxyCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

@@ -1,15 +1,7 @@
-import StairCalculatorComponent from './component.astro';
-import StairCalculatorSEO from './seo.astro';
-import StairCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { StairCalculatorUI } from './ui';
 import { stairCalculatorUI } from './ui';
 
-export {
-  StairCalculatorComponent,
-  StairCalculatorSEO,
-  StairCalculatorBibliography,
-};
 
 export const stairCalculator: DiyToolEntry<StairCalculatorUI> = {
   id: 'stair-calculator',
@@ -35,9 +27,9 @@ export const stairCalculator: DiyToolEntry<StairCalculatorUI> = {
 
 export const STAIR_CALCULATOR_TOOL: ToolDefinition = {
   entry: stairCalculator,
-  Component: StairCalculatorComponent,
-  SEOComponent: StairCalculatorSEO,
-  BibliographyComponent: StairCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
 
 export { stairCalculatorUI };

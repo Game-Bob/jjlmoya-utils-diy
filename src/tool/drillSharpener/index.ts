@@ -1,15 +1,7 @@
-import DrillSharpenerComponent from './component.astro';
-import DrillSharpenerSEO from './seo.astro';
-import DrillSharpenerBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { DrillSharpenerUI } from './ui';
 import { drillSharpenerUI } from './ui';
 
-export {
-  DrillSharpenerComponent,
-  DrillSharpenerSEO,
-  DrillSharpenerBibliography,
-};
 
 export const drillSharpener: DiyToolEntry<DrillSharpenerUI> = {
   id: 'drill-sharpener',
@@ -35,9 +27,9 @@ export const drillSharpener: DiyToolEntry<DrillSharpenerUI> = {
 
 export const DRILL_SHARPENER_TOOL: ToolDefinition = {
   entry: drillSharpener,
-  Component: DrillSharpenerComponent,
-  SEOComponent: DrillSharpenerSEO,
-  BibliographyComponent: DrillSharpenerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
 
 export { drillSharpenerUI };

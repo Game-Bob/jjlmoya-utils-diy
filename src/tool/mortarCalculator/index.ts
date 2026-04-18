@@ -1,10 +1,6 @@
-import MortarCalculatorComponent from './component.astro';
-import MortarCalculatorSEO from './seo.astro';
-import MortarCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { MortarCalculatorUI } from './ui';
 
-export { MortarCalculatorComponent, MortarCalculatorSEO, MortarCalculatorBibliography };
 
 export const mortarCalculator: DiyToolEntry<MortarCalculatorUI> = {
   id: 'mortar-calculator',
@@ -30,7 +26,7 @@ export const mortarCalculator: DiyToolEntry<MortarCalculatorUI> = {
 
 export const MORTAR_CALCULATOR_TOOL: ToolDefinition = {
   entry: mortarCalculator,
-  Component: MortarCalculatorComponent,
-  SEOComponent: MortarCalculatorSEO,
-  BibliographyComponent: MortarCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

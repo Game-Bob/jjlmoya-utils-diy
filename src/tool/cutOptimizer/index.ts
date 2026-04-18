@@ -1,14 +1,6 @@
-import CutOptimizerComponent from './component.astro';
-import CutOptimizerSEO from './seo.astro';
-import CutOptimizerBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { CutOptimizerUI } from './ui';
 
-export {
-  CutOptimizerComponent,
-  CutOptimizerSEO,
-  CutOptimizerBibliography,
-};
 
 export const cutOptimizer: DiyToolEntry<CutOptimizerUI> = {
   id: 'cut-optimizer',
@@ -34,7 +26,7 @@ export const cutOptimizer: DiyToolEntry<CutOptimizerUI> = {
 
 export const CUT_OPTIMIZER_TOOL: ToolDefinition = {
   entry: cutOptimizer,
-  Component: CutOptimizerComponent,
-  SEOComponent: CutOptimizerSEO,
-  BibliographyComponent: CutOptimizerBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

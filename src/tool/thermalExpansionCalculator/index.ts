@@ -1,14 +1,6 @@
-import ThermalExpansionCalculatorComponent from './component.astro';
-import ThermalExpansionCalculatorSEO from './seo.astro';
-import ThermalExpansionCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { ThermalExpansionCalculatorUI } from './ui';
 
-export {
-  ThermalExpansionCalculatorComponent,
-  ThermalExpansionCalculatorSEO,
-  ThermalExpansionCalculatorBibliography,
-};
 
 export const thermalExpansionCalculator: DiyToolEntry<ThermalExpansionCalculatorUI> = {
   id: 'thermal-expansion-calculator',
@@ -34,7 +26,7 @@ export const thermalExpansionCalculator: DiyToolEntry<ThermalExpansionCalculator
 
 export const THERMAL_EXPANSION_CALCULATOR_TOOL: ToolDefinition = {
   entry: thermalExpansionCalculator,
-  Component: ThermalExpansionCalculatorComponent,
-  SEOComponent: ThermalExpansionCalculatorSEO,
-  BibliographyComponent: ThermalExpansionCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

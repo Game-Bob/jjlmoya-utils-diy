@@ -1,14 +1,6 @@
-import VoltageDropCalculatorComponent from './component.astro';
-import VoltageDropCalculatorSEO from './seo.astro';
-import VoltageDropCalculatorBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { VoltageDropCalculatorUI } from './ui';
 
-export {
-  VoltageDropCalculatorComponent,
-  VoltageDropCalculatorSEO,
-  VoltageDropCalculatorBibliography,
-};
 
 export const voltageDropCalculator: DiyToolEntry<VoltageDropCalculatorUI> = {
   id: 'voltage-drop-calculator',
@@ -34,7 +26,7 @@ export const voltageDropCalculator: DiyToolEntry<VoltageDropCalculatorUI> = {
 
 export const VOLTAGE_DROP_CALCULATOR_TOOL: ToolDefinition = {
   entry: voltageDropCalculator,
-  Component: VoltageDropCalculatorComponent,
-  SEOComponent: VoltageDropCalculatorSEO,
-  BibliographyComponent: VoltageDropCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

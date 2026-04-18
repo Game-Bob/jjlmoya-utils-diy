@@ -1,7 +1,4 @@
 import type { DiyToolEntry, ToolLocaleContent, ToolDefinition } from '../../types';
-import BalusterCalculatorComponent from './component.astro';
-import BalusterCalculatorSEO from './seo.astro';
-import BalusterCalculatorBibliography from './bibliography.astro';
 import type { BalusterCalculatorUI } from './ui';
 
 export type BalusterCalculatorLocaleContent = ToolLocaleContent<BalusterCalculatorUI>;
@@ -31,11 +28,10 @@ export const balusterCalculator: DiyToolEntry<BalusterCalculatorUI> = {
   },
 };
 
-export { BalusterCalculatorComponent, BalusterCalculatorSEO, BalusterCalculatorBibliography };
 
 export const BALUSTER_CALCULATOR_TOOL: ToolDefinition = {
   entry: balusterCalculator,
-  Component: BalusterCalculatorComponent,
-  SEOComponent: BalusterCalculatorSEO,
-  BibliographyComponent: BalusterCalculatorBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };

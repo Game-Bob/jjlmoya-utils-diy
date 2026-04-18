@@ -1,14 +1,6 @@
-import FurnitureFitComponent from './component.astro';
-import FurnitureFitSEO from './seo.astro';
-import FurnitureFitBibliography from './bibliography.astro';
 import type { DiyToolEntry, ToolDefinition } from '../../types';
 import type { FurnitureFitUI } from './ui';
 
-export {
-  FurnitureFitComponent,
-  FurnitureFitSEO,
-  FurnitureFitBibliography,
-};
 
 export const furnitureFit: DiyToolEntry<FurnitureFitUI> = {
   id: 'furniture-fit-calculator',
@@ -34,7 +26,7 @@ export const furnitureFit: DiyToolEntry<FurnitureFitUI> = {
 
 export const FURNITURE_FIT_TOOL: ToolDefinition = {
   entry: furnitureFit,
-  Component: FurnitureFitComponent,
-  SEOComponent: FurnitureFitSEO,
-  BibliographyComponent: FurnitureFitBibliography,
+  Component: () => import('./component.astro'),
+  SEOComponent: () => import('./seo.astro'),
+  BibliographyComponent: () => import('./bibliography.astro'),
 };
