@@ -30,7 +30,7 @@
     border: 1px solid #f1f5f9;
   }
 
-  :global(.theme-dark) .ff-card {
+  .theme-dark .ff-card {
     background: #0f172a;
     border-color: #1e293b;
   }
@@ -45,7 +45,7 @@
     margin: 0 0 1.5rem;
   }
 
-  :global(.theme-dark) .ff-card-title {
+  .theme-dark .ff-card-title {
     color: #fff;
   }
 
@@ -97,7 +97,7 @@
     box-shadow: 0 0 0 2px #6366f1;
   }
 
-  :global(.theme-dark) .ff-input {
+  .theme-dark .ff-input {
     background: #1e293b;
     color: #fff;
   }
@@ -127,7 +127,7 @@
     margin-top: 0.5rem;
   }
 
-  :global(.theme-dark) .ff-margin-row {
+  .theme-dark .ff-margin-row {
     border-color: #1e293b;
   }
 
@@ -161,7 +161,7 @@
     overflow: hidden;
   }
 
-  :global(.theme-dark) .ff-visual-container {
+  .theme-dark .ff-visual-container {
     background: #020617;
     border-color: #1e293b;
   }
@@ -203,7 +203,7 @@
     height: 200px;
   }
 
-  :global(.theme-dark) .ff-space-box {
+  .theme-dark .ff-space-box {
     border-color: #334155;
   }
 
@@ -264,7 +264,7 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
-  :global(.theme-dark) .ff-verdict {
+  .theme-dark .ff-verdict {
     background: #1e293b;
     border-color: #475569;
     color: #fff;

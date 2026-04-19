@@ -34,7 +34,7 @@
     border: 1px solid #f1f5f9;
   }
 
-  :global(.theme-dark) .co-card {
+  .theme-dark .co-card {
     background: #1e293b;
     border-color: #334155;
   }
@@ -49,7 +49,7 @@
     margin: 0 0 1rem;
   }
 
-  :global(.theme-dark) .co-card-title {
+  .theme-dark .co-card-title {
     color: #fff;
   }
 
@@ -79,7 +79,7 @@
     margin-bottom: 1.5rem;
   }
 
-  :global(.theme-dark) .co-mode-toggle {
+  .theme-dark .co-mode-toggle {
     background: rgba(30, 41, 59, 0.8);
   }
 
@@ -102,11 +102,11 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
   }
 
-  :global(.theme-dark) .co-mode-btn {
+  .theme-dark .co-mode-btn {
     color: #94a3b8;
   }
 
-  :global(.theme-dark) .co-mode-btn.co-mode-active {
+  .theme-dark .co-mode-btn.co-mode-active {
     color: #fff;
   }
 
@@ -148,7 +148,7 @@
     box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
   }
 
-  :global(.theme-dark) .co-input {
+  .theme-dark .co-input {
     background: #0f172a;
     border-color: #334155;
     color: #fff;
@@ -176,7 +176,7 @@
     height: 1.25rem;
   }
 
-  :global(.theme-dark) .co-btn-add {
+  .theme-dark .co-btn-add {
     background: rgba(249, 115, 22, 0.15);
     color: #fb923c;
   }
@@ -249,7 +249,7 @@
     text-align: center;
   }
 
-  :global(.theme-dark) .co-row-input {
+  .theme-dark .co-row-input {
     background: #0f172a;
     border-color: #334155;
     color: #fff;
@@ -300,7 +300,7 @@
     border: 1px solid #f1f5f9;
   }
 
-  :global(.theme-dark) .co-stat-card {
+  .theme-dark .co-stat-card {
     background: #1e293b;
     border-color: #334155;
   }
@@ -321,7 +321,7 @@
     line-height: 1;
   }
 
-  :global(.theme-dark) .co-stat-value {
+  .theme-dark .co-stat-value {
     color: #fff;
   }
 
@@ -329,7 +329,7 @@
     color: #ef4444;
   }
 
-  :global(.theme-dark) .co-stat-red {
+  .theme-dark .co-stat-red {
     color: #f87171;
   }
 
@@ -337,7 +337,7 @@
     color: #22c55e;
   }
 
-  :global(.theme-dark) .co-stat-green {
+  .theme-dark .co-stat-green {
     color: #4ade80;
   }
 
@@ -352,7 +352,7 @@
     min-height: 16rem;
   }
 
-  :global(.co-empty-state) {
+  .co-empty-state {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,19 +363,19 @@
     text-align: center;
   }
 
-  :global(.co-bar-wrap) {
+  .co-bar-wrap {
     background: #f8fafc;
     border-radius: 0.5rem;
     padding: 0.75rem;
     border: 1px solid #f1f5f9;
   }
 
-  :global(.theme-dark .co-bar-wrap) {
+  .theme-dark .co-bar-wrap {
     background: rgba(15, 23, 42, 0.5);
     border-color: #1e293b;
   }
 
-  :global(.co-bar-hdr) {
+  .co-bar-hdr {
     display: flex;
     justify-content: space-between;
     font-size: 0.7rem;
@@ -384,7 +384,7 @@
     margin-bottom: 0.5rem;
   }
 
-  :global(.co-bar) {
+  .co-bar {
     height: 3rem;
     background: #e2e8f0;
     border-radius: 0.25rem;
@@ -393,11 +393,11 @@
     position: relative;
   }
 
-  :global(.theme-dark .co-bar) {
+  .theme-dark .co-bar {
     background: #334155;
   }
 
-  :global(.co-seg) {
+  .co-seg {
     height: 100%;
     background: linear-gradient(to bottom, #fb923c, #ea580c);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -411,31 +411,31 @@
     cursor: default;
   }
 
-  :global(.co-panel-wrap) {
+  .co-panel-wrap {
     background: #f8fafc;
     border-radius: 0.5rem;
     padding: 0.75rem;
     border: 1px solid #f1f5f9;
   }
 
-  :global(.theme-dark .co-panel-wrap) {
+  .theme-dark .co-panel-wrap {
     background: rgba(15, 23, 42, 0.5);
     border-color: #1e293b;
   }
 
-  :global(.co-sheet) {
+  .co-sheet {
     position: relative;
     background: #e2e8f0;
     width: 100%;
     border: 1px solid #cbd5e1;
   }
 
-  :global(.theme-dark .co-sheet) {
+  .theme-dark .co-sheet {
     background: #334155;
     border-color: #475569;
   }
 
-  :global(.co-rect) {
+  .co-rect {
     position: absolute;
     background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -450,7 +450,7 @@
     transition: filter 0.15s ease;
   }
 
-  :global(.co-rect:hover) {
+  .co-rect:hover {
     filter: brightness(1.1);
   }
 

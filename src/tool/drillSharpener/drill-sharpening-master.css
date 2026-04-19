@@ -10,7 +10,7 @@
     --drillsharp-button-hover: #cbd5e1;
   }
   
-  :global(.theme-dark) {
+  .theme-dark {
     --drillsharp-primary: #38bdf8;
     --drillsharp-accent: #38bdf8;
     --drillsharp-text: #f8fafc;

@@ -280,41 +280,41 @@
     margin-bottom: 0;
   }
 
-  :global(.theme-dark) .bc-input-panel {
+  .theme-dark .bc-input-panel {
     background: #18181b;
     border-color: rgba(51, 65, 85, 0.4);
   }
 
-  :global(.theme-dark) .bc-panel-icon {
+  .theme-dark .bc-panel-icon {
     background: rgba(30, 58, 138, 0.3);
   }
 
-  :global(.theme-dark) .bc-panel-title {
+  .theme-dark .bc-panel-title {
     color: #f1f5f9;
   }
 
-  :global(.theme-dark) .bc-label {
+  .theme-dark .bc-label {
     color: #94a3b8;
   }
 
-  :global(.theme-dark) .bc-input {
+  .theme-dark .bc-input {
     background: #27272a;
     color: #f1f5f9;
   }
 
-  :global(.theme-dark) .bc-input:focus {
+  .theme-dark .bc-input:focus {
     border-color: #3b82f6;
   }
 
-  :global(.theme-dark) .bc-unit-toggle {
+  .theme-dark .bc-unit-toggle {
     background: #27272a;
   }
 
-  :global(.theme-dark) [data-bc-unit][data-bc-active='true'] {
+  .theme-dark [data-bc-unit][data-bc-active='true'] {
     background: #3f3f46;
     color: #f1f5f9;
   }
 
-  :global(.theme-dark) .bc-blueprint {
+  .theme-dark .bc-blueprint {
     background: #0f172a;
   }

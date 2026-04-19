@@ -9,7 +9,7 @@
     overflow: hidden;
   }
 
-  :global(.theme-dark) .pp-root {
+  .theme-dark .pp-root {
     background: #1e1e2e;
     border-color: #2d2d3f;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -35,7 +35,7 @@
     border-right: 1px solid #e2e8f0;
   }
 
-  :global(.theme-dark) .pp-inputs {
+  .theme-dark .pp-inputs {
     background: #16161e;
     border-right-color: #2d2d3f;
   }
@@ -55,7 +55,7 @@
     gap: 0.5rem;
   }
 
-  :global(.theme-dark) .pp-section-title {
+  .theme-dark .pp-section-title {
     color: #e2e8f0;
   }
 
@@ -64,7 +64,7 @@
     color: #64748b;
   }
 
-  :global(.theme-dark) .pp-section-desc {
+  .theme-dark .pp-section-desc {
     color: #94a3b8;
   }
 
@@ -86,7 +86,7 @@
     color: #4f46e5;
   }
 
-  :global(.theme-dark) .pp-label-frame {
+  .theme-dark .pp-label-frame {
     color: #818cf8;
   }
 
@@ -94,7 +94,7 @@
     color: #db2777;
   }
 
-  :global(.theme-dark) .pp-label-art {
+  .theme-dark .pp-label-art {
     color: #f472b6;
   }
 
@@ -121,7 +121,7 @@
     margin-left: 0.25rem;
   }
 
-  :global(.theme-dark) .pp-label {
+  .theme-dark .pp-label {
     color: #94a3b8;
   }
 
@@ -143,13 +143,13 @@
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
   }
 
-  :global(.theme-dark) .pp-input {
+  .theme-dark .pp-input {
     background: #1e1e2e;
     border-color: #3d3d50;
     color: #e2e8f0;
   }
 
-  :global(.theme-dark) .pp-input:focus {
+  .theme-dark .pp-input:focus {
     border-color: #818cf8;
     box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
   }
@@ -159,7 +159,7 @@
     border-top: 1px solid #e2e8f0;
   }
 
-  :global(.theme-dark) .pp-toggle-row {
+  .theme-dark .pp-toggle-row {
     border-top-color: #2d2d3f;
   }
 
@@ -183,7 +183,7 @@
     color: #0f172a;
   }
 
-  :global(.theme-dark) .pp-toggle-name {
+  .theme-dark .pp-toggle-name {
     color: #e2e8f0;
   }
 
@@ -192,7 +192,7 @@
     color: #64748b;
   }
 
-  :global(.theme-dark) .pp-toggle-desc {
+  .theme-dark .pp-toggle-desc {
     color: #94a3b8;
   }
 
@@ -239,7 +239,7 @@
     border-top: 1px solid #e2e8f0;
   }
 
-  :global(.theme-dark) .pp-offset-ctrl {
+  .theme-dark .pp-offset-ctrl {
     border-top-color: #2d2d3f;
   }
 
@@ -265,7 +265,7 @@
     text-align: right;
   }
 
-  :global(.theme-dark) .pp-offset-val {
+  .theme-dark .pp-offset-val {
     color: #e2e8f0;
   }
 
@@ -281,7 +281,7 @@
     gap: 0.75rem;
   }
 
-  :global(.theme-dark) .pp-error {
+  .theme-dark .pp-error {
     background: #2d1515;
     border-color: #7f1d1d;
     color: #fca5a5;
@@ -304,7 +304,7 @@
     min-height: 500px;
   }
 
-  :global(.theme-dark) .pp-preview {
+  .theme-dark .pp-preview {
     background: #0f172a;
   }
 
@@ -317,7 +317,7 @@
     opacity: 0.5;
   }
 
-  :global(.theme-dark) .pp-dots-bg {
+  .theme-dark .pp-dots-bg {
     background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
   }
 
@@ -339,7 +339,7 @@
     transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  :global(.theme-dark) .pp-frame {
+  .theme-dark .pp-frame {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
   }
 
@@ -349,7 +349,7 @@
     background: #e2e2e2;
   }
 
-  :global(.theme-dark) .pp-mat {
+  .theme-dark .pp-mat {
     background: #334155;
   }
 
@@ -364,7 +364,7 @@
     transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  :global(.theme-dark) .pp-art {
+  .theme-dark .pp-art {
     background: #1e293b;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
@@ -378,7 +378,7 @@
     z-index: 1;
   }
 
-  :global(.theme-dark) .pp-art-placeholder {
+  .theme-dark .pp-art-placeholder {
     color: #475569;
   }
 
@@ -416,7 +416,7 @@
     background: #0f172a;
   }
 
-  :global(.theme-dark) .pp-dim-line {
+  .theme-dark .pp-dim-line {
     background: #e2e8f0;
   }
 
@@ -430,7 +430,7 @@
     color: #0f172a;
   }
 
-  :global(.theme-dark) .pp-dim-label {
+  .theme-dark .pp-dim-label {
     color: #e2e8f0;
   }
 
@@ -449,7 +449,7 @@
     z-index: 10;
   }
 
-  :global(.theme-dark) .pp-border-label {
+  .theme-dark .pp-border-label {
     color: #818cf8;
   }
 
@@ -475,7 +475,7 @@
     color: #db2777;
   }
 
-  :global(.theme-dark) .pp-border-left {
+  .theme-dark .pp-border-left {
     color: #f472b6;
   }
 
@@ -487,7 +487,7 @@
     color: #db2777;
   }
 
-  :global(.theme-dark) .pp-border-right {
+  .theme-dark .pp-border-right {
     color: #f472b6;
   }
 
