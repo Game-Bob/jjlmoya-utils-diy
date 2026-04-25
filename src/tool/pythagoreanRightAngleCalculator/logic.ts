@@ -33,16 +33,16 @@ function getStatusMessage(status: 'perfect' | 'acceptable' | 'warning' | 'error'
   return msgs[status];
 }
 
-function getCorrection(status: 'perfect' | 'acceptable' | 'warning' | 'error', params: { absDev: number; devDir: string; action: string; ui: Record<string, string> }): string {
+function getCorrection(status: 'perfect' | 'acceptable' | 'warning' | 'error', params: { absDev: number; devDir: string; action: string; unit: string; ui: Record<string, string> }): string {
   if (status === 'perfect') return '';
   const fixStr = (val: number) => val.toFixed(1);
-  const { absDev, devDir, action, ui } = params;
-  if (status === 'acceptable') return `${action} the angle slightly. Diagonal is ${fixStr(absDev)} ${devDir}.`;
-  if (status === 'warning') return `${action} the angle. Diagonal is ${fixStr(absDev)} ${devDir}.`;
-  return `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)} ${devDir} than ideal.`;
+  const { absDev, devDir, action, unit, ui } = params;
+  if (status === 'acceptable') return `${action} the angle slightly. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`;
+  if (status === 'warning') return `${action} the angle. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`;
+  return `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)}${unit} ${devDir} than ideal.`;
 }
 
-function determineStatus(deviation: number, deviationPercent: number, ui: Record<string, string>): StatusResult {
+function determineStatus(deviation: number, deviationPercent: number, unit: string, ui: Record<string, string>): StatusResult {
   const absDev = Math.abs(deviation);
   const devDir = deviation > 0 ? (ui.descLarger || 'larger') : (ui.descSmaller || 'smaller');
   const action = deviation > 0 ? (ui.actionClose || 'Close') : (ui.actionOpen || 'Open');
@@ -51,7 +51,7 @@ function determineStatus(deviation: number, deviationPercent: number, ui: Record
   return {
     status,
     message: getStatusMessage(status, ui),
-    correction: getCorrection(status, { absDev, devDir, action, ui })
+    correction: getCorrection(status, { absDev, devDir, action, unit, ui })
   };
 }
 
@@ -59,6 +59,7 @@ export function calculateSquaring(
   sideA: number,
   sideB: number,
   measuredDiagonal: number | null = null,
+  unit: string = '',
   ui: Record<string, string> = {}
 ): SquaringCalculation {
   const baseResult: Omit<SquaringCalculation, 'status' | 'message' | 'correction'> = {
@@ -83,7 +84,7 @@ export function calculateSquaring(
 
   const deviation = measuredDiagonal - hypotenuse;
   const deviationPercent = (Math.abs(deviation) / hypotenuse) * 100;
-  const { status, message, correction } = determineStatus(deviation, deviationPercent, ui);
+  const { status, message, correction } = determineStatus(deviation, deviationPercent, unit, ui);
 
   return { ...baseResult, measuredDiagonal, deviation, deviationPercent, status, message, correction };
 }

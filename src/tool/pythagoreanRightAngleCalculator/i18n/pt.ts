@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-angulo-reto-pitagoras-regra-3-4-5';
-const title = 'Calculadora de Ângulo Reto (Teorema de Pitágoras): Regra 3 4 5 para Esquadros Perfeitos';
+const title = 'Calculadora de Ângulo Reto (Teorema de Pitágoras): Regra 3-4-5 para Esquadros Perfeitos';
 const description = 'Verifique se as estruturas estão perfeitamente no esquadro (90°) usando o teorema de Pitágoras e a regra 3-4-5. Ferramenta essencial para construção, carpintaria e projetos DIY.';
 
 const faqData = [
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'O Teorema de Pitágoras na Prática', level: 2 },
-    { type: 'paragraph', html: 'Um ângulo perfeito de 90 graus é fundamental para uma construção de qualidade. As paredes devem ser perpendiculares, os alicerces devem estar no esquadro e as estruturas devem estar alinhadas. O teorema de Pitágoras fornece um método matematicamente garantido: a² + b² = c².' },
+    { type: 'paragraph', html: 'Um ângulo perfeito de 90 graus é fundamental para uma construção de qualidade. As paredes devem ser perpendiculares, os alicerces deben estar no esquadro e as estruturas deben estar alinhadas. O teorema de Pitágoras fornece um método matematicamente garantido: a² + b² = c².' },
     { type: 'title', text: 'Por que a regra 3-4-5 funciona', level: 3 },
     { type: 'paragraph', html: 'A regra 3-4-5 é o terno pitagórico mais simples. Quer meça em polegadas, pés ou qualquer outra unidade, lados de 3, 4 e 5 unidades garantem um ângulo de 90 graus. Isso foi provado matematicamente e testado na construção durante séculos.' },
     { type: 'title', text: 'Precisão sem ferramentas especializadas', level: 3 },
@@ -97,6 +97,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
     labelUnitSelection: 'Unidade',
     btnUnitInches: 'polegadas',
     btnUnitFeet: 'pés',
+    btnUnitCentimeters: 'centímetros',
     labelSideA: 'Lado A',
     labelSideB: 'Lado B',
     labelMeasuredDiagonal: 'Diagonal medida (opcional)',
@@ -110,6 +111,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
     labelPresets: 'Ajustes rápidos',
     unitInches: 'pol',
     unitFeet: 'pé',
+    unitCentimeters: 'cm',
     tooltipOptional: 'Insira a sua diagonal medida para verificar os 90 graus',
     tooltipPresets: 'Regra 3-4-5 em diferentes escalas',
     statusPerfect: 'Ângulo de 90 graus perfeito',

@@ -32,9 +32,11 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
       <div class="prac-button-group">
         <button id="prac-clear" class="prac-btn prac-btn-icon" title={t.btnClear}>
           <i class="mdi mdi-delete"></i>
+          <span>{t.btnClear}</span>
         </button>
         <button id="prac-copy" class="prac-btn prac-btn-icon" title={t.btnCopyResults}>
           <i class="mdi mdi-content-copy"></i>
+          <span>{t.btnCopyResults}</span>
         </button>
       </div>
 
@@ -179,7 +181,8 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
     const a = parseFloat(inputA.value) || 0;
     const b = parseFloat(inputB.value) || 0;
     const d = parseFloat(inputD.value) || null;
-    const calc = calculateSquaring(a, b, d, ui);
+    const unitStr = currentUnit === 'in' ? ui.unitInches : (currentUnit === 'ft' ? ui.unitFeet : ui.unitCentimeters);
+    const calc = calculateSquaring(a, b, d, unitStr, ui);
 
     if (calc.hypotenuse > 0) {
       resultIdeal.textContent = calc.hypotenuse.toFixed(2);
