@@ -146,16 +146,21 @@
   border-radius: 0.5rem;
   background: var(--prac-bg);
   color: var(--prac-neutral);
-  font-weight: 700;
   cursor: pointer;
-  font-size: 0.85rem;
   transition: all 200ms ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+}
+
+.prac-btn-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.prac-btn-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .prac-btn:hover {

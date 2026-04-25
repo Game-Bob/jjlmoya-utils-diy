@@ -34,12 +34,15 @@ function getStatusMessage(status: 'perfect' | 'acceptable' | 'warning' | 'error'
 }
 
 function getCorrection(status: 'perfect' | 'acceptable' | 'warning' | 'error', params: { absDev: number; devDir: string; action: string; unit: string; ui: Record<string, string> }): string {
-  if (status === 'perfect') return '';
   const fixStr = (val: number) => val.toFixed(1);
   const { absDev, devDir, action, unit, ui } = params;
-  if (status === 'acceptable') return `${action} the angle slightly. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`;
-  if (status === 'warning') return `${action} the angle. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`;
-  return `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)}${unit} ${devDir} than ideal.`;
+  const corrections = {
+    perfect: '',
+    acceptable: `${action} the angle slightly. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`,
+    warning: `${action} the angle. Diagonal is ${fixStr(absDev)}${unit} ${devDir}.`,
+    error: `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)}${unit} ${devDir} than ideal.`
+  };
+  return corrections[status];
 }
 
 function determineStatus(deviation: number, deviationPercent: number, unit: string, ui: Record<string, string>): StatusResult {
@@ -55,38 +58,40 @@ function determineStatus(deviation: number, deviationPercent: number, unit: stri
   };
 }
 
+function createIdleResult(sideA: number, sideB: number): SquaringCalculation {
+  return { sideA, sideB, hypotenuse: 0, measuredDiagonal: null, deviation: null, deviationPercent: null, status: 'idle', message: '', correction: '' };
+}
+
+function createAcceptableResult(sideA: number, sideB: number, hypotenuse: number, ui: Record<string, string>): SquaringCalculation {
+  return { sideA, sideB, hypotenuse, measuredDiagonal: null, deviation: null, deviationPercent: null, status: 'acceptable', message: ui.msgIdealCalculated || 'Diagonal ideal calculated', correction: '' };
+}
+
+function validateInput(sideA: number, sideB: number): boolean {
+  return sideA > 0 && sideB > 0;
+}
+
+function calculateDeviation(measuredDiagonal: number, hypotenuse: number, unit: string, ui: Record<string, string>): Pick<SquaringCalculation, 'measuredDiagonal' | 'deviation' | 'deviationPercent' | 'status' | 'message' | 'correction'> {
+  const deviation = measuredDiagonal - hypotenuse;
+  const deviationPercent = (Math.abs(deviation) / hypotenuse) * 100;
+  const { status, message, correction } = determineStatus(deviation, deviationPercent, unit, ui);
+  return { measuredDiagonal, deviation, deviationPercent, status, message, correction };
+}
+
 export function calculateSquaring(
   sideA: number,
   sideB: number,
   measuredDiagonal: number | null = null,
-  unit: string = '',
-  ui: Record<string, string> = {}
+  options: { unit?: string; ui?: Record<string, string> } = {}
 ): SquaringCalculation {
-  const baseResult: Omit<SquaringCalculation, 'status' | 'message' | 'correction'> = {
-    sideA,
-    sideB,
-    hypotenuse: 0,
-    measuredDiagonal: null,
-    deviation: null,
-    deviationPercent: null
-  };
-
-  if (sideA <= 0 || sideB <= 0) {
-    return { ...baseResult, status: 'idle', message: '', correction: '' };
-  }
+  const unit = options.unit || '';
+  const ui = options.ui || {};
+  if (!validateInput(sideA, sideB)) return createIdleResult(sideA, sideB);
 
   const hypotenuse = Math.sqrt(sideA ** 2 + sideB ** 2);
-  baseResult.hypotenuse = hypotenuse;
+  if (!measuredDiagonal || measuredDiagonal <= 0) return createAcceptableResult(sideA, sideB, hypotenuse, ui);
 
-  if (!measuredDiagonal || measuredDiagonal <= 0) {
-    return { ...baseResult, status: 'acceptable', message: ui.msgIdealCalculated || 'Diagonal ideal calculated', correction: '' };
-  }
-
-  const deviation = measuredDiagonal - hypotenuse;
-  const deviationPercent = (Math.abs(deviation) / hypotenuse) * 100;
-  const { status, message, correction } = determineStatus(deviation, deviationPercent, unit, ui);
-
-  return { ...baseResult, measuredDiagonal, deviation, deviationPercent, status, message, correction };
+  const deviation = calculateDeviation(measuredDiagonal, hypotenuse, unit, ui);
+  return { sideA, sideB, hypotenuse, ...deviation };
 }
 
 export const PRESET_RULES = [

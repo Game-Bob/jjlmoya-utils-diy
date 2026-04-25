@@ -1,17 +1,22 @@
 ---
+import { Icon } from 'astro-icon/components';
 import type { PythagoreanRightAngleCalculatorUI } from './ui';
+
 interface Props { ui?: PythagoreanRightAngleCalculatorUI; }
 const { ui } = Astro.props;
 const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
 ---
 
-<div class="prac-root" data-ui={JSON.stringify(t)}>
+<div class="prac-root" data-prac-root data-ui={JSON.stringify(t)}>
   <div class="prac-container">
     <aside class="prac-inputs">
-      <div class="prac-unit-selector">
-        <button class="prac-unit-btn active" data-unit="in">{t.btnUnitInches}</button>
-        <button class="prac-unit-btn" data-unit="ft">{t.btnUnitFeet}</button>
-        <button class="prac-unit-btn" data-unit="cm">{t.btnUnitCentimeters}</button>
+      <div class="prac-input-group">
+        <label>{t.labelUnitSelection || 'Units'}</label>
+        <div class="prac-unit-selector">
+          <button class="prac-unit-btn active" data-unit="in">{t.btnUnitInches}</button>
+          <button class="prac-unit-btn" data-unit="ft">{t.btnUnitFeet}</button>
+          <button class="prac-unit-btn" data-unit="cm">{t.btnUnitCentimeters}</button>
+        </div>
       </div>
 
       <div class="prac-input-group">
@@ -31,12 +36,10 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
 
       <div class="prac-button-group">
         <button id="prac-clear" class="prac-btn prac-btn-icon" title={t.btnClear}>
-          <i class="mdi mdi-delete"></i>
-          <span>{t.btnClear}</span>
+          <Icon name="mdi:delete" />
         </button>
         <button id="prac-copy" class="prac-btn prac-btn-icon" title={t.btnCopyResults}>
-          <i class="mdi mdi-content-copy"></i>
-          <span>{t.btnCopyResults}</span>
+          <Icon name="mdi:content-copy" />
         </button>
       </div>
 
@@ -181,8 +184,7 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
     const a = parseFloat(inputA.value) || 0;
     const b = parseFloat(inputB.value) || 0;
     const d = parseFloat(inputD.value) || null;
-    const unitStr = currentUnit === 'in' ? ui.unitInches : (currentUnit === 'ft' ? ui.unitFeet : ui.unitCentimeters);
-    const calc = calculateSquaring(a, b, d, unitStr, ui);
+    const calc = calculateSquaring(a, b, d, { unit: currentUnit, ui });
 
     if (calc.hypotenuse > 0) {
       resultIdeal.textContent = calc.hypotenuse.toFixed(2);
@@ -231,9 +233,9 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
     else if (currentUnit === 'cm') unitText = ui.unitCentimeters;
     const text = `${ui.labelIdealDiagonal || 'Ideal'}: ${resultIdeal.textContent}${unitText}, ${ui.labelDeviation || 'Deviation'}: ${resultDev.textContent}${unitText}`;
     navigator.clipboard.writeText(text).then(() => {
-      const originalText = copyBtn.innerHTML;
-      copyBtn.innerHTML = '<i class="mdi mdi-check"></i>';
-      setTimeout(() => (copyBtn.innerHTML = originalText), 1500);
+      const originalHTML = copyBtn.innerHTML;
+      copyBtn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>';
+      setTimeout(() => (copyBtn.innerHTML = originalHTML), 1500);
     });
   });
 
