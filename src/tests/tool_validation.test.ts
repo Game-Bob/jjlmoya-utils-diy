@@ -4,8 +4,8 @@ import { diyCategory } from '../data';
 
 describe('Tool Validation Suite', () => {
   describe('Library Registration', () => {
-    it('should have 13 tools in ALL_TOOLS', () => {
-      expect(ALL_TOOLS.length).toBe(13);
+    it('should have 14 tools in ALL_TOOLS', () => {
+      expect(ALL_TOOLS.length).toBe(14);
     });
 
     it('diyCategory should be defined', () => {

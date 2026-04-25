@@ -12,10 +12,11 @@ import { thermalExpansionCalculator } from '../tool/thermalExpansionCalculator/i
 import { drillCalculator } from '../tool/drillCalculator/index';
 import { stairCalculator } from '../tool/stairCalculator/index';
 import { drillSharpener } from '../tool/drillSharpener/index';
+import { workshopFractionConverter } from '../tool/workshopFractionConverter/index';
 
 export const diyCategory: DiyCategoryEntry = {
   icon: 'mdi:hand',
-  tools: [clayCalculator, epoxyCalculator, balusterCalculator, mortarCalculator, passepartoutCalculator, concreteCalculator, cutOptimizer, voltageDropCalculator, furnitureFit, thermalExpansionCalculator, drillCalculator, stairCalculator, drillSharpener],
+  tools: [clayCalculator, epoxyCalculator, balusterCalculator, mortarCalculator, passepartoutCalculator, concreteCalculator, cutOptimizer, voltageDropCalculator, furnitureFit, thermalExpansionCalculator, drillCalculator, stairCalculator, drillSharpener, workshopFractionConverter],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),

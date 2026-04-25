@@ -6,7 +6,7 @@ const { ui } = Astro.props;
 const t = (ui ?? {}) as WorkshopFractionConverterUI;
 ---
 
-<div class="wfc-root" data-wfc-root>
+<div class="wfc-root" data-wfc-root data-ui={JSON.stringify(t)}>
   <div class="wfc-card">
     <div class="wfc-grid">
       <div class="wfc-sidebar">
@@ -169,7 +169,7 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
 
           <div class="wfc-visual-scale">
             <div style="font-size: 0.75rem; font-weight: 600; color: #6b7280; margin-bottom: 0.75rem;">
-              Visual Reference (1 inch = 96px)
+              {t.labelVisualReference}
             </div>
             <div class="wfc-scale-ruler" id="wfc-scale-ruler">
               <div class="wfc-scale-indicator" id="wfc-scale-indicator" style="width: 0;"></div>
@@ -219,6 +219,8 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
 </div>
 
 <script>
-import { WorkshopFractionConverter } from './client';
-new WorkshopFractionConverter();
+  import { WorkshopFractionConverter } from './client';
+  const root = document.querySelector('[data-wfc-root]');
+  const ui = JSON.parse(root?.getAttribute('data-ui') || '{}');
+  new WorkshopFractionConverter(ui);
 </script>

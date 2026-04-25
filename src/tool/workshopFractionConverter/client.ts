@@ -6,7 +6,9 @@ export class WorkshopFractionConverter {
   history: HistoryEntry[] = [];
   currentMode = 'forward';
   currentPrecision = 'carpentry';
-  constructor() {
+  ui: Record<string, string> = {};
+  constructor(ui?: Record<string, string>) {
+    if (ui) this.ui = ui;
     this.setupEventListeners();
     this.loadHistory();
   }
@@ -103,7 +105,7 @@ export class WorkshopFractionConverter {
     const numerator = parseInt((document.getElementById('wfc-numerator') as HTMLInputElement).value, 10) || 0;
     const denominator = parseInt((document.getElementById('wfc-denominator') as HTMLSelectElement).value, 10) || 1;
     const input: Fraction = { whole, numerator, denominator };
-    displayResult(convertFraction(input), this.currentPrecision);
+    displayResult(convertFraction(input), this.currentPrecision, this.ui);
   }
   convertReverse() {
     const mm = parseFloat((document.getElementById('wfc-reverse-mm') as HTMLInputElement).value) || 0;
@@ -112,7 +114,7 @@ export class WorkshopFractionConverter {
       document.getElementById('wfc-result-content')?.classList.add('wfc-hidden');
       return;
     }
-    displayReverseResult(reverseSearch(mm), this.currentPrecision);
+    displayReverseResult(reverseSearch(mm), this.currentPrecision, this.ui);
   }
   copyResult() {
     const fractionEl = document.getElementById('wfc-result-fraction');
@@ -147,7 +149,7 @@ export class WorkshopFractionConverter {
     const list = document.getElementById('wfc-history-list');
     if (!list) return;
     if (this.history.length === 0) {
-      list.innerHTML = '<div style="text-align: center; color: #9ca3af; font-size: 0.85rem;">No measurements yet</div>';
+      list.innerHTML = `<div style="text-align: center; color: #9ca3af; font-size: 0.85rem;">${this.ui.historyEmpty || 'No measurements yet'}</div>`;
       return;
     }
     list.innerHTML = this.buildHistoryHTML();
@@ -155,7 +157,7 @@ export class WorkshopFractionConverter {
   }
   buildHistoryHTML() {
     return this.history
-      .map((item, idx) => `<div class="wfc-history-item"><span><span class="wfc-history-item-fraction">${item.fraction}</span> = ${item.mm}</span><button class="wfc-history-remove" data-idx="${idx}">Remove</button></div>`)
+      .map((item, idx) => `<div class="wfc-history-item"><span><span class="wfc-history-item-fraction">${item.fraction}</span> = ${item.mm}</span><button class="wfc-history-remove" data-idx="${idx}">${this.ui.historyRemove || 'Remove'}</button></div>`)
       .join('');
   }
   attachHistoryHandlers(list: HTMLElement) {

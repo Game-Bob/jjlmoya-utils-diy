@@ -14,7 +14,7 @@ function updateResultDisplay(fractionStr: string, inchesStr: string, mmStr: stri
   if (mmEl) mmEl.textContent = mmStr;
 }
 
-export function displayResult(result: ConversionResult, precision = 'carpentry') {
+export function displayResult(result: ConversionResult, precision = 'carpentry', ui: Record<string, string> = {}) {
   document.getElementById('wfc-no-result')?.classList.add('wfc-hidden');
   document.getElementById('wfc-result-content')?.classList.remove('wfc-hidden');
   const decimals = getDecimals(precision);
@@ -23,11 +23,11 @@ export function displayResult(result: ConversionResult, precision = 'carpentry')
   const mmStr = result.millimeters.toFixed(decimals) + ' mm';
   updateResultDisplay(fractionStr, inchesStr, mmStr);
   updateVisualScale(result.millimeters);
-  if (result.closestFastener) updateFastenerMatch(result.closestFastener);
-  if (result.closestSocket) updateSocketMatch(result.closestSocket);
+  if (result.closestFastener) updateFastenerMatch(result.closestFastener, ui);
+  if (result.closestSocket) updateSocketMatch(result.closestSocket, ui);
 }
 
-export function displayReverseResult(result: ReverseSearchResult, precision = 'carpentry') {
+export function displayReverseResult(result: ReverseSearchResult, precision = 'carpentry', ui: Record<string, string> = {}) {
   document.getElementById('wfc-no-result')?.classList.add('wfc-hidden');
   document.getElementById('wfc-result-content')?.classList.remove('wfc-hidden');
   const decimals = getDecimals(precision);
@@ -36,8 +36,8 @@ export function displayReverseResult(result: ReverseSearchResult, precision = 'c
   const mmStr = result.input_mm.toFixed(decimals) + ' mm';
   updateResultDisplay(fractionStr, inchesStr, mmStr);
   updateVisualScale(result.input_mm);
-  if (result.closestFastener) updateFastenerMatch(result.closestFastener);
-  if (result.closestSocket) updateSocketMatch(result.closestSocket);
+  if (result.closestFastener) updateFastenerMatch(result.closestFastener, ui);
+  if (result.closestSocket) updateSocketMatch(result.closestSocket, ui);
 }
 
 function updateVisualScale(mm: number) {
@@ -54,35 +54,35 @@ function updateVisualScale(mm: number) {
   }
 }
 
-function updateFastenerMatch(match: Match) {
+function updateFastenerMatch(match: Match, ui: Record<string, string>) {
   const pct = Math.abs(match.difference_pct).toFixed(1);
   const badge = document.getElementById('wfc-fastener-badge');
   const badgeClass = getBadgeClass(pct);
   if (badge) {
     badge.className = 'wfc-match-badge ' + badgeClass;
-    badge.textContent = pct + '% diff';
+    badge.textContent = pct + '%';
   }
   const nameEl = document.getElementById('wfc-fastener-name');
   if (nameEl) nameEl.textContent = match.name;
   const detailsEl = document.getElementById('wfc-fastener-details');
   if (detailsEl) {
-    detailsEl.innerHTML = `<strong>${match.size_mm.toFixed(2)} mm</strong> (${match.size_inch})<br/>Difference: ${match.difference_mm.toFixed(2)} mm`;
+    detailsEl.innerHTML = `<strong>${match.size_mm.toFixed(2)} mm</strong> (${match.size_inch})<br/>${ui.matchDifference || 'Difference'}: ${match.difference_mm.toFixed(2)} mm`;
   }
 }
 
-function updateSocketMatch(match: Match) {
+function updateSocketMatch(match: Match, ui: Record<string, string>) {
   const pct = Math.abs(match.difference_pct).toFixed(1);
   const badge = document.getElementById('wfc-socket-badge');
   const badgeClass = getBadgeClass(pct);
   if (badge) {
     badge.className = 'wfc-match-badge ' + badgeClass;
-    badge.textContent = pct + '% diff';
+    badge.textContent = pct + '%';
   }
   const nameEl = document.getElementById('wfc-socket-name');
   if (nameEl) nameEl.textContent = match.name;
   const detailsEl = document.getElementById('wfc-socket-details');
   if (detailsEl) {
-    detailsEl.innerHTML = `<strong>${match.size_mm.toFixed(2)} mm</strong> (${match.size_inch})<br/>Difference: ${match.difference_mm.toFixed(2)} mm`;
+    detailsEl.innerHTML = `<strong>${match.size_mm.toFixed(2)} mm</strong> (${match.size_inch})<br/>${ui.matchDifference || 'Difference'}: ${match.difference_mm.toFixed(2)} mm`;
   }
 }
 

@@ -34,4 +34,5 @@ export interface WorkshopFractionConverterUI extends Record<string, string> {
   historyRemove: string;
   helpText: string;
   toolOverline: string;
+  labelVisualReference: string;
 }

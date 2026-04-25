@@ -136,5 +136,6 @@ export const content: ToolLocaleContent<WorkshopFractionConverterUI> = {
     historyRemove: 'Remove',
     helpText: 'Select a measurement or enter a fraction to get started.',
     toolOverline: 'Workshop Converter',
+    labelVisualReference: 'Visual Reference (1 inch = 96px)',
   },
 };
