@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'dosage-mortier-chaux-nhl';
 const title = 'Dosage Mortier de Chaux NHL: Proportions pour Enduits et Crépis Traditionnels';
@@ -89,25 +90,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    {
-      name: 'NF EN 459: Chaux de Construction',
-      url: 'https://www.boutique.afnor.org/',
-    },
-    {
-      name: 'ICOMOS: Charte de Venise pour la Conservation',
-      url: 'https://www.icomos.org/charte-de-venise',
-    },
-    {
-      name: 'Vitruve: De Architectura, Livre VII',
-      url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072',
-    },
-    {
-      name: 'CSTB: Guide des enduits à la chaux',
-      url: 'https://www.cstb.fr/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

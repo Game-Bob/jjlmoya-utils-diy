@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'stair-calculator';
 const title = '階段計算機：設計と施工';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: 'リファレンスと規定',
-  bibliography: [
-    { name: '建築基準法（階段の規定）', url: 'https://ja.wikipedia.org/wiki/%E9%9A%8E%E6%AE%B5' },
-    { name: 'ブロンデルの法則 - Wikipedia（英語）', url: 'https://en.wikipedia.org/wiki/Stairs#Blondel\'s_Rule' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

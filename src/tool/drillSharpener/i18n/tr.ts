@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'usta-matkap-bileme';
 const title = 'Usta Matkap Bileme: Hassas Mastar';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Teknik Referanslar',
-  bibliography: [
-    { name: 'Atölye El Kitabı - Matkap Bileme (PDF)', url: 'https://tr.wikipedia.org/wiki/Matkap_ucu#Bileme' },
-    { name: 'Metal Teknolojisi - Matkap Açıları', url: 'https://www.google.com/search?q=matkap+bileme+acilari' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

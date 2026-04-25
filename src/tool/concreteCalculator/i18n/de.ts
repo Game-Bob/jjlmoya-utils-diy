@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'beton-moertel-rechner';
 const title = 'Beton und Mörtelrechner: Exakte Mengen an Zement, Sand und Wasser';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenzen',
-  bibliography: [
-    {
-      name: 'DIN EN 206-1: Beton – Festlegung, Eigenschaften, Herstellung und Konformität',
-      url: 'https://www.beuth.de/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Zement-Merkblätter Betontechnik',
-      url: 'https://www.beton.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

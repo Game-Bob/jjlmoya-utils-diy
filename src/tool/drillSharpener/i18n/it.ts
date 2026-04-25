@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'affilatura-maestra-punte';
 const title = 'Affilatura Maestra delle Punte: Calibro di Precisione';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti Tecnici',
-  bibliography: [
-    { name: 'Manuale d\'Officina - Affilatura Punte (PDF)', url: 'https://www.google.com/search?q=manuale+affilatura+punte' },
-    { name: 'Tecnologia dei Metalli - Angoli delle Punte', url: 'https://it.wikipedia.org/wiki/Punta_da_trapano' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'concrete-mortar-calculator';
 const title = 'コンクリート・モルタル計算機：セメント、砂、水の正確な配合量';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    {
-      name: 'コンクリート標準示方書 - 公益社団法人 土木学会',
-      url: 'https://www.jsce.or.jp/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'モルタルの配合と種類について',
-      url: 'https://ja.wikipedia.org/wiki/モルタル',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-sharpening-master';
 const title = '钻头修磨大师：精密数字规';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '技术参考',
-  bibliography: [
-    { name: '车间手册 - 钻头修磨 (PDF)', url: 'https://zh.wikipedia.org/wiki/钻头#修磨' },
-    { name: '金属工艺学 - 钻头角度', url: 'https://www.google.com/search?q=钻头+修磨+角度' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

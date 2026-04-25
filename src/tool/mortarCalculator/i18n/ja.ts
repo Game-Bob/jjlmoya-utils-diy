@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'lime-mortar-calculator';
 const title = '伝統的な石灰モルタル配合：下地と仕上げ';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    { name: 'ヴィトルウィウス - 建築十書 第7巻', url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072' },
-    { name: 'EN 459規格 - 建築用石灰', url: 'https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0053796' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

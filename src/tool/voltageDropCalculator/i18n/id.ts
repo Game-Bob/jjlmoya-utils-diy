@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-jatuh-tegangan';
 const title = 'Kalkulator Jatuh Tegangan dan Ukuran Kabel';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    { name: 'IEC 60364: Instalasi Listrik Tegangan Rendah', url: 'https://www.iec.ch/' },
-    { name: 'Hukum Ohm dan Resistivitas: Wikipedia', url: 'https://id.wikipedia.org/wiki/Hambatan_listrik' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

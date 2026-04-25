@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-rpm-calculator';
 const title = '钻孔与切削转速计算器';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillCalculatorUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '技术参考',
-  bibliography: [
-    { name: 'Sandvik Coromant: 切削速度与进给率公式', url: 'https://www.sandvik.coromant.com/zh-cn/knowledge/machining-formulas-definitions/general-turning-formulas-definitions' },
-    { name: '机械加工工艺手册', url: 'https://www.google.com/search?q=Casillas+Maquinas+Calculos+de+taller' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

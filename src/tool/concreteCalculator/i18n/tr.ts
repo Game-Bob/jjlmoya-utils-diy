@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'beton-harc-hesaplama';
 const title = 'Beton ve Harç Hesaplayıcı: Tam Çimento, Kum ve Su Miktarları';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Teknik Referanslar',
-  bibliography: [
-    {
-      name: 'TS EN 206 - Beton - Özellik, performans, imalat ve uygunluk',
-      url: 'https://www.tse.org.tr/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Çimento Harçları Dozaj Kılavuzu',
-      url: 'https://tr.wikipedia.org/wiki/Har%C3%A7_(in%C5%9Faat)',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-balaustres';
 const title = 'Calculadora de Balaústres: Espaçamento Exato para Guardas';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
-  bibliographyTitle: 'Referências Técnicas',
-  bibliography: [
-    {
-      name: 'RGEU - Regulamento Geral das Edificações Urbanas (Portugal)',
-      url: 'https://DiariodaRepublica.pt/',
-    },
-    {
-      name: 'IRC - International Residential Code (EUA)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - International Building Code',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'beton-mortel-calculator';
 const title = 'Beton en Mortelcalculator: Exacte Hoeveelheden Cement, Zand en Water';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenties',
-  bibliography: [
-    {
-      name: 'NEN-EN 206: Beton - Specificatie, eigenschappen, vervaardiging en conformiteit',
-      url: 'https://www.nen.nl/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Doseergids voor Cementmortels',
-      url: 'https://nl.wikipedia.org/wiki/Mortel',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'betong-bruk-kalkylator';
 const title = 'Betong och brukskalkylator: Exakta mängder cement, sand och vatten';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Vanliga frågor',
   faq: faqData,
-  bibliographyTitle: 'Tekniska referenser',
-  bibliography: [
-    {
-      name: 'Boverkets konstruktionsregler (EKS) - Sverige',
-      url: 'https://www.boverket.se/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Guide för dosering av cementbruk',
-      url: 'https://sv.wikipedia.org/wiki/Murbruk',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'lime-mortar-calculator';
 const title = '전통 석회 모르타르 배합 비율: 초벌 및 정벌 바름';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    { name: '비트루비우스 - 건축십서 제7권', url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072' },
-    { name: 'EN 459 규격 - 건축용 석회', url: 'https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0053796' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-sharpening-master';
 const title = '드릴 연마 마스터: 정밀 게이지';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    { name: '워크숍 매뉴얼 - 드릴 연마 (PDF)', url: 'https://ko.wikipedia.org/wiki/트위스트_드릴#연마' },
-    { name: '금속 기술 - 드릴 각도', url: 'https://www.google.com/search?q=드릴+연마+각도' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

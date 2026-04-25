@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-sharpening-master';
 const title = 'Drill Sharpening Master: Precision Gauge';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    { name: 'Workshop Manual - Drill Bit Sharpening (PDF)', url: 'https://www.scribd.com/document/486692441/Afilado-Manual-de-Brocas' },
-    { name: 'Metal Technology - Drill Angles', url: 'https://en.wikipedia.org/wiki/Drill_bit' },
-    { name: 'Mechanical Workshop Sharpening Standards', url: 'https://www.iso.org/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CutOptimizerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'optimiseur-decoupe';
 const title = 'Optimiseur de Découpe 1D et 2D: Réduire les Chutes de Matériaux';
@@ -89,17 +90,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    {
-      name: 'Problème de découpe de stock: Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Cutting_stock_problem',
-    },
-    {
-      name: 'Problème de bin packing: Wolfram MathWorld',
-      url: 'https://mathworld.wolfram.com/BinPackingProblem.html',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

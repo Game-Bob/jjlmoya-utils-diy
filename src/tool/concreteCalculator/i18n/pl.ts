@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-betonu-zaprawy';
 const title = 'Kalkulator Betonu i Zaprawy: Dokładne Ilości Cementu, Piasku i Wody';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje Techniczne',
-  bibliography: [
-    {
-      name: 'Norma PN-EN 206: Beton – Wymagania, właściwości, produkcja i zgodność',
-      url: 'https://www.pkn.pl/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Przewodnik po dozowaniu zapraw cementowych',
-      url: 'https://pl.wikipedia.org/wiki/Zaprawa_murarska',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

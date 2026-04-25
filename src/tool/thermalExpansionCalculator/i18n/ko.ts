@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'thermal-expansion-calculator';
 const title = '보 및 구조물 열팽창 계산기';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    { name: '열팽창 계수 — Engineering Toolbox', url: 'https://www.engineeringtoolbox.com/linear-expansion-coefficients-d_95.html' },
-    { name: '열팽창과 온도 — Britannica', url: 'https://www.britannica.com/science/thermal-expansion' },
-    { name: '선열팽창 — Physics Hypertextbook', url: 'https://physics.info/expansion/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

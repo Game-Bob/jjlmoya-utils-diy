@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CutOptimizerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'cut-optimizer';
 const title = '목재 및 판재 절단 최적화 계산기';
@@ -89,17 +90,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    {
-      name: 'Cutting Stock Problem: Wikipedia',
-      url: 'https://en.wikipedia.org/wiki/Cutting_stock_problem',
-    },
-    {
-      name: 'Bin Packing Problem: Wolfram MathWorld',
-      url: 'https://mathworld.wolfram.com/BinPackingProblem.html',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'lime-mortar-calculator';
 const title = 'Lime Mortar Mix Ratios: Proportions for Heritage Render and Plaster';
@@ -89,25 +90,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    {
-      name: 'EN 459: Building Lime Standard',
-      url: 'https://www.bsigroup.com/en-GB/standards/',
-    },
-    {
-      name: 'Historic England: Mortars, Renders and Plasters',
-      url: 'https://historicengland.org.uk/advice/technical-advice/buildings/',
-    },
-    {
-      name: 'Vitruvius: De Architectura, Book VII',
-      url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072',
-    },
-    {
-      name: 'ICCROM: Conservation of Historic Masonry',
-      url: 'https://www.iccrom.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

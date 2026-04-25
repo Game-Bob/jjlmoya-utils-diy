@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'spannungsabfall-rechner';
 const title = 'Spannungsabfall Rechner und Kabelquerschnitt Rechner';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenzen',
-  bibliography: [
-    { name: 'DIN VDE 0100: Errichten von Niederspannungsanlagen', url: 'https://www.vde-verlag.de/normen/vde-0100.html' },
-    { name: 'Ohmsches Gesetz und Widerstand: Wikipedia', url: 'https://de.wikipedia.org/wiki/Ohmsches_Gesetz' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

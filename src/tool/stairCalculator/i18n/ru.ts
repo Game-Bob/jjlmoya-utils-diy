@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulyator-lestnic';
 const title = 'Калькулятор лестниц: проектирование и расчет';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Справочные материалы и нормы',
-  bibliography: [
-    { name: 'ГОСТ и СНиП на устройство лестниц', url: 'https://ru.wikipedia.org/wiki/Лестница' },
-    { name: 'Закон Блонделя — Википедия', url: 'https://ru.wikipedia.org/wiki/Лестница#Геометрия_лестницы' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

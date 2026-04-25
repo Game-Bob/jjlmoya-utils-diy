@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'epoxyharts-kalkylator';
 const title = 'Epoxyharts kalkylator: Exakt blandning och volym';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
   description,
   faqTitle: 'Vanliga frågor',
   faq: faqData,
-  bibliographyTitle: 'Tekniska referenser',
-  bibliography: [
-    { name: 'TotalBoat - Supportcenter och tekniska guider', url: 'https://www.totalboat.com/pages/support' },
-    { name: 'ArtResin - FAQ och bruksanvisning', url: 'https://www.artresin.com/pages/artresin-faq' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

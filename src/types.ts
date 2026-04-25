@@ -32,7 +32,7 @@ export interface ToolLocaleContent<TUI extends Record<string, string> = Record<s
   faqTitle?: string;
   faq: FAQItem[];
   bibliographyTitle?: string;
-  bibliography: BibliographyEntry[];
+  bibliography?: BibliographyEntry[];
   howTo: HowToStep[];
   schemas: WithContext<Thing>[];
 }

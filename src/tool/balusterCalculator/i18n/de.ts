@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'baluster-rechner';
 const title = 'Baluster Rechner: Exakter Abstand für Geländer';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenzen',
-  bibliography: [
-    {
-      name: 'DIN 18065 - Treppenmaße und Geländer (Deutschland)',
-      url: 'https://www.beuth.de/de/norm/din-18065/324683526',
-    },
-    {
-      name: 'IRC - International Residential Code (USA)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - International Building Code',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

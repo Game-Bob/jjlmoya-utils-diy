@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-rpm-calculator';
 const title = 'Drill and Machining RPM Calculator';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    { name: 'Sandvik Coromant: Cutting Speed and Feed Rate Formulae', url: 'https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/general-turning-formulas-definitions' },
-    { name: 'Machine Calculations and Workshop Tables — Machinery Handbook', url: 'https://www.google.com/search?q=machinery+handbook+cutting+speeds' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

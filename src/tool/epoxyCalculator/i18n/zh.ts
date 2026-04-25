@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'epoxy-resin-calculator';
 const title = '环氧树脂计算器：混合比例与精确体积';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '技术参考',
-  bibliography: [
-    { name: 'TotalBoat - 支持中心与技术指南', url: 'https://www.totalboat.com/pages/support' },
-    { name: 'ArtResin - 常见问题与使用指南', url: 'https://www.artresin.com/pages/artresin-faq' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

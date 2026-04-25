@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-balustres';
 const title = 'Calculateur de Balustres: Espacement Exact pour Rampes';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    {
-      name: 'IBC - International Building Code',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-    {
-      name: 'IRC - International Residential Code (États-Unis)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'CTE - Código Técnico de la Edificación (Espagne)',
-      url: 'https://www.codigotecnico.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

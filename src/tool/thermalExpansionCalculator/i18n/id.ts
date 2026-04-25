@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-pemuaian-panas';
 const title = 'Kalkulator Pemuaian Panas Balok dan Struktur';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    { name: 'Koefisien Ekspansi Termal — Engineering Toolbox', url: 'https://www.engineeringtoolbox.com/linear-expansion-coefficients-d_95.html' },
-    { name: 'Ekspansi Termal dan Suhu — Britannica', url: 'https://www.britannica.com/science/thermal-expansion' },
-    { name: 'Ekspansi Termal Linier — Physics Hypertextbook', url: 'https://physics.info/expansion/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

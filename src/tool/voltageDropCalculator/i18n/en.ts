@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'voltage-drop-calculator';
 const title = 'Voltage Drop Calculator: Wire Cross Section from Volts, Watts and Distance';
@@ -89,12 +90,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    { name: 'IEC 60364: Low voltage electrical installations', url: 'https://www.iec.ch/homepage' },
-    { name: 'Voltage drop: Wikipedia', url: 'https://en.wikipedia.org/wiki/Voltage_drop' },
-    { name: 'Electrical resistivity and conductivity: Wikipedia', url: 'https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

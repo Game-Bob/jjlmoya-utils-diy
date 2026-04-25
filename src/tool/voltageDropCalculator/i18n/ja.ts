@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'voltage-drop-calculator';
 const title = '電圧降下・配線サイズ計算機';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    { name: 'IEC 60364: 低圧電気設備', url: 'https://www.iec.ch/' },
-    { name: 'オームの法則と抵抗率：Wikipedia', url: 'https://ja.wikipedia.org/wiki/%E9%9B%BB%E6%B0%97%E6%B5%B5%E6%8A%B5%E6%8E%87' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

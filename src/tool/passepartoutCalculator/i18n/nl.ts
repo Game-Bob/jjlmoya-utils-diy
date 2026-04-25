@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'passepartout-rekenmachine';
 const title = 'Passepartout Calculator: Marges met Optische Correctie voor Inlijsten';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenties',
-  bibliography: [
-    { name: 'ISO 9706: Permanent papier voor documenten', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA: Professional Picture Framers Association', url: 'https://ppfa.com/' },
-    { name: 'Fine Art Trade Guild: Framing Standards', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

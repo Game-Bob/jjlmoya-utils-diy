@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-mortir';
 const title = 'Proporsi Mortir Kapur Tradicional: Plester dan Acian';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    { name: 'Vitruvius - De Architectura, Buku VII', url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072' },
-    { name: 'Norma EN 459 - Kapur Konstruksi', url: 'https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0053796' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

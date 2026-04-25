@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'morteros';
 const title = 'Proporciones Morteros de Cal Tradicionales: Enfoscados y Revocos';
@@ -89,25 +90,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
   description,
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
-  bibliographyTitle: 'Referencias Técnicas',
-  bibliography: [
-    {
-      name: 'Vitruvio - De Architectura, Libro VII',
-      url: 'https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:2007.01.0072',
-    },
-    {
-      name: 'Norma EN 459 - Cales para la Construcción',
-      url: 'https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0053796',
-    },
-    {
-      name: 'CTE - Código Técnico de la Edificación',
-      url: 'https://www.codigotecnico.org/',
-    },
-    {
-      name: 'ICCROM - Conservation of Historic Masonry',
-      url: 'https://www.iccrom.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

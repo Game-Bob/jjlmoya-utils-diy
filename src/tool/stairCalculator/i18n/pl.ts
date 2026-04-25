@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-schodow';
 const title = 'Kalkulator Schodów: Projektowanie i Wykonawstwo';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje i Normy',
-  bibliography: [
-    { name: 'Warunki Techniczne budynków - Schody', url: 'https://isap.sejm.gov.pl/' },
-    { name: 'Prawo Blondela - Wikipedia', url: 'https://pl.wikipedia.org/wiki/Schody#Wymiary_stopni' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

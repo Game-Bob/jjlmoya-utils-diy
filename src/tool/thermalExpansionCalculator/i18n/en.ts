@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'thermal-expansion-calculator';
 const title = 'Thermal Expansion Calculator for Beams and Structural Materials';
@@ -89,12 +90,7 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    { name: 'Coefficient of Thermal Expansion — Engineering Toolbox', url: 'https://www.engineeringtoolbox.com/linear-expansion-coefficients-d_95.html' },
-    { name: 'Thermal expansion and temperature — Britannica', url: 'https://www.britannica.com/science/thermal-expansion' },
-    { name: 'Linear Thermal Expansion — Physics Hypertextbook', url: 'https://physics.info/expansion/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

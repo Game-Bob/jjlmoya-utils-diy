@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drehzahlrechner-bohren-fraesen';
 const title = 'Drehzahlrechner Bohren und Fräsen';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillCalculatorUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenzen',
-  bibliography: [
-    { name: 'Sandvik Coromant: Formeln für Schnittgeschwindigkeit und Vorschub', url: 'https://www.sandvik.coromant.com/de-de/knowledge/machining-formulas-definitions/general-turning-formulas-definitions' },
-    { name: 'Tabellenbuch Metall', url: 'https://www.europa-lehrmittel.de/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

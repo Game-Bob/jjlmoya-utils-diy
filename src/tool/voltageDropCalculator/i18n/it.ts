@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calcolatore-caduta-tensione';
 const title = 'Calcolatore di Caduta di Tensione e Sezione Cavo';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti Tecnici',
-  bibliography: [
-    { name: 'IEC 60364: Impianti elettrici a bassa tensione', url: 'https://www.iec.ch/' },
-    { name: 'Legge di Ohm e Resistività: Wikipedia', url: 'https://it.wikipedia.org/wiki/Resistivit%C3%A0_elettrica' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

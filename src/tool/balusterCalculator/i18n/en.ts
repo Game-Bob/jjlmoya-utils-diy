@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'baluster-calculator';
 const title = 'Baluster Calculator: Exact Railing Spacing';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    {
-      name: 'IRC - International Residential Code (USA)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - International Building Code',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-    {
-      name: 'CTE - Código Técnico de la Edificación (Spain)',
-      url: 'https://www.codigotecnico.org/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

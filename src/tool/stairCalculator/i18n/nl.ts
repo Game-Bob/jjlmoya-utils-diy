@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'trap-calculator';
 const title = 'Trap Calculator: Ontwerp en Uitvoering';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
-  bibliographyTitle: 'Referenties en Normen',
-  bibliography: [
-    { name: 'NEN 3502: Trappen in woningen', url: 'https://www.nen.nl/nen-3502-1981-nl' },
-    { name: 'Wet van Blondel - Wikipedia', url: 'https://nl.wikipedia.org/wiki/Trap_(bouwkunde)#Wet_van_Blondel' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulyator-passepartu';
 const title = 'Калькулятор паспарту: поля с оптической коррекцией для оформления';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Технические справочники',
-  bibliography: [
-    { name: 'ISO 9706: Долговечная бумага для документов', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA: Профессиональная ассоциация оформителей картин', url: 'https://ppfa.com/' },
-    { name: 'Fine Art Trade Guild: Стандарты оформления', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

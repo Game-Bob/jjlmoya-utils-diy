@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'passepartout-calculator';
 const title = '卡纸计算器：具有视觉偏差补偿的装裱边距';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '技术参考',
-  bibliography: [
-    { name: 'ISO 9706：文档用永久性纸张', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA：专业画框装裱师协会', url: 'https://ppfa.com/' },
-    { name: '艺术贸易公会：装裱标准', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'treppen-rechner';
 const title = 'Treppenrechner: Planung und Ausführung';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Referenzen und Normen',
-  bibliography: [
-    { name: 'DIN 18065: Gebäudetreppen', url: 'https://www.beuth.de/de/norm/din-18065/233056075' },
-    { name: 'Schrittmaßregel - Wikipedia', url: 'https://de.wikipedia.org/wiki/Treppensteigung' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'matkap-devir-hesaplayici';
 const title = 'İşleme ve Matkap RPM Hesaplayıcı';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillCalculatorUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Teknik Referanslar',
-  bibliography: [
-    { name: 'Sandvik Coromant: Cutting Speed and Feed Rate Formulae', url: 'https://www.sandvik.coromant.com/en-gb/knowledge/machining-formulas-definitions/general-turning-formulas-definitions' },
-    { name: 'Makineler. Atölye Hesaplamaları — A.L. Casillas', url: 'https://www.google.com/search?q=Casillas+Maquinas+Calculos+de+taller' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

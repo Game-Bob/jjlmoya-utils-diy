@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'baluster-calculator';
 const title = 'バラスター計算機：手すりの正確な間隔計算';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    {
-      name: '建築基準法（日本）',
-      url: 'https://www.mlit.go.jp/',
-    },
-    {
-      name: 'IRC - 国際住宅基準（米国）',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - 国際建築基準',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

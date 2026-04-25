@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-spadku-napiecia';
 const title = 'Kalkulator Spadku Napięcia i Doboru Przekroju Kabla';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje Techniczne',
-  bibliography: [
-    { name: 'IEC 60364: Instalacje elektryczne niskiego napięcia', url: 'https://www.iec.ch/' },
-    { name: 'Prawo Ohma i Rezystywność: Wikipedia', url: 'https://pl.wikipedia.org/wiki/Rezystywno%C5%9B%C4%87' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

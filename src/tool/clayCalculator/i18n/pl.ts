@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ClayCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-kurczliwosci-gliny';
 const title = 'Kalkulator Kurczliwości Gliny: Dokładne Wymiary dla Ceramiki';
@@ -89,17 +90,7 @@ export const content: ToolLocaleContent<ClayCalculatorUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje',
-  bibliography: [
-    {
-      name: 'The Potter\'s Dictionary - Clay Shrinkage',
-      url: 'https://digitalfire.com/glossary/firing+shrinkage',
-    },
-    {
-      name: 'Ceramic Arts Network - Understanding Shrinkage',
-      url: 'https://ceramicartsnetwork.org/daily/article/How-to-Determine-Clay-Shrinkage-and-Make-a-Shrink-Rule',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

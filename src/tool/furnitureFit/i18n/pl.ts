@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-miejsca-na-meble';
 const title = 'Kalkulator Przestrzeni do Przeprowadzek i Mebli';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje Techniczne',
-  bibliography: [
-    { name: 'Geometric Fit in Confined Spaces (MDPI Buildings)', url: 'https://www.mdpi.com/2075-5309/15/2/157' },
-    { name: 'Moving Sofa Problem: Wolfram MathWorld', url: 'https://mathworld.wolfram.com/MovingSofaProblem.html' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

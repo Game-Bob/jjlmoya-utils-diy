@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-rpm-calculator';
 const title = '穴あけ・切削回転数計算機';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    { name: 'サンドビック・コロマント：切削速度・送り計算式', url: 'https://www.sandvik.coromant.com/ja-jp/knowledge/machining-formulas-definitions/general-turning-formulas-definitions' },
-    { name: '機械工作計算表', url: 'https://www.google.com/search?q=機械工作計算表+Casillas' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

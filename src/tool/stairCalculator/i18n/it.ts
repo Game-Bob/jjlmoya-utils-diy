@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calcolatore-scale';
 const title = 'Calcolatore per Scale: Progettazione ed Esecuzione';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti e Normative',
-  bibliography: [
-    { name: 'Norme per la progettazione delle scale', url: 'https://it.wikipedia.org/wiki/Scala_(architettura)' },
-    { name: 'Legge di Blondel - Wikipedia', url: 'https://it.wikipedia.org/wiki/Alzata_e_pedata' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

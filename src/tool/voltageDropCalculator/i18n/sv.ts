@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkylator-spanningsfall';
 const title = 'Kalkylator för spänningsfall och kabelarea';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Vanliga frågor',
   faq: faqData,
-  bibliographyTitle: 'Tekniska referenser',
-  bibliography: [
-    { name: 'IEC 60364: Elinstallationer för lågspänning', url: 'https://www.iec.ch/' },
-    { name: 'Ohms lag och resistivitet: Wikipedia', url: 'https://sv.wikipedia.org/wiki/Resistivitet' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

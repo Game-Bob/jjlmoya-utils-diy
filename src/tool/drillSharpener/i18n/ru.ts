@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'master-zatochki-sverl';
 const title = 'Мастер заточки сверл: прецизионный калибр';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Технические справочники',
-  bibliography: [
-    { name: 'Руководство мастерской - Заточка сверл (PDF)', url: 'https://ru.wikipedia.org/wiki/Спиральное_сверло#Зенкерование_и_заточка' },
-    { name: 'Технология металлов - Углы сверла', url: 'https://www.google.com/search?q=заточка+сверл+углы' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

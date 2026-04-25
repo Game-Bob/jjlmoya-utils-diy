@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulyator-betona-rastvora';
 const title = 'Калькулятор бетона и раствора: Точное количество цемента, песка и воды';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Технические справочники',
-  bibliography: [
-    {
-      name: 'ГОСТ 27006-2019 Бетоны. Правила подбора состава',
-      url: 'https://docs.cntd.ru/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Руководство по дозировке цементных растворов',
-      url: 'https://ru.wikipedia.org/wiki/Строительный_раствор',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculatrice-escaliers';
 const title = 'Calculatrice d\'Escaliers: Conception et Exécution';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références et Normes',
-  bibliography: [
-    { name: 'Règles de construction des escaliers intérieurs - DTU', url: 'https://www.afnor.org/' },
-    { name: 'Loi de Blondel - Wikipédia', url: 'https://fr.wikipedia.org/wiki/Escalier' },
-    { name: 'ISO 12122-1: Escaliers de bâtiment - Prescriptions de sécurité', url: 'https://www.iso.org/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

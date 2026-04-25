@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-passe-partout';
 const title = 'Calculateur Passepartout: Marges avec Correction Optique pour Encadrement';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    {
-      name: 'ISO 9706: Permanence du papier pour documents',
-      url: 'https://www.iso.org/standard/22495.html',
-    },
-    {
-      name: 'PPFA: Professional Picture Framers Association',
-      url: 'https://ppfa.com/',
-    },
-    {
-      name: 'Fine Art Trade Guild: Normes d\'encadrement',
-      url: 'https://www.fineart.co.uk/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

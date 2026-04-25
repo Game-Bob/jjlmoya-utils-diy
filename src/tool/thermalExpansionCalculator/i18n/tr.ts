@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'termal-genlesme-hesaplayici';
 const title = 'Kiriş ve Yapıların Termal Genleşme Hesaplayıcısı';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Teknik Referanslar',
-  bibliography: [
-    { name: 'Termal Genleşme Katsayısı — Engineering Toolbox', url: 'https://www.engineeringtoolbox.com/linear-expansion-coefficients-d_95.html' },
-    { name: 'Termal Genleşme ve Sıcaklık — Britannica', url: 'https://www.britannica.com/science/thermal-expansion' },
-    { name: 'Lineer Termal Genleşme — Physics Hypertextbook', url: 'https://physics.info/expansion/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

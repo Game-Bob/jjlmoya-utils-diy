@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calcolatrice-balaustre';
 const title = 'Calcolatrice per Balaustre: Spaziatura Esatta per Ringhiere';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti Tecnici',
-  bibliography: [
-    {
-      name: 'Normativa Italiana sulle Ringhiere e Parapetti',
-      url: 'https://www.lavoripubblici.it/',
-    },
-    {
-      name: 'IRC - International Residential Code (USA)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - International Building Code',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

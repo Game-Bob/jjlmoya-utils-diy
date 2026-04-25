@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'drill-sharpening-master';
 const title = 'ドリル研磨マスター：精密ゲージ';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    { name: 'ワークショップマニュアル - ドリル研磨 (PDF)', url: 'https://ja.wikipedia.org/wiki/ツイストドリル#研磨' },
-    { name: '金属技術 - ドリルの角度', url: 'https://www.google.com/search?q=ドリル+研磨+角度' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

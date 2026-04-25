@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-escaleras';
 const title = 'Calculadora de Escaleras: Diseño y Ejecución';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
-  bibliographyTitle: 'Referencias y Normativa',
-  bibliography: [
-    { name: 'CTE DB SUA Seguridad de Utilización y Accesibilidad', url: 'https://www.codigotecnico.org/' },
-    { name: 'Ley de Blondel - Wikipedia', url: 'https://es.wikipedia.org/wiki/Escalera#Geometr%C3%ADa_de_la_escalera' },
-    { name: 'Instrucción para la Recepción de Cementos (RC-16)', url: 'https://www.fomento.gob.es/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'pengasah-mata-bor-presisi';
 const title = 'Pengasah Mata Bor Utama: Alat Ukur Presisi';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    { name: 'Manual Bengkel - Pengasahan Mata Bor (PDF)', url: 'https://www.google.com/search?q=manual+pengasahan+mata+bor' },
-    { name: 'Teknologi Logam - Sudut Mata Bor', url: 'https://id.wikipedia.org/wiki/Mata_bor' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

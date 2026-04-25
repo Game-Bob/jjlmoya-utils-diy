@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'voltage-drop-calculator';
 const title = '电压降与电缆线径计算器';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '技术参考',
-  bibliography: [
-    { name: 'IEC 60364：低压电气装置', url: 'https://www.iec.ch/' },
-    { name: '欧姆定律与电阻率：维基百科', url: 'https://zh.wikipedia.org/wiki/%E7%94%B5%E9%98%BB%E7%8E%87' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'baluster-calculator';
 const title = '발러스터 계산기: 난간의 정확한 간격 계산';
@@ -89,21 +90,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 문헌',
-  bibliography: [
-    {
-      name: '건축물의 피난·방화구조 등의 기준에 관한 규칙 (한국)',
-      url: 'https://www.law.go.kr/',
-    },
-    {
-      name: 'IRC - 국제 주택 기준 (미국)',
-      url: 'https://codes.iccsafe.org/content/IRC2021',
-    },
-    {
-      name: 'IBC - 국제 건축 기준',
-      url: 'https://codes.iccsafe.org/content/IBC2021',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

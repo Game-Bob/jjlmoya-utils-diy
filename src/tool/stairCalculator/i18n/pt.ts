@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-escadas';
 const title = 'Calculadora de Escadas: Design e Execução';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
-  bibliographyTitle: 'Referências e Normas',
-  bibliography: [
-    { name: 'Regras de Dimensionamento de Escadas', url: 'https://pt.wikipedia.org/wiki/Escada' },
-    { name: 'Lei de Blondel - Wikipedia', url: 'https://pt.wikipedia.org/wiki/Escada#Dimensionamento' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

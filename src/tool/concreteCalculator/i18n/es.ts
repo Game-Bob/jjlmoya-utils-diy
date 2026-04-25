@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-hormigon-mortero';
 const title = 'Calculadora de Hormigón y Mortero: Cantidades Exactas de Cemento, Arena y Agua';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
-  bibliographyTitle: 'Referencias Técnicas',
-  bibliography: [
-    {
-      name: 'Código Estructural (EHE-08): Normativa de Hormigón',
-      url: 'https://www.boe.es/buscar/doc.php?id=BOE-A-2021-12906',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Guía de Dosificación de Morteros de Cemento',
-      url: 'https://es.wikipedia.org/wiki/Mortero_(construcci%C3%B3n)',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

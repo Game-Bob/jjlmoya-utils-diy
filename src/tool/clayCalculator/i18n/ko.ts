@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ClayCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'clay-shrinkage-calculator';
 const title = '점토 수축 계산기: 도예를 위한 정확한 치수 설계';
@@ -89,17 +90,7 @@ export const content: ToolLocaleContent<ClayCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '참고 자료',
-  bibliography: [
-    {
-      name: 'The Potter\'s Dictionary - Clay Shrinkage',
-      url: 'https://digitalfire.com/glossary/firing+shrinkage',
-    },
-    {
-      name: 'Ceramic Arts Network - Understanding Shrinkage',
-      url: 'https://ceramicartsnetwork.org/daily/article/How-to-Determine-Clay-Shrinkage-and-Make-a-Shrink-Rule',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

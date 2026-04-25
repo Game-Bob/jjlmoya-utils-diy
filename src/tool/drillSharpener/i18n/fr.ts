@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'affuteur-maitrise-forets';
 const title = 'Affûteur Maître de Forets: Jauge de Précision';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    { name: 'Manuel d\'atelier - Affûtage des forets (PDF)', url: 'https://www.scribd.com/document/486692441/Afilado-Manual-de-Brocas' },
-    { name: 'Technologie des métaux - Angles de forets', url: 'https://fr.wikipedia.org/wiki/Foret_%28outil%29' },
-    { name: 'Normes d\'affûtage en atelier mécanique', url: 'https://www.iso.org/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

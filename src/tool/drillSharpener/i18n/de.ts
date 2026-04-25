@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'bohrer-schleifen-meister';
 const title = 'Bohrer Schleifen Meister: Präzisionslehre';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Häufig gestellte Fragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenzen',
-  bibliography: [
-    { name: 'Werkstatthandbuch - Bohrer schleifen (PDF)', url: 'https://de.wikipedia.org/wiki/Spiralbohrer#Spitzenanschliff' },
-    { name: 'Metalltechnologie - Bohrerwinkel', url: 'https://www.google.com/search?q=bohrer+anschleifen+winkel' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

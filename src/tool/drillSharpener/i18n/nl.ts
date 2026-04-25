@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'boor-slijpen-master';
 const title = 'Boor Slijpen Master: Precisiekaliber';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenties',
-  bibliography: [
-    { name: 'Werkplaatshandboek - Boren Slijpen (PDF)', url: 'https://nl.wikipedia.org/wiki/Spiraalboor#' },
-    { name: 'Metaaltechnologie - Boorhoeken', url: 'https://www.google.com/search?q=boor+slijpen+hoek' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

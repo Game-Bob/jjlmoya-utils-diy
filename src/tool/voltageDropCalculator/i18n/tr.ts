@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'gerilim-dusumu-hesaplayici';
 const title = 'Gerilim Düşümü ve Kablo Kesiti Hesaplayıcı';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Teknik Referanslar',
-  bibliography: [
-    { name: 'IEC 60364: Alçak Gerilim Elektrik Tesisatları', url: 'https://www.iec.ch/' },
-    { name: 'Ohm Yasası ve Özdirenç: Wikipedia', url: 'https://tr.wikipedia.org/wiki/%C3%96zdiren%C3%A7' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

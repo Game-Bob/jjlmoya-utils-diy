@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-beton-mortar';
 const title = 'Kalkulator Beton dan Mortar: Jumlah Tepat Semen, Pasir, dan Air';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    {
-      name: 'SNI 2847:2019 - Persyaratan Beton Struktural untuk Bangunan Gedung (Indonesia)',
-      url: 'https://www.bsn.go.id/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Panduan Dosis Mortar Semen',
-      url: 'https://id.wikipedia.org/wiki/Mortar',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

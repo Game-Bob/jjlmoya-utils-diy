@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'voltage-drop-calculator';
 const title = '전압 강하 및 배선 굵기 계산기';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    { name: 'IEC 60364: 저압 전기 설비', url: 'https://www.iec.ch/' },
-    { name: '옴의 법칙과 비저항: Wikipedia', url: 'https://ko.wikipedia.org/wiki/%EB%B9%84%EC%A0%80%ED%95%AD' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

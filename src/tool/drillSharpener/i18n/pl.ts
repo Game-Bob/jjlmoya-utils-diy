@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'mistrzowskie-ostrzenie-wiertel';
 const title = 'Mistrzowskie Ostrzenie Wierteł: Sprawdzian Precyzyjny';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje Techniczne',
-  bibliography: [
-    { name: 'Podręcznik warsztatowy - Ostrzenie wierteł (PDF)', url: 'https://pl.wikipedia.org/wiki/Wiertło_kręte' },
-    { name: 'Technologia metali - Kąty wierteł', url: 'https://www.google.com/search?q=ostrzenie+wiertla+katy' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

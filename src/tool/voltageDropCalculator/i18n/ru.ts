@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulyator-padeniya-napryazheniya';
 const title = 'Калькулятор падения напряжения и сечения кабеля';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Часто задаваемые вопросы',
   faq: faqData,
-  bibliographyTitle: 'Технические справочники',
-  bibliography: [
-    { name: 'IEC 60364: Электроустановки низкого напряжения', url: 'https://www.iec.ch/' },
-    { name: 'Закон Ома и удельное сопротивление: Википедия', url: 'https://ru.wikipedia.org/wiki/Удельное_электрическое_сопротивление' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

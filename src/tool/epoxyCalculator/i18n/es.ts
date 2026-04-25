@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-resina';
 const title = 'Calculadora de Resina Epoxi: Mezcla y Volumen Exacto';
@@ -89,25 +90,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
   description,
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
-  bibliographyTitle: 'Referencias Técnicas',
-  bibliography: [
-    {
-      name: 'TotalBoat - Centro de Soporte y Guías Técnicas',
-      url: 'https://www.totalboat.com/pages/support',
-    },
-    {
-      name: 'ArtResin - Preguntas Frecuentes y Guía de Uso',
-      url: 'https://www.artresin.com/pages/artresin-faq',
-    },
-    {
-      name: 'Smooth-On - Calculadoras de Moldes y Vaciado',
-      url: 'https://www.smooth-on.com/support/calculators/',
-    },
-    {
-      name: 'Polytek - Soporte Técnico y Hojas de Seguridad',
-      url: 'https://www.polytek.com/technical-support',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

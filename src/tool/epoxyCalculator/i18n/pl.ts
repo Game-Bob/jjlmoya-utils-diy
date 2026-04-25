@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-zywicy-epoksydowej';
 const title = 'Kalkulator Żywicy Epoksydowej: Mieszanka i Dokładna Objętość';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
   description,
   faqTitle: 'Często Zadawane Pytania',
   faq: faqData,
-  bibliographyTitle: 'Referencje Techniczne',
-  bibliography: [
-    { name: 'TotalBoat - Centrum Wsparcia i Przewodniki Techniczne', url: 'https://www.totalboat.com/pages/support' },
-    { name: 'ArtResin - Często Zadawane Pytania i Instrukcja Obsługi', url: 'https://www.artresin.com/pages/artresin-faq' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

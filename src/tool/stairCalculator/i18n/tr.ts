@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'merdiven-hesaplayici';
 const title = 'Merdiven Hesaplayıcı: Tasarım ve Uygulama';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Sıkça Sorulan Sorular',
   faq: faqData,
-  bibliographyTitle: 'Referanslar ve Yönetmelikler',
-  bibliography: [
-    { name: 'Merdivenlerin Planlanması ve Yönetmelikler', url: 'https://tr.wikipedia.org/wiki/Merdiven' },
-    { name: 'Blondel Yasası - Wikipedia (İngilizce)', url: 'https://en.wikipedia.org/wiki/Stairs#Blondel\'s_Rule' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

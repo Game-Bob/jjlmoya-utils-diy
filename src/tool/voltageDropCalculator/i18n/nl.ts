@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'spanningsverlies-calculator';
 const title = 'Spanningsverlies Calculator en Kabeldikte Berekenen';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Veelgestelde Vragen',
   faq: faqData,
-  bibliographyTitle: 'Technische Referenties',
-  bibliography: [
-    { name: 'IEC 60364: Elektrische installaties voor laagspanning', url: 'https://www.iec.ch/' },
-    { name: 'Wet van Ohm en Weerstand: Wikipedia', url: 'https://nl.wikipedia.org/wiki/Wet_van_Ohm' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

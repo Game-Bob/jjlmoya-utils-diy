@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-tangga';
 const title = 'Kalkulator Tangga: Desain dan Pelaksanaan';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi dan Peraturan',
-  bibliography: [
-    { name: 'Standar Keamanan dan Aksesibilitas', url: 'https://id.wikipedia.org/wiki/Tangga' },
-    { name: 'Hukum Blondel - Wikipedia', url: 'https://en.wikipedia.org/wiki/Stairs#Blondel\'s_Rule' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

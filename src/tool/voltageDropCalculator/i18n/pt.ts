@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-queda-tensao';
 const title = 'Calculadora de Queda de Tensão e Secção de Cabo';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
-  bibliographyTitle: 'Referências Técnicas',
-  bibliography: [
-    { name: 'IEC 60364: Instalações elétricas de baixa tensão', url: 'https://www.iec.ch/' },
-    { name: 'Lei de Ohm e Resistividade: Wikipedia', url: 'https://pt.wikipedia.org/wiki/Resistividade_el%C3%A9trica' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

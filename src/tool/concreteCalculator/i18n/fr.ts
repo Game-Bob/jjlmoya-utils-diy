@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-beton-mortier';
 const title = 'Calculateur Béton et Mortier: Sacs de Ciment et Dosages par m³';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    {
-      name: 'NF EN 206: Béton, spécification, performance, production et conformité',
-      url: 'https://www.afnor.org/',
-    },
-    {
-      name: 'DTU 26.1: Travaux d\'enduit de mortiers',
-      url: 'https://www.cstb.fr/',
-    },
-    {
-      name: 'Centre Technique du Bâtiment: Guide de formulation du béton',
-      url: 'https://www.cstb.fr/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

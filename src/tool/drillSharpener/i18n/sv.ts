@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'borrslipningsmaster';
 const title = 'Borrslipningsmästare: Precisionsmått';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Vanliga frågor',
   faq: faqData,
-  bibliographyTitle: 'Tekniska referenser',
-  bibliography: [
-    { name: 'Workshopmanual - Borrslipning (PDF)', url: 'https://sv.wikipedia.org/wiki/Spiralborr#' },
-    { name: 'Metallteknologi - Borrvinklar', url: 'https://www.google.com/search?q=borr+slipning+vinklar' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'passepartout-calculator';
 const title = 'マット紙計算機：額装用視覚補正マージン';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: 'よくある質問',
   faq: faqData,
-  bibliographyTitle: '技術リファレンス',
-  bibliography: [
-    { name: 'ISO 9706: 文書用長期保存紙', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA: Professional Picture Framers Association', url: 'https://ppfa.com/' },
-    { name: 'Fine Art Trade Guild: 額装基準', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

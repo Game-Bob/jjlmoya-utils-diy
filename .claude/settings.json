@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash([ -f \"$file\" ])",
+      "Read(//d/code/jjlmoya-utils-diy/src/tool$tool/i18n/**)",
+      "Bash(chmod +x /tmp/update_biblio.sh)",
+      "Bash(/tmp/update_biblio.sh)",
+      "Bash(chmod +x /tmp/remove_bib_from_i18n.sh)",
+      "Bash(/tmp/remove_bib_from_i18n.sh)",
+      "Read(//d/code/jjlmoya-utils-diy/src/tool/balusterCalculator/i18n/**)",
+      "Read(//d/code/jjlmoya-utils-diy/src/tool/clayCalculator/i18n/**)",
+      "Read(//d/code/jjlmoya-utils-diy/**)",
+      "Read(//d/d/code/jjlmoya-utils-diy/src/**)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}

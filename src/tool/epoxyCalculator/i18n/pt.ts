@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-resina-epoxica';
 const title = 'Calculadora de Resina Epóxica: Mistura e Volume Exato';
@@ -72,11 +73,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
   description,
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
-  bibliographyTitle: 'Referências Técnicas',
-  bibliography: [
-    { name: 'TotalBoat - Centro de Suporte e Guias Técnicos', url: 'https://www.totalboat.com/pages/support' },
-    { name: 'ArtResin - Perguntas Frequentes e Guia de Uso', url: 'https://www.artresin.com/pages/artresin-faq' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

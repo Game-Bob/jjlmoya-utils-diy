@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'stair-calculator';
 const title = '楼梯计算器：设计与施工';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: '常见问题',
   faq: faqData,
-  bibliographyTitle: '参考资料与规范',
-  bibliography: [
-    { name: 'CTE 建筑安全与无障碍性规范', url: 'https://www.codigotecnico.org/' },
-    { name: '布隆德尔法则 - 维基百科', url: 'https://en.wikipedia.org/wiki/Stairs#Blondel\'s_Rule' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

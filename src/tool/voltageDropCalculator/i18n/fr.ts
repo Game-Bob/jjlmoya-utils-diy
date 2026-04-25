@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-chute-tension';
 const title = 'Calculateur de Chute de Tension et Section de Câble';
@@ -89,12 +90,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
   description,
   faqTitle: 'Questions Fréquentes',
   faq: faqData,
-  bibliographyTitle: 'Références Techniques',
-  bibliography: [
-    { name: 'IEC 60364: Installations électriques basse tension', url: 'https://www.iec.ch/homepage' },
-    { name: 'Chute de tension: Wikipedia', url: 'https://fr.wikipedia.org/wiki/Chute_de_tension' },
-    { name: 'Résistivité électrique: Wikipedia', url: 'https://fr.wikipedia.org/wiki/R%C3%A9sistivit%C3%A9' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

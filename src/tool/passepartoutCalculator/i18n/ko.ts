@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'passepartout-calculator';
 const title = '매트지 계산기: 액자 제작을 위한 시각 보정 여백';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: '자주 묻는 질문',
   faq: faqData,
-  bibliographyTitle: '기술 참고 자료',
-  bibliography: [
-    { name: 'ISO 9706: 문서용 보존지 표준', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA: 전문 액자 제작자 협회', url: 'https://ppfa.com/' },
-    { name: 'Fine Art Trade Guild: 액자 제작 표준', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

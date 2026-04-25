@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-passepartout';
 const title = 'Kalkulator Passepartout: Margin dengan Koreksi Optik untuk Pembingkaian';
@@ -72,12 +73,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
   description,
   faqTitle: 'Pertanyaan Umum',
   faq: faqData,
-  bibliographyTitle: 'Referensi Teknis',
-  bibliography: [
-    { name: 'ISO 9706: Kertas permanen untuk dokumen', url: 'https://www.iso.org/standard/22495.html' },
-    { name: 'PPFA: Professional Picture Framers Association', url: 'https://ppfa.com/' },
-    { name: 'Fine Art Trade Guild: Standar Pembingkaian', url: 'https://www.fineart.co.uk/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

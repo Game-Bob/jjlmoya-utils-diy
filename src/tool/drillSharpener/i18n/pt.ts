@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'afiamento-mestre-brocas';
 const title = 'Afiamento Mestre de Brocas: Bitola de Precisão';
@@ -76,11 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Perguntas Frequentes',
   faq: faqData,
-  bibliographyTitle: 'Referências Técnicas',
-  bibliography: [
-    { name: 'Manual de Oficina - Afiamento de Brocas (PDF)', url: 'https://www.google.com/search?q=manual+afiamento+brocas' },
-    { name: 'Tecnologia dos Metais - Ângulos de Broca', url: 'https://pt.wikipedia.org/wiki/Broca' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'calcolatrice-calcestruzzo-malta';
 const title = 'Calcolatrice Calcestruzzo e Malta: Quantità Esatte di Cemento, Sabbia e Acqua';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Domande Frequenti',
   faq: faqData,
-  bibliographyTitle: 'Riferimenti Tecnici',
-  bibliography: [
-    {
-      name: 'Norme Tecniche per le Costruzioni (NTC 2018) - Italia',
-      url: 'https://www.gazzettaufficiale.it/',
-    },
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'Guida al Dosaggio delle Malte Cementizie',
-      url: 'https://it.wikipedia.org/wiki/Malta_(edilizia)',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

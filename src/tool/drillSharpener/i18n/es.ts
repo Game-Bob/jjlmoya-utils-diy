@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillSharpenerUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'afilado-maestro-brocas';
 const title = 'Afilado Maestro de Brocas: Galga de Precisión';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<DrillSharpenerUI> = {
   description,
   faqTitle: 'Preguntas Frecuentes',
   faq: faqData,
-  bibliographyTitle: 'Referencias Técnicas',
-  bibliography: [
-    { name: 'Manual de Taller - Afilado de Brocas (PDF)', url: 'https://www.scribd.com/document/486692441/Afilado-Manual-de-Brocas' },
-    { name: 'Tecnología de los Metales - Ángulos de Broca', url: 'https://es.wikipedia.org/wiki/Broca' },
-    { name: 'Normas de Afilado en Taller Mecánico', url: 'https://www.inem.es/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

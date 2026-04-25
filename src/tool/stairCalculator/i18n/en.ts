@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { StairCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'stair-calculator';
 const title = 'Stair Calculator: Design and Execution';
@@ -76,12 +77,7 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'References and Standards',
-  bibliography: [
-    { name: 'Building Code - Stair Design Standards', url: 'https://www.ibc.org/' },
-    { name: 'Blondel\'s Law - Wikipedia', url: 'https://en.wikipedia.org/wiki/Staircase' },
-    { name: 'ISO 12122-1: Building stairs - Performance requirements', url: 'https://www.iso.org/' },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [

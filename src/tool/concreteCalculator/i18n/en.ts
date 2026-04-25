@@ -1,6 +1,7 @@
 import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
+import { bibliography } from '../bibliography';
 
 const slug = 'concrete-mortar-calculator';
 const title = 'Concrete and Mortar Calculator: Bags of Cement per Cubic Metre';
@@ -94,21 +95,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
   description,
   faqTitle: 'Frequently Asked Questions',
   faq: faqData,
-  bibliographyTitle: 'Technical References',
-  bibliography: [
-    {
-      name: 'Concrete Mix Proportioning Standards (ASTM C94)',
-      url: 'https://store.astm.org/astm-bos-04.02.html',
-    },
-    {
-      name: 'BS EN 197: Cement Composition and Conformity Criteria',
-      url: 'https://www.bsigroup.com/en-GB/standards/',
-    },
-    {
-      name: 'The Concrete Centre: Mix Design Guide',
-      url: 'https://www.concretecentre.com/',
-    },
-  ],
+  bibliography,
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
