@@ -1,0 +1,37 @@
+export interface WorkshopFractionConverterUI extends Record<string, string> {
+  labelFraction: string;
+  labelWhole: string;
+  labelNumerator: string;
+  labelDenominator: string;
+  labelInches: string;
+  labelMillimeters: string;
+  resultTitle: string;
+  resultFraction: string;
+  resultInches: string;
+  resultMillimeters: string;
+  matchTitle: string;
+  matchClosestFastener: string;
+  matchClosestSocket: string;
+  matchDifference: string;
+  matchRecommendation: string;
+  reverseSearchTitle: string;
+  reverseSearchLabel: string;
+  reverseSearchButton: string;
+  reverseSearchHint: string;
+  unitMm: string;
+  unitInch: string;
+  modeForward: string;
+  modeReverse: string;
+  precisionLabel: string;
+  precisionCarpentry: string;
+  precisionMetal: string;
+  buttonConvert: string;
+  buttonClear: string;
+  buttonCopyResult: string;
+  buttonSaveToHistory: string;
+  historyTitle: string;
+  historyEmpty: string;
+  historyRemove: string;
+  helpText: string;
+  toolOverline: string;
+}

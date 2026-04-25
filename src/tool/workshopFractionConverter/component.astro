@@ -1,0 +1,224 @@
+---
+import type { WorkshopFractionConverterUI } from './ui';
+
+interface Props { ui?: WorkshopFractionConverterUI; }
+const { ui } = Astro.props;
+const t = (ui ?? {}) as WorkshopFractionConverterUI;
+---
+
+<div class="wfc-root" data-wfc-root>
+  <div class="wfc-card">
+    <div class="wfc-grid">
+      <div class="wfc-sidebar">
+        <div class="wfc-field">
+          <label class="wfc-field-label">{t.labelFraction}</label>
+          <div class="wfc-mode-toggle" id="wfc-mode-toggle">
+            <button class="wfc-mode-btn active" data-mode="forward">
+              {t.modeForward}
+            </button>
+            <button class="wfc-mode-btn" data-mode="reverse">
+              {t.modeReverse}
+            </button>
+          </div>
+        </div>
+
+        <div class="wfc-field" id="wfc-forward-input" data-forward-input>
+          <label class="wfc-field-label">{t.labelFraction}</label>
+          <div class="wfc-fraction-input">
+            <div class="wfc-fraction-column">
+              <span class="wfc-fraction-label">{t.labelWhole}</span>
+              <div class="wfc-stepper-group">
+                <button class="wfc-stepper-btn" data-stepper="whole-down">−</button>
+                <button class="wfc-stepper-btn" data-stepper="whole-up">+</button>
+              </div>
+              <input
+                type="number"
+                class="wfc-input-number"
+                id="wfc-whole"
+                value="0"
+                min="0"
+                max="999"
+                inputmode="numeric"
+              />
+            </div>
+            <div class="wfc-fraction-column">
+              <span class="wfc-fraction-label">{t.labelNumerator}</span>
+              <div class="wfc-stepper-group">
+                <button class="wfc-stepper-btn" data-stepper="num-down">−</button>
+                <button class="wfc-stepper-btn" data-stepper="num-up">+</button>
+              </div>
+              <input
+                type="number"
+                class="wfc-input-number"
+                id="wfc-numerator"
+                value="0"
+                min="0"
+                max="64"
+                inputmode="numeric"
+              />
+            </div>
+            <div class="wfc-fraction-column">
+              <span class="wfc-fraction-label">{t.labelDenominator}</span>
+              <div class="wfc-stepper-group">
+                <button class="wfc-stepper-btn" data-stepper="denom-down">−</button>
+                <button class="wfc-stepper-btn" data-stepper="denom-up">+</button>
+              </div>
+              <select class="wfc-input-number" id="wfc-denominator" style="appearance: none;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="8">8</option>
+                <option value="16">16</option>
+                <option value="32">32</option>
+                <option value="64">64</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wfc-field">
+            <label class="wfc-field-label">{t.labelFraction}</label>
+            <div class="wfc-presets" id="wfc-presets">
+              <button class="wfc-preset-btn" data-preset="1/4">1/4"</button>
+              <button class="wfc-preset-btn" data-preset="1/2">1/2"</button>
+              <button class="wfc-preset-btn" data-preset="3/8">3/8"</button>
+              <button class="wfc-preset-btn" data-preset="5/16">5/16"</button>
+              <button class="wfc-preset-btn" data-preset="3/16">3/16"</button>
+              <button class="wfc-preset-btn" data-preset="1/8">1/8"</button>
+              <button class="wfc-preset-btn" data-preset="1/16">1/16"</button>
+              <button class="wfc-preset-btn" data-preset="5/8">5/8"</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="wfc-field wfc-hidden" id="wfc-reverse-input" data-reverse-input>
+          <label class="wfc-field-label">{t.reverseSearchLabel}</label>
+          <div style="display: flex; gap: 0.5rem;">
+            <input
+              type="number"
+              class="wfc-input-number"
+              id="wfc-reverse-mm"
+              placeholder="12.7"
+              min="0.1"
+              max="999"
+              step="0.1"
+              inputmode="decimal"
+              style="flex: 1;"
+            />
+            <span style="align-self: flex-end; padding-bottom: 0.75rem; color: #6b7280;">mm</span>
+          </div>
+        </div>
+
+        <div class="wfc-field">
+          <label class="wfc-field-label">{t.precisionLabel}</label>
+          <div class="wfc-mode-toggle" id="wfc-precision-toggle">
+            <button class="wfc-mode-btn active" data-precision="carpentry">
+              {t.precisionCarpentry}
+            </button>
+            <button class="wfc-mode-btn" data-precision="metal">
+              {t.precisionMetal}
+            </button>
+          </div>
+        </div>
+
+        <div class="wfc-button-group">
+          <button class="wfc-button wfc-button-primary" id="wfc-convert-btn">
+            {t.buttonConvert}
+          </button>
+          <button class="wfc-button wfc-button-secondary" id="wfc-clear-btn">
+            {t.buttonClear}
+          </button>
+        </div>
+
+        <div class="wfc-history" id="wfc-history">
+          <div class="wfc-history-title">{t.historyTitle}</div>
+          <div class="wfc-history-list" id="wfc-history-list">
+            <div style="text-align: center; color: #9ca3af; font-size: 0.85rem;">
+              {t.historyEmpty}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wfc-main" id="wfc-main-content">
+        <div id="wfc-no-result" style="text-align: center; padding: 3rem 0; color: #9ca3af;">
+          <p>{t.helpText}</p>
+        </div>
+
+        <div class="wfc-hidden" id="wfc-result-content">
+          <div class="wfc-result-box">
+            <div class="wfc-result-title">{t.resultTitle}</div>
+            <div class="wfc-result-row">
+              <span class="wfc-result-label">{t.resultFraction}</span>
+              <span class="wfc-result-value wfc-text-mono" id="wfc-result-fraction">
+                0"
+              </span>
+            </div>
+            <div class="wfc-result-row">
+              <span class="wfc-result-label">{t.resultInches}</span>
+              <span class="wfc-result-value wfc-text-mono" id="wfc-result-inches">
+                0.00"
+              </span>
+            </div>
+            <div class="wfc-result-row">
+              <span class="wfc-result-label">{t.resultMillimeters}</span>
+              <span class="wfc-result-value wfc-text-mono" id="wfc-result-mm">
+                0.00 mm
+              </span>
+            </div>
+          </div>
+
+          <div class="wfc-visual-scale">
+            <div style="font-size: 0.75rem; font-weight: 600; color: #6b7280; margin-bottom: 0.75rem;">
+              Visual Reference (1 inch = 96px)
+            </div>
+            <div class="wfc-scale-ruler" id="wfc-scale-ruler">
+              <div class="wfc-scale-indicator" id="wfc-scale-indicator" style="width: 0;"></div>
+            </div>
+            <div style="font-size: 0.75rem; color: #6b7280;">
+              <span id="wfc-scale-text">0 mm</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="wfc-result-title">{t.matchTitle}</div>
+            <div class="wfc-match-cards">
+              <div class="wfc-match-card" id="wfc-fastener-match">
+                <div class="wfc-match-header">
+                  <span class="wfc-match-name" id="wfc-fastener-name">−</span>
+                  <span class="wfc-match-badge" id="wfc-fastener-badge">−</span>
+                </div>
+                <div class="wfc-match-details" id="wfc-fastener-details">
+                  {t.matchClosestFastener}
+                </div>
+              </div>
+
+              <div class="wfc-match-card" id="wfc-socket-match">
+                <div class="wfc-match-header">
+                  <span class="wfc-match-name" id="wfc-socket-name">−</span>
+                  <span class="wfc-match-badge" id="wfc-socket-badge">−</span>
+                </div>
+                <div class="wfc-match-details" id="wfc-socket-details">
+                  {t.matchClosestSocket}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wfc-button-group">
+            <button class="wfc-button wfc-button-primary" id="wfc-copy-btn">
+              {t.buttonCopyResult}
+            </button>
+            <button class="wfc-button wfc-button-secondary" id="wfc-save-btn">
+              {t.buttonSaveToHistory}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+import { WorkshopFractionConverter } from './client';
+new WorkshopFractionConverter();
+</script>
