@@ -1,0 +1,236 @@
+---
+import type { PythagoreanRightAngleCalculatorUI } from './ui';
+interface Props { ui?: PythagoreanRightAngleCalculatorUI; }
+const { ui } = Astro.props;
+const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
+---
+
+<div class="prac-root" data-ui={JSON.stringify(t)}>
+  <div class="prac-container">
+    <aside class="prac-inputs">
+      <div class="prac-unit-selector">
+        <button class="prac-unit-btn active" data-unit="in">{t.btnUnitInches}</button>
+        <button class="prac-unit-btn" data-unit="ft">{t.btnUnitFeet}</button>
+        <button class="prac-unit-btn" data-unit="cm">{t.btnUnitCentimeters}</button>
+      </div>
+
+      <div class="prac-input-group">
+        <label for="prac-a">{t.labelSideA}</label>
+        <input type="number" id="prac-a" inputmode="decimal" placeholder="0" step="0.1">
+      </div>
+
+      <div class="prac-input-group">
+        <label for="prac-b">{t.labelSideB}</label>
+        <input type="number" id="prac-b" inputmode="decimal" placeholder="0" step="0.1">
+      </div>
+
+      <div class="prac-input-group">
+        <label for="prac-d">{t.labelMeasuredDiagonal}</label>
+        <input type="number" id="prac-d" inputmode="decimal" placeholder="0" step="0.1">
+      </div>
+
+      <div class="prac-button-group">
+        <button id="prac-clear" class="prac-btn prac-btn-icon" title={t.btnClear}>
+          <i class="mdi mdi-delete"></i>
+        </button>
+        <button id="prac-copy" class="prac-btn prac-btn-icon" title={t.btnCopyResults}>
+          <i class="mdi mdi-content-copy"></i>
+        </button>
+      </div>
+
+      <div class="prac-presets">
+        <button class="prac-preset" data-preset="0">3-4-5</button>
+        <button class="prac-preset" data-preset="1">6-8-10</button>
+        <button class="prac-preset" data-preset="2">30-40-50</button>
+        <button class="prac-preset" data-preset="3">15-20-25</button>
+      </div>
+    </aside>
+
+    <main class="prac-display">
+      <div id="prac-status" class="prac-status idle">
+        <div class="prac-status-indicator"></div>
+        <div class="prac-status-content">
+          <span class="prac-status-title" id="prac-status-title">Ready</span>
+          <span class="prac-status-value" id="prac-status-value">--</span>
+        </div>
+      </div>
+
+      <div class="prac-results-grid">
+        <div class="prac-result-box">
+          <span class="prac-result-label">{t.labelIdealDiagonal}</span>
+          <span class="prac-result-value" id="prac-ideal">--</span>
+          <span id="prac-unit" class="prac-result-unit">in</span>
+        </div>
+        <div class="prac-result-box">
+          <span class="prac-result-label">{t.labelDeviation}</span>
+          <span class="prac-result-value" id="prac-dev">--</span>
+          <span id="prac-unit-dev" class="prac-result-unit">in</span>
+        </div>
+      </div>
+
+      <svg id="prac-svg" viewBox="0 0 280 220" preserveAspectRatio="xMidYMid meet" class="prac-svg">
+        <path id="prac-tri" d="" fill="rgba(99, 102, 241, 0.08)" stroke="#6366f1" stroke-width="2"></path>
+        <text id="prac-lbl-a" x="0" y="0" class="prac-label">A</text>
+        <text id="prac-lbl-b" x="0" y="0" class="prac-label">B</text>
+        <text id="prac-lbl-c" x="0" y="0" class="prac-label prac-label-hyp">C</text>
+        <path id="prac-corner" d="" fill="none" stroke="#6366f1" stroke-width="1"></path>
+      </svg>
+
+      <div id="prac-message" class="prac-message"></div>
+    </main>
+  </div>
+</div>
+
+<style>
+  @import './pythagorean-right-angle-calculator.css';
+</style>
+
+<script>
+  import { calculateSquaring, PRESET_RULES } from './logic';
+  import type { SquaringCalculation } from './logic';
+
+  const root = document.querySelector('.prac-root') as HTMLElement | null;
+  const ui = root ? JSON.parse((root as HTMLElement).dataset.ui || '{}') : {};
+
+  const inputA = document.getElementById('prac-a') as HTMLInputElement;
+  const inputB = document.getElementById('prac-b') as HTMLInputElement;
+  const inputD = document.getElementById('prac-d') as HTMLInputElement;
+  const unitBtns = document.querySelectorAll('.prac-unit-btn');
+  const presetBtns = document.querySelectorAll('.prac-preset');
+  const clearBtn = document.getElementById('prac-clear') as HTMLButtonElement;
+  const copyBtn = document.getElementById('prac-copy') as HTMLButtonElement;
+
+  const statusEl = document.getElementById('prac-status') as HTMLElement;
+  const statusTitle = document.getElementById('prac-status-title') as HTMLElement;
+  const statusValue = document.getElementById('prac-status-value') as HTMLElement;
+  const resultIdeal = document.getElementById('prac-ideal') as HTMLElement;
+  const resultDev = document.getElementById('prac-dev') as HTMLElement;
+  const unitDisplay = document.getElementById('prac-unit') as HTMLElement;
+  const unitDevDisplay = document.getElementById('prac-unit-dev') as HTMLElement;
+  const msgEl = document.getElementById('prac-message') as HTMLElement;
+
+  const triPath = document.getElementById('prac-tri')!;
+  const lblA = document.getElementById('prac-lbl-a')!;
+  const lblB = document.getElementById('prac-lbl-b')!;
+  const lblC = document.getElementById('prac-lbl-c')!;
+  const corner = document.getElementById('prac-corner')!;
+
+  let currentUnit = 'in';
+
+  function setUnit(unit: string) {
+    currentUnit = unit;
+    unitDisplay.textContent = unit;
+    unitDevDisplay.textContent = unit;
+    unitBtns.forEach(btn => (btn as HTMLElement).classList.toggle('active', (btn as HTMLElement).getAttribute('data-unit') === unit));
+    calculate();
+  }
+
+  function updateStatus(calc: SquaringCalculation) {
+    statusEl.className = `prac-status ${calc.status}`;
+    statusTitle.textContent = calc.message || ui.statusReady || 'Ready';
+
+    if (calc.deviationPercent !== null) {
+      statusValue.textContent = `${calc.deviationPercent.toFixed(2)}%`;
+    } else {
+      statusValue.textContent = '--';
+    }
+
+    msgEl.textContent = calc.correction;
+  }
+
+  function drawTriangle(a: number, b: number) {
+    if (a <= 0 || b <= 0) {
+      triPath.setAttribute('d', '');
+      lblA.textContent = '';
+      lblB.textContent = '';
+      lblC.textContent = '';
+      corner.setAttribute('d', '');
+      return;
+    }
+
+    const scale = Math.min(180 / Math.max(a, b), 150 / Math.max(a, b));
+    const x1 = 20;
+    const y1 = 20 + a * scale;
+    const x2 = 20 + b * scale;
+    const y2 = 20 + a * scale;
+    const x3 = 20;
+    const y3 = 20;
+
+    triPath.setAttribute('d', `M ${x1} ${y1} L ${x2} ${y2} L ${x3} ${y3} Z`);
+
+    lblA.setAttribute('x', `${x1 - 15}`);
+    lblA.setAttribute('y', `${(y1 + y3) / 2}`);
+    lblA.textContent = `${a.toFixed(1)}`;
+
+    lblB.setAttribute('x', `${(x1 + x2) / 2}`);
+    lblB.setAttribute('y', `${y1 + 18}`);
+    lblB.textContent = `${b.toFixed(1)}`;
+
+    const c = Math.sqrt(a * a + b * b);
+    lblC.setAttribute('x', `${(x2 + x3) / 2 + 8}`);
+    lblC.setAttribute('y', `${(y2 + y3) / 2 - 8}`);
+    lblC.textContent = `${c.toFixed(1)}`;
+
+    const cornerSize = 10;
+    corner.setAttribute('d', `M ${x1 - cornerSize} ${y1 - cornerSize} L ${x1 - cornerSize} ${y1} L ${x1} ${y1}`);
+  }
+
+  function calculate() {
+    const a = parseFloat(inputA.value) || 0;
+    const b = parseFloat(inputB.value) || 0;
+    const d = parseFloat(inputD.value) || null;
+    const calc = calculateSquaring(a, b, d, ui);
+
+    if (calc.hypotenuse > 0) {
+      resultIdeal.textContent = calc.hypotenuse.toFixed(2);
+      resultDev.textContent = calc.deviation !== null ? Math.abs(calc.deviation).toFixed(2) : '--';
+    } else {
+      resultIdeal.textContent = '--';
+      resultDev.textContent = '--';
+    }
+
+    updateStatus(calc);
+    drawTriangle(a, b);
+  }
+
+  function applyPreset(idx: number) {
+    const p = PRESET_RULES[idx];
+    if (p) {
+      inputA.value = p.a.toString();
+      inputB.value = p.b.toString();
+      inputD.value = '';
+      calculate();
+    }
+  }
+
+  unitBtns.forEach(btn => {
+    btn.addEventListener('click', () => setUnit((btn as HTMLElement).getAttribute('data-unit') || 'in'));
+  });
+
+  [inputA, inputB, inputD].forEach(inp => {
+    inp.addEventListener('input', calculate);
+  });
+
+  presetBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => applyPreset(idx));
+  });
+
+  clearBtn.addEventListener('click', () => {
+    inputA.value = '';
+    inputB.value = '';
+    inputD.value = '';
+    calculate();
+  });
+
+  copyBtn.addEventListener('click', () => {
+    const unitText = currentUnit === 'in' ? ui.unitInches : currentUnit === 'ft' ? ui.unitFeet : ui.unitCentimeters;
+    const text = `${ui.labelIdealDiagonal || 'Ideal'}: ${resultIdeal.textContent}${unitText}, ${ui.labelDeviation || 'Deviation'}: ${resultDev.textContent}${unitText}`;
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = copyBtn.innerHTML;
+      copyBtn.innerHTML = '<i class="mdi mdi-check"></i>';
+      setTimeout(() => (copyBtn.innerHTML = originalText), 1500);
+    });
+  });
+
+  calculate();
+</script>
