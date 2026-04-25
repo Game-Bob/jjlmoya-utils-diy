@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'stelling-van-pythagoras-rechte-hoek-calculator-3-4-5-regel';
-const title = 'Pythagoras Rechte Hoek Calculator: 3-4-5-regel voor perfecte hoeken';
+const title = 'Pythagoras Rechte Hoek Calculator: 3 4 5 regel voor perfecte hoeken';
 const description = 'Controleer of structuren perfect haaks (90°) zijn met de stelling van Pythagoras en de 3-4-5-regel. Essentieel gereedschap voor de bouw, houtbewerking en doe-het-zelfprojecten.';
 
 const faqData = [

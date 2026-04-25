@@ -16,35 +16,42 @@ interface StatusResult {
   correction: string;
 }
 
+function getStatusLevel(absDev: number, deviationPercent: number): 'perfect' | 'acceptable' | 'warning' | 'error' {
+  if (absDev < 0.5) return 'perfect';
+  if (deviationPercent < 0.5) return 'acceptable';
+  if (deviationPercent < 1) return 'warning';
+  return 'error';
+}
+
+function getStatusMessage(status: 'perfect' | 'acceptable' | 'warning' | 'error', ui: Record<string, string>): string {
+  const msgs = {
+    perfect: ui.statusPerfect || 'Perfect 90 degree angle',
+    acceptable: ui.statusAcceptable || 'Acceptable deviation',
+    warning: ui.statusWarning || 'Minor deviation',
+    error: ui.statusError || 'Out of square'
+  };
+  return msgs[status];
+}
+
+function getCorrection(status: 'perfect' | 'acceptable' | 'warning' | 'error', params: { absDev: number; devDir: string; action: string; ui: Record<string, string> }): string {
+  if (status === 'perfect') return '';
+  const fixStr = (val: number) => val.toFixed(1);
+  const { absDev, devDir, action, ui } = params;
+  if (status === 'acceptable') return `${action} the angle slightly. Diagonal is ${fixStr(absDev)} ${devDir}.`;
+  if (status === 'warning') return `${action} the angle. Diagonal is ${fixStr(absDev)} ${devDir}.`;
+  return `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)} ${devDir} than ideal.`;
+}
+
 function determineStatus(deviation: number, deviationPercent: number, ui: Record<string, string>): StatusResult {
   const absDev = Math.abs(deviation);
-  const fixStr = (val: number) => val.toFixed(1);
   const devDir = deviation > 0 ? (ui.descLarger || 'larger') : (ui.descSmaller || 'smaller');
+  const action = deviation > 0 ? (ui.actionClose || 'Close') : (ui.actionOpen || 'Open');
+  const status = getStatusLevel(absDev, deviationPercent);
 
-  if (absDev < 0.5) {
-    return { status: 'perfect', message: ui.statusPerfect || 'Perfect 90 degree angle', correction: '' };
-  }
-  if (deviationPercent < 0.5) {
-    const action = deviation > 0 ? (ui.actionClose || 'Close') : (ui.actionOpen || 'Open');
-    return {
-      status: 'acceptable',
-      message: ui.statusAcceptable || 'Acceptable deviation',
-      correction: `${action} the angle slightly. Diagonal is ${fixStr(absDev)} ${devDir}.`
-    };
-  }
-  if (deviationPercent < 1) {
-    const action = deviation > 0 ? (ui.actionClose || 'Close') : (ui.actionOpen || 'Open');
-    return {
-      status: 'warning',
-      message: ui.statusWarning || 'Minor deviation',
-      correction: `${action} the angle. Diagonal is ${fixStr(absDev)} ${devDir}.`
-    };
-  }
-  const angleState = deviation > 0 ? (ui.descLarger || 'OPEN') : (ui.descSmaller || 'CLOSED');
   return {
-    status: 'error',
-    message: ui.statusError || 'Out of square',
-    correction: `${ui.descCorrection || 'Correction'}: diagonal ${fixStr(absDev)} ${devDir} than ideal.`
+    status,
+    message: getStatusMessage(status, ui),
+    correction: getCorrection(status, { absDev, devDir, action, ui })
   };
 }
 

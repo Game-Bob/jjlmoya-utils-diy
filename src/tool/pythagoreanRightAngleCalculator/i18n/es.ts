@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-angulos-rectos-pitagoras-regla-3-4-5';
-const title = 'Calculadora de Ángulos Rectos (Teorema de Pitágoras): Regla 3-4-5 para Escuadras Perfectas';
+const title = 'Calculadora de Ángulos Rectos (Teorema de Pitágoras): Regla 3 4 5 para Escuadras Perfectas';
 const description = 'Verifica si las estructuras están perfectamente a escuadra (90°) usando el teorema de Pitágoras y la regla 3-4-5. Herramienta esencial para construcción, carpintería y proyectos DIY.';
 
 const faqData = [

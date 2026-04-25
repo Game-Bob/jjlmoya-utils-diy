@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'pythagoras-sats-rat-vinkel-kalkylator-3-4-5-regeln';
-const title = 'Pythagoras Rät Vinkel Kalkylator: 3-4-5-regeln för perfekta vinklar';
+const title = 'Pythagoras Rät Vinkel Kalkylator: 3 4 5 regeln för perfekta vinklar';
 const description = 'Kontrollera om strukturer är perfekt rätvinkliga (90°) med Pythagoras sats och 3-4-5-regeln. Oumbärligt verktyg för bygg, snickeri och DIY-projekt.';
 
 const faqData = [

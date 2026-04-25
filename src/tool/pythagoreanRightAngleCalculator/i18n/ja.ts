@@ -3,8 +3,8 @@ import type { ToolLocaleContent } from '../../../types';
 import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
-const slug = 'pythagorean-theorem-right-angle-calculator-3-4-5-rule';
-const title = '直角計算機（ピタゴラスの定理）：完璧な直角のための3-4-5の法則';
+const slug = 'pythagorean-right-angle-calculator-3-4-5-rule';
+const title = '直角計算機（ピタゴラスの定理）：完璧な直角のための3 4 5の法則';
 const description = 'ピタゴラスの定理と3-4-5の法則を使用して、構造物が完璧な直角（90°）であるかを確認します。建設、木工、DIYプロジェクトに不可欠なツールです。';
 
 const faqData = [

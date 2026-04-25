@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'pisagor-teoremi-dik-aci-hesaplama-3-4-5-kurali';
-const title = 'Pisagor Dik Açı Hesaplayıcı: Mükemmel Gönye İçin 3-4-5 Kuralı';
+const title = 'Pisagor Dik Açı Hesaplayıcı: Mükemmel Gönye İçin 3 4 5 Kuralı';
 const description = 'Pisagor teoremini ve 3-4-5 kuralını kullanarak yapıların mükemmel şekilde gönyede (90°) olup olmadığını doğrulayın. İnşaat, marangozluk ve DIY projeleri için temel araç.';
 
 const faqData = [

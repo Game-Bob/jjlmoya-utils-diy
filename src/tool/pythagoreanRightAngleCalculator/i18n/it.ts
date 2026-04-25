@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calcolatrice-angolo-retto-pitagora-regola-3-4-5';
-const title = 'Calcolatrice Angolo Retto (Teorema di Pitagora): Regola 3-4-5 per Squadrature Perfette';
+const title = 'Calcolatrice Angolo Retto (Teorema di Pitagora): Regola 3 4 5 per Squadrature Perfette';
 const description = 'Verifica se le strutture sono perfettamente a squadra (90°) utilizzando il teorema di Pitagora e la regola 3-4-5. Strumento essenziale per edilizia, falegnameria e progetti DIY.';
 
 const faqData = [

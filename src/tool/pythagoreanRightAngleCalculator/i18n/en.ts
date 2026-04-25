@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'pythagorean-right-angle-calculator-3-4-5-rule';
-const title = 'Pythagorean Right Angle Calculator: 3-4-5 Rule for Perfect Squares';
+const title = 'Pythagorean Right Angle Calculator: 3 4 5 Rule for Perfect Squares';
 const description = 'Verify if structures are perfectly squared at 90° using the Pythagorean theorem and 3-4-5 rule. Essential tool for construction, carpentry, and DIY projects.';
 
 const faqData = [

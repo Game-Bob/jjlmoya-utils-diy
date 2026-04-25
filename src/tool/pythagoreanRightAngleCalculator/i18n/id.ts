@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-sudut-siku-siku-pythagoras-aturan-3-4-5';
-const title = 'Kalkulator Sudut Siku-Siku (Teorema Pythagoras): Aturan 3-4-5 untuk Kesikuan Sempurna';
+const title = 'Kalkulator Sudut Siku Siku (Teorema Pythagoras): Aturan 3 4 5 untuk Kesikuan Sempurna';
 const description = 'Verifikasi apakah struktur sudah benar-benar siku (90°) menggunakan teorema Pythagoras dan aturan 3-4-5. Alat penting untuk konstruksi, pertukangan, dan proyek DIY.';
 
 const faqData = [

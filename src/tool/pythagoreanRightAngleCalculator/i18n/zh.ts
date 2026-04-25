@@ -3,8 +3,8 @@ import type { ToolLocaleContent } from '../../../types';
 import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
-const slug = 'pythagorean-theorem-right-angle-calculator-3-4-5-rule';
-const title = '直角计算器（勾股定理）：完美直角的 3-4-5 法则';
+const slug = 'pythagorean-right-angle-calculator-3-4-5-rule';
+const title = '直角计算器（勾股定理）：完美直角的 3 4 5 法则';
 const description = '使用勾股定理和 3-4-5 法则验证结构是否完美垂直（90°）。建筑、木工和 DIY 项目的必备工具。';
 
 const faqData = [

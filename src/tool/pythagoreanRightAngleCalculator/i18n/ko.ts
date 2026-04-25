@@ -3,8 +3,8 @@ import type { ToolLocaleContent } from '../../../types';
 import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
-const slug = 'pythagorean-theorem-right-angle-calculator-3-4-5-rule';
-const title = '직각 계산기 (피타고라스의 정리): 완벽한 직각을 위한 3-4-5 법칙';
+const slug = 'pythagorean-right-angle-calculator-3-4-5-rule';
+const title = '직각 계산기 (피타고라스의 정리): 완벽한 직각을 위한 3 4 5 법칙';
 const description = '피타고라스의 정리와 3-4-5 법칙을 사용하여 구조물이 완벽한 직각(90°)인지 확인하세요. 건설, 목공 및 DIY 프로젝트에 필수적인 도구입니다.';
 
 const faqData = [
@@ -97,6 +97,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
     labelUnitSelection: '단위',
     btnUnitInches: '인치',
     btnUnitFeet: '피트',
+    btnUnitCentimeters: '센티미터',
     labelSideA: 'A면',
     labelSideB: 'B면',
     labelMeasuredDiagonal: '측정된 대각선 (선택 사항)',
@@ -110,6 +111,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
     labelPresets: '빠른 프리셋',
     unitInches: 'in',
     unitFeet: 'ft',
+    unitCentimeters: 'cm',
     tooltipOptional: '측정된 대각선을 입력하여 90도 각도를 확인하세요',
     tooltipPresets: '다양한 스케일의 3-4-5 법칙',
     statusPerfect: '완벽한 90도 각도',

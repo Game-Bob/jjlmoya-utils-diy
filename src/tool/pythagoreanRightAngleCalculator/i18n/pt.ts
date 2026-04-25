@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculadora-angulo-reto-pitagoras-regra-3-4-5';
-const title = 'Calculadora de Ângulo Reto (Teorema de Pitágoras): Regra 3-4-5 para Esquadros Perfeitos';
+const title = 'Calculadora de Ângulo Reto (Teorema de Pitágoras): Regra 3 4 5 para Esquadros Perfeitos';
 const description = 'Verifique se as estruturas estão perfeitamente no esquadro (90°) usando o teorema de Pitágoras e a regra 3-4-5. Ferramenta essencial para construção, carpintaria e projetos DIY.';
 
 const faqData = [

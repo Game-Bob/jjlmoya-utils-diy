@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'kalkulator-kata-prostego-pitagorasa-zasada-3-4-5';
-const title = 'Kalkulator Kąta Prostego (Twierdzenie Pitagorasa): Zasada 3-4-5 dla Idealnego Wyosiowania';
+const title = 'Kalkulator Kąta Prostego (Twierdzenie Pitagorasa): Zasada 3 4 5 dla Idealnego Wyosiowania';
 const description = 'Sprawdź, czy konstrukcje są idealnie prostopadłe (90°), używając twierdzenia Pitagorasa i zasady 3-4-5. Niezbędne narzędzie w budownictwie, stolarstwie i projektach DIY.';
 
 const faqData = [

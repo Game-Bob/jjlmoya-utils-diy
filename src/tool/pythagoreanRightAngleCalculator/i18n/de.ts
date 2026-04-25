@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'satz-des-pythagoras-rechter-winkel-rechner-3-4-5-regel';
-const title = 'Pythagoras Rechter Winkel Rechner: 3-4-5-Regel für perfekte Winkel';
+const title = 'Pythagoras Rechter Winkel Rechner: 3 4 5 Regel für perfekte Winkel';
 const description = 'Prüfen Sie mit dem Satz des Pythagoras und der 3-4-5-Regel, ob Strukturen perfekt im 90°-Winkel stehen. Unverzichtbares Tool für Bau, Zimmerei und DIY-Projekte.';
 
 const faqData = [

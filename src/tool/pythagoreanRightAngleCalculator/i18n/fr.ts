@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculatrice-angle-droit-pythagore-regle-3-4-5';
-const title = 'Calculatrice d\'Angle Droit (Théorème de Pythagore) : Règle 3-4-5 pour Équerrages Parfaits';
+const title = 'Calculatrice d\'Angle Droit (Théorème de Pythagore) : Règle 3 4 5 pour Équerrages Parfaits';
 const description = 'Vérifiez si vos structures sont parfaitement d\'équerre (90°) en utilisant le théorème de Pythagore et la règle 3-4-5. Outil essentiel pour la construction, la menuiserie et le bricolage.';
 
 const faqData = [

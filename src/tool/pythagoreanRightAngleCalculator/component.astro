@@ -223,7 +223,9 @@ const t = (ui ?? {}) as PythagoreanRightAngleCalculatorUI;
   });
 
   copyBtn.addEventListener('click', () => {
-    const unitText = currentUnit === 'in' ? ui.unitInches : currentUnit === 'ft' ? ui.unitFeet : ui.unitCentimeters;
+    let unitText = ui.unitInches;
+    if (currentUnit === 'ft') unitText = ui.unitFeet;
+    else if (currentUnit === 'cm') unitText = ui.unitCentimeters;
     const text = `${ui.labelIdealDiagonal || 'Ideal'}: ${resultIdeal.textContent}${unitText}, ${ui.labelDeviation || 'Deviation'}: ${resultDev.textContent}${unitText}`;
     navigator.clipboard.writeText(text).then(() => {
       const originalText = copyBtn.innerHTML;

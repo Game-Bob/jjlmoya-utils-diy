@@ -4,7 +4,7 @@ import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'kalkulyator-pryamogo-ugla-pifagora-pravilo-3-4-5';
-const title = 'Калькулятор прямого угла (теорема Пифагора): правило 3-4-5 для идеальной разметки';
+const title = 'Калькулятор прямого угла (теорема Пифагора): правило 3 4 5 для идеальной разметки';
 const description = 'Проверьте, идеально ли выровнены конструкции под углом 90°, используя теорему Пифагора и правило 3-4-5. Незаменимый инструмент для строительства, столярных работ и DIY-проектов.';
 
 const faqData = [
