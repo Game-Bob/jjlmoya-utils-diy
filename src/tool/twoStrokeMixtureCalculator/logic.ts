@@ -21,10 +21,20 @@ function determineRichness(ratio: number): 'lean' | 'balanced' | 'rich' {
 }
 
 function formatOilVolume(oilMl: number): { value: number; unit: 'ml' | 'l' } {
-  if (oilMl < 1000) {
-    return { value: oilMl, unit: 'ml' };
-  }
-  return { value: oilMl / 1000, unit: 'l' };
+  return oilMl < 1000 ? { value: oilMl, unit: 'ml' } : { value: oilMl / 1000, unit: 'l' };
+}
+
+function createIdleResult(ui: Record<string, string>, fuelLiters: number, ratio: number): MixtureCalculation {
+  return {
+    fuelVolume: fuelLiters,
+    ratio,
+    oilRequired: 0,
+    displayUnit: 'ml',
+    richness: 'balanced',
+    totalMixture: 0,
+    status: 'idle',
+    message: ui.msgReady || 'Ready to calculate',
+  };
 }
 
 export function calculateMixture(
@@ -36,30 +46,19 @@ export function calculateMixture(
   const ratio = parseFloat(String(ratioValue)) || 0;
 
   if (fuelLiters <= 0 || ratio <= 0) {
-    return {
-      fuelVolume: fuelLiters,
-      ratio,
-      oilRequired: 0,
-      displayUnit: 'ml',
-      richness: 'balanced',
-      totalMixture: 0,
-      status: 'idle',
-      message: ui.msgReady || 'Ready to calculate',
-    };
+    return createIdleResult(ui, fuelLiters, ratio);
   }
 
   const oilRequiredMl = (fuelLiters * 1000) / ratio;
   const { value: displayValue, unit: displayUnit } = formatOilVolume(oilRequiredMl);
-  const richness = determineRichness(ratio);
-  const totalMixture = fuelLiters + oilRequiredMl / 1000;
 
   return {
     fuelVolume: fuelLiters,
     ratio,
     oilRequired: displayValue,
     displayUnit,
-    richness,
-    totalMixture,
+    richness: determineRichness(ratio),
+    totalMixture: fuelLiters + oilRequiredMl / 1000,
     status: 'calculated',
     message: ui.msgMixtureReady || 'Mixture calculated',
   };

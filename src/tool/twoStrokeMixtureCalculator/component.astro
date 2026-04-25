@@ -131,34 +131,41 @@ const t = (ui ?? {}) as TwoStrokeMixtureCalculatorUI;
   let currentVolume = parseFloat(params.get('volume') || '5');
   let currentRatio = parseInt(params.get('ratio') || '40');
 
+  function setFuelMode(skipSliderUpdate: boolean) {
+    container.classList.remove('tsmc-oil-mode');
+    slider.min = '1';
+    slider.max = '50';
+    slider.step = '1';
+    if (!skipSliderUpdate) slider.value = '5';
+    sliderUnit.textContent = 'L';
+    volumeLabel.textContent = ui.labelVolume || 'Volume';
+    resultLabel.textContent = ui.labelOilRequired || 'Oil Required';
+    fuelBtns.forEach(btn => btn.classList.remove('hidden'));
+    oilBtns.forEach(btn => btn.classList.add('hidden'));
+  }
+
+  function setOilMode(skipSliderUpdate: boolean) {
+    container.classList.add('tsmc-oil-mode');
+    slider.min = '20';
+    slider.max = '1000';
+    slider.step = '10';
+    if (!skipSliderUpdate) slider.value = '125';
+    sliderUnit.textContent = 'ml';
+    volumeLabel.textContent = ui.labelOilRequired || 'Oil';
+    resultLabel.textContent = ui.labelFuelVolume || 'Fuel Required';
+    fuelBtns.forEach(btn => btn.classList.add('hidden'));
+    oilBtns.forEach(btn => btn.classList.remove('hidden'));
+  }
+
   function setMission(mission: 'fuel' | 'oil', skipSliderUpdate = false) {
     currentMission = mission;
     missionBtns.forEach(btn => {
       btn.classList.toggle('active', (btn as HTMLElement).getAttribute('data-mission') === mission);
     });
-
     if (mission === 'fuel') {
-      container.classList.remove('tsmc-oil-mode');
-      slider.min = '1';
-      slider.max = '50';
-      slider.step = '1';
-      if (!skipSliderUpdate) slider.value = '5';
-      sliderUnit.textContent = 'L';
-      volumeLabel.textContent = ui.labelVolume || 'Volume';
-      resultLabel.textContent = ui.labelOilRequired || 'Oil Required';
-      fuelBtns.forEach(btn => btn.classList.remove('hidden'));
-      oilBtns.forEach(btn => btn.classList.add('hidden'));
+      setFuelMode(skipSliderUpdate);
     } else {
-      container.classList.add('tsmc-oil-mode');
-      slider.min = '20';
-      slider.max = '1000';
-      slider.step = '10';
-      if (!skipSliderUpdate) slider.value = '125';
-      sliderUnit.textContent = 'ml';
-      volumeLabel.textContent = ui.labelOilRequired || 'Oil';
-      resultLabel.textContent = ui.labelFuelVolume || 'Fuel Required';
-      fuelBtns.forEach(btn => btn.classList.add('hidden'));
-      oilBtns.forEach(btn => btn.classList.remove('hidden'));
+      setOilMode(skipSliderUpdate);
     }
     sliderValue.textContent = currentVolume.toString();
   }

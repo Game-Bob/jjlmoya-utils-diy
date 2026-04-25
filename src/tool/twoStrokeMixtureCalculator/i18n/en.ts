@@ -4,7 +4,7 @@ import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'two-stroke-fuel-mixture-calculator';
-const title = 'Two Stroke Fuel Mixture Calculator: Accurate Oil-to-Fuel Ratios';
+const title = 'Two Stroke Fuel Mixture Calculator: Accurate Oil and Fuel Ratios';
 const description = 'Calculate precise 2-stroke fuel mixture ratios instantly. Essential tool for chainsaws, mopeds, motorcycles, and small engines. Supports 1:25, 1:33, 1:40, and 1:50 ratios.';
 
 const faqData = [
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   howTo: howToData,
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
-    { type: 'title', text: '2-Stroke Fuel Mixture Calculator: Precise Oil-to-Fuel Ratios for Chainsaws, Mopeds & Small Engines', level: 2 },
+    { type: 'title', text: '2-Stroke Fuel Mixture Calculator: Precise Oil and Fuel Ratios for Chainsaws, Mopeds & Small Engines', level: 2 },
     { type: 'paragraph', html: 'Two-stroke engines require a precise fuel-oil mixture for survival. Mix wrong and destroy your engine in minutes. This calculator instantly determines the exact amount of oil needed for your fuel volume and engine type—eliminating guesswork from the workshop.' },
 
     { type: 'title', text: 'Why 2-Stroke Engines Require Oil in Fuel', level: 3 },
@@ -110,9 +110,9 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Oil Type Matters as Much as Ratio', level: 3 },
     { type: 'comparative', items: [
-      { title: 'Conventional 2-Stroke Oil', description: 'Budget option for occasional use. Higher ash content, more smoke, adequate protection for standard ratios.', icon: 'mdi:beaker', points: ['Lower cost', 'More visible smoke', 'Higher ash buildup', 'Works for 1:40 ratios'] },
-      { title: 'Synthetic 2-Stroke Oil', description: 'Premium choice for frequent users. Cleaner burn, better protection, enables leaner ratios. Temperature-stable.', icon: 'mdi:flame', points: ['Lower smoke output', 'Better engine protection', 'Enables 1:50 ratios safely', 'Longer storage stability'], highlight: true },
-      { title: 'Synthetic Blend (Semi-Synthetic)', description: 'Middle ground between conventional and full synthetic. Good protection at moderate cost. Common OEM recommendation.', icon: 'mdi:beaker-outline', points: ['Balanced performance', 'Moderate cost', 'Good for 1:40 ratios', 'Reduced smoke vs conventional'] }
+      { title: 'Conventional 2 Stroke Oil', description: 'Budget option for occasional use. Higher ash content, more smoke, adequate protection for standard ratios.', icon: 'mdi:beaker', points: ['Lower cost', 'More visible smoke', 'Higher ash buildup', 'Works for 1:40 ratios'] },
+      { title: 'Synthetic 2 Stroke Oil', description: 'Premium choice for frequent users. Cleaner burn, better protection, enables leaner ratios. Temperature-stable.', icon: 'mdi:flame', points: ['Lower smoke output', 'Better engine protection', 'Enables 1:50 ratios safely', 'Longer storage stability'], highlight: true },
+      { title: 'Synthetic Blend Semi synthetic', description: 'Middle ground between conventional and full synthetic. Good protection at moderate cost. Common OEM recommendation.', icon: 'mdi:beaker-outline', points: ['Balanced performance', 'Moderate cost', 'Good for 1:40 ratios', 'Reduced smoke vs conventional'] }
     ], columns: 3 },
 
     { type: 'title', text: 'Step-by-Step Mixing Process', level: 3 },
@@ -141,7 +141,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 2 },
 
     { type: 'title', text: 'Common Mistakes That Kill Engines', level: 3 },
-    { type: 'diagnostic', variant: 'error', title: 'Using 4-Stroke Oil in 2-Stroke Engines', icon: 'mdi:alert', badge: 'Engine Death', html: '4-stroke oils are designed for circulation through an engine block. In a 2-stroke fuel tank, they don\'t burn cleanly and will destroy your engine in hours.' },
+    { type: 'diagnostic', variant: 'error', title: 'Using 4 Stroke Oil in 2 Stroke Engines', icon: 'mdi:alert', badge: 'Engine Death', html: '4-stroke oils are designed for circulation through an engine block. In a 2-stroke fuel tank, they don\'t burn cleanly and will destroy your engine in hours.' },
     { type: 'diagnostic', variant: 'warning', title: 'Forgetting to Mix Thoroughly', icon: 'mdi:alert', badge: 'Seizure Risk', html: 'If oil and fuel separate due to incomplete mixing, parts of your engine will burn without lubrication. Shake for at least 1–2 minutes until the mixture is uniform.' },
     { type: 'diagnostic', variant: 'warning', title: 'Using Old Fuel (Over 60 Days Old)', icon: 'mdi:alert', badge: 'Gum Buildup', html: 'Ethanol-blend fuel separates over time. Old fuel mixture leaves gum deposits in carburetors and fuel injectors. Mix only what you\'ll use within 30 days.' },
 

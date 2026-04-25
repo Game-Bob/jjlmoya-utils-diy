@@ -13,10 +13,13 @@
       "Read(//d/d/code/jjlmoya-utils-diy/src/**)",
       "Bash(git reset *)",
       "Read(//d/d/code/jjlmoya-utils-shared/**)",
-      "Read(//d/code/jjlmoya-utils-shared/src/**)"
+      "Read(//d/code/jjlmoya-utils-shared/src/**)",
+      "Bash(chmod +x /tmp/fix_slugs.sh)",
+      "Bash(/tmp/fix_slugs.sh)"
     ],
     "additionalDirectories": [
-      "\\tmp"
+      "\\tmp",
+      "D:\\code\\jjlmoya-utils-diy\\src\\tool\\twoStrokeMixtureCalculator\\i18n"
     ]
   }
 }
