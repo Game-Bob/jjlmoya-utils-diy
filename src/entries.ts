@@ -16,6 +16,7 @@ export { thermalExpansionCalculator } from './tool/thermalExpansionCalculator/en
 export { voltageDropCalculator } from './tool/voltageDropCalculator/entry';
 export { workshopFractionConverter } from './tool/workshopFractionConverter/entry';
 export { pythagoreanRightAngleCalculator } from './tool/pythagoreanRightAngleCalculator/entry';
+export { twoStrokeMixtureCalculator } from './tool/twoStrokeMixtureCalculator/entry';
 export { diyCategory } from './category';
 import { balusterCalculator } from './tool/balusterCalculator/entry';
 import { clayCalculator } from './tool/clayCalculator/entry';
@@ -32,4 +33,5 @@ import { thermalExpansionCalculator } from './tool/thermalExpansionCalculator/en
 import { voltageDropCalculator } from './tool/voltageDropCalculator/entry';
 import { workshopFractionConverter } from './tool/workshopFractionConverter/entry';
 import { pythagoreanRightAngleCalculator } from './tool/pythagoreanRightAngleCalculator/entry';
-export const ALL_ENTRIES = [balusterCalculator, clayCalculator, concreteCalculator, cutOptimizer, drillCalculator, drillSharpener, epoxyCalculator, furnitureFit, mortarCalculator, passepartoutCalculator, stairCalculator, thermalExpansionCalculator, voltageDropCalculator, workshopFractionConverter, pythagoreanRightAngleCalculator];
+import { twoStrokeMixtureCalculator } from './tool/twoStrokeMixtureCalculator/entry';
+export const ALL_ENTRIES = [balusterCalculator, clayCalculator, concreteCalculator, cutOptimizer, drillCalculator, drillSharpener, epoxyCalculator, furnitureFit, mortarCalculator, passepartoutCalculator, stairCalculator, thermalExpansionCalculator, voltageDropCalculator, workshopFractionConverter, pythagoreanRightAngleCalculator, twoStrokeMixtureCalculator];

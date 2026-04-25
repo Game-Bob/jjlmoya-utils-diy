@@ -1,0 +1,259 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { TwoStrokeMixtureCalculatorUI } from './ui';
+
+interface Props { ui?: TwoStrokeMixtureCalculatorUI; }
+const { ui } = Astro.props;
+const t = (ui ?? {}) as TwoStrokeMixtureCalculatorUI;
+---
+
+<div class="tsmc-root" data-tsmc-root data-ui={JSON.stringify(t)}>
+  <div class="tsmc-mission-selector">
+    <button class="tsmc-mission-btn active" data-mission="fuel">
+      <Icon name="mdi:gas-cylinder" />
+      <span>{t.copyTextFuel}</span>
+    </button>
+    <button class="tsmc-mission-btn" data-mission="oil">
+      <Icon name="mdi:beaker-outline" />
+      <span>{t.copyTextOil}</span>
+    </button>
+  </div>
+
+  <div class="tsmc-container">
+    <div class="tsmc-input-section">
+      <label id="tsmc-volume-label" class="tsmc-section-label">{t.labelVolume}</label>
+
+      <div class="tsmc-slider-container">
+        <input
+          type="range"
+          id="tsmc-slider"
+          min="1"
+          max="50"
+          step="1"
+          value="5"
+          class="tsmc-slider"
+        >
+        <div class="tsmc-slider-value-display">
+          <span id="tsmc-slider-value">5</span><span id="tsmc-slider-unit" class="tsmc-unit">L</span>
+        </div>
+      </div>
+
+      <div class="tsmc-quick-buttons">
+        <button class="tsmc-quick-btn fuel-btn" data-volume="2">2L</button>
+        <button class="tsmc-quick-btn fuel-btn active" data-volume="5">5L</button>
+        <button class="tsmc-quick-btn fuel-btn" data-volume="10">10L</button>
+        <button class="tsmc-quick-btn fuel-btn" data-volume="20">20L</button>
+
+        <button class="tsmc-quick-btn oil-btn hidden" data-volume="125">125ml</button>
+        <button class="tsmc-quick-btn oil-btn hidden" data-volume="250">250ml</button>
+        <button class="tsmc-quick-btn oil-btn hidden" data-volume="500">500ml</button>
+        <button class="tsmc-quick-btn oil-btn hidden" data-volume="1000">1L</button>
+      </div>
+    </div>
+
+    <div class="tsmc-ratio-section">
+      <label class="tsmc-section-label">{t.labelPresets}</label>
+      <div class="tsmc-ratio-cards">
+        <button class="tsmc-ratio-card" data-ratio="25">
+          <span class="tsmc-ratio-value">1:25</span>
+          <span class="tsmc-ratio-desc">{t.ratio25Desc}</span>
+        </button>
+        <button class="tsmc-ratio-card" data-ratio="33">
+          <span class="tsmc-ratio-value">1:33</span>
+          <span class="tsmc-ratio-desc">{t.ratio33Desc}</span>
+        </button>
+        <button class="tsmc-ratio-card active" data-ratio="40">
+          <span class="tsmc-ratio-value">1:40</span>
+          <span class="tsmc-ratio-desc">{t.ratio40Desc}</span>
+        </button>
+        <button class="tsmc-ratio-card" data-ratio="50">
+          <span class="tsmc-ratio-value">1:50</span>
+          <span class="tsmc-ratio-desc">{t.ratio50Desc}</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tsmc-mega-result">
+      <div class="tsmc-result-label">{t.labelOilRequired}</div>
+      <div class="tsmc-result-display">
+        <span id="tsmc-result-value" class="tsmc-result-big">--</span>
+        <span id="tsmc-result-unit" class="tsmc-result-unit">ml</span>
+      </div>
+
+      <svg id="tsmc-container-visual" class="tsmc-container-visual" viewBox="0 0 200 240">
+        <rect x="65" y="30" width="70" height="12" fill="#64748b" rx="3"/>
+        <rect x="70" y="22" width="60" height="8" fill="#475569" rx="2"/>
+        <path d="M 50 42 Q 45 50 45 70 L 45 160 Q 45 175 60 180 L 140 180 Q 155 175 155 160 L 155 70 Q 155 50 150 42 Z"
+              fill="none" stroke="#64748b" stroke-width="3" stroke-linejoin="round"/>
+        <rect id="tsmc-fuel-fill" x="50" y="160" width="100" height="0" fill="#fbbf24"/>
+        <rect id="tsmc-oil-fill" x="50" y="160" width="100" height="0" fill="#dc2626"/>
+        <text id="tsmc-ratio-display" x="100" y="105" text-anchor="middle" dominant-baseline="middle"
+              font-size="20" font-weight="bold" fill="#1e293b" />
+      </svg>
+
+      <button id="tsmc-share" class="tsmc-share-btn" title="Share">
+        <Icon name="mdi:share-variant" />
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  @import './two-stroke-fuel-mixture-calculator.css';
+</style>
+
+<script>
+  import { calculateMixture } from './logic';
+
+  const root = document.querySelector('.tsmc-root') as HTMLElement;
+  const ui = root ? JSON.parse(root.dataset.ui || '{}') : {};
+
+  const slider = document.getElementById('tsmc-slider') as HTMLInputElement;
+  const missionBtns = document.querySelectorAll('.tsmc-mission-btn');
+  const sliderUnit = document.getElementById('tsmc-slider-unit')!;
+  const sliderValue = document.getElementById('tsmc-slider-value')!;
+  const quickBtns = document.querySelectorAll('.tsmc-quick-btn');
+  const fuelBtns = document.querySelectorAll('.fuel-btn');
+  const oilBtns = document.querySelectorAll('.oil-btn');
+  const ratioCards = document.querySelectorAll('.tsmc-ratio-card');
+  const resultLabel = document.querySelector('.tsmc-result-label')!;
+  const resultValue = document.getElementById('tsmc-result-value')!;
+  const resultUnit = document.getElementById('tsmc-result-unit')!;
+  const fuelFill = document.getElementById('tsmc-fuel-fill')!;
+  const oilFill = document.getElementById('tsmc-oil-fill')!;
+  const ratioDisplay = document.getElementById('tsmc-ratio-display')!;
+  const shareBtn = document.getElementById('tsmc-share')!;
+  const volumeLabel = document.getElementById('tsmc-volume-label')!;
+  const container = document.querySelector('.tsmc-container')!;
+
+  const params = new URLSearchParams(window.location.search);
+  let currentMission: 'fuel' | 'oil' = (params.get('mode') as 'fuel' | 'oil') || 'fuel';
+  let currentVolume = parseFloat(params.get('volume') || '5');
+  let currentRatio = parseInt(params.get('ratio') || '40');
+
+  function setMission(mission: 'fuel' | 'oil', skipSliderUpdate = false) {
+    currentMission = mission;
+    missionBtns.forEach(btn => {
+      btn.classList.toggle('active', (btn as HTMLElement).getAttribute('data-mission') === mission);
+    });
+
+    if (mission === 'fuel') {
+      container.classList.remove('tsmc-oil-mode');
+      slider.min = '1';
+      slider.max = '50';
+      slider.step = '1';
+      if (!skipSliderUpdate) slider.value = '5';
+      sliderUnit.textContent = 'L';
+      volumeLabel.textContent = ui.labelVolume || 'Volume';
+      resultLabel.textContent = ui.labelOilRequired || 'Oil Required';
+      fuelBtns.forEach(btn => btn.classList.remove('hidden'));
+      oilBtns.forEach(btn => btn.classList.add('hidden'));
+    } else {
+      container.classList.add('tsmc-oil-mode');
+      slider.min = '20';
+      slider.max = '1000';
+      slider.step = '10';
+      if (!skipSliderUpdate) slider.value = '125';
+      sliderUnit.textContent = 'ml';
+      volumeLabel.textContent = ui.labelOilRequired || 'Oil';
+      resultLabel.textContent = ui.labelFuelVolume || 'Fuel Required';
+      fuelBtns.forEach(btn => btn.classList.add('hidden'));
+      oilBtns.forEach(btn => btn.classList.remove('hidden'));
+    }
+    sliderValue.textContent = currentVolume.toString();
+  }
+
+  function setVolume(volume: number) {
+    currentVolume = volume;
+    slider.value = String(volume);
+    sliderValue.textContent = volume.toFixed(1);
+    quickBtns.forEach(btn => {
+      btn.classList.toggle('active', parseFloat((btn as HTMLElement).getAttribute('data-volume') || '0') === volume);
+    });
+    calculate();
+  }
+
+  function setRatio(ratio: number) {
+    currentRatio = ratio;
+    ratioCards.forEach(card => {
+      card.classList.toggle('active', parseInt((card as HTMLElement).getAttribute('data-ratio') || '40') === ratio);
+    });
+    calculate();
+  }
+
+  function calculate() {
+    const calc = calculateMixture(currentVolume, currentRatio, ui);
+
+    if (calc.status === 'calculated') {
+      const oilMl = calc.oilRequired * (calc.displayUnit === 'ml' ? 1 : 1000);
+
+      if (oilMl < 1000) {
+        resultValue.textContent = oilMl.toFixed(0);
+        resultUnit.textContent = 'ml';
+      } else if (oilMl % 1000 === 0) {
+        resultValue.textContent = (oilMl / 1000).toFixed(0);
+        resultUnit.textContent = 'L';
+      } else {
+        resultValue.textContent = oilMl.toFixed(0);
+        resultUnit.textContent = 'ml';
+      }
+
+      ratioDisplay.textContent = `1:${currentRatio}`;
+
+      const containerHeight = 120;
+      const oilRatioHeight = (1 / (1 + currentRatio)) * containerHeight;
+
+      fuelFill.setAttribute('y', (160 - containerHeight).toString());
+      fuelFill.setAttribute('height', containerHeight.toString());
+
+      oilFill.setAttribute('y', (160 - oilRatioHeight).toString());
+      oilFill.setAttribute('height', oilRatioHeight.toString());
+    } else {
+      resultValue.textContent = '--';
+      resultUnit.textContent = 'ml';
+      ratioDisplay.textContent = '';
+      fuelFill.setAttribute('height', '0');
+      oilFill.setAttribute('height', '0');
+    }
+  }
+
+  missionBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setMission((btn as HTMLElement).getAttribute('data-mission') as 'fuel' | 'oil');
+    });
+  });
+
+  slider.addEventListener('input', (e) => {
+    setVolume(parseFloat((e.target as HTMLInputElement).value));
+  });
+
+  quickBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setVolume(parseFloat((btn as HTMLElement).getAttribute('data-volume') || '5'));
+    });
+  });
+
+  ratioCards.forEach(card => {
+    card.addEventListener('click', () => {
+      setRatio(parseInt((card as HTMLElement).getAttribute('data-ratio') || '40'));
+    });
+  });
+
+  shareBtn.addEventListener('click', () => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('mode', currentMission);
+    url.searchParams.set('volume', String(currentVolume));
+    url.searchParams.set('ratio', String(currentRatio));
+    navigator.clipboard.writeText(url.toString()).then(() => {
+      const originalHTML = shareBtn.innerHTML;
+      shareBtn.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"/></svg>';
+      setTimeout(() => (shareBtn.innerHTML = originalHTML), 1500);
+    });
+  });
+
+  setMission(currentMission, true);
+  setRatio(currentRatio);
+  slider.value = String(currentVolume);
+  sliderValue.textContent = currentVolume.toString();
+  calculate();
+</script>

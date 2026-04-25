@@ -46,3 +46,5 @@ export { DRILL_SHARPENER_TOOL } from './tool/drillSharpener/index';
 export { WORKSHOP_FRACTION_CONVERTER_TOOL } from './tool/workshopFractionConverter/index';
 
 export { PYTHAGOREAN_RIGHT_ANGLE_CALCULATOR_TOOL } from './tool/pythagoreanRightAngleCalculator/index';
+
+export { TWO_STROKE_MIXTURE_CALCULATOR_TOOL } from './tool/twoStrokeMixtureCalculator/index';
