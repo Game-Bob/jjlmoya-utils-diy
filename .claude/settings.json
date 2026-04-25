@@ -10,7 +10,10 @@
       "Read(//d/code/jjlmoya-utils-diy/src/tool/balusterCalculator/i18n/**)",
       "Read(//d/code/jjlmoya-utils-diy/src/tool/clayCalculator/i18n/**)",
       "Read(//d/code/jjlmoya-utils-diy/**)",
-      "Read(//d/d/code/jjlmoya-utils-diy/src/**)"
+      "Read(//d/d/code/jjlmoya-utils-diy/src/**)",
+      "Bash(git reset *)",
+      "Read(//d/d/code/jjlmoya-utils-shared/**)",
+      "Read(//d/code/jjlmoya-utils-shared/src/**)"
     ],
     "additionalDirectories": [
       "\\tmp"
