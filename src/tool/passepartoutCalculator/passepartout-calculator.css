@@ -564,11 +564,11 @@
 
     .pp-preview {
       min-height: 360px;
-      padding: 3.25rem 2rem;
+      padding: 3.25rem 1rem;
     }
 
     .pp-frame-wrapper {
-      width: min(100%, 74vw);
+      width: min(100%, 76vw);
       max-height: 320px;
     }
 
@@ -577,11 +577,17 @@
     }
 
     .pp-border-left {
-      padding-right: 0.5rem;
+      left: 0.35rem;
+      align-items: flex-start;
+      padding-right: 0;
+      transform: translateY(-50%);
     }
 
     .pp-border-right {
-      padding-left: 0.5rem;
+      right: 0.35rem;
+      align-items: flex-end;
+      padding-left: 0;
+      transform: translateY(-50%);
     }
 
     .pp-border-val {
@@ -589,6 +595,14 @@
     }
 
     .pp-border-tag {
+      font-size: 0.55rem;
+      letter-spacing: 0.04em;
+      max-width: 2.75rem;
+      overflow-wrap: anywhere;
+      text-align: inherit;
+    }
+
+    .pp-border-unit {
       font-size: 0.55rem;
     }
 
@@ -602,11 +616,11 @@
 
   @media (max-width: 380px) {
     .pp-preview {
-      padding-right: 1.5rem;
-      padding-left: 1.5rem;
+      padding-right: 0.75rem;
+      padding-left: 0.75rem;
     }
 
     .pp-frame-wrapper {
-      width: min(100%, 68vw);
+      width: min(100%, 70vw);
     }
   }
