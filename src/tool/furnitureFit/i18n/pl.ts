@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Problem Sofy w Korytarzu', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: 'Margines Manewru', html: '<p>Częstym błędem jest zakładanie, że jeśli mebel ma 80 cm, a otwór 80 cm, to przejdzie. Tak nie jest. Ręce tragarzy, elastyczność tkaniny i nierówności ścian wymagają minimalnego marginesu <strong>od 2 do 5 cm</strong>. Bez tego marginesu mebel zostanie porysowany lub zaklinuje się pod naciskiem.</p>' },
     { type: 'title', text: '3 Błędy, które Ruinują Przeprowadzkę', level: 3 },
-    { type: 'paragraph', html: 'Nawet przy poprawnych wymiarach, te niewidoczne czynniki często powodują katastrofy: <strong>Lampa Sufitowa</strong> — często pomijana podczas obracania po skosie. <strong>Promień Skrętu Mebla</strong> — sztywny mebel się nie zgina. <strong>Opakowanie</strong> — folia bąbelkowa i tektura ochronna mogą dodać od 1 do 3 cm z każdej strony.' },
+    { type: 'paragraph', html: 'Nawet przy poprawnych wymiarach, te niewidoczne czynniki często powodują katastrofy: <strong>Lampa Sufitowa</strong> - często pomijana podczas obracania po skosie. <strong>Promień Skrętu Mebla</strong> - sztywny mebel się nie zgina. <strong>Opakowanie</strong> - folia bąbelkowa i tektura ochronna mogą dodać od 1 do 3 cm z każdej strony.' },
   ],
   ui: {
     conTitle: 'Wymiary Przestrzeni',

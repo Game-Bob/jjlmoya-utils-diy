@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -14,7 +14,7 @@ const faqData = [
   },
   {
     question: 'Apa rasio campuran bahan bakar dan oli yang umum?',
-    answer: 'Rasio umum adalah 1:25 (kaya, melindungi), 1:33 (peralatan lama), 1:40 (standar), dan 1:50 (miskin, mesin modern). Periksa manual mesin Anda untuk rasio yang tepat—menggunakan rasio yang salah dapat merusak mesin Anda.',
+    answer: 'Rasio umum adalah 1:25 (kaya, melindungi), 1:33 (peralatan lama), 1:40 (standar), dan 1:50 (miskin, mesin modern). Periksa manual mesin Anda untuk rasio yang tepat-menggunakan rasio yang salah dapat merusak mesin Anda.',
   },
   {
     question: 'Apa yang terjadi jika saya salah mencampur?',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Jenis oli apa yang harus saya gunakan?',
-    answer: 'Gunakan oli motor 2-tak yang sesuai untuk peralatan Anda. Oli 2-tak sintetik premium memberikan perlindungan yang lebih baik dan pembakaran yang lebih bersih daripada oli konvensional. Jangan pernah menggunakan oli mesin 4-tak—ini akan merusak mesin.',
+    answer: 'Gunakan oli motor 2-tak yang sesuai untuk peralatan Anda. Oli 2-tak sintetik premium memberikan perlindungan yang lebih baik dan pembakaran yang lebih bersih daripada oli konvensional. Jangan pernah menggunakan oli mesin 4-tak-ini akan merusak mesin.',
   },
   {
     question: 'Bagaimana cara mencampur bahan bakar dan oli?',
@@ -83,15 +83,15 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Kalkulator Campuran Bahan Bakar 2-Tak: Rasio Oli-Bensin Presisi untuk Gergaji Mesin & Moped', level: 2 },
-    { type: 'paragraph', html: 'Mesin dua-tak membutuhkan campuran bahan bakar-oli yang presisi untuk bertahan hidup. Salah campur dan mesin Anda bisa hancur dalam hitungan menit. Kalkulator ini secara instan menentukan jumlah oli yang tepat yang dibutuhkan untuk volume bahan bakar dan jenis mesin Anda—menghilangkan tebakan di bengkel.' },
+    { type: 'paragraph', html: 'Mesin dua-tak membutuhkan campuran bahan bakar-oli yang presisi untuk bertahan hidup. Salah campur dan mesin Anda bisa hancur dalam hitungan menit. Kalkulator ini secara instan menentukan jumlah oli yang tepat yang dibutuhkan untuk volume bahan bakar dan jenis mesin Anda-menghilangkan tebakan di bengkel.' },
 
     { type: 'title', text: 'Mengapa Mesin 2-Tak Membutuhkan Oli dalam Bahan Bakar', level: 3 },
-    { type: 'card', icon: 'mdi:engine', title: 'Perbedaan Kritis', html: 'Tidak seperti mesin 4-tak dengan penampung oli terpisah, mesin 2-tak mencampur oli langsung ke dalam bahan bakar. Pada setiap langkah tenaga, mesin membakar campuran bahan bakar-oli untuk energi dan pelumasan. Tidak ada bak oli, tidak ada pompa oli terpisah—hanya bahan bakar campuran yang menjaga piston tetap hidup.' },
+    { type: 'card', icon: 'mdi:engine', title: 'Perbedaan Kritis', html: 'Tidak seperti mesin 4-tak dengan penampung oli terpisah, mesin 2-tak mencampur oli langsung ke dalam bahan bakar. Pada setiap langkah tenaga, mesin membakar campuran bahan bakar-oli untuk energi dan pelumasan. Tidak ada bak oli, tidak ada pompa oli terpisah-hanya bahan bakar campuran yang menjaga piston tetap hidup.' },
 
     { type: 'title', text: 'Referensi Cepat Rasio 2-Tak', level: 3 },
     { type: 'table', headers: ['Rasio', '% Oli', 'Kasus Penggunaan', 'Jenis Mesin', 'Karakteristik'], rows: [
       ['1:25', '3,85%', 'Perlindungan Maksimal', 'Peralatan sebelum 1980-an, penggunaan beban tinggi, motor antik', 'Campuran kaya: lebih banyak asap, lebih banyak tumpukan karbon, perlindungan maksimal terhadap macet'],
-      ['1:33', '2,94%', 'Peralatan Klasik', 'Mesin kecil 1980-an–1990-an, gergaji mesin lama', 'Kekayaan moderat: keseimbangan antara perlindungan dan efisiensi'],
+      ['1:33', '2,94%', 'Peralatan Klasik', 'Mesin kecil 1980-an-1990-an, gergaji mesin lama', 'Kekayaan moderat: keseimbangan antara perlindungan dan efisiensi'],
       ['1:40', '2,44%', 'Standar Industri', 'Kebanyakan gergaji mesin modern, moped, mesin kecil modern', 'Rekomendasi standar: dirancang untuk oli sintetik masa kini'],
       ['1:50', '1,96%', 'Efisiensi Modern', 'Gergaji mesin terbaru, moped performa tinggi, sepeda motor baru', 'Campuran miskin: lebih sedikit asap, pembakaran lebih bersih, dirancang untuk oli sintetik premium']
     ] },
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Rasio Peralatan Umum', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Gergaji Mesin', html: '<strong>Stihl, Husqvarna, Echo:</strong> Model modern biasanya membutuhkan 1:40 atau 1:50. Selalu periksa manual Anda—menggunakan 1:25 pada gergaji mesin modern berisiko busi kotor dan performa buruk. Mesin Stihl lama (1990-an dan sebelumnya) mungkin menentukan 1:25 atau 1:33.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Moped & Sepeda Motor', html: '<strong>Vespa, Honda, Yamaha:</strong> Kebanyakan membutuhkan 1:33 untuk model lama, 1:40–1:50 untuk versi modern. Moped performa tinggi sering kali menentukan rasio 1:50. Periksa manual servis Anda—itu adalah sumber kebenaran.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Gergaji Mesin', html: '<strong>Stihl, Husqvarna, Echo:</strong> Model modern biasanya membutuhkan 1:40 atau 1:50. Selalu periksa manual Anda-menggunakan 1:25 pada gergaji mesin modern berisiko busi kotor dan performa buruk. Mesin Stihl lama (1990-an dan sebelumnya) mungkin menentukan 1:25 atau 1:33.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Moped & Sepeda Motor', html: '<strong>Vespa, Honda, Yamaha:</strong> Kebanyakan membutuhkan 1:33 untuk model lama, 1:40-1:50 untuk versi modern. Moped performa tinggi sering kali menentukan rasio 1:50. Periksa manual servis Anda-itu adalah sumber kebenaran.' },
     { type: 'card', icon: 'mdi:tools', title: 'Peniup Daun & Pemangkas', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Biasanya 1:50 (modern) atau 1:40 (sedikit lebih tua). Alat-alat ini dirancang untuk penggunaan musiman cepat, sehingga rasio miskin menghemat asap tanpa mengorbankan keandalan.' },
 
     { type: 'title', text: 'Jenis Oli Sangat Penting', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Proses Mencampur Langkah-demi-Langkah', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'Cara yang Benar untuk Mencampur', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Gunakan wadah khusus</strong> yang disediakan hanya untuk pencampuran bahan bakar. Bersih, kering, bertanda.</li><li><strong>Tuangkan setengah bahan bakar Anda</strong> ke dalam wadah terlebih dahulu.</li><li><strong>Tambahkan jumlah oli yang dihitung</strong> (gunakan kalkulator ini untuk presisi).</li><li><strong>Tambahkan sisa bahan bakar</strong> untuk mencapai volume target.</li><li><strong>Kocok dengan kuat selama 1–2 menit</strong> sampai warna seragam. Campuran homogen = pelumasan merata.</li><li><strong>Beri label pada wadah</strong> dengan tanggal, rasio, dan jenis bahan bakar.</li><li><strong>Gunakan dalam waktu 30 hari</strong> (oli sintetik memperpanjang ini hingga 60 hari).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'Cara yang Benar untuk Mencampur', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Gunakan wadah khusus</strong> yang disediakan hanya untuk pencampuran bahan bakar. Bersih, kering, bertanda.</li><li><strong>Tuangkan setengah bahan bakar Anda</strong> ke dalam wadah terlebih dahulu.</li><li><strong>Tambahkan jumlah oli yang dihitung</strong> (gunakan kalkulator ini untuk presisi).</li><li><strong>Tambahkan sisa bahan bakar</strong> untuk mencapai volume target.</li><li><strong>Kocok dengan kuat selama 1-2 menit</strong> sampai warna seragam. Campuran homogen = pelumasan merata.</li><li><strong>Beri label pada wadah</strong> dengan tanggal, rasio, dan jenis bahan bakar.</li><li><strong>Gunakan dalam waktu 30 hari</strong> (oli sintetik memperpanjang ini hingga 60 hari).</li></ol>' },
 
     { type: 'title', text: 'Kapan Harus Mempertanyakan Manual Peralatan Anda', level: 3 },
-    { type: 'tip', html: '<strong>Selalu verifikasi rasio dalam manual peralatan Anda terlebih dahulu.</strong> Jika Anda tidak dapat menemukannya, kunjungi situs web produsen atau hubungi dukungan mereka. Jangan pernah menebak—rasio yang salah membatalkan garansi dan berisiko piston macet. Jika peralatan Anda barang antik dan manualnya hilang, cari nomor model secara online.' },
+    { type: 'tip', html: '<strong>Selalu verifikasi rasio dalam manual peralatan Anda terlebih dahulu.</strong> Jika Anda tidak dapat menemukannya, kunjungi situs web produsen atau hubungi dukungan mereka. Jangan pernah menebak-rasio yang salah membatalkan garansi dan berisiko piston macet. Jika peralatan Anda barang antik dan manualnya hilang, cari nomor model secara online.' },
 
     { type: 'title', text: 'Glosarium: Istilah 2-Tak Dijelaskan', level: 3 },
     { type: 'glossary', items: [
@@ -142,12 +142,12 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Kesalahan Umum yang Mematikan Mesin', level: 3 },
     { type: 'diagnostic', variant: 'error', title: 'Menggunakan Oli 4 Tak pada Mesin 2 Tak', icon: 'mdi:alert', badge: 'Kematian Mesin', html: 'Oli 4-tak dirancang untuk bersirkulasi melalui blok mesin. Dalam tangki bahan bakar 2-tak, mereka tidak terbakar bersih dan akan menghancurkan mesin Anda dalam hitungan jam.' },
-    { type: 'diagnostic', variant: 'warning', title: 'Lupa Mencampur Secara Menyeluruh', icon: 'mdi:alert', badge: 'Risiko Macet', html: 'Jika oli dan bahan bakar terpisah karena pencampuran yang tidak lengkap, bagian dari mesin Anda akan terbakar tanpa pelumasan. Kocok setidaknya selama 1–2 menit sampai campuran seragam.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Lupa Mencampur Secara Menyeluruh', icon: 'mdi:alert', badge: 'Risiko Macet', html: 'Jika oli dan bahan bakar terpisah karena pencampuran yang tidak lengkap, bagian dari mesin Anda akan terbakar tanpa pelumasan. Kocok setidaknya selama 1-2 menit sampai campuran seragam.' },
     { type: 'diagnostic', variant: 'warning', title: 'Menggunakan Bahan Bakar Lama (Lebih dari 60 Hari)', icon: 'mdi:alert', badge: 'Penumpukan Getah', html: 'Bahan bakar campuran etanol terurai seiring waktu. Campuran bahan bakar lama meninggalkan endapan getah di karburator dan injektor bahan bakar. Campur hanya apa yang akan Anda gunakan dalam 30 hari.' },
 
     { type: 'title', text: 'Ringkasan FAQ', level: 3 },
     { type: 'summary', title: 'Sebelum Anda Mencampur', items: [
-      'Periksa manual peralatan Anda untuk rasio yang tepat—ini adalah spesifikasi yang diuji produsen.',
+      'Periksa manual peralatan Anda untuk rasio yang tepat-ini adalah spesifikasi yang diuji produsen.',
       'Verifikasi Anda menggunakan oli 2-tak, bukan 4-tak atau oli lainnya.',
       'Gunakan wadah bersih khusus yang hanya digunakan untuk pencampuran bahan bakar.',
       'Gunakan bensin segar (tidak disimpan selama berbulan-bulan) dan oli 2-tak yang kompatibel.',

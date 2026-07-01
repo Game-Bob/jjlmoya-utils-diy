@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -116,7 +116,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'İlk ahşap veya metal parçasını kesmeden önce, matematiğin arkasındaki "neden"i anlamalısınız. Birçok ülkedeki yapı kodları ve ABD’deki IRC (Uluslararası Konut Kodu) net bir standart belirler: <em>"Dikey elemanlar arasındaki net boşluk, 10 cm (4 inç) çapındaki bir kürenin geçmesine izin vermemelidir."</em>',
+      html: 'İlk ahşap veya metal parçasını kesmeden önce, matematiğin arkasındaki "neden"i anlamalısınız. Birçok ülkedeki yapı kodları ve ABD\'deki IRC (Uluslararası Konut Kodu) net bir standart belirler: <em>"Dikey elemanlar arasındaki net boşluk, 10 cm (4 inç) çapındaki bir kürenin geçmesine izin vermemelidir."</em>',
     },
     {
       type: 'paragraph',
@@ -129,7 +129,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Programlamada ve inşaatta, <em>"Fencepost Error"</em> (Direk Hatası) olarak adlandırılan klasik bir problem vardır. Her metrede bir direk olacak şekilde 10 metrelik bir çit inşa etmek istiyorsanız, kaç direğe ihtiyacınız olur? Sezgisel cevap 10’dur, ancak doğru cevap 11’dir.',
+      html: 'Programlamada ve inşaatta, <em>"Fencepost Error"</em> (Direk Hatası) olarak adlandırılan klasik bir problem vardır. Her metrede bir direk olacak şekilde 10 metrelik bir çit inşa etmek istiyorsanız, kaç direğe ihtiyacınız olur? Sezgisel cevap 10\'dur, ancak doğru cevap 11\'dir.',
     },
     {
       type: 'paragraph',
@@ -168,7 +168,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Direkten direğe <strong>iç</strong> mesafeyi ölçün. Direğin merkezinden ölçmeyin. Dolduracağınız tam boşluk alanını (L) bilmeniz gerekir. Korkuluğunuzun birkaç bölümü varsa, her birini ayrı ayrı ölçün; yapılar nadiren tam olarak kare şeklindedir ve 0,5 cm’lik bir hata simetriyi bozabilir.',
+      html: 'Direkten direğe <strong>iç</strong> mesafeyi ölçün. Direğin merkezinden ölçmeyin. Dolduracağınız tam boşluk alanını (L) bilmeniz gerekir. Korkuluğunuzun birkaç bölümü varsa, her birini ayrı ayrı ölçün; yapılar nadiren tam olarak kare şeklindedir ve 0,5 cm\'lik bir hata simetriyi bozabilir.',
     },
     {
       type: 'title',
@@ -212,7 +212,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:help-circle-outline',
       title: 'Ya son boşluk uymazsa?',
-      html: '<p>Hesaplayıcımızı kullandıysanız, bu durumun olmaması gerekir. Ancak gerçek dünyada ahşap bükülür ve direkler her zaman düz değildir. Sona ulaştığınızda 1-2 mm’lik bir fazlalık veya eksiklik fark edilmez. 1 cm eksikse, ara parça bloklarınızı kontrol edin; muhtemelen her adımda birkaç mm kaybetmişsinizdir.</p>',
+      html: '<p>Hesaplayıcımızı kullandıysanız, bu durumun olmaması gerekir. Ancak gerçek dünyada ahşap bükülür ve direkler her zaman düz değildir. Sona ulaştığınızda 1-2 mm\'lik bir fazlalık veya eksiklik fark edilmez. 1 cm eksikse, ara parça bloklarınızı kontrol edin; muhtemelen her adımda birkaç mm kaybetmişsinizdir.</p>',
     },
     {
       type: 'card',

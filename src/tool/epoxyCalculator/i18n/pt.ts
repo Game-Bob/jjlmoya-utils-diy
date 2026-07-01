@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'A diferença entre uma peça de arte duradoura e um desastre pegajoso reside na <strong>estequiometria exata</strong>. Um erro de apenas 5% na proporção de mistura pode inibir a cura permanentemente. Esta ferramenta elimina as suposições matemáticas, permitindo-lhe focar-se na criação.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volume ou Peso?', html: '<p>O erro nº 1 dos principiantes é assumir que 100ml pesam 100g. <strong>A resina é mais densa que o endurecedor.</strong></p><p>Se a ficha técnica do seu produto diz "100:50 por peso", NÃO é o mesmo que "2:1 por volume". Esta calculadora trabalha com <strong>Volume</strong> (V = L × W × H), que é o padrão para preencher moldes.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Proporções Comuns', html: '<ul><li><strong>1:1</strong> — Revestimentos, vernizes e adesivos rápidos.</li><li><strong>2:1</strong> — Padrão. River tables, joalharia e moldes médios.</li><li><strong>3:1</strong> — Pavimentos industriais e laminados estruturais de alta dureza.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Proporções Comuns', html: '<ul><li><strong>1:1</strong> - Revestimentos, vernizes e adesivos rápidos.</li><li><strong>2:1</strong> - Padrão. River tables, joalharia e moldes médios.</li><li><strong>3:1</strong> - Pavimentos industriais e laminados estruturais de alta dureza.</li></ul>' },
     ]},
     { type: 'title', text: 'Protocolo de Segurança e Boas Práticas', level: 2 },
     { type: 'grid', columns: [

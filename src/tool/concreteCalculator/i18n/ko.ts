@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -121,7 +121,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>콘크리트 배합량</strong>은 용도에 따라 달라집니다. <strong>표준 콘크리트</strong>(기초 및 바닥용)의 배합비는 세멘트 1 : 모래 2.5 : 자갈 3입니다. <strong>조적용 모르타르</strong>(벽체 및 칸막이)는 세멘트 1 : 모래 4입니다. <strong>강력 미장용 모르타르</strong>는 세멘트 1 : 모래 3입니다. 자갈이 섞인 콘크리트는 더 많은 하중을 견디고, 모래만 섞인 모르타르는 접착 및 미장에 적합합니다.',
+      html: '<strong>콘크리트 배합량</strong>은 용도에 따라 달라집니다. <strong>표준 콘크리트</strong>(기초 및 바닥용)의 배합비는 세멘트 1: 모래 2.5: 자갈 3입니다. <strong>조적용 모르타르</strong>(벽체 및 칸막이)는 세멘트 1: 모래 4입니다. <strong>강력 미장용 모르타르</strong>는 세멘트 1: 모래 3입니다. 자갈이 섞인 콘크리트는 더 많은 하중을 견디고, 모래만 섞인 모르타르는 접착 및 미장에 적합합니다.',
     },
     {
       type: 'title',

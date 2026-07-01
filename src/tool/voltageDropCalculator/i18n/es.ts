@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -17,12 +17,12 @@ const faqData = [
   {
     question: '¿Qué sección de cable necesito para 12V a 10 metros?',
     answer:
-      'Depende de la potencia. Para 12V y 10A a 10m, necesitas mínimo 2.5mm². Para 20A, necesitas 6mm². A bajo voltaje (12V/24V), la caída es mucho más crítica que a 230V.',
+      'Depende de la potencia. Para 12V y 10A a 10m, necesitas mínimo 2,5mm². Para 20A, necesitas 6mm². A bajo voltaje (12V/24V), la caída es mucho más crítica que a 230V.',
   },
   {
-    question: '¿Puedo usar cable de 1.5mm² para toda mi instalación?',
+    question: '¿Puedo usar cable de 1,5mm² para toda mi instalación?',
     answer:
-      'No. 1.5mm² es para circuitos de iluminación (máx 10A). Para enchufes necesitas 2.5mm². Para cocina o lavadora necesitas 4mm² o 6mm². Usar cable fino es peligroso y puede causar incendios.',
+      'No. 1,5mm² es para circuitos de iluminación (máx 10A). Para enchufes necesitas 2,5mm². Para cocina o lavadora necesitas 4mm² o 6mm². Usar cable fino es peligroso y puede causar incendios.',
   },
   {
     question: '¿Cuál es la caída de tensión máxima permitida?',

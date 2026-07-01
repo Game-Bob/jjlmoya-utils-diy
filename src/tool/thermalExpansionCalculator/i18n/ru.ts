@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -18,7 +18,7 @@ const faqData = [
   },
   {
     question: 'Расширяется ли дерево одинаково во всех направлениях?',
-    answer: 'Нет. Дерево — анизотропный материал. Оно очень мало расширяется вдоль волокон, но значительно в поперечном направлении (в ширину и толщину).',
+    answer: 'Нет. Дерево - анизотропный материал. Оно очень мало расширяется вдоль волокон, но значительно в поперечном направлении (в ширину и толщину).',
   },
   {
     question: 'Какую температуру использовать в качестве начальной?',
@@ -78,9 +78,9 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Что такое тепловое расширение и как оно влияет на конструкции', level: 2 },
-    { type: 'paragraph', html: '<strong>Тепловое расширение</strong> — это физический процесс, при котором материал увеличивает свою длину в ответ на повышение температуры. В строительстве это явление — сила, способная разрушить бетон, деформировать стальные балки и искривить железнодорожные рельсы.' },
+    { type: 'paragraph', html: '<strong>Тепловое расширение</strong> - это физический процесс, при котором материал увеличивает свою длину в ответ на повышение температуры. В строительстве это явление - сила, способная разрушить бетон, деформировать стальные балки и искривить железнодорожные рельсы.' },
     { type: 'title', text: 'Формула линейного расширения', level: 3 },
-    { type: 'card', icon: 'mdi:math-log', title: 'Формула линейного расширения', html: '<p>Расширение структурного элемента рассчитывается по формуле: <code>ΔL = L₀ · α · ΔT</code>. Где <strong>ΔL</strong> — общий рост, <strong>L₀</strong> — исходная длина, <strong>α</strong> — коэффициент расширения материала (в °C⁻¹), а <strong>ΔT</strong> — разница температур.</p>' },
+    { type: 'card', icon: 'mdi:math-log', title: 'Формула линейного расширения', html: '<p>Расширение структурного элемента рассчитывается по формуле: <code>ΔL = L₀ · α · ΔT</code>. Где <strong>ΔL</strong> - общий рост, <strong>L₀</strong> - исходная длина, <strong>α</strong> - коэффициент расширения материала (в °C⁻¹), а <strong>ΔT</strong> - разница температур.</p>' },
   ],
   ui: {
     configTitle: 'Настройка',

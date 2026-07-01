@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -106,13 +106,13 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Whether you are laying a garden slab, building a block wall, or pouring a floor screed, getting the <strong>concrete mix ratio</strong> right is the single most important factor for structural integrity. This calculator converts professional engineering dosages — expressed in kg per cubic metre — into the practical units you actually work with on site: <strong>25kg bags, shovelfuls, and litres</strong>.',
+      html: 'Whether you are laying a garden slab, building a block wall, or pouring a floor screed, getting the <strong>concrete mix ratio</strong> right is the single most important factor for structural integrity. This calculator converts professional engineering dosages - expressed in kg per cubic metre - into the practical units you actually work with on site: <strong>25kg bags, shovelfuls, and litres</strong>.',
     },
     {
       type: 'card',
       icon: 'mdi:water-alert',
       title: 'Why Water Ratio Determines Concrete Strength',
-      html: '<p>The water-to-cement ratio (w/c ratio) is the key variable controlling concrete strength. Every extra litre of water you add beyond the minimum makes the mix more workable — but permanently weakens the cured concrete by leaving voids as it evaporates.</p><p>The correct consistency resembles a <strong>stiff, cohesive paste</strong>, not a pourable liquid. If your mix slumps off a trowel too easily, you have added too much water.</p>',
+      html: '<p>The water-to-cement ratio (w/c ratio) is the key variable controlling concrete strength. Every extra litre of water you add beyond the minimum makes the mix more workable - but permanently weakens the cured concrete by leaving voids as it evaporates.</p><p>The correct consistency resembles a <strong>stiff, cohesive paste</strong>, not a pourable liquid. If your mix slumps off a trowel too easily, you have added too much water.</p>',
     },
     {
       type: 'title',
@@ -147,7 +147,7 @@ export const content: ToolLocaleContent<ConcreteCalculatorUI> = {
       type: 'card',
       icon: 'mdi:package-variant-closed',
       title: 'Always Buy 10% Extra to Cover Wastage',
-      html: '<p>Material waste on a concrete job is not optional — it is unavoidable. Sub-base irregularities, form overfill, mixer residue and the compaction factor all consume material beyond the theoretical volume. A <strong>10% surplus</strong> prevents the costly and time-critical problem of running short mid-pour with no way to restart the job.</p>',
+      html: '<p>Material waste on a concrete job is not optional - it is unavoidable. Sub-base irregularities, form overfill, mixer residue and the compaction factor all consume material beyond the theoretical volume. A <strong>10% surplus</strong> prevents the costly and time-critical problem of running short mid-pour with no way to restart the job.</p>',
     },
   ],
   ui: {

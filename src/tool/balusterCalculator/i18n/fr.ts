@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -120,7 +120,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: "Cette mesure n'est pas arbitraire. C'est le diamètre moyen de la tête d'un jeune enfant (généralement de moins d'1 an). Si un enfant peut passer son corps mais que sa tête se coince, le risque d'asphyxie est extrêmement élevé. L'objectif de notre <strong>Calculateur de Balustres</strong> n'est donc pas seulement esthétique — il sauve des vies.",
+      html: "Cette mesure n'est pas arbitraire. C'est le diamètre moyen de la tête d'un jeune enfant (généralement de moins d'1 an). Si un enfant peut passer son corps mais que sa tête se coince, le risque d'asphyxie est extrêmement élevé. L'objectif de notre <strong>Calculateur de Balustres</strong> n'est donc pas seulement esthétique - il sauve des vies.",
     },
     {
       type: 'title',
@@ -224,7 +224,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:wrench-outline',
       title: 'Bois, Métal ou Verre?',
-      html: '<p>Ce calculateur fonctionne pour <strong>tout élément vertical répétitif</strong>. Pour les câbles en acier horizontaux, une réglementation différente s\'applique. Pour le verre, c\'est un panneau continu et l\'espacement ne s\'applique pas — c\'est la résistance aux chocs qui compte.</p>',
+      html: '<p>Ce calculateur fonctionne pour <strong>tout élément vertical répétitif</strong>. Pour les câbles en acier horizontaux, une réglementation différente s\'applique. Pour le verre, c\'est un panneau continu et l\'espacement ne s\'applique pas - c\'est la résistance aux chocs qui compte.</p>',
     },
     {
       type: 'card',

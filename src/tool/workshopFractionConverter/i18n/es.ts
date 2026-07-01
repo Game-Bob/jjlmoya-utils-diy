@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { WorkshopFractionConverterUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -13,7 +13,7 @@ const faqData = [
     answer: 'La mayoría de las herramientas y tornillería modernas usan el sistema métrico, pero muchas herramientas antiguas y especificaciones siguen usando pulgadas fraccionales. Este conversor cierra esa brecha, ayudándote a encontrar el equivalente métrico exacto o el tamaño de tornillería estándar más cercano.',
   },
   {
-    question: '¿Cuál es la diferencia entre 1/2 pulgada y 12.7 mm?',
+    question: '¿Cuál es la diferencia entre 1/2 pulgada y 12,7 mm?',
     answer: '1/2 pulgada equivale exactamente a 12.7 milímetros (0.5 × 25.4 = 12.7). Las herramientas métricas e imperiales a menudo son intercambiables en tamaños estándar porque los fabricantes alinean los tamaños de tornillería comunes en ambos sistemas.',
   },
   {

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: '耐久性のある芸術作品とベタベタの失敗作の分かれ目は、<strong>正確な化学量論</strong>にあります。混合比がわずか5%狂っただけで、完全な硬化が永続的に妨げられることがあります。このツールは数学的な推測を排除し、あなたが創造に集中できるようにします。' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: '容量か重量か？', html: '<p>初心者の最大の失敗は、100mlが100gであると仮定することです。<strong>樹脂は硬化剤よりも密度が高いです。</strong></p><p>製品データシートに「重量比 100:50」とある場合、それは「容量比 2:1」と同じではありません。この計算機は、型を満たすための標準である<strong>体積（容量）</strong> (V = L × W × H) で計算します。</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: '一般的な比率', html: '<ul><li><strong>1:1</strong> — コーティング、ニス、速乾性接着剤。</li><li><strong>2:1</strong> — 標準。リバーテーブル、ジュエリー、中規模の型取り。</li><li><strong>3:1</strong> — 工業用床材や高硬度の構造用積層板。</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: '一般的な比率', html: '<ul><li><strong>1:1</strong> - コーティング、ニス、速乾性接着剤。</li><li><strong>2:1</strong> - 標準。リバーテーブル、ジュエリー、中規模の型取り。</li><li><strong>3:1</strong> - 工業用床材や高硬度の構造用積層板。</li></ul>' },
     ]},
     { type: 'title', text: '安全プロトコルとベストプラクティス', level: 2 },
     { type: 'grid', columns: [

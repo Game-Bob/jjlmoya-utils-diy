@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Perbedaan antara karya seni yang tahan lama dan kegagalan yang lengket terletak pada <strong>stoikiometri yang tepat</strong>. Kesalahan bahkan hanya 5% dalam rasio campuran dapat menghambat pengerasan secara permanen. Alat ini menghilangkan tebakan matematis, memungkinkan Anda fokus pada kreasi.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volume atau Berat?', html: '<p>Kesalahan #1 pemula adalah menganggap bahwa 100ml beratnya 100g. <strong>Resin lebih padat daripada pengeras.</strong></p><p>Jika data teknis produk Anda menyebutkan "100:50 berdasarkan berat", itu TIDAK sama dengan "2:1 berdasarkan volume". Kalkulator ini bekerja dengan <strong>Volume</strong> (V = L × W × H), yang merupakan standar untuk mengisi cetakan.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Rasio Umum', html: '<ul><li><strong>1:1</strong> — Pelapis, vernis, dan pelekat cepat.</li><li><strong>2:1</strong> — Standar. Meja river, perhiasan, dan cetakan sedang.</li><li><strong>3:1</strong> — Lantai industri dan laminasi struktural kekerasan tinggi.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Rasio Umum', html: '<ul><li><strong>1:1</strong> - Pelapis, vernis, dan pelekat cepat.</li><li><strong>2:1</strong> - Standar. Meja river, perhiasan, dan cetakan sedang.</li><li><strong>3:1</strong> - Lantai industri dan laminasi struktural kekerasan tinggi.</li></ul>' },
     ]},
     { type: 'title', text: 'Protokol Keamanan dan Praktik Terbaik', level: 2 },
     { type: 'grid', columns: [

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Różnica między trwałym dziełem sztuki a lepką katastrofą tkwi w <strong>dokładnej stechiometrii</strong>. Błąd rzędu zaledwie 5% w proporcji mieszania może trwale uniemożliwić utwardzenie. To narzędzie eliminuje matematyczne zgadywanie, pozwalając Ci skupić się na tworzeniu.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Objętość czy Waga?', html: '<p>Błąd nr 1 początkujących polega na zakładaniu, że 100 ml waży 100 g. <strong>Żywica jest gęstsza niż utwardzacz.</strong></p><p>Jeśli karta techniczna produktu podaje "100:50 wagowo", to NIE jest to samo co "2:1 objętościowo". Ten kalkulator pracuje z <strong>Objętością</strong> (V = L × W × H), która jest standardem przy napełnianiu form.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Typowe Proporcje', html: '<ul><li><strong>1:1</strong> — Powłoki, lakiery i szybkie kleje.</li><li><strong>2:1</strong> — Standard. Stoły rzeczne, biżuteria i średnie odlewy.</li><li><strong>3:1</strong> — Podłogi przemysłowe i laminaty strukturalne o wysokiej twardości.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Typowe Proporcje', html: '<ul><li><strong>1:1</strong> - Powłoki, lakiery i szybkie kleje.</li><li><strong>2:1</strong> - Standard. Stoły rzeczne, biżuteria i średnie odlewy.</li><li><strong>3:1</strong> - Podłogi przemysłowe i laminaty strukturalne o wysokiej twardości.</li></ul>' },
     ]},
     { type: 'title', text: 'Protokół Bezpieczeństwa i Najlepsze Praktyki', level: 2 },
     { type: 'grid', columns: [

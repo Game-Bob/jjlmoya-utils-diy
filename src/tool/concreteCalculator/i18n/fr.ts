@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ConcreteCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -27,7 +27,7 @@ const faqData = [
   {
     question: 'Peut-on gâcher le béton à la main sans bétonnière?',
     answer:
-      'Oui, mais c\'est très physique et peu pratique au-delà de 0,5 m³. Gâchez sur une surface propre et étanche. Ajoutez l\'eau en faible quantité : un excès d\'eau réduit drastiquement la résistance finale du béton.',
+      'Oui, mais c\'est très physique et peu pratique au-delà de 0,5 m³. Gâchez sur une surface propre et étanche. Ajoutez l\'eau en faible quantité: un excès d\'eau réduit drastiquement la résistance finale du béton.',
   },
   {
     question: 'Pourquoi le béton se fissure-t-il en séchant?',

@@ -1,4 +1,4 @@
-import type { CategoryLocaleContent } from '../../types';
+﻿import type { CategoryLocaleContent } from '../../types';
 
 export const content: CategoryLocaleContent = {
   slug: 'diy',
@@ -8,7 +8,7 @@ export const content: CategoryLocaleContent = {
   seo: [
     {
       type: 'title',
-      text: 'Ingénierie Domestique et Projets DIY : Du Design à la Réalité',
+      text: 'Ingénierie Domestique et Projets DIY: Du Design à la Réalité',
       level: 2,
     },
     {
@@ -21,7 +21,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Construction et Rénovation : Béton, Mortiers et Escaliers',
+      text: 'Construction et Rénovation: Béton, Mortiers et Escaliers',
       level: 2,
     },
     {
@@ -39,7 +39,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Artisanat et Nouveaux Matériaux : Argile et Résine Époxy',
+      text: 'Artisanat et Nouveaux Matériaux: Argile et Résine Époxy',
       level: 2,
     },
     {
@@ -71,7 +71,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'title',
-      text: 'Gestion du Budget : Décomposition des Coûts et Optimisation Économique',
+      text: 'Gestion du Budget: Décomposition des Coûts et Optimisation Économique',
       level: 2,
     },
     {

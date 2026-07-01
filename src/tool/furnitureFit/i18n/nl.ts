@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Het Bank-in-de-Gang Probleem', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: 'Manoeuvreerruimte', html: '<p>Een veelvoorkomende fout is aan te nemen dat als het meubel 80cm breed is en de opening ook 80cm, het zal passen. Dat is niet zo. De handen van verhuizers, de elasticiteit van de stof en oneffenheden van de muren vereisen een minimale marge van <strong>2 tot 5 cm</strong>. Zonder deze marge wordt het meubel bekrast of raakt het klem.</p>' },
     { type: 'title', text: '3 Fouten die een Verhuizing Verpesten', level: 3 },
-    { type: 'paragraph', html: 'Zelfs met de juiste maten veroorzaken deze onzichtbare factoren vaak rampen: <strong>De Plafondlamp</strong> — vaak vergeten tijdens het schuin draaien. <strong>De Draaicirkel van het Meubel</strong> — een stijf meubel buigt niet. <strong>De Verpakking</strong> — bubbeltjesplastic kan aan elke kant 1 tot 3 cm toevoegen.' },
+    { type: 'paragraph', html: 'Zelfs met de juiste maten veroorzaken deze onzichtbare factoren vaak rampen: <strong>De Plafondlamp</strong> - vaak vergeten tijdens het schuin draaien. <strong>De Draaicirkel van het Meubel</strong> - een stijf meubel buigt niet. <strong>De Verpakking</strong> - bubbeltjesplastic kan aan elke kant 1 tot 3 cm toevoegen.' },
   ],
   ui: {
     conTitle: 'Afmetingen van de Ruimte',

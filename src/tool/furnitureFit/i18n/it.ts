@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Il Problema del Divano nel Corridoio', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: 'Margine di Manovra', html: '<p>Un errore comune è assumere che se il mobile misura 80cm e il vano 80cm, passerà. Non è così. Le mani dei trasportatori, l\'elasticità del tessuto e le imperfezioni delle pareti richiedono un margine minimo di <strong>2-5 cm</strong>. Senza questo margine, il mobile si graffierà o rimarrà incastrato per pressione.</p>' },
     { type: 'title', text: 'I 3 Errori che Rovinano un Traslocco', level: 3 },
-    { type: 'paragraph', html: 'Anche con misure corrette, questi fattori invisibili causano spesso disastri: <strong>La Lampada a Soffitto</strong> — dimenticata durante la rotazione diagonale; <strong>Il Raggio di Rotazione del Mobile</strong> — un mobile rigido non si piega; <strong>L\'Imballaggio</strong> — il pluriball può aggiungere da 1 a 3 cm per lato.' },
+    { type: 'paragraph', html: 'Anche con misure corrette, questi fattori invisibili causano spesso disastri: <strong>La Lampada a Soffitto</strong> - dimenticata durante la rotazione diagonale; <strong>Il Raggio di Rotazione del Mobile</strong> - un mobile rigido non si piega; <strong>L\'Imballaggio</strong> - il pluriball può aggiungere da 1 a 3 cm per lato.' },
   ],
   ui: {
     conTitle: 'Dimensioni dello Spazio',

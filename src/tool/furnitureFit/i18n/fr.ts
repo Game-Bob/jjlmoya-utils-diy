@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -97,7 +97,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'La Science du Déménagement et le Théorème de Pythagore', level: 2 },
     {
       type: 'paragraph',
-      html: 'Un déménagement n\'est pas seulement une épreuve physique — c\'est un puzzle géométrique complexe. L\'espace apparent d\'une pièce ou d\'un ascenseur trompe l\'œil humain, surtout lorsqu\'on ignore la troisième dimension. Les mathématiques peuvent vous faire économiser des centaines d\'euros en retours et transports ratés.',
+      html: 'Un déménagement n\'est pas seulement une épreuve physique - c\'est un puzzle géométrique complexe. L\'espace apparent d\'une pièce ou d\'un ascenseur trompe l\'œil humain, surtout lorsqu\'on ignore la troisième dimension. Les mathématiques peuvent vous faire économiser des centaines d\'euros en retours et transports ratés.',
     },
     { type: 'title', text: 'L\'Astuce de la Diagonale 3D', level: 3 },
     {
@@ -122,7 +122,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: '3 Erreurs Fatales lors d\'un Déménagement', level: 3 },
     {
       type: 'paragraph',
-      html: 'Même avec des mesures correctes, ces facteurs invisibles provoquent des catastrophes: <strong>Le Luminaire au Plafond</strong> — oublié pendant l\'inclinaison diagonale, il peut être heurté et brisé. <strong>Le Rayon de Giration du Meuble</strong> — un meuble rigide ne se plie pas; même s\'il passe en largeur dans un couloir étroit, il ne pourra pas effectuer le virage. <strong>L\'Emballage</strong> — le papier bulle et le carton de protection peuvent ajouter 1 à 3 cm de chaque côté.',
+      html: 'Même avec des mesures correctes, ces facteurs invisibles provoquent des catastrophes: <strong>Le Luminaire au Plafond</strong> - oublié pendant l\'inclinaison diagonale, il peut être heurté et brisé. <strong>Le Rayon de Giration du Meuble</strong> - un meuble rigide ne se plie pas; même s\'il passe en largeur dans un couloir étroit, il ne pourra pas effectuer le virage. <strong>L\'Emballage</strong> - le papier bulle et le carton de protection peuvent ajouter 1 à 3 cm de chaque côté.',
     },
   ],
   ui: {

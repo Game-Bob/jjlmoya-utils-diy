@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -122,7 +122,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Los 3 Errores que Arruinan una Mudanza', level: 3 },
     {
       type: 'paragraph',
-      html: 'Incluso con medidas correctas, estos factores invisibles suelen causar desastres: <strong>La Lámpara del Techo</strong> — olvidada durante el giro diagonal, puede ser golpeada y destruida. <strong>El Radio de Giro del Mueble</strong> — un mueble rígido no se dobla; si el pasillo es estrecho y el mueble largo, aunque quepa de ancho, no podrá realizar el giro de esquina. <strong>El Embalaje</strong> — el papel burbuja y el cartón protector pueden añadir de 1 a 3 cm a cada lado.',
+      html: 'Incluso con medidas correctas, estos factores invisibles suelen causar desastres: <strong>La Lámpara del Techo</strong> - olvidada durante el giro diagonal, puede ser golpeada y destruida. <strong>El Radio de Giro del Mueble</strong> - un mueble rígido no se dobla; si el pasillo es estrecho y el mueble largo, aunque quepa de ancho, no podrá realizar el giro de esquina. <strong>El Embalaje</strong> - el papel burbuja y el cartón protector pueden añadir de 1 a 3 cm a cada lado.',
     },
   ],
   ui: {

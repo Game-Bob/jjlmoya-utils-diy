@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -18,7 +18,7 @@ const faqData = [
   },
   {
     question: 'Co jeśli moja przekątna jest inna?',
-    answer: 'Jeśli zmierzona przekątna różni się od idealnej, kalkulator pokaże odchylenie. Kolor zielony oznacza ideał, żółty – akceptowalne odchylenie, czerwony – brak kąta prostego. Narzędzie podpowie również, czy należy zwiększyć czy zmniejszyć kąt.',
+    answer: 'Jeśli zmierzona przekątna różni się od idealnej, kalkulator pokaże odchylenie. Kolor zielony oznacza ideał, żółty - akceptowalne odchylenie, czerwony - brak kąta prostego. Narzędzie podpowie również, czy należy zwiększyć czy zmniejszyć kąt.',
   },
   {
     question: 'Czy to jest wystarczająco dokładne do budowy?',

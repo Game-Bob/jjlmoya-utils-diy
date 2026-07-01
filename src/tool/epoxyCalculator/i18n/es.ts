@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -120,7 +120,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
           type: 'card',
           icon: 'mdi:water-percent',
           title: 'Proporciones Comunes',
-          html: '<ul><li><strong>1:1</strong> — Recubrimientos, barnices y adhesivos rápidos.</li><li><strong>2:1</strong> — Estándar. River tables, joyería y moldes medios.</li><li><strong>3:1</strong> — Suelos industriales y laminados estructurales de alta dureza.</li></ul>',
+          html: '<ul><li><strong>1:1</strong> - Recubrimientos, barnices y adhesivos rápidos.</li><li><strong>2:1</strong> - Estándar. River tables, joyería y moldes medios.</li><li><strong>3:1</strong> - Suelos industriales y laminados estructurales de alta dureza.</li></ul>',
         },
       ],
     },

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Dayanıklı bir sanat eseri ile yapış yapış bir felaket arasındaki fark <strong>tam stokiyometride</strong> yatar. Karışım oranındaki sadece %5\'lik bir hata, kürleşmeyi kalıcı olarak engelleyebilir. Bu araç, matematiksel tahminleri ortadan kaldırarak yaratıcılığınıza odaklanmanızı sağlar.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Hacim mi Ağırlık mı?', html: '<p>Yeni başlayanların 1 numaralı hatası 100ml\'nin 100g ağırlığında olduğunu varsaymaktır. <strong>Reçine sertleştiriciden daha yoğundur.</strong></p><p>Ürününüzün teknik bilgi formu "ağırlıkça 100:50" diyorsa, bu "hacimce 2:1" ile AYNI değildir. Bu hesaplayıcı, kalıpları doldurmak için standart olan <strong>Hacim</strong> (V = U × G × Y) ile çalışır.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Yaygın Oranlar', html: '<ul><li><strong>1:1</strong> — Kaplamalar, vernikler ve hızlı yapıştırıcılar.</li><li><strong>2:1</strong> — Standart. Nehir masaları, takı ve orta ölçekli kalıplar.</li><li><strong>3:1</strong> — Endüstriyel zeminler ve yüksek sertlikteki yapısal laminatlar.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Yaygın Oranlar', html: '<ul><li><strong>1:1</strong> - Kaplamalar, vernikler ve hızlı yapıştırıcılar.</li><li><strong>2:1</strong> - Standart. Nehir masaları, takı ve orta ölçekli kalıplar.</li><li><strong>3:1</strong> - Endüstriyel zeminler ve yüksek sertlikteki yapısal laminatlar.</li></ul>' },
     ]},
     { type: 'title', text: 'Güvenlik Protokolü ve En İyi Uygulamalar', level: 2 },
     { type: 'grid', columns: [

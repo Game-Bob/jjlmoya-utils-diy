@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -105,7 +105,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Rapporti comuni per attrezzatura', level: 3 },
     { type: 'card', icon: 'mdi:tree', title: 'Motoseghe', html: '<strong>Stihl, Husqvarna, Echo:</strong> I modelli moderni richiedono tipicamente 1:40 o 1:50. Controlla sempre il manuale: usare 1:25 su una motosega moderna rischia candele sporche. Le vecchie macchine Stihl (anni 90 e precedenti) possono specificare 1:25 o 1:33.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Ciclomotori e Moto', html: '<strong>Vespa, Honda, Yamaha:</strong> La maggior parte richiede 1:33 per i vecchi modelli, 1:40–1:50 per le versioni moderne. Ciclomotori ad alte prestazioni spesso specificano 1:50. Il manuale di servizio è la fonte di verità.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Ciclomotori e Moto', html: '<strong>Vespa, Honda, Yamaha:</strong> La maggior parte richiede 1:33 per i vecchi modelli, 1:40-1:50 per le versioni moderne. Ciclomotori ad alte prestazioni spesso specificano 1:50. Il manuale di servizio è la fonte di verità.' },
     { type: 'card', icon: 'mdi:tools', title: 'Soffiatori e Tagliabordi', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Tipicamente 1:50 (moderni) o 1:40 (più vecchi). Questi strumenti sono progettati per uso stagionale rapido, quindi rapporti magri riducono il fumo senza sacrificare l\'affidabilità.' },
 
     { type: 'title', text: 'Il tipo di olio conta quanto il rapporto', level: 3 },
@@ -116,7 +116,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Processo di miscelazione passo-passo', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'Il modo giusto di miscelare', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Usa un contenitore dedicato</strong> riservato solo alla miscela. Pulito, asciutto, contrassegnato.</li><li><strong>Versa metà benzina</strong> nel contenitore per prima.</li><li><strong>Aggiungi la quantità di olio calcolata</strong> (usa questo calcolatore per precisione).</li><li><strong>Aggiungi la benzina rimanente</strong> per raggiungere il volume target.</li><li><strong>Agita vigorosamente per 1–2 minuti</strong> finché il colore non è uniforme. Una miscela omogenea = lubrificazione costante.</li><li><strong>Etichetta il contenitore</strong> con data, rapporto e tipo di carburante.</li><li><strong>Usa entro 30 giorni</strong> (gli oli sintetici estendono a 60 giorni).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'Il modo giusto di miscelare', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Usa un contenitore dedicato</strong> riservato solo alla miscela. Pulito, asciutto, contrassegnato.</li><li><strong>Versa metà benzina</strong> nel contenitore per prima.</li><li><strong>Aggiungi la quantità di olio calcolata</strong> (usa questo calcolatore per precisione).</li><li><strong>Aggiungi la benzina rimanente</strong> per raggiungere il volume target.</li><li><strong>Agita vigorosamente per 1-2 minuti</strong> finché il colore non è uniforme. Una miscela omogenea = lubrificazione costante.</li><li><strong>Etichetta il contenitore</strong> con data, rapporto e tipo di carburante.</li><li><strong>Usa entro 30 giorni</strong> (gli oli sintetici estendono a 60 giorni).</li></ol>' },
 
     { type: 'title', text: 'Quando dubitare del manuale dell\'attrezzatura', level: 3 },
     { type: 'tip', html: '<strong>Verifica sempre prima il rapporto sul manuale del produttore.</strong> Se non lo trovi, visita il sito del produttore o contatta il supporto. Mai indovinare: un rapporto errato annulla la garanzia e rischia il grippaggio. Se l\'attrezzatura è d\'epoca e il manuale è perso, cerca online il numero del modello.' },
@@ -142,7 +142,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Errori comuni che uccidono i motori', level: 3 },
     { type: 'diagnostic', variant: 'error', title: 'Usare olio per 4 tempi in motori a 2 tempi', icon: 'mdi:alert', badge: 'Morte Motore', html: 'Gli oli per 4 tempi sono fatti per circolare nel blocco motore. In un serbatoio 2 tempi non bruciano bene e distruggono il motore in poche ore.' },
-    { type: 'diagnostic', variant: 'warning', title: 'Dimenticare di agitare bene', icon: 'mdi:alert', badge: 'Rischio Grippaggio', html: 'Se olio e benzina si separano per miscelazione incompleta, parti del motore bruceranno senza lubrificazione. Agita per almeno 1–2 minuti.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Dimenticare di agitare bene', icon: 'mdi:alert', badge: 'Rischio Grippaggio', html: 'Se olio e benzina si separano per miscelazione incompleta, parti del motore bruceranno senza lubrificazione. Agita per almeno 1-2 minuti.' },
     { type: 'diagnostic', variant: 'warning', title: 'Usare benzina vecchia (oltre 60 giorni)', icon: 'mdi:alert', badge: 'Residui Gommosi', html: 'La benzina con etanolo si degrada nel tempo. La vecchia miscela lascia depositi gommosi nei carburatori. Prepara solo quella che userai entro 30 giorni.' },
 
     { type: 'title', text: 'Sintesi FAQ', level: 3 },

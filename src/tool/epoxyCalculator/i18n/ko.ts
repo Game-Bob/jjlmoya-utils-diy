@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: '내구성 있는 예술 작품과 끈적이는 실패작의 차이는 <strong>정확한 화학량론</strong>에 달려 있습니다. 혼합 비율이 단 5%만 틀려도 영구적으로 경화되지 않을 수 있습니다. 이 도구는 수학적 추측을 없애주어 당신이 창작에 집중할 수 있도록 돕습니다.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: '부피인가 중량인가?', html: '<p>보통 초보자들이 하는 가장 큰 실수는 100ml가 100g이라고 가정하는 것입니다. <strong>레진은 경화제보다 밀도가 높습니다.</strong></p><p>제품 데이터 시트에 "중량 기준 100:50"이라고 되어 있다면, 그것은 "부피 기준 2:1"과 같지 않습니다. 이 계산기는 몰드를 채우기 위한 표준인 <strong>부피</strong>(V = L × W × H)를 기준으로 작동합니다.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: '일반적인 비율', html: '<ul><li><strong>1:1</strong> — 코팅, 바니시 및 속건성 접착제.</li><li><strong>2:1</strong> — 표준. 리버 테이블, 주얼리 및 중간 크기 몰드.</li><li><strong>3:1</strong> — 산업용 바닥 및 고경도 구조용 적층판.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: '일반적인 비율', html: '<ul><li><strong>1:1</strong> - 코팅, 바니시 및 속건성 접착제.</li><li><strong>2:1</strong> - 표준. 리버 테이블, 주얼리 및 중간 크기 몰드.</li><li><strong>3:1</strong> - 산업용 바닥 및 고경도 구조용 적층판.</li></ul>' },
     ]},
     { type: 'title', text: '안전 프로토콜 및 베스트 프랙티스', level: 2 },
     { type: 'grid', columns: [

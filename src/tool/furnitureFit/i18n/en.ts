@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -97,7 +97,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'The Science of Moving House: Pythagorean Theorem in Practice', level: 2 },
     {
       type: 'paragraph',
-      html: 'Moving house is not just a physical challenge — it is a complex geometric puzzle. The apparent space of a room or lift deceives the human eye, especially when we ignore the third dimension. Applied mathematics can save you hundreds of pounds in returns and failed deliveries.',
+      html: 'Moving house is not just a physical challenge - it is a complex geometric puzzle. The apparent space of a room or lift deceives the human eye, especially when we ignore the third dimension. Applied mathematics can save you hundreds of pounds in returns and failed deliveries.',
     },
     { type: 'title', text: 'The 3D Diagonal Trick', level: 3 },
     {
@@ -117,12 +117,12 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
       type: 'card',
       icon: 'mdi:tools',
       title: 'Disassemble to Win',
-      html: '<p>Before giving up because a piece does not fit, check the legs. Removing sofa legs often reduces the critical height by 10 to 15cm — the difference between success and leaving it in the lobby. Fridge doors and wardrobe handles also add critical centimetres.</p>',
+      html: '<p>Before giving up because a piece does not fit, check the legs. Removing sofa legs often reduces the critical height by 10 to 15cm - the difference between success and leaving it in the lobby. Fridge doors and wardrobe handles also add critical centimetres.</p>',
     },
     { type: 'title', text: '3 Mistakes That Ruin Every Move', level: 3 },
     {
       type: 'paragraph',
-      html: 'Even with correct measurements, these invisible factors cause disasters: <strong>The Ceiling Light</strong> — forgotten during the diagonal tilt, it can be hit and smashed. <strong>Furniture Turning Radius</strong> — a rigid piece does not bend; even if it fits width-wise in a narrow corridor, it cannot complete the corner turn. <strong>Packaging</strong> — bubble wrap and cardboard protection can add 1 to 3 cm on every side.',
+      html: 'Even with correct measurements, these invisible factors cause disasters: <strong>The Ceiling Light</strong> - forgotten during the diagonal tilt, it can be hit and smashed. <strong>Furniture Turning Radius</strong> - a rigid piece does not bend; even if it fits width-wise in a narrow corridor, it cannot complete the corner turn. <strong>Packaging</strong> - bubble wrap and cardboard protection can add 1 to 3 cm on every side.',
     },
   ],
   ui: {

@@ -1,10 +1,10 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-resine-epoxy';
-const title = 'Calculateur de Résine Époxy : Mélange et Volume Exact';
+const title = 'Calculateur de Résine Époxy: Mélange et Volume Exact';
 const description =
   "Calculez la quantité exacte de résine époxy et de durcisseur nécessaire pour vos projets. Évitez les gaspillages pour les tables rivières, bijoux et moules.";
 
@@ -120,7 +120,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
           type: 'card',
           icon: 'mdi:water-percent',
           title: 'Proportions Courantes',
-          html: "<ul><li><strong>1:1</strong> — Revêtements, vernis et adhésifs rapides.</li><li><strong>2:1</strong> — Standard. Tables rivières, bijoux et moules moyens.</li><li><strong>3:1</strong> — Sols industriels et stratifiés structurels haute résistance.</li></ul>",
+          html: "<ul><li><strong>1:1</strong> - Revêtements, vernis et adhésifs rapides.</li><li><strong>2:1</strong> - Standard. Tables rivières, bijoux et moules moyens.</li><li><strong>3:1</strong> - Sols industriels et stratifiés structurels haute résistance.</li></ul>",
         },
       ],
     },

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -14,7 +14,7 @@ const faqData = [
   },
   {
     question: 'Jakie są typowe proporcje mieszanki?',
-    answer: 'Typowe proporcje to 1:25 (bogata, ochronna), 1:33 (starszy sprzęt), 1:40 (standardowa) i 1:50 (uboga, nowoczesne silniki). Zawsze sprawdzaj instrukcję silnika – błędna proporcja może go uszkodzić.',
+    answer: 'Typowe proporcje to 1:25 (bogata, ochronna), 1:33 (starszy sprzęt), 1:40 (standardowa) i 1:50 (uboga, nowoczesne silniki). Zawsze sprawdzaj instrukcję silnika - błędna proporcja może go uszkodzić.',
   },
   {
     question: 'Co się stanie przy złej mieszance?',
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Kalkulator Mieszanki Paliwa 2T: Precyzyjne Proporcje do Pił Spalinowych i Mopędów', level: 2 },
-    { type: 'paragraph', html: 'Silniki dwusuwowe wymagają precyzyjnej mieszanki paliwowo-olejowej, aby działać poprawnie. Błąd w proporcjach może zniszczyć silnik w kilka minut. Ten kalkulator błyskawicznie wylicza dokładną ilość oleju potrzebną do danej objętości paliwa — koniec ze zgadywaniem w garażu.' },
+    { type: 'paragraph', html: 'Silniki dwusuwowe wymagają precyzyjnej mieszanki paliwowo-olejowej, aby działać poprawnie. Błąd w proporcjach może zniszczyć silnik w kilka minut. Ten kalkulator błyskawicznie wylicza dokładną ilość oleju potrzebną do danej objętości paliwa - koniec ze zgadywaniem w garażu.' },
 
     { type: 'title', text: 'Dlaczego silniki 2-suwowe wymagają oleju w paliwie?', level: 3 },
     { type: 'card', icon: 'mdi:engine', title: 'Kluczowa różnica', html: 'W przeciwieństwie do silników 4 suwowych z oddzielną miską olejową, silniki 2T mieszają olej bezpośrednio z paliwem. Podczas każdego cyklu silnik spala mieszankę, która jednocześnie smaruje ruchome części. Brak smarowania to gwarantowane zatarcie tłoka.' },
@@ -104,7 +104,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Typowe proporcje dla urządzeń', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Piły spalinowe', html: '<strong>Stihl, Husqvarna, Echo:</strong> Nowoczesne modele wymagają zazwyczaj 1:40 lub 1:50. Zawsze sprawdź instrukcję — 1:25 w nowej pile to pewne problemy ze świecą. Starsze maszyny Stihl mogą wymagać 1:25 lub 1:33.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Piły spalinowe', html: '<strong>Stihl, Husqvarna, Echo:</strong> Nowoczesne modele wymagają zazwyczaj 1:40 lub 1:50. Zawsze sprawdź instrukcję - 1:25 w nowej pile to pewne problemy ze świecą. Starsze maszyny Stihl mogą wymagać 1:25 lub 1:33.' },
     { type: 'card', icon: 'mdi:motorcycle', title: 'Mopędy i Motocykle', html: '<strong>Vespa, Romet, Simson:</strong> Zabytki wymagają zazwyczaj 1:33 lub 1:25. Nowsze konstrukcje 1:40-1:50. Instrukcja serwisowa to jedyne pewne źródło informacji.' },
     { type: 'card', icon: 'mdi:tools', title: 'Dmuchawy i Podkaszarki', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Zazwyczaj 1:50 (nowe) lub 1:40. Sprzęt ten pracuje sezonowo, więc ubogie mieszanki ograniczają dym bez utraty trwałości.' },
 
@@ -119,7 +119,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     { type: 'card', icon: 'mdi:check-circle', title: 'Jak robić to poprawnie', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Używaj dedykowanego kanistra</strong> tylko do mieszanki. Czysty i szczelny.</li><li><strong>Wlej połowę paliwa</strong> jako pierwszą.</li><li><strong>Dodaj odmierzoną ilość oleju</strong> (użyj tego kalkulatora dla precyzji).</li><li><strong>Dolej resztę benzyny</strong> do pożądanej objętości.</li><li><strong>Wstrząsaj mocno przez 1-2 minuty</strong> aż kolor będzie jednolity. Jednorodna mieszanka = równe smarowanie.</li><li><strong>Opisz kanister</strong> datą i proporcją.</li><li><strong>Zużyj w ciągu 30 dni</strong> (syntetyki wytrzymają do 60 dni).</li></ol>' },
 
     { type: 'title', text: 'Kiedy nie ufać instrukcji?', level: 3 },
-    { type: 'tip', html: '<strong>Zawsze najpierw sprawdź instrukcję producenta.</strong> Jeśli jej nie masz, odwiedź stronę producenta. Nigdy nie zgaduj „na oko” — zła mieszanka to utrata gwarancji i ryzyko zniszczenia silnika. W przypadku starych maszyn bez dokumentacji szukaj informacji na forach pasjonatów danej marki.' },
+    { type: 'tip', html: '<strong>Zawsze najpierw sprawdź instrukcję producenta.</strong> Jeśli jej nie masz, odwiedź stronę producenta. Nigdy nie zgaduj "na oko" - zła mieszanka to utrata gwarancji i ryzyko zniszczenia silnika. W przypadku starych maszyn bez dokumentacji szukaj informacji na forach pasjonatów danej marki.' },
 
     { type: 'title', text: 'Słowniczek pojęć 2T', level: 3 },
     { type: 'glossary', items: [
@@ -143,7 +143,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     { type: 'title', text: 'Błędy, które zabijają silniki', level: 3 },
     { type: 'diagnostic', variant: 'error', title: 'Używanie oleju do silników 4 suwowych', icon: 'mdi:alert', badge: 'Śmierć Silnika', html: 'Oleje 4T nie są przystosowane do spalania. W dwusuwie stworzą gęsty osad, który zniszczy gładź cylindra w kilka godzin.' },
     { type: 'diagnostic', variant: 'warning', title: 'Brak wymieszania paliwa', icon: 'mdi:alert', badge: 'Ryzyko Zatarcia', html: 'Jeśli olej i benzyna się rozwarstwią, silnik przez chwilę będzie pracował bez smarowania. Wstrząsaj kanistrem przed każdym tankowaniem.' },
-    { type: 'diagnostic', variant: 'warning', title: 'Stare paliwo (ponad 60 dni)', icon: 'mdi:alert', badge: 'Zatory w gaźniku', html: 'Paliwo z czasem traci właściwości i „kwaśnieje”. Stara mieszanka zapycha dysze gaźnika i utrudnia rozruch.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Stare paliwo (ponad 60 dni)', icon: 'mdi:alert', badge: 'Zatory w gaźniku', html: 'Paliwo z czasem traci właściwości i "kwaśnieje". Stara mieszanka zapycha dysze gaźnika i utrudnia rozruch.' },
 
     { type: 'title', text: 'Podsumowanie', level: 3 },
     { type: 'summary', title: 'Zanim zaczniesz mieszać', items: [

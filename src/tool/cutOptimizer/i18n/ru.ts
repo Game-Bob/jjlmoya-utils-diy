@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CutOptimizerUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -127,7 +127,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>Kerf</strong> — это материал, который удаляется при каждом резе. Стандартный диск настольной пилы расходует от 3,0 до 3,2 мм на один рез. Ручная циркулярная пила расходует 1,5–2,5 мм. Лазерная резка оргстекла — всего 0,1–0,3 мм. Игнорирование толщины реза в проекте с 10 резами на рейках длиной 2400 мм может привести к потере от 30 до 32 мм полезного материала.',
+      html: '<strong>Kerf</strong> - это материал, который удаляется при каждом резе. Стандартный диск настольной пилы расходует от 3,0 до 3,2 мм на один рез. Ручная циркулярная пила расходует 1,5-2,5 мм. Лазерная резка оргстекла - всего 0,1-0,3 мм. Игнорирование толщины реза в проекте с 10 резами на рейках длиной 2400 мм может привести к потере от 30 до 32 мм полезного материала.',
     },
     {
       type: 'title',

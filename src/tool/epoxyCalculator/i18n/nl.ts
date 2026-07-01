@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Het verschil tussen een duurzaam kunstwerk en een plakkerige ramp ligt in de <strong>exacte stoichiometrie</strong>. Een fout van slechts 5% in de mengverhouding kan de uitharding permanent verhinderen. Deze tool elimineert de wiskundige gissingen, zodat jij je kunt concentreren op de creatie.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volume of Gewicht?', html: '<p>De #1 fout van beginners is de aanname dat 100ml 100g weegt. <strong>Hars is dichter dan de harder.</strong></p><p>Als het technisch informatieblad van je product "100:50 per gewicht" zegt, is dat NIET hetzelfde als "2:1 per volume". Deze calculator werkt met <strong>Volume</strong> (V = L × B × H), de standaard voor het vullen van mallen.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Veelvoorkomende Verhoudingen', html: '<ul><li><strong>1:1</strong> — Coatings, vernissen en snellijmen.</li><li><strong>2:1</strong> — Standaard. River tabels, sieraden en middelgrote mallen.</li><li><strong>3:1</strong> — Industriële vloeren und structurele laminaten van hoge hardheid.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Veelvoorkomende Verhoudingen', html: '<ul><li><strong>1:1</strong> - Coatings, vernissen en snellijmen.</li><li><strong>2:1</strong> - Standaard. River tabels, sieraden en middelgrote mallen.</li><li><strong>3:1</strong> - Industriële vloeren und structurele laminaten van hoge hardheid.</li></ul>' },
     ]},
     { type: 'title', text: 'Veiligheidsprotocol en Best Practices', level: 2 },
     { type: 'grid', columns: [

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: '走廊沙发问题', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: '操作余量', html: '<p>一个常见的错误是假设如果家具宽 80 厘米，门洞宽 80 厘米，就能通过。并非如此。工人的手、织物的弹性以及墙面的不平整都需要至少 <strong>2 到 5 厘米</strong> 的余量。如果没有这个余量，家具会被刮花或被挤住。</p>' },
     { type: 'title', text: '毁掉搬家的 3 个错误', level: 3 },
-    { type: 'paragraph', html: '即使尺寸正确，这些看不见的因素也常会导致灾难：<strong>吸顶灯</strong> —— 在对角线旋转期间常被遗忘；<strong>家具的转弯半径</strong> —— 硬家具不会弯曲；<strong>包装</strong> —— 气泡膜和保护纸板会在每边增加 1 到 3 厘米。' },
+    { type: 'paragraph', html: '即使尺寸正确，这些看不见的因素也常会导致灾难：<strong>吸顶灯</strong> - 在对角线旋转期间常被遗忘；<strong>家具的转弯半径</strong> - 硬家具不会弯曲；<strong>包装</strong> - 气泡膜和保护纸板会在每边增加 1 到 3 厘米。' },
   ],
   ui: {
     conTitle: '空间尺寸',

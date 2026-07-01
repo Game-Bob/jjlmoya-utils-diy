@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { WorkshopFractionConverterUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -99,7 +99,7 @@ export const content: ToolLocaleContent<WorkshopFractionConverterUI> = {
   seo: [
     { type: 'title', text: 'Pourquoi la Précision de Conversion des Fractions est Vitale en Atelier', level: 2 },
     { type: 'paragraph', html: 'Dans un atelier professionnel ou de bricolage avancé, un "à peu près" finit souvent par des boulons foirés, des joints instables ou des assemblages défaillants. Cet outil comble le fossé entre les mesures impériales traditionnelles et la précision du système métrique, garantissant que vos projets conservent un standard professionnel.' },
-    { type: 'title', text: 'La Conversion Standard : 1/2" contre 12,7 mm', level: 3 },
+    { type: 'title', text: 'La Conversion Standard: 1/2" contre 12,7 mm', level: 3 },
     { type: 'card', icon: 'mdi:ruler-square', title: 'Les systèmes métrique et impérial son tils interchangeables ?', html: '<p>Beaucoup le pensent. Bien que 1/2" fasse exactement 12,7 mm, la clé métrique la plus proche est de 13 mm. L\'utilisation d\'un outil inadapté peut arrondir les têtes de boulons. Notre convertisseur identifie la <strong>correspondance d\'outil standard la plus proche</strong> pour ne jamais endommager votre matériel.</p>' },
     { type: 'title', text: 'Tolérance en Menuiserie vs. Mécanique', level: 3 },
     { type: 'paragraph', html: 'Les exigences de tolérance varient énormément selon le métier. En <strong>menuiserie</strong>, une tolérance de 1/64" (0,4 mm) est généralement acceptable. En <strong>mécanique et usinage</strong>, chaque 0,1 mm voire 0,01 mm compte. Notre outil inclut un mode précision pour vous aider à décider quelle mesure standard est la plus sûre pour votre matériau.' },

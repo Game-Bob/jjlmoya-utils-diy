@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { WorkshopFractionConverterUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -17,7 +17,7 @@ const faqData = [
     answer: '1/2 英寸正好等于 12.7 毫米 (0.5 × 25.4 = 12.7)。在标准尺寸下，由于制造商在两个系统中统一了常见的紧固件尺寸，公制和英制工具通常可以互换使用。',
   },
   {
-    question: '为什么工具显示“最接近的紧固件”？',
+    question: '为什么工具显示"最接近的紧固件"？',
     answer: '因为精确转换的结果通常介于标准紧固件尺寸之间。该工具会找到与您的测量值最接近的市售螺栓或套筒，以便您可以使用车间中的现有材料。',
   },
   {
@@ -37,7 +37,7 @@ const faqData = [
 const howToData = [
   {
     name: '选择测量类型',
-    text: '选择“正向”将分数转换为毫米，或选择“反向”为您用卡尺测得的数值寻找分数。',
+    text: '选择"正向"将分数转换为毫米，或选择"反向"为您用卡尺测得的数值寻找分数。',
   },
   {
     name: '输入数值',
@@ -49,7 +49,7 @@ const howToData = [
   },
   {
     name: '保存到历史记录',
-    text: '点击“保存到历史记录”以保留测量值供以后参考。历史记录会保存在您的浏览器中，即使关闭后也是如此。',
+    text: '点击"保存到历史记录"以保留测量值供以后参考。历史记录会保存在您的浏览器中，即使关闭后也是如此。',
   },
 ];
 
@@ -98,13 +98,13 @@ export const content: ToolLocaleContent<WorkshopFractionConverterUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: '为什么车间中的精密分数转换至关重要', level: 2 },
-    { type: 'paragraph', html: '在专业或高要求的 DIY 车间中，“大约”的测量值往往会导致螺栓滑丝、接头松动或组装失败。本工具旨在弥补传统英制测量与公制系统精度之间的差距，确保您的车间项目保持专业级标准。' },
+    { type: 'paragraph', html: '在专业或高要求的 DIY 车间中，"大约"的测量值往往会导致螺栓滑丝、接头松动或组装失败。本工具旨在弥补传统英制测量与公制系统精度之间的差距，确保您的车间项目保持专业级标准。' },
     { type: 'title', text: '标准转换：1/2" 与 12.7mm 的对比', level: 3 },
     { type: 'card', icon: 'mdi:ruler-square', title: '公制和英制系统可以互换吗？', html: '<p>许多人认为可以。虽然 1/2" 恰好是 12.7mm，但最接近的标准公制套筒是 13mm。使用错误的工具可能会磨圆螺栓头。我们的转换器会识别<strong>最接近的标准工具匹配</strong>，确保您永远不会损坏硬件。</p>' },
     { type: 'title', text: '木工与金属加工的公差', level: 3 },
     { type: 'paragraph', html: '公差要求因行业而异。在<strong>木工</strong>中，1/64" (0.4mm) 的公差通常是可以接受的。在<strong>金属加工和机械加工</strong>中，0.1mm 甚至 0.01mm 都至关重要。我们的工具包含精度模式，帮助您决定哪种标准紧固件最适合您的特定材料。' },
     { type: 'title', text: '准确测量的 3 个基本技巧', level: 3 },
-    { type: 'paragraph', html: '<strong>1. 使用卡尺：</strong> 进行反向查询时，务必使用数显卡尺以获得最准确的毫米输入。<strong>2. 检查磨损：</strong> 旧套筒和螺栓的边缘可能已经磨损，这使得“最接近匹配”变得更加关键。<strong>3. 核对螺距：</strong> 请记住，即使头部尺寸匹配，螺距（公制与英制）也总是不同的。' },
+    { type: 'paragraph', html: '<strong>1. 使用卡尺：</strong> 进行反向查询时，务必使用数显卡尺以获得最准确的毫米输入。<strong>2. 检查磨损：</strong> 旧套筒和螺栓的边缘可能已经磨损，这使得"最接近匹配"变得更加关键。<strong>3. 核对螺距：</strong> 请记住，即使头部尺寸匹配，螺距（公制与英制）也总是不同的。' },
   ],
   ui: {
     labelFraction: '测量类型',

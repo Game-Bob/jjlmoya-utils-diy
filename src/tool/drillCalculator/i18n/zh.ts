@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { DrillCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -34,7 +34,7 @@ const howToData = [
   { name: '选择材料', text: '指定您要钻孔或铣削的材料（钢、铝、木材等）。每种材料的硬度和热容量都不同。' },
   { name: '输入直径', text: '输入钻头或铣刀的准确直径（毫米）。请记住，直径越大，转速应越低。' },
   { name: '选择工具类型', text: '确定您的钻头是高速钢 (HSS) 还是硬质合金 (Widia)。硬质合金工具可承受更高的转速。' },
-  { name: '调整机器 RPM', text: '根据计算值配置您的钻床或铣床。如果您的机器是档位变速，请参考我们的“推荐设定”选择最安全的皮带轮位置。' },
+  { name: '调整机器 RPM', text: '根据计算值配置您的钻床或铣床。如果您的机器是档位变速，请参考我们的"推荐设定"选择最安全的皮带轮位置。' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {

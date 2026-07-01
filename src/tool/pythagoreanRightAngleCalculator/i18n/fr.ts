@@ -1,10 +1,10 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PythagoreanRightAngleCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculatrice-angle-droit-pythagore-regle-3-4-5';
-const title = 'Calculatrice d\'Angle Droit (Théorème de Pythagore) : Règle 3 4 5 pour Équerrages Parfaits';
+const title = 'Calculatrice d\'Angle Droit (Théorème de Pythagore): Règle 3 4 5 pour Équerrages Parfaits';
 const description = 'Vérifiez si vos structures sont parfaitement d\'équerre (90°) en utilisant le théorème de Pythagore et la règle 3-4-5. Outil essentiel pour la construction, la menuiserie et le bricolage.';
 
 const faqData = [
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent<PythagoreanRightAngleCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Le Théorème de Pythagore en Pratique', level: 2 },
-    { type: 'paragraph', html: 'Un angle parfait de 90 degrés est fondamental pour une construction de qualité. Les murs doivent être perpendiculaires, les fondations doivent être d\'équerre et les cadres doivent être d\'aplomb. Le théorème de Pythagore fournit une méthode mathématiquement garantie : a² + b² = c².' },
+    { type: 'paragraph', html: 'Un angle parfait de 90 degrés est fondamental pour une construction de qualité. Les murs doivent être perpendiculaires, les fondations doivent être d\'équerre et les cadres doivent être d\'aplomb. Le théorème de Pythagore fournit une méthode mathématiquement garantie: a² + b² = c².' },
     { type: 'title', text: 'Pourquoi la règle 3-4-5 fonctionne', level: 3 },
     { type: 'paragraph', html: 'La règle 3-4-5 est le triplet pythagoricien le plus simple. Que vous mesuriez en pouces, en pieds ou dans n\'importe quelle autre unité, les côtés de 3, 4 et 5 unités garantissent un angle de 90 degrés. Cela a été prouvé mathématiquement et testé dans la construction depuis des siècles.' },
     { type: 'title', text: 'La précision sans outils spécialisés', level: 3 },

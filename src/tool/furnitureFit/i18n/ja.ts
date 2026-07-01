@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: '廊下のソファ問題', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: '操作の余裕', html: '<p>家具が80cmで開口部が80cmなら通ると思い込むのはよくある間違いです。そうではありません。作業員の手、生地の弾力性、壁の凹凸などを考慮すると、最低 <strong>2〜5 cm</strong> の余裕が必要です。この余裕がないと、家具が傷ついたり圧迫されて動かなくなったりします。</p>' },
     { type: 'title', text: '引越しを台無しにする3つの間違い', level: 3 },
-    { type: 'paragraph', html: '正しい採寸をしていても、これら見えない要因が災いをもたらすことがあります：<strong>天井の照明</strong> — 対角線回転中に忘れられがちです。<strong>家具の回転半径</strong> — 固い家具は曲がりません。<strong>梱包</strong> — プチプチや保護用ダンボールは各辺に1〜3cm加わります。' },
+    { type: 'paragraph', html: '正しい採寸をしていても、これら見えない要因が災いをもたらすことがあります：<strong>天井の照明</strong> - 対角線回転中に忘れられがちです。<strong>家具の回転半径</strong> - 固い家具は曲がりません。<strong>梱包</strong> - プチプチや保護用ダンボールは各辺に1〜3cm加わります。' },
   ],
   ui: {
     conTitle: 'スペースの寸法',

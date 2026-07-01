@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -120,7 +120,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: "This measurement is not arbitrary. It is the average diameter of a young child's head (generally under 1 year old). If a child can fit their body through but their head gets stuck, the risk of suffocation is extremely high. If they can fit their head through, they can fall into the void. Therefore, the goal of our <strong>Baluster Calculator</strong> is not just aesthetic — it saves lives.",
+      html: "This measurement is not arbitrary. It is the average diameter of a young child's head (generally under 1 year old). If a child can fit their body through but their head gets stuck, the risk of suffocation is extremely high. If they can fit their head through, they can fall into the void. Therefore, the goal of our <strong>Baluster Calculator</strong> is not just aesthetic - it saves lives.",
     },
     {
       type: 'title',
@@ -212,7 +212,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:help-circle-outline',
       title: 'What if the last gap does not fit?',
-      html: "<p>If you've used our calculator, this shouldn't happen. However, in the real world, wood warps and posts aren't always straight. If at the end you're off by 1-2 mm, it's imperceptible. If you're off by 1 cm, check your spacer blocks — you've probably been losing mm at each step.</p>",
+      html: "<p>If you've used our calculator, this shouldn't happen. However, in the real world, wood warps and posts aren't always straight. If at the end you're off by 1-2 mm, it's imperceptible. If you're off by 1 cm, check your spacer blocks - you've probably been losing mm at each step.</p>",
     },
     {
       type: 'card',
@@ -224,7 +224,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:wrench-outline',
       title: 'Wood, Metal or Glass?',
-      html: '<p>This calculator works for <strong>any repetitive vertical element</strong>. If you use horizontal steel cables, different regulations apply (they typically must not allow climbing, "ladder effect"). For glass, it is considered a continuous panel and spacing does not apply — impact resistance does.</p>',
+      html: '<p>This calculator works for <strong>any repetitive vertical element</strong>. If you use horizontal steel cables, different regulations apply (they typically must not allow climbing, "ladder effect"). For glass, it is considered a continuous panel and spacing does not apply - impact resistance does.</p>',
     },
     {
       type: 'card',

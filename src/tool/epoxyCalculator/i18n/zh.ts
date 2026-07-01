@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -30,7 +30,7 @@ const howToData = [
   { name: '测量模具尺寸', text: '测量您想要填充树脂区域的长度、宽度和深度（厚度）。' },
   { name: '输入混合比例', text: '查看产品标签，确定混合比例是 1:1、2:1 还是 3:1，以及是基于重量还是体积。' },
   { name: '称重组件', text: '在电子秤上的干净容器中，先倒入 A 组分（树脂），然后倒入 B 组分（固化剂）。' },
-  { name: '技术搅拌', text: '轻轻搅拌，直到混合物完全透明，看不见不同密度的“丝线”。' },
+  { name: '技术搅拌', text: '轻轻搅拌，直到混合物完全透明，看不见不同密度的"丝线"。' },
 ];
 
 const faqSchema: WithContext<FAQPage> = {
@@ -81,8 +81,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: '环氧树脂不是靠蒸发干燥的油漆；它是一个复杂的<strong>放热化学反应</strong>。当环氧分子与多胺分子链结合形成固体结晶热固性聚合物时，魔法就发生了。' },
     { type: 'paragraph', html: '一件耐用的艺术品与一场粘糊糊的灾难之间的区别在于<strong>精确的化学计量</strong>。混合比例哪怕只有 5% 的误差，都可能永久性地抑制固化。本工具消除了数学上的猜测，让您专注于创作。' },
     { type: 'grid', columns: [
-      { type: 'card', icon: 'mdi:scale-balance', title: '体积还是重量？', html: '<p>初学者的一号错误是假设 100ml 重 100g。<strong>树脂的密度比固化剂大。</strong></p><p>如果您的产品说明书上写着“重量比 100:50”，这与“体积比 2:1”是不同的。此计算器使用<strong>体积</strong> (V = L × W × H) 进行工作，这是填充模具的标准。</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: '常见比例', html: '<ul><li><strong>1:1</strong> — 涂层、清漆和快干胶水。</li><li><strong>2:1</strong> — 标准。河流桌、首饰和中型模具。</li><li><strong>3:1</strong> — 工业地面和高硬度结构层压板。</li></ul>' },
+      { type: 'card', icon: 'mdi:scale-balance', title: '体积还是重量？', html: '<p>初学者的一号错误是假设 100ml 重 100g。<strong>树脂的密度比固化剂大。</strong></p><p>如果您的产品说明书上写着"重量比 100:50"，这与"体积比 2:1"是不同的。此计算器使用<strong>体积</strong> (V = L × W × H) 进行工作，这是填充模具的标准。</p>' },
+      { type: 'card', icon: 'mdi:water-percent', title: '常见比例', html: '<ul><li><strong>1:1</strong> - 涂层、清漆和快干胶水。</li><li><strong>2:1</strong> - 标准。河流桌、首饰和中型模具。</li><li><strong>3:1</strong> - 工业地面和高硬度结构层压板。</li></ul>' },
     ]},
     { type: 'title', text: '安全协议与最佳实践', level: 2 },
     { type: 'grid', columns: [

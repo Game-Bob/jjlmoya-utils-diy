@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -97,14 +97,14 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'title', text: 'Qu\'est-ce que la Dilatation Thermique et comment affecte-t-elle les Structures', level: 2 },
     {
       type: 'paragraph',
-      html: 'La <strong>dilatation thermique</strong> est le processus physique par lequel un matériau augmente sa longueur en réponse à une élévation de température. À l\'échelle microscopique, les particules vibrent avec plus d\'énergie et nécessitent un espacement moyen plus grand entre elles. En construction, ce phénomène n\'est pas une curiosité : c\'est une force qui peut fissurer le béton, déformer des poutres en acier et faire se tordre les rails d\'un chemin de fer.',
+      html: 'La <strong>dilatation thermique</strong> est le processus physique par lequel un matériau augmente sa longueur en réponse à une élévation de température. À l\'échelle microscopique, les particules vibrent avec plus d\'énergie et nécessitent un espacement moyen plus grand entre elles. En construction, ce phénomène n\'est pas une curiosité: c\'est une force qui peut fissurer le béton, déformer des poutres en acier et faire se tordre les rails d\'un chemin de fer.',
     },
     { type: 'title', text: 'La Formule de la Dilatation Linéaire', level: 3 },
     {
       type: 'card',
       icon: 'mdi:math-log',
       title: 'Formule de Dilatation Linéaire',
-      html: '<p>L\'expansion d\'un élément structurel se calcule avec : <code>ΔL = L₀ · α · ΔT</code>. Où <strong>ΔL</strong> est l\'allongement total, <strong>L₀</strong> est la longueur originale, <strong>α</strong> est le coefficient de dilatation du matériau (en °C⁻¹) et <strong>ΔT</strong> est la différence de température. Cette formule est à la base du dimensionnement des joints de dilatation dans les ponts, les toitures et les façades.</p>',
+      html: '<p>L\'expansion d\'un élément structurel se calcule avec: <code>ΔL = L₀ · α · ΔT</code>. Où <strong>ΔL</strong> est l\'allongement total, <strong>L₀</strong> est la longueur originale, <strong>α</strong> est le coefficient de dilatation du matériau (en °C⁻¹) et <strong>ΔT</strong> est la différence de température. Cette formule est à la base du dimensionnement des joints de dilatation dans les ponts, les toitures et les façades.</p>',
     },
     { type: 'title', text: 'Coefficients de Dilatation par Matériau', level: 3 },
     {

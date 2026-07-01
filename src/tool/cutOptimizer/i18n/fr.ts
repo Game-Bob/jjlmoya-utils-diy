@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CutOptimizerUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -127,7 +127,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
     },
     {
       type: 'paragraph',
-      html: "Le <strong>trait de scie (Kerf)</strong> est la largeur de matériau enlevée par la lame à chaque coupe. Une scie circulaire sur table standard enlève 3,0 à 3,2mm par passage. Une scie circulaire portative enlève 1,5 à 2,5mm. Un laser enlève seulement 0,1 à 0,3mm. Sur un projet avec 10 coupes dans une planche de 2400mm, un kerf de 3mm représente 30mm de matériau utilisable perdu — de quoi rater une petite pièce entière.",
+      html: "Le <strong>trait de scie (Kerf)</strong> est la largeur de matériau enlevée par la lame à chaque coupe. Une scie circulaire sur table standard enlève 3,0 à 3,2mm par passage. Une scie circulaire portative enlève 1,5 à 2,5mm. Un laser enlève seulement 0,1 à 0,3mm. Sur un projet avec 10 coupes dans une planche de 2400mm, un kerf de 3mm représente 30mm de matériau utilisable perdu - de quoi rater une petite pièce entière.",
     },
     {
       type: 'title',

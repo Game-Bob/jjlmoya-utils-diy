@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ThermalExpansionCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -97,7 +97,7 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'title', text: 'What is Thermal Expansion and How Does It Affect Structures', level: 2 },
     {
       type: 'paragraph',
-      html: '<strong>Thermal expansion</strong> is the physical process by which a material increases its length in response to a rise in temperature. At the microscopic level, particles vibrate with more energy and require a greater average spacing between them. In construction, this phenomenon is not a curiosity — it is a force that can crack concrete, deform steel beams and buckle railway tracks.',
+      html: '<strong>Thermal expansion</strong> is the physical process by which a material increases its length in response to a rise in temperature. At the microscopic level, particles vibrate with more energy and require a greater average spacing between them. In construction, this phenomenon is not a curiosity - it is a force that can crack concrete, deform steel beams and buckle railway tracks.',
     },
     { type: 'title', text: 'The Linear Expansion Formula', level: 3 },
     {

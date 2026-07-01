@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -14,7 +14,7 @@ const faqData = [
   },
   {
     question: '常见的燃油机油混合比例是多少？',
-    answer: '常见的比例有 1:25（油多，保护性强）、1:33（旧型号设备）、1:40（标准）和 1:50（油少，现代发动机）。请查看发动机手册获取准确比例——使用错误比例会损坏发动机。',
+    answer: '常见的比例有 1:25（油多，保护性强）、1:33（旧型号设备）、1:40（标准）和 1:50（油少，现代发动机）。请查看发动机手册获取准确比例 - 使用错误比例会损坏发动机。',
   },
   {
     question: '如果比例混合错了会怎样？',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: '我应该使用什么类型的机油？',
-    answer: '请使用适用于您设备的2冲程专用发动机油。优质合成2冲程油比普通矿物油提供更好的保护和更清洁的燃烧。切勿使用4冲程机油——那会损坏发动机。',
+    answer: '请使用适用于您设备的2冲程专用发动机油。优质合成2冲程油比普通矿物油提供更好的保护和更清洁的燃烧。切勿使用4冲程机油 - 那会损坏发动机。',
   },
   {
     question: '如何混合燃油和机油？',
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: '常见设备比例', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: '电锯', html: '<strong>Stihl, Husqvarna, Echo:</strong> 现代机型通常要求 1:40 或 1:50。请务必核对手册——在现代机型上使用 1:25 可能导致积碳和性能下降。90年代及以前的老款机型可能指定 1:25 或 1:33。' },
-    { type: 'card', icon: 'mdi:motorcycle', title: '助力车与摩托车', html: '<strong>Vespa, Honda, Yamaha:</strong> 旧型号大多要求 1:33，现代机型则为 1:40–1:50。高性能街道车辆通常指定 1:50 比例。维修手册是唯一的准确依据。' },
+    { type: 'card', icon: 'mdi:tree', title: '电锯', html: '<strong>Stihl, Husqvarna, Echo:</strong> 现代机型通常要求 1:40 或 1:50。请务必核对手册 - 在现代机型上使用 1:25 可能导致积碳和性能下降。90年代及以前的老款机型可能指定 1:25 或 1:33。' },
+    { type: 'card', icon: 'mdi:motorcycle', title: '助力车与摩托车', html: '<strong>Vespa, Honda, Yamaha:</strong> 旧型号大多要求 1:33，现代机型则为 1:40-1:50。高性能街道车辆通常指定 1:50 比例。维修手册是唯一的准确依据。' },
     { type: 'card', icon: 'mdi:tools', title: '吹叶机与打草机', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> 通常为 1:50（现代）或 1:40。这些工具专为快速季节性使用设计，稀比例可在不牺牲可靠性的前提下减少烟雾。' },
 
     { type: 'title', text: '机油类型与比例同样重要', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: '分步混合流程', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: '正确混合方法', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>使用专用容器</strong>：仅用于燃油混合的洁净、干燥、有标注的容器。</li><li><strong>先倒入一半汽油</strong>：先将汽油倒入容器。</li><li><strong>加入计算出的机油量</strong>：请使用此计算器获取精准数值。</li><li><strong>倒入剩余汽油</strong>：达到目标总体积。</li><li><strong>剧烈摇晃 1–2 分钟</strong>：直到颜色均匀一致。均匀混合 = 稳定润滑。</li><li><strong>标注容器</strong>：写明日期、比例和燃油类型。</li><li><strong>30天内用完</strong>：合成油最多可延长至60天。</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: '正确混合方法', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>使用专用容器</strong>：仅用于燃油混合的洁净、干燥、有标注的容器。</li><li><strong>先倒入一半汽油</strong>：先将汽油倒入容器。</li><li><strong>加入计算出的机油量</strong>：请使用此计算器获取精准数值。</li><li><strong>倒入剩余汽油</strong>：达到目标总体积。</li><li><strong>剧烈摇晃 1-2 分钟</strong>：直到颜色均匀一致。均匀混合 = 稳定润滑。</li><li><strong>标注容器</strong>：写明日期、比例和燃油类型。</li><li><strong>30天内用完</strong>：合成油最多可延长至60天。</li></ol>' },
 
     { type: 'title', text: '何时该怀疑您的设备手册', level: 3 },
-    { type: 'tip', html: '<strong>务必先核对手册。</strong> 如果找不到，请访问官网或咨询客服。切勿盲目猜测——比例错误会导致保修失效并面临拉缸风险。如果是老式机器手册丢失，请根据型号在网上搜索。' },
+    { type: 'tip', html: '<strong>务必先核对手册。</strong> 如果找不到，请访问官网或咨询客服。切勿盲目猜测 - 比例错误会导致保修失效并面临拉缸风险。如果是老式机器手册丢失，请根据型号在网上搜索。' },
 
     { type: 'title', text: '词汇表：2冲程术语解释', level: 3 },
     { type: 'glossary', items: [

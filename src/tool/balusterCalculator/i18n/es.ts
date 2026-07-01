@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -15,7 +15,7 @@ const faqData = [
       'En España (CTE) y en la mayoría de normativas internacionales, el espacio libre entre elementos de una barandilla no debe permitir el paso de una esfera de 10 cm de diámetro para evitar accidentes infantiles.',
   },
   {
-    question: '¿Cómo se mide el espaciado: entre centros o huecos?',
+    question: '¿Cómo se mide el espaciado: Â¿entre centros o huecos?',
     answer:
       "Nuestra calculadora proporciona ambos. El 'espaciado libre' es el hueco real entre barrotes (vital por seguridad), mientras que la 'distancia entre centros' (on-center) es la que marca dónde taladrar o fijar cada balustre.",
   },

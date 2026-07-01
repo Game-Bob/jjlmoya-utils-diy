@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: '복도의 소파 문제', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: '조작 여유 공간', html: '<p>가구가 80cm이고 입구가 80cm라면 들어갈 것이라고 생각하는 것은 흔한 실수입니다. 그렇지 않습니다. 작업자의 손, 원단의 탄성, 벽의 미세한 굴곡 등을 고려하면 최소 <strong>2~5cm</strong>의 여유가 필요합니다. 이 여유가 없으면 가구가 긁히거나 끼어버릴 수 있습니다.</p>' },
     { type: 'title', text: '이사를 망치는 3가지 실수', level: 3 },
-    { type: 'paragraph', html: '치수를 정확히 쟀더라도 이러한 보이지 않는 요인이 종종 문제를 일으킵니다: <strong>천장 조명</strong> — 대각선 회전 중에 잊어버리기 쉽습니다. <strong>가구의 회전 반경</strong> — 딱딱한 가구는 구부러지지 않습니다. <strong>포장</strong> — 뽁뽁이(에어캡)나 보호용 박스는 각 면에 1~3cm를 추가합니다.' },
+    { type: 'paragraph', html: '치수를 정확히 쟀더라도 이러한 보이지 않는 요인이 종종 문제를 일으킵니다: <strong>천장 조명</strong> - 대각선 회전 중에 잊어버리기 쉽습니다. <strong>가구의 회전 반경</strong> - 딱딱한 가구는 구부러지지 않습니다. <strong>포장</strong> - 뽁뽁이(에어캡)나 보호용 박스는 각 면에 1~3cm를 추가합니다.' },
   ],
   ui: {
     conTitle: '공간 치수',

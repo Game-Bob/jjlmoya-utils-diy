@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -120,7 +120,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
           type: 'card',
           icon: 'mdi:water-percent',
           title: 'Common Ratios',
-          html: '<ul><li><strong>1:1</strong> — Coatings, varnishes and quick adhesives.</li><li><strong>2:1</strong> — Standard. River tables, jewelry and medium molds.</li><li><strong>3:1</strong> — Industrial floors and high-strength structural laminates.</li></ul>',
+          html: '<ul><li><strong>1:1</strong> - Coatings, varnishes and quick adhesives.</li><li><strong>2:1</strong> - Standard. River tables, jewelry and medium molds.</li><li><strong>3:1</strong> - Industrial floors and high-strength structural laminates.</li></ul>',
         },
       ],
     },

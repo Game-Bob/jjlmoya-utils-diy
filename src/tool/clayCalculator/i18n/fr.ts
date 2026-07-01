@@ -1,10 +1,10 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { ClayCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
 
 const slug = 'calculateur-retrait-argile';
-const title = "Calculateur de Retrait d'Argile : Dimensions Exactes pour la Céramique";
+const title = "Calculateur de Retrait d'Argile: Dimensions Exactes pour la Céramique";
 const description =
   "Calculez le retrait de l'argile pendant le séchage et la cuisson. Concevez des pièces céramiques avec les dimensions finales exactes dont vous avez besoin.";
 
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<ClayCalculatorUI> = {
   seo: [
     {
       type: 'title',
-      text: "La Physique de l'Argile : Retrait et Expansion",
+      text: "La Physique de l'Argile: Retrait et Expansion",
       level: 2,
     },
     {

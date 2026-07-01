@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { WorkshopFractionConverterUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question: 'Kann ich dieses Tool offline verwenden?',
-    answer: 'Ja. Alle Berechnungen finden in Ihrem Browser statt. Nach dem ersten Laden funktioniert das Tool komplett offline – perfekt für den Einsatz in der Werkstatt ohne WLAN.',
+    answer: 'Ja. Alle Berechnungen finden in Ihrem Browser statt. Nach dem ersten Laden funktioniert das Tool komplett offline - perfekt für den Einsatz in der Werkstatt ohne WLAN.',
   },
   {
     question: 'Warum enthält das Tool einen Verlauf?',

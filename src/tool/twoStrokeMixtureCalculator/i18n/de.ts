@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -14,7 +14,7 @@ const faqData = [
   },
   {
     question: 'Was sind gängige Kraftstoff-Öl-Mischungsverhältnisse?',
-    answer: 'Gängige Verhältnisse sind 1:25 (fett, schützend), 1:33 (ältere Geräte), 1:40 (Standard) und 1:50 (mager, moderne Motoren). Prüfen Sie das Handbuch Ihres Motors – ein falsches Verhältnis kann den Motor beschädigen.',
+    answer: 'Gängige Verhältnisse sind 1:25 (fett, schützend), 1:33 (ältere Geräte), 1:40 (Standard) und 1:50 (mager, moderne Motoren). Prüfen Sie das Handbuch Ihres Motors - ein falsches Verhältnis kann den Motor beschädigen.',
   },
   {
     question: 'Was passiert bei falschem Mischungsverhältnis?',
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Welches Öl soll ich verwenden?',
-    answer: 'Verwenden Sie Zweitaktöl, das für Ihr Gerät zugelassen ist. Hochwertige synthetische Zweitaktöle bieten besseren Schutz und verbrennen sauberer als herkömmliche Öle. Verwenden Sie niemals Viertaktöl – es führt zu Motorschäden.',
+    answer: 'Verwenden Sie Zweitaktöl, das für Ihr Gerät zugelassen ist. Hochwertige synthetische Zweitaktöle bieten besseren Schutz und verbrennen sauberer als herkömmliche Öle. Verwenden Sie niemals Viertaktöl - es führt zu Motorschäden.',
   },
   {
     question: 'Wie mische ich Kraftstoff und Öl?',
@@ -83,10 +83,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Zweitakt-Gemischrechner: Präzise Öl-Kraftstoff-Verhältnisse für Motorsägen und Mofas', level: 2 },
-    { type: 'paragraph', html: 'Zweitaktmotoren benötigen ein präzises Kraftstoff-Öl-Gemisch zum Überleben. Eine falsche Mischung kann Ihren Motor in wenigen Minuten zerstören. Dieser Rechner ermittelt sofort die exakte Ölmenge für Ihre Kraftstoffmenge und Ihren Motortyp – Schluss mit dem Rätselraten in der Werkstatt.' },
+    { type: 'paragraph', html: 'Zweitaktmotoren benötigen ein präzises Kraftstoff-Öl-Gemisch zum Überleben. Eine falsche Mischung kann Ihren Motor in wenigen Minuten zerstören. Dieser Rechner ermittelt sofort die exakte Ölmenge für Ihre Kraftstoffmenge und Ihren Motortyp - Schluss mit dem Rätselraten in der Werkstatt.' },
 
     { type: 'title', text: 'Warum Zweitaktmotoren Öl im Kraftstoff benötigen', level: 3 },
-    { type: 'card', icon: 'mdi:engine', title: 'Der entscheidende Unterschied', html: 'Im Gegensatz zu Viertaktmotoren mit separaten Öltanks mischen Zweitaktmotoren das Öl direkt in den Kraftstoff. Bei jedem Arbeitstakt verbrennt der Motor das Gemisch sowohl für Energie als auch zur Schmierung. Es gibt keine Ölwanne, keine separate Ölpumpe – nur das Mischbenzin hält die Kolben am Leben.' },
+    { type: 'card', icon: 'mdi:engine', title: 'Der entscheidende Unterschied', html: 'Im Gegensatz zu Viertaktmotoren mit separaten Öltanks mischen Zweitaktmotoren das Öl direkt in den Kraftstoff. Bei jedem Arbeitstakt verbrennt der Motor das Gemisch sowohl für Energie als auch zur Schmierung. Es gibt keine Ölwanne, keine separate Ölpumpe - nur das Mischbenzin hält die Kolben am Leben.' },
 
     { type: 'title', text: 'Schnellreferenz für Zweitakt-Verhältnisse', level: 3 },
     { type: 'table', headers: ['Verhältnis', 'Öl %', 'Einsatzzweck', 'Motortyp', 'Eigenschaften'], rows: [
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Gängige Geräte-Verhältnisse', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Motorsägen', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderne Modelle benötigen typischerweise 1:40 oder 1:50. Prüfen Sie immer Ihr Handbuch – 1:25 bei einer modernen Säge riskiert verrußte Kerzen. Ältere Stihl-Maschinen (90er und früher) können 1:25 oder 1:33 vorschreiben.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Mofas & Motorräder', html: '<strong>Vespa, Honda, Yamaha:</strong> Die meisten benötigen 1:33 bei älteren Modellen, 1:40–1:50 bei modernen Versionen. Hochleistungs-Mofas und Straßenmaschinen schreiben oft 1:50 vor. Das Werkstatthandbuch ist die einzige Wahrheit.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Motorsägen', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderne Modelle benötigen typischerweise 1:40 oder 1:50. Prüfen Sie immer Ihr Handbuch - 1:25 bei einer modernen Säge riskiert verrußte Kerzen. Ältere Stihl-Maschinen (90er und früher) können 1:25 oder 1:33 vorschreiben.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Mofas & Motorräder', html: '<strong>Vespa, Honda, Yamaha:</strong> Die meisten benötigen 1:33 bei älteren Modellen, 1:40-1:50 bei modernen Versionen. Hochleistungs-Mofas und Straßenmaschinen schreiben oft 1:50 vor. Das Werkstatthandbuch ist die einzige Wahrheit.' },
     { type: 'card', icon: 'mdi:tools', title: 'Laubbläser & Trimmer', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Typischerweise 1:50 (modern) oder 1:40 (etwas älter). Diese Geräte sind für kurzen saisonalen Einsatz konzipiert, magere Mischungen sparen Rauch ohne Zuverlässigkeitsverlust.' },
 
     { type: 'title', text: 'Ölsorte ist so wichtig wie das Verhältnis', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Schritt-für-Schritt Mischvorgang', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'Der richtige Weg zum Mischen', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Verwenden Sie einen speziellen Behälter</strong> nur für Kraftstoffmischungen. Sauber, trocken, markiert.</li><li><strong>Gießen Sie zuerst die Hälfte des Benzins</strong> ein.</li><li><strong>Geben Sie die berechnete Ölmenge zu</strong> (nutzen Sie diesen Rechner für Präzision).</li><li><strong>Füllen Sie das restliche Benzin auf</strong>, um die Zielmenge zu erreichen.</li><li><strong>Schütteln Sie kräftig für 1–2 Minuten</strong>, bis die Farbe gleichmäßig ist. Ein homogenes Gemisch = gleichmäßige Schmierung.</li><li><strong>Beschriften Sie den Behälter</strong> mit Datum, Verhältnis und Kraftstoffart.</li><li><strong>Innerhalb von 30 Tagen verbrauchen</strong> (Synthetiköle halten bis zu 60 Tage).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'Der richtige Weg zum Mischen', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Verwenden Sie einen speziellen Behälter</strong> nur für Kraftstoffmischungen. Sauber, trocken, markiert.</li><li><strong>Gießen Sie zuerst die Hälfte des Benzins</strong> ein.</li><li><strong>Geben Sie die berechnete Ölmenge zu</strong> (nutzen Sie diesen Rechner für Präzision).</li><li><strong>Füllen Sie das restliche Benzin auf</strong>, um die Zielmenge zu erreichen.</li><li><strong>Schütteln Sie kräftig für 1-2 Minuten</strong>, bis die Farbe gleichmäßig ist. Ein homogenes Gemisch = gleichmäßige Schmierung.</li><li><strong>Beschriften Sie den Behälter</strong> mit Datum, Verhältnis und Kraftstoffart.</li><li><strong>Innerhalb von 30 Tagen verbrauchen</strong> (Synthetiköle halten bis zu 60 Tage).</li></ol>' },
 
     { type: 'title', text: 'Wann Sie das Handbuch infrage stellen sollten', level: 3 },
-    { type: 'tip', html: '<strong>Prüfen Sie immer zuerst das Verhältnis im Gerätehandbuch.</strong> Wenn Sie es nicht finden, besuchen Sie die Website des Herstellers oder kontaktieren Sie den Support. Niemals raten – ein falsches Verhältnis führt zum Erlöschen der Garantie und riskiert einen Motorschaden.' },
+    { type: 'tip', html: '<strong>Prüfen Sie immer zuerst das Verhältnis im Gerätehandbuch.</strong> Wenn Sie es nicht finden, besuchen Sie die Website des Herstellers oder kontaktieren Sie den Support. Niemals raten - ein falsches Verhältnis führt zum Erlöschen der Garantie und riskiert einen Motorschaden.' },
 
     { type: 'title', text: 'Glossar: Zweitakt-Begriffe erklärt', level: 3 },
     { type: 'glossary', items: [
@@ -142,12 +142,12 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Häufige Fehler, die Motoren töten', level: 3 },
     { type: 'diagnostic', variant: 'error', title: 'Viertaktöl in Zweitaktmotoren verwenden', icon: 'mdi:alert', badge: 'Motortod', html: 'Viertaktöle sind für die Zirkulation im Motorblock gedacht. Im Zweitakter verbrennen sie nicht sauber und zerstören den Motor binnen Stunden.' },
-    { type: 'diagnostic', variant: 'warning', title: 'Gründliches Mischen vergessen', icon: 'mdi:alert', badge: 'Fresser-Risiko', html: 'Wenn sich Öl und Benzin trennen, laufen Teile Ihres Motors ohne Schmierung. Mindestens 1–2 Minuten lang kräftig schütteln.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Gründliches Mischen vergessen', icon: 'mdi:alert', badge: 'Fresser-Risiko', html: 'Wenn sich Öl und Benzin trennen, laufen Teile Ihres Motors ohne Schmierung. Mindestens 1-2 Minuten lang kräftig schütteln.' },
     { type: 'diagnostic', variant: 'warning', title: 'Alten Kraftstoff verwenden (über 60 Tage)', icon: 'mdi:alert', badge: 'Verharzungsgefahr', html: 'Ethanol-Benzin zersetzt sich mit der Zeit. Alte Mischung hinterlässt Harzablagerungen im Vergaser. Nur mischen, was in 30 Tagen verbraucht wird.' },
 
     { type: 'title', text: 'FAQ Zusammenfassung', level: 3 },
     { type: 'summary', title: 'Vor dem Mischen', items: [
-      'Prüfen Sie das Handbuch auf das exakte Verhältnis – das ist die Vorgabe des Herstellers.',
+      'Prüfen Sie das Handbuch auf das exakte Verhältnis - das ist die Vorgabe des Herstellers.',
       'Sicherstellen, dass Sie Zweitaktöl verwenden, kein Viertakt- oder sonstiges Öl.',
       'Verwenden Sie einen sauberen, speziellen Behälter nur zum Mischen.',
       'Frisches Benzin (nicht monatelang gelagert) und passendes Öl verwenden.',
@@ -182,7 +182,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     labelRatioShort: 'Verhältnis',
     labelOilTip: '2% Öl-Mix = 1:50 Verhältnis',
     labelMixingTips: 'Tipps zum Mischen',
-    labelMixingTipsDesc: 'In sauberem Behälter mischen – erst Benzin, dann Öl, dann Restbenzin. 1-2 Minuten kräftig schütteln. Mit Datum und Verhältnis beschriften.',
+    labelMixingTipsDesc: 'In sauberem Behälter mischen - erst Benzin, dann Öl, dann Restbenzin. 1-2 Minuten kräftig schütteln. Mit Datum und Verhältnis beschriften.',
     recipePrefix: 'Für',
     recipeAt: 'Benzin bei',
     recipeAdd: 'fügen Sie genau',

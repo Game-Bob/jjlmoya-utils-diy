@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { CutOptimizerUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -101,7 +101,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Cut optimization — technically known as the <strong>Cutting Stock Problem</strong> — is one of the most practically useful problems in combinatorial mathematics. For a project with 20 pieces and 5 bars of stock, there are millions of possible arrangements. A computational algorithm finds the near-optimal solution in milliseconds, reducing typical 15% material waste to under 5%.',
+      html: 'Cut optimization - technically known as the <strong>Cutting Stock Problem</strong> - is one of the most practically useful problems in combinatorial mathematics. For a project with 20 pieces and 5 bars of stock, there are millions of possible arrangements. A computational algorithm finds the near-optimal solution in milliseconds, reducing typical 15% material waste to under 5%.',
     },
     {
       type: 'title',
@@ -118,7 +118,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
       type: 'card',
       icon: 'mdi:view-grid',
       title: 'Panel Optimization for Sheet Materials',
-      html: '<p><strong>Panel (2D) optimization</strong> handles sheet materials such as plywood, MDF, chipboard, glass, acrylic, and sheet metal. It uses a guillotine-cut algorithm, meaning every cut runs edge to edge — matching how table saws and panel saws actually operate.</p>',
+      html: '<p><strong>Panel (2D) optimization</strong> handles sheet materials such as plywood, MDF, chipboard, glass, acrylic, and sheet metal. It uses a guillotine-cut algorithm, meaning every cut runs edge to edge - matching how table saws and panel saws actually operate.</p>',
     },
     {
       type: 'title',
@@ -127,7 +127,7 @@ export const content: ToolLocaleContent<CutOptimizerUI> = {
     },
     {
       type: 'paragraph',
-      html: 'The <strong>kerf</strong> is the width of material removed by the blade per cut. A standard table saw blade removes 3.0 to 3.2mm per pass. A circular hand saw removes 1.5 to 2.5mm. A laser cutter removes just 0.1 to 0.3mm. On a project with 10 cuts from a 2400mm board, a 3mm kerf costs you 30mm of usable material — enough to lose a whole small piece.',
+      html: 'The <strong>kerf</strong> is the width of material removed by the blade per cut. A standard table saw blade removes 3.0 to 3.2mm per pass. A circular hand saw removes 1.5 to 2.5mm. A laser cutter removes just 0.1 to 0.3mm. On a project with 10 cuts from a 2400mm board, a 3mm kerf costs you 30mm of usable material - enough to lose a whole small piece.',
     },
     {
       type: 'title',

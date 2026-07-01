@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'La differenza tra un pezzo d\'arte duraturo e un disastro appiccicoso risiede nella <strong>stechiometria esatta</strong>. Un errore di appena il 5% nel rapporto di miscela può inibire permanentemente l\'indurimento. Questo strumento elimina le congetture matematiche, permettendoti di concentrarti sulla creazione.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volume o Peso?', html: '<p>L\'errore n. 1 dei principianti è assumere che 100ml pesino 100g. <strong>La resina è più densa dell\'indurente.</strong></p><p>Se la scheda tecnica del tuo prodotto dice "100:50 in peso", NON è lo stesso di "2:1 in volume". Questo calcolatore lavora con il <strong>Volume</strong> (V = L × W × H), che è lo standard per riempire gli stampi.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Rapporti Comuni', html: '<ul><li><strong>1:1</strong> — Rivestimenti, vernici e adesivi rapidi.</li><li><strong>2:1</strong> — Standard. Tavoli river, gioielleria e stampi medi.</li><li><strong>3:1</strong> — Pavimenti industriali e laminati strutturali ad alta durezza.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Rapporti Comuni', html: '<ul><li><strong>1:1</strong> - Rivestimenti, vernici e adesivi rapidi.</li><li><strong>2:1</strong> - Standard. Tavoli river, gioielleria e stampi medi.</li><li><strong>3:1</strong> - Pavimenti industriali e laminati strutturali ad alta durezza.</li></ul>' },
     ]},
     { type: 'title', text: 'Protocollo di Sicurezza e Buone Pratiche', level: 2 },
     { type: 'grid', columns: [

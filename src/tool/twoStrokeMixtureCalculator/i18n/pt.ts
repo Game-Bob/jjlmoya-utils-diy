@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Que tipo de óleo devo usar?',
-    answer: 'Use óleo específico para motores de 2 tempos adequado ao seu equipamento. Óleos sintéticos premium oferecem melhor proteção e combustão mais limpa que os convencionais. Nunca use óleo de motor de 4 tempos — causará danos graves.',
+    answer: 'Use óleo específico para motores de 2 tempos adequado ao seu equipamento. Óleos sintéticos premium oferecem melhor proteção e combustão mais limpa que os convencionais. Nunca use óleo de motor de 4 tempos - causará danos graves.',
   },
   {
     question: 'Como misturar combustível e óleo?',
@@ -83,10 +83,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Calculadora de Mistura 2 Tempos: Proporções Óleo/Combustível Precisas para Motosserras e Ciclomotores', level: 2 },
-    { type: 'paragraph', html: 'Motores a dois tempos requerem uma mistura precisa de gasolina e óleo para sobreviver. Uma mistura errada pode destruir o seu motor em minutos. Esta calculadora determina instantaneamente a quantidade exata de óleo necessária para o seu volume de combustível e tipo de motor — eliminando as dúvidas na oficina.' },
+    { type: 'paragraph', html: 'Motores a dois tempos requerem uma mistura precisa de gasolina e óleo para sobreviver. Uma mistura errada pode destruir o seu motor em minutos. Esta calculadora determina instantaneamente a quantidade exata de óleo necessária para o seu volume de combustível e tipo de motor - eliminando as dúvidas na oficina.' },
 
     { type: 'title', text: 'Por que motores 2 tempos requerem óleo no combustível', level: 3 },
-    { type: 'card', icon: 'mdi:engine', title: 'A diferença crítica', html: 'Ao contrário dos motores de 4 tempos com cárteres de óleo separados, os motores de 2 tempos misturam o óleo diretamente no combustível. Em cada ciclo, o motor queima a mistura tanto para energia quanto para lubrificação. Não há cárter, nem bomba de óleo separada — apenas o combustível misturado mantém os pistões vivos.' },
+    { type: 'card', icon: 'mdi:engine', title: 'A diferença crítica', html: 'Ao contrário dos motores de 4 tempos com cárteres de óleo separados, os motores de 2 tempos misturam o óleo diretamente no combustível. Em cada ciclo, o motor queima a mistura tanto para energia quanto para lubrificação. Não há cárter, nem bomba de óleo separada - apenas o combustível misturado mantém os pistões vivos.' },
 
     { type: 'title', text: 'Referência rápida de proporções 2 tempos', level: 3 },
     { type: 'table', headers: ['Proporção', '% Óleo', 'Uso Recomendado', 'Tipo de Motor', 'Características'], rows: [
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Proporções comuns por equipamento', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Motosserras', html: '<strong>Stihl, Husqvarna, Echo:</strong> Modelos modernos normalmente requerem 1:40 ou 1:50. Verifique sempre o manual — usar 1:25 numa motosserra moderna corre o risco de sujar as velas. Máquinas Stihl antigas (anos 90 e anteriores) podem especificar 1:25 ou 1:33.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Ciclomotores e Motos', html: '<strong>Vespa, Honda, Yamaha:</strong> A maioria requer 1:33 para modelos antigos, 1:40–1:50 para versões modernas. Ciclomotores de alto desempenho especificam frequentemente 1:50. O manual de serviço é a sua fonte da verdade.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Motosserras', html: '<strong>Stihl, Husqvarna, Echo:</strong> Modelos modernos normalmente requerem 1:40 ou 1:50. Verifique sempre o manual - usar 1:25 numa motosserra moderna corre o risco de sujar as velas. Máquinas Stihl antigas (anos 90 e anteriores) podem especificar 1:25 ou 1:33.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Ciclomotores e Motos', html: '<strong>Vespa, Honda, Yamaha:</strong> A maioria requer 1:33 para modelos antigos, 1:40-1:50 para versões modernas. Ciclomotores de alto desempenho especificam frequentemente 1:50. O manual de serviço é a sua fonte da verdade.' },
     { type: 'card', icon: 'mdi:tools', title: 'Sopradores e Roçadoras', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Tipicamente 1:50 (modernos) ou 1:40 (mais antigos). Estas ferramentas são feitas para uso sazonal rápido, por isso proporções pobres reduzem o fumo sem sacrificar a fiabilidade.' },
 
     { type: 'title', text: 'O tipo de óleo importa tanto quanto a proporção', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Processo de mistura passo a passo', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'A forma correta de misturar', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Use um recipiente dedicado</strong> reservado apenas para mistura. Limpo, seco e marcado.</li><li><strong>Deite metade da gasolina</strong> primeiro no recipiente.</li><li><strong>Adicione a quantidade de óleo calculada</strong> (use esta calculadora para precisão).</li><li><strong>Adicione a gasolina restante</strong> para atingir o volume pretendido.</li><li><strong>Agite vigorosamente por 1–2 minutos</strong> até a cor ficar uniforme. Mistura homogénea = lubrificação uniforme.</li><li><strong>Etiquete o recipiente</strong> com data, proporção e tipo de combustível.</li><li><strong>Use em 30 dias</strong> (óleos sintéticos estendem para 60 dias).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'A forma correta de misturar', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Use um recipiente dedicado</strong> reservado apenas para mistura. Limpo, seco e marcado.</li><li><strong>Deite metade da gasolina</strong> primeiro no recipiente.</li><li><strong>Adicione a quantidade de óleo calculada</strong> (use esta calculadora para precisão).</li><li><strong>Adicione a gasolina restante</strong> para atingir o volume pretendido.</li><li><strong>Agite vigorosamente por 1-2 minutos</strong> até a cor ficar uniforme. Mistura homogénea = lubrificação uniforme.</li><li><strong>Etiquete o recipiente</strong> com data, proporção e tipo de combustível.</li><li><strong>Use em 30 dias</strong> (óleos sintéticos estendem para 60 dias).</li></ol>' },
 
     { type: 'title', text: 'Quando duvidar do manual do equipamento', level: 3 },
-    { type: 'tip', html: '<strong>Verifique sempre a proporção no manual do seu equipamento primeiro.</strong> Se não o encontrar, visite o site do fabricante ou contacte o suporte. Nunca adivinhe — uma proporção errada anula garantias e arrisca gripar o motor. Se o equipamento for antigo e o manual estiver perdido, pesquise online pelo modelo.' },
+    { type: 'tip', html: '<strong>Verifique sempre a proporção no manual do seu equipamento primeiro.</strong> Se não o encontrar, visite o site do fabricante ou contacte o suporte. Nunca adivinhe - uma proporção errada anula garantias e arrisca gripar o motor. Se o equipamento for antigo e o manual estiver perdido, pesquise online pelo modelo.' },
 
     { type: 'title', text: 'Glossário: Termos de 2 Tempos Explicados', level: 3 },
     { type: 'glossary', items: [
@@ -142,12 +142,12 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Erros comuns que matam motores', level: 3 },
     { type: 'diagnostic', variant: 'error', title: 'Usar óleo 4 tempos em motores 2 tempos', icon: 'mdi:alert', badge: 'Morte do Motor', html: 'Óleos de 4 tempos são feitos para circular num bloco motor. Num depósito de 2 tempos, não queimam bem e destruirão o motor em horas.' },
-    { type: 'diagnostic', variant: 'warning', title: 'Esquecer de misturar bem', icon: 'mdi:alert', badge: 'Risco de Gripagem', html: 'Se o óleo e a gasolina se separarem por mistura incompleta, partes do motor queimarão sem lubrificação. Agite por pelo menos 1–2 minutos.' },
+    { type: 'diagnostic', variant: 'warning', title: 'Esquecer de misturar bem', icon: 'mdi:alert', badge: 'Risco de Gripagem', html: 'Se o óleo e a gasolina se separarem por mistura incompleta, partes do motor queimarão sem lubrificação. Agite por pelo menos 1-2 minutos.' },
     { type: 'diagnostic', variant: 'warning', title: 'Usar combustível velho (mais de 60 dias)', icon: 'mdi:alert', badge: 'Resíduos Gomosos', html: 'Gasolina com etanol degrada-se com o tempo. Mistura velha deixa depósitos nos carburadores. Prepare apenas o que vai usar em 30 dias.' },
 
     { type: 'title', text: 'Resumo FAQ', level: 3 },
     { type: 'summary', title: 'Antes de misturar', items: [
-      'Verifique o manual para a proporção exata — é a especificação do fabricante.',
+      'Verifique o manual para a proporção exata - é a especificação do fabricante.',
       'Confirme que usa óleo de 2 tempos, não de 4 tempos ou outros.',
       'Use um recipiente limpo e dedicado apenas à mistura.',
       'Use gasolina fresca (não guardada há meses) e óleo compatível.',

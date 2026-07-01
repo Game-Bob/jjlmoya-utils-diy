@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { VoltageDropCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -97,7 +97,7 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'title', text: 'Complete Guide to Voltage Drop in DC and AC Systems', level: 2 },
     {
       type: 'paragraph',
-      html: 'Whether you are wiring a camper van, designing an off-grid solar system or running cable for garden lighting, there is one invisible enemy that can ruin your project before it starts: <strong>voltage drop</strong>. It is not just a technical nuance — it is the difference between a fridge that cools and one that shuts off, or between a safe installation and a fire hazard.',
+      html: 'Whether you are wiring a camper van, designing an off-grid solar system or running cable for garden lighting, there is one invisible enemy that can ruin your project before it starts: <strong>voltage drop</strong>. It is not just a technical nuance - it is the difference between a fridge that cools and one that shuts off, or between a safe installation and a fire hazard.',
     },
     { type: 'title', text: 'The Ohm\'s Law Formula Behind the Calculator', level: 3 },
     {

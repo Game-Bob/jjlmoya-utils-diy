@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { MortarCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -101,7 +101,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Natural Hydraulic Lime (NHL) mortars are the material of choice for heritage restoration, conservation projects, and traditional masonry. Unlike cement, which traps moisture and damages old stone, NHL lime mortar is breathable, flexible, and compatible with historic substrates. This calculator uses the proportional system codified by the Roman architect Vitruvius in 25 BC — a system still valid today.',
+      html: 'Natural Hydraulic Lime (NHL) mortars are the material of choice for heritage restoration, conservation projects, and traditional masonry. Unlike cement, which traps moisture and damages old stone, NHL lime mortar is breathable, flexible, and compatible with historic substrates. This calculator uses the proportional system codified by the Roman architect Vitruvius in 25 BC - a system still valid today.',
     },
     {
       type: 'card',
@@ -153,7 +153,7 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'The aggregate is not a filler — it is <strong>60-75% of your mortar by volume</strong>. Sand quality directly determines mortar quality. Sharp washed sand with angular grains creates stronger mechanical keying. Rounded river sand gives a more workable mix but lower strength. For heritage pointing, always try to match the colour and texture of the original mortar through petrographic analysis.',
+      html: 'The aggregate is not a filler - it is <strong>60-75% of your mortar by volume</strong>. Sand quality directly determines mortar quality. Sharp washed sand with angular grains creates stronger mechanical keying. Rounded river sand gives a more workable mix but lower strength. For heritage pointing, always try to match the colour and texture of the original mortar through petrographic analysis.',
     },
     {
       type: 'card',

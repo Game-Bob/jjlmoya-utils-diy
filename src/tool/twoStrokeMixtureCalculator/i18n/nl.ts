@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Tweetakt Mengverhouding Calculator: Precieze Olie-Benzine Ratios voor Kettingzagen en Bromfietsen', level: 2 },
-    { type: 'paragraph', html: 'Tweetaktmotoren hebben een exact mengsel van benzine en olie nodig om te overleven. Een verkeerd mengsel kan uw motor binnen enkele minuten vernielen. Deze calculator bepaalt direct de exacte hoeveelheid olie voor uw brandstofvolume en motortype — geen giswerk meer in de schuur.' },
+    { type: 'paragraph', html: 'Tweetaktmotoren hebben een exact mengsel van benzine en olie nodig om te overleven. Een verkeerd mengsel kan uw motor binnen enkele minuten vernielen. Deze calculator bepaalt direct de exacte hoeveelheid olie voor uw brandstofvolume en motortype - geen giswerk meer in de schuur.' },
 
     { type: 'title', text: 'Waarom tweetaktmotoren olie in de brandstof nodig hebben', level: 3 },
     { type: 'card', icon: 'mdi:engine', title: 'Het cruciale verschil', html: 'In tegenstelling tot viertaktmotoren met een apart carter, mengen tweetaktmotoren olie direct door de brandstof. Bij elke arbeidsslag verbrandt de motor het mengsel voor zowel energie als smering. Er is geen oliepomp; alleen de mengsmering houdt de zuigers in leven.' },
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Veelvoorkomende ratios per apparaat', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Kettingzagen', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderne modellen vereisen meestal 1:40 of 1:50. Check altijd uw handleiding — 1:25 op een moderne zaag geeft risico op vette bougies. Oudere Stihl-machines (jaren 90 en ouder) kunnen 1:25 of 1:33 voorschrijven.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Bromfietsen & Motoren', html: '<strong>Vespa, Honda, Yamaha:</strong> De meeste vereisen 1:33 voor oude modellen, 1:40–1:50 voor moderne versies. High-performance brommers schrijven vaak 1:50 voor. De handleiding is de enige bron van waarheid.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Kettingzagen', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderne modellen vereisen meestal 1:40 of 1:50. Check altijd uw handleiding - 1:25 op een moderne zaag geeft risico op vette bougies. Oudere Stihl-machines (jaren 90 en ouder) kunnen 1:25 of 1:33 voorschrijven.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Bromfietsen & Motoren', html: '<strong>Vespa, Honda, Yamaha:</strong> De meeste vereisen 1:33 voor oude modellen, 1:40-1:50 voor moderne versies. High-performance brommers schrijven vaak 1:50 voor. De handleiding is de enige bron van waarheid.' },
     { type: 'card', icon: 'mdi:tools', title: 'Bladblazers & Trimmers', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Meestal 1:50 (modern) of 1:40 (iets ouder). Dit materieel is voor kort seizoensgebruik; magere ratios sparen rook zonder de betrouwbaarheid op te offeren.' },
 
     { type: 'title', text: 'Oliesoort is net zo belangrijk als de ratio', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Stappenplan voor het mengen', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'De juiste manier van mengen', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Gebruik een aparte jerrycan</strong> die alleen voor mengsmering is. Schoon, droog en gelabeld.</li><li><strong>Giet eerst de helft van de benzine</strong> in de jerrycan.</li><li><strong>Voeg de berekende olie toe</strong> (gebruik deze calculator voor precisie).</li><li><strong>Voeg de rest van de benzine toe</strong> tot het gewenste volume.</li><li><strong>Schud krachtig gedurende 1–2 minuten</strong> tot de kleur egaal is. Een homogeen mengsel = gelijkmatige smering.</li><li><strong>Label de jerrycan</strong> met datum, ratio en brandstoftype.</li><li><strong>Gebruik binnen 30 dagen</strong> (synthetische oliën tot 60 dagen).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'De juiste manier van mengen', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Gebruik een aparte jerrycan</strong> die alleen voor mengsmering is. Schoon, droog en gelabeld.</li><li><strong>Giet eerst de helft van de benzine</strong> in de jerrycan.</li><li><strong>Voeg de berekende olie toe</strong> (gebruik deze calculator voor precisie).</li><li><strong>Voeg de rest van de benzine toe</strong> tot het gewenste volume.</li><li><strong>Schud krachtig gedurende 1-2 minuten</strong> tot de kleur egaal is. Een homogeen mengsel = gelijkmatige smering.</li><li><strong>Label de jerrycan</strong> met datum, ratio en brandstoftype.</li><li><strong>Gebruik binnen 30 dagen</strong> (synthetische oliën tot 60 dagen).</li></ol>' },
 
     { type: 'title', text: 'Wanneer de handleiding in twijfel trekken', level: 3 },
-    { type: 'tip', html: '<strong>Controleer altijd eerst de ratio in de originele handleiding.</strong> Kunt u deze niet vinden, kijk dan op de website van de fabrikant. Gok nooit — een verkeerde ratio doet de garantie vervallen en riskeert een vastloper. Bij oldtimers zonder handleiding: zoek online op modelnummer.' },
+    { type: 'tip', html: '<strong>Controleer altijd eerst de ratio in de originele handleiding.</strong> Kunt u deze niet vinden, kijk dan op de website van de fabrikant. Gok nooit - een verkeerde ratio doet de garantie vervallen en riskeert een vastloper. Bij oldtimers zonder handleiding: zoek online op modelnummer.' },
 
     { type: 'title', text: 'Begrippenlijst tweetakt termen', level: 3 },
     { type: 'glossary', items: [

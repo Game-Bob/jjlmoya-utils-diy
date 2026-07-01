@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { BalusterCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -116,7 +116,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Bevor Sie das erste Stück Holz oder Metall schneiden, müssen Sie das „Warum“ hinter der Mathematik verstehen. Die Bauvorschriften in vielen Ländern, wie auch der IRC (International Residential Code) in den USA, legen eine klare Norm fest: <em>„Der lichte Abstand zwischen vertikalen Elementen darf den Durchgang einer Kugel mit 10 cm (4 Zoll) Durchmesser nicht zulassen.“</em>',
+      html: 'Bevor Sie das erste Stück Holz oder Metall schneiden, müssen Sie das "Warum" hinter der Mathematik verstehen. Die Bauvorschriften in vielen Ländern, wie auch der IRC (International Residential Code) in den USA, legen eine klare Norm fest: <em>"Der lichte Abstand zwischen vertikalen Elementen darf den Durchgang einer Kugel mit 10 cm (4 Zoll) Durchmesser nicht zulassen."</em>',
     },
     {
       type: 'paragraph',
@@ -129,7 +129,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'In der Programmierung und im Bauwesen gibt es ein klassisches Problem namens <em>„Fencepost Error“</em> (Zaunpfostenfehler). Wenn Sie einen 10 Meter langen Zaun mit Pfosten alle 1 Meter bauen wollen, wie viele Pfosten benötigen Sie? Die intuitive Antwort ist 10, aber die richtige ist 11.',
+      html: 'In der Programmierung und im Bauwesen gibt es ein klassisches Problem namens <em>"Fencepost Error"</em> (Zaunpfostenfehler). Wenn Sie einen 10 Meter langen Zaun mit Pfosten alle 1 Meter bauen wollen, wie viele Pfosten benötigen Sie? Die intuitive Antwort ist 10, aber die richtige ist 11.',
     },
     {
       type: 'paragraph',
@@ -148,7 +148,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
           type: 'card',
           icon: 'mdi:function-variant',
           title: 'Schritt B: Exakten Abstand neuberechnen',
-          html: '<p class="bc-formula">g = (L - n × w) / (n + 1)</p><p>Sobald wir die exakte Anzahl der Baluster (n) kennen, berechnen wir, wie viel Platz „übrig bleibt“, wenn wir die Breite des gesamten Materials abziehen, und verteilen diesen gleichmäßig auf die Lücken (n+1).</p>',
+          html: '<p class="bc-formula">g = (L - n × w) / (n + 1)</p><p>Sobald wir die exakte Anzahl der Baluster (n) kennen, berechnen wir, wie viel Platz "übrig bleibt", wenn wir die Breite des gesamten Materials abziehen, und verteilen diesen gleichmäßig auf die Lücken (n+1).</p>',
         },
       ],
     },
@@ -212,7 +212,7 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:help-circle-outline',
       title: 'Was passiert, wenn die letzte Lücke nicht passt?',
-      html: '<p>Wenn Sie unseren Rechner verwendet haben, sollte dies nicht passieren. In der realen Welt verbiegt sich jedoch Holz, und Pfosten sind nicht immer gerade. Wenn Ihnen am Ende 1-2 mm fehlen oder zu viel sind, ist das unmerklich. Wenn Ihnen 1 cm fehlt, überprüfen Sie Ihre Abstandshalter; wahrscheinlich haben Sie sich bei jedem Schritt Millimeter „eingefressen“.</p>',
+      html: '<p>Wenn Sie unseren Rechner verwendet haben, sollte dies nicht passieren. In der realen Welt verbiegt sich jedoch Holz, und Pfosten sind nicht immer gerade. Wenn Ihnen am Ende 1-2 mm fehlen oder zu viel sind, ist das unmerklich. Wenn Ihnen 1 cm fehlt, überprüfen Sie Ihre Abstandshalter; wahrscheinlich haben Sie sich bei jedem Schritt Millimeter "eingefressen".</p>',
     },
     {
       type: 'card',
@@ -224,13 +224,13 @@ export const content: ToolLocaleContent<BalusterCalculatorUI> = {
       type: 'card',
       icon: 'mdi:wrench-outline',
       title: 'Holz, Metall oder Glas?',
-      html: '<p>Dieser Rechner funktioniert für <strong>jedes sich wiederholende vertikale Element</strong>. Wenn Sie horizontale Stahlseile verwenden, sind die Vorschriften anders (normalerweise dürfen sie nicht zum Klettern einladen, „Leitereffekt“). Bei Glas wird es als durchgehende Platte betrachtet, und es gilt kein Abstand, sondern die Schlagfestigkeit.</p>',
+      html: '<p>Dieser Rechner funktioniert für <strong>jedes sich wiederholende vertikale Element</strong>. Wenn Sie horizontale Stahlseile verwenden, sind die Vorschriften anders (normalerweise dürfen sie nicht zum Klettern einladen, "Leitereffekt"). Bei Glas wird es als durchgehende Platte betrachtet, und es gilt kein Abstand, sondern die Schlagfestigkeit.</p>',
     },
     {
       type: 'card',
       icon: 'mdi:format-quote-close',
       title: 'Mies van der Rohe',
-      html: '<p><em>„Architektur ist der Wille der Epoche, in den Raum übersetzt.“</em></p><p>Wir hoffen, dass dieses Tool Ihnen hilft, sicherere und schönere Räume zu bauen. Denken Sie immer daran, die örtlichen Bauvorschriften Ihrer Gemeinde zu konsultieren, da es spezifische Variationen bei der Mindesthöhe (normalerweise 90–110 cm) oder den Belastungen geben kann.</p>',
+      html: '<p><em>"Architektur ist der Wille der Epoche, in den Raum übersetzt."</em></p><p>Wir hoffen, dass dieses Tool Ihnen hilft, sicherere und schönere Räume zu bauen. Denken Sie immer daran, die örtlichen Bauvorschriften Ihrer Gemeinde zu konsultieren, da es spezifische Variationen bei der Mindesthöhe (normalerweise 90-110 cm) oder den Belastungen geben kann.</p>',
     },
   ],
   ui: {

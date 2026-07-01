@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { PassepartoutCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -22,7 +22,7 @@ const faqData = [
   {
     question: 'How do I choose the mat board color?',
     answer:
-      'Off-white or soft cream are the safe professional standards — they do not compete with the artwork. A dark mat can emphasize highlights in photography. Colored mats should be used carefully and only to complement specific tones in the piece, never to overpower it.',
+      'Off-white or soft cream are the safe professional standards - they do not compete with the artwork. A dark mat can emphasize highlights in photography. Colored mats should be used carefully and only to complement specific tones in the piece, never to overpower it.',
   },
   {
     question: 'What is the ideal mat margin width?',
@@ -101,7 +101,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'A <strong>passepartout</strong> (or mat board) is not merely decorative cardboard — it is the breathing space that allows your artwork to exist independently from its frame. This calculator gives you the exact dimensions to cut your mat, ensuring the artwork is optically centred or balanced within the frame to professional gallery standards.',
+      html: 'A <strong>passepartout</strong> (or mat board) is not merely decorative cardboard - it is the breathing space that allows your artwork to exist independently from its frame. This calculator gives you the exact dimensions to cut your mat, ensuring the artwork is optically centred or balanced within the frame to professional gallery standards.',
     },
     {
       type: 'title',
@@ -112,7 +112,7 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
       type: 'card',
       icon: 'mdi:eye-outline',
       title: 'The optical center illusion',
-      html: '<p>The human eye perceives the geometric vertical center of a rectangle as being slightly lower than it actually is. Artwork framed with perfectly equal top and bottom margins appears to be "falling" or sinking.</p><p><strong>Bottom weighting</strong> corrects this by making the bottom margin 5-15% wider than the top. The artwork is lifted optically and appears perfectly centered — a technique used in every professional gallery worldwide.</p>',
+      html: '<p>The human eye perceives the geometric vertical center of a rectangle as being slightly lower than it actually is. Artwork framed with perfectly equal top and bottom margins appears to be "falling" or sinking.</p><p><strong>Bottom weighting</strong> corrects this by making the bottom margin 5-15% wider than the top. The artwork is lifted optically and appears perfectly centered - a technique used in every professional gallery worldwide.</p>',
     },
     {
       type: 'title',

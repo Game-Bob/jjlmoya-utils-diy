@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Soffproblemet i korridoren', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: 'Manövreringsutrymme', html: '<p>Ett vanligt misstag är att anta att om möbeln mäter 80 cm och öppningen är 80 cm, så går den igenom. Så är det inte. Flyttkarlarnas händer, tygets elasticitet och väggarnas ojämnheter kräver en minsta marginal på <strong>2 till 5 cm</strong>. Utan denna marginal blir möbeln repad eller fastnar genom tryck.</p>' },
     { type: 'title', text: '3 fel som förstör en flytt', level: 3 },
-    { type: 'paragraph', html: 'Även med korrekta mått orsakar dessa osynliga faktorer ofta katastrofer: <strong>Taklampan</strong> — ofta bortglömd vid diagonal rotation. <strong>Möbelns svängradie</strong> — en stel möbel böjer sig inte. <strong>Förpackningen</strong> — bubbelplast och skyddskartong kan lägga till 1 till 3 cm på varje sida.' },
+    { type: 'paragraph', html: 'Även med korrekta mått orsakar dessa osynliga faktorer ofta katastrofer: <strong>Taklampan</strong> - ofta bortglömd vid diagonal rotation. <strong>Möbelns svängradie</strong> - en stel möbel böjer sig inte. <strong>Förpackningen</strong> - bubbelplast och skyddskartong kan lägga till 1 till 3 cm på varje sida.' },
   ],
   ui: {
     conTitle: 'Utrymmets dimensioner',

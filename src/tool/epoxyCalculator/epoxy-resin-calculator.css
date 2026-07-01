@@ -37,6 +37,7 @@
   }
 
   .ec-tab-btn {
+    min-width: 0;
     flex: 1;
     padding: 0.625rem 1rem;
     border-radius: 0.75rem;
@@ -344,6 +345,7 @@
     font-size: 3rem;
     font-weight: 700;
     line-height: 1;
+    overflow-wrap: anywhere;
   }
 
   .ec-total-unit {
@@ -384,6 +386,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+    overflow-wrap: anywhere;
   }
 
   .ec-viz-card {
@@ -566,4 +569,81 @@
   .theme-dark .ec-visual-shape {
     background: #0f172a;
     border-color: rgba(148, 163, 184, 0.15);
+  }
+
+  @media (max-width: 640px) {
+    .ec-grid {
+      gap: 1rem;
+    }
+
+    .ec-panel-left,
+    .ec-result-inner,
+    .ec-viz-card {
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .ec-tabs {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .ec-tab-btn {
+      flex: 0 0 auto;
+      min-width: 7.5rem;
+      padding: 0.625rem 0.75rem;
+      scroll-snap-align: start;
+      white-space: nowrap;
+    }
+
+    .ec-inputs-grid,
+    .ec-custom-grid,
+    .ec-parts-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .ec-waste-row,
+    .ec-waste-info {
+      align-items: flex-start;
+    }
+
+    .ec-waste-row {
+      gap: 1rem;
+    }
+
+    .ec-result-inner {
+      gap: 1.25rem;
+    }
+
+    .ec-total-number {
+      font-size: 2.25rem;
+    }
+
+    .ec-viz-card {
+      min-height: 220px;
+    }
+
+    .ec-viz-label {
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .ec-visual-stage {
+      gap: 1.5rem;
+      padding-top: 1.5rem;
+    }
+
+    .ec-visual-shape {
+      width: 6rem;
+      height: 6rem;
+    }
+
+    .ec-shape-rect {
+      height: 4rem;
+    }
+
+    .ec-shape-cylinder {
+      width: 5rem;
+    }
   }

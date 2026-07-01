@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -22,7 +22,7 @@ const faqData = [
   },
   {
     question: 'Vilken typ av olja ska jag använda?',
-    answer: 'Använd tvåtaktsolja anpassad för din utrustning. Syntetisk tvåtaktsolja av hög kvalitet ger bättre skydd och renare förbränning än mineraloljor. Använd aldrig fyrtaktsolja — det skadar motorn.',
+    answer: 'Använd tvåtaktsolja anpassad för din utrustning. Syntetisk tvåtaktsolja av hög kvalitet ger bättre skydd och renare förbränning än mineraloljor. Använd aldrig fyrtaktsolja - det skadar motorn.',
   },
   {
     question: 'Hur blandar jag bensin och olja?',
@@ -83,7 +83,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
   schemas: [faqSchema, howToSchema, appSchema],
   seo: [
     { type: 'title', text: 'Tvåtaktsblandning Kalkylator: Exakta Proportioner för Motorsågar och Mopeder', level: 2 },
-    { type: 'paragraph', html: 'Tvåtaktsmotorer kräver en exakt blandning av bensin och olja för att överleva. Fel blandning kan förstöra din motor på några minuter. Denna kalkylator beräknar direkt den exakta mängden olja som behövs för din bränslemängd och motortyp — inget mer gissande i verkstaden.' },
+    { type: 'paragraph', html: 'Tvåtaktsmotorer kräver en exakt blandning av bensin och olja för att överleva. Fel blandning kan förstöra din motor på några minuter. Denna kalkylator beräknar direkt den exakta mängden olja som behövs för din bränslemängd och motortyp - inget mer gissande i verkstaden.' },
 
     { type: 'title', text: 'Varför tvåtaktsmotorer kräver olja i bränslet', level: 3 },
     { type: 'card', icon: 'mdi:engine', title: 'Den avgörande skillnaden', html: 'Till skillnad från fyrtaktsmotorer med separata oljetankar blandar tvåtaktsmotorer oljan direkt i bränslet. Vid varje arbetstakt förbränner motorn blandningen för både energi och smörjning. Det finns ingen oljepump; bara det blandade bränslet håller kolvarna vid liv.' },
@@ -104,8 +104,8 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ] },
 
     { type: 'title', text: 'Vanliga förhållanden per utrustning', level: 3 },
-    { type: 'card', icon: 'mdi:tree', title: 'Motorsågar', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderna modeller kräver oftast 1:40 eller 1:50. Kolla alltid din manual — 1:25 på en modern såg riskerar sotiga stift. Äldre Stihl-maskiner (90-talet och tidigare) kan föreskriva 1:25 eller 1:33.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Mopeder & Motorcyklar', html: '<strong>Vespa, Honda, Yamaha:</strong> De flesta kräver 1:33 för äldre modeller, 1:40–1:50 för moderna versioner. Högpresterande mopeder föreskriver ofta 1:50. Verkstadshandboken är den enda källan till sanning.' },
+    { type: 'card', icon: 'mdi:tree', title: 'Motorsågar', html: '<strong>Stihl, Husqvarna, Echo:</strong> Moderna modeller kräver oftast 1:40 eller 1:50. Kolla alltid din manual - 1:25 på en modern såg riskerar sotiga stift. Äldre Stihl-maskiner (90-talet och tidigare) kan föreskriva 1:25 eller 1:33.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Mopeder & Motorcyklar', html: '<strong>Vespa, Honda, Yamaha:</strong> De flesta kräver 1:33 för äldre modeller, 1:40-1:50 för moderna versioner. Högpresterande mopeder föreskriver ofta 1:50. Verkstadshandboken är den enda källan till sanning.' },
     { type: 'card', icon: 'mdi:tools', title: 'Lövblåsar & Trimmers', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Vanligtvis 1:50 (moderna) eller 1:40 (något äldre). Dessa verktyg är gjorda för kort säsongsanvändning, så magra förhållanden sparar rök utan att offra pålitlighet.' },
 
     { type: 'title', text: 'Oljetyp är lika viktigt som förhållande', level: 3 },
@@ -116,10 +116,10 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     ], columns: 3 },
 
     { type: 'title', text: 'Steg-för-steg blandning', level: 3 },
-    { type: 'card', icon: 'mdi:check-circle', title: 'Rätt sätt att blanda', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Använd en dedikerad dunk</strong> endast för bränsleblandning. Ren, torr, märkt.</li><li><strong>Häll i hälften av bensinen</strong> först.</li><li><strong>Tillsätt den beräknade oljemängden</strong> (använd denna kalkylator för precision).</li><li><strong>Fyll på med resten av bensinen</strong> för att nå målvolymen.</li><li><strong>Skaka kraftigt i 1–2 minuter</strong> tills färgen är jämn. En homogen blandning = jämn smörjning.</li><li><strong>Märk dunken</strong> med datum, förhållande och bränsletyp.</li><li><strong>Använd inom 30 dagar</strong> (syntetiska oljor upp till 60 dagar).</li></ol>' },
+    { type: 'card', icon: 'mdi:check-circle', title: 'Rätt sätt att blanda', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Använd en dedikerad dunk</strong> endast för bränsleblandning. Ren, torr, märkt.</li><li><strong>Häll i hälften av bensinen</strong> först.</li><li><strong>Tillsätt den beräknade oljemängden</strong> (använd denna kalkylator för precision).</li><li><strong>Fyll på med resten av bensinen</strong> för att nå målvolymen.</li><li><strong>Skaka kraftigt i 1-2 minuter</strong> tills färgen är jämn. En homogen blandning = jämn smörjning.</li><li><strong>Märk dunken</strong> med datum, förhållande och bränsletyp.</li><li><strong>Använd inom 30 dagar</strong> (syntetiska oljor upp till 60 dagar).</li></ol>' },
 
     { type: 'title', text: 'När du bör ifrågasätta manualen', level: 3 },
-    { type: 'tip', html: '<strong>Kontrollera alltid förhållandet i manualen först.</strong> Om du inte hittar den, besök tillverkarens hemsida. Gissa aldrig — fel förhållande gör garantin ogiltig och riskerar att motorn skär. För äldre maskiner utan manual, sök online på modellnumret.' },
+    { type: 'tip', html: '<strong>Kontrollera alltid förhållandet i manualen först.</strong> Om du inte hittar den, besök tillverkarens hemsida. Gissa aldrig - fel förhållande gör garantin ogiltig och riskerar att motorn skär. För äldre maskiner utan manual, sök online på modellnumret.' },
 
     { type: 'title', text: 'Ordlista: Tvåtaktsbegrepp förklarade', level: 3 },
     { type: 'glossary', items: [
@@ -147,7 +147,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Sammanfattning FAQ', level: 3 },
     { type: 'summary', title: 'Innan du blandar', items: [
-      'Kolla manualen för exakt förhållande — det är tillverkarens specifikation.',
+      'Kolla manualen för exakt förhållande - det är tillverkarens specifikation.',
       'Se till att använda tvåtaktsolja, inte fyrtaktsolja.',
       'Använd en ren dunk endast avsedd för bränsleblandning.',
       'Använd färsk bensin och kompatibel olja.',

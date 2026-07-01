@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { FurnitureFitUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -84,7 +84,7 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'title', text: 'Das Sofa-Problem im Flur', level: 3 },
     { type: 'card', icon: 'mdi:sofa', title: 'Manövrierspielraum', html: '<p>Ein häufiger Fehler ist die Annahme, dass das Möbelstück passt, wenn es 80 cm misst und die Öffnung ebenfalls 80 cm beträgt. Das ist nicht der Fall. Die Hände der Träger, die Elastizität des Stoffes und Unebenheiten der Wände erfordern eine Mindestmarge von <strong>2 bis 5 cm</strong>. Ohne diese Marge wird das Möbelstück zerkratzt oder verkeilt sich.</p>' },
     { type: 'title', text: '3 Fehler, die einen Umzug ruinieren', level: 3 },
-    { type: 'paragraph', html: 'Selbst mit korrekten Maßen verursachen diese unsichtbaren Faktoren oft Katastrophen: <strong>Die Deckenlampe</strong> — oft vergessen bei diagonalen Drehungen; <strong>Der Schwenkradius</strong> — ein starres Möbelstück biegt sich nicht; <strong>Die Verpackung</strong> — Luftpolsterfolie kann auf jeder Seite 1 bis 3 cm hinzufügen.' },
+    { type: 'paragraph', html: 'Selbst mit korrekten Maßen verursachen diese unsichtbaren Faktoren oft Katastrophen: <strong>Die Deckenlampe</strong> - oft vergessen bei diagonalen Drehungen; <strong>Der Schwenkradius</strong> - ein starres Möbelstück biegt sich nicht; <strong>Die Verpackung</strong> - Luftpolsterfolie kann auf jeder Seite 1 bis 3 cm hinzufügen.' },
   ],
   ui: {
     conTitle: 'Abmessungen des Raums',

@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { TwoStrokeMixtureCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -105,7 +105,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'Yaygın Ekipman Oranları', level: 3 },
     { type: 'card', icon: 'mdi:tree', title: 'Motorlu Testereler', html: '<strong>Stihl, Husqvarna, Echo:</strong> Modern modeller genellikle 1:40 veya 1:50 gerektirir. Her zaman kılavuzunuzu kontrol edin. Eski Stihl makineleri (90\'lar ve öncesi) 1:25 veya 1:33 belirtebilir.' },
-    { type: 'card', icon: 'mdi:motorcycle', title: 'Mopetler ve Motosikletler', html: '<strong>Vespa, Honda, Yamaha:</strong> Çoğu eski model için 1:33, modern versiyonlar için 1:40–1:50 gerektirir. Yüksek performanslı mopetler genellikle 1:50 oranlarını belirtir.' },
+    { type: 'card', icon: 'mdi:motorcycle', title: 'Mopetler ve Motosikletler', html: '<strong>Vespa, Honda, Yamaha:</strong> Çoğu eski model için 1:33, modern versiyonlar için 1:40-1:50 gerektirir. Yüksek performanslı mopetler genellikle 1:50 oranlarını belirtir.' },
     { type: 'card', icon: 'mdi:tools', title: 'Yaprak Üfleyiciler', html: '<strong>Stihl, Husqvarna, DeWalt:</strong> Tipik olarak 1:50 (modern) veya 1:40 (biraz daha eski). Bu araçlar hızlı sezonluk kullanım için tasarlanmıştır, bu nedenle fakir oranlar güvenilirlikten ödün vermeden dumanı azaltır.' },
 
     { type: 'title', text: 'Yağ Tipi Oran Kadar Önemlidir', level: 3 },
@@ -119,7 +119,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
     { type: 'card', icon: 'mdi:check-circle', title: 'Karıştırmanın Doğru Yolu', html: '<ol style="margin: 1rem 0; padding-left: 1.5rem;"><li><strong>Özel bir kap kullanın</strong> sadece yakıt karıştırma için ayrılmış. Temiz, kuru.</li><li><strong>Benzinin yarısını</strong> önce kaba dökün.</li><li><strong>Hesaplanan yağ miktarını ekleyin</strong> (hassasiyet için bu hesaplayıcıyı kullanın).</li><li><strong>Kalan benzini ekleyin</strong> hedef hacme ulaşmak için.</li><li><strong>1-2 dakika kuvvetlice çalkalayın</strong> renk homojen olana kadar. Homojen bir karışım = eşit yağlama.</li><li><strong>Kabı etiketleyin</strong> tarih, oran ve yakıt tipi ile.</li><li><strong>30 gün içinde kullanın</strong> (sentetik yağlar bunu 60 güne çıkarır).</li></ol>' },
 
     { type: 'title', text: 'Ekipman Kılavuzunuzdan Ne Zaman Şüphe Etmelisiniz?', level: 3 },
-    { type: 'tip', html: '<strong>Her zaman önce ekipman kılavuzundaki oranı doğrulayın.</strong> Bulamıyorsanız üreticinin web sitesini ziyaret edin. Asla tahmin etmeyin — yanlış oran garantiyi geçersiz kılar ve motorun kilitlenme riskini artırır. Ekipmanınız eskiyse ve kılavuz kayıpsa model numarasıyla çevrimiçi arama yapın.' },
+    { type: 'tip', html: '<strong>Her zaman önce ekipman kılavuzundaki oranı doğrulayın.</strong> Bulamıyorsanız üreticinin web sitesini ziyaret edin. Asla tahmin etmeyin - yanlış oran garantiyi geçersiz kılar ve motorun kilitlenme riskini artırır. Ekipmanınız eskiyse ve kılavuz kayıpsa model numarasıyla çevrimiçi arama yapın.' },
 
     { type: 'title', text: 'Sözlük: 2 Zamanlı Terimlerin Açıklaması', level: 3 },
     { type: 'glossary', items: [
@@ -147,7 +147,7 @@ export const content: ToolLocaleContent<TwoStrokeMixtureCalculatorUI> = {
 
     { type: 'title', text: 'SSS Özeti', level: 3 },
     { type: 'summary', title: 'Karıştırmadan Önce', items: [
-      'Tam oran için ekipman kılavuzunu kontrol edin — bu üreticinin test edilmiş özelliğidir.',
+      'Tam oran için ekipman kılavuzunu kontrol edin - bu üreticinin test edilmiş özelliğidir.',
       '4 zamanlı veya diğer yağları değil, 2 zamanlı yağı kullandığınızdan emin olun.',
       'Sadece yakıt karıştırma için ayrılmış temiz bir kap kullanın.',
       'Taze benzin (aylarca saklanmamış) ve uyumlu 2 zamanlı yağı kullanın.',

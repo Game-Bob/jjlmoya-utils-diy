@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Der Unterschied zwischen einem langlebigen Kunstwerk und einer klebrigen Katastrophe liegt in der <strong>exakten Stöchiometrie</strong>. Ein Fehler von nur 5 % im Mischungsverhältnis kann die Aushärtung dauerhaft verhindern. Dieses Tool eliminiert mathematische Vermutungen, sodass Sie sich auf das Erschaffen konzentrieren können.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volumen oder Gewicht?', html: '<p>Der häufigste Fehler von Anfängern ist die Annahme, dass 100 ml 100 g wiegen. <strong>Harz ist dichter als Härter.</strong></p><p>Wenn das Datenblatt Ihres Produkts "100:50 nach Gewicht" angibt, ist das NICHT dasselbe wie "2:1 nach Volumen". Dieser Rechner arbeitet mit dem <strong>Volumen</strong> (V = L × B × H), dem Standard für das Füllen von Formen.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Gängige Verhältnisse', html: '<ul><li><strong>1:1</strong> — Beschichtungen, Lacke und Schnellkleber.</li><li><strong>2:1</strong> — Standard. River Tables, Schmuck und mittlere Abgüsse.</li><li><strong>3:1</strong> — Industrieböden und hochharte strukturelle Laminate.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Gängige Verhältnisse', html: '<ul><li><strong>1:1</strong> - Beschichtungen, Lacke und Schnellkleber.</li><li><strong>2:1</strong> - Standard. River Tables, Schmuck und mittlere Abgüsse.</li><li><strong>3:1</strong> - Industrieböden und hochharte strukturelle Laminate.</li></ul>' },
     ]},
     { type: 'title', text: 'Sicherheitsprotokoll und Best Practices', level: 2 },
     { type: 'grid', columns: [

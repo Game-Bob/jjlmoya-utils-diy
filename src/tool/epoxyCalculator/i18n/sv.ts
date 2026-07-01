@@ -1,4 +1,4 @@
-import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
+﻿import type { WithContext, FAQPage, HowToThing, SoftwareApplication } from 'schema-dts';
 import type { ToolLocaleContent } from '../../../types';
 import type { EpoxyCalculatorUI } from '../ui';
 import { bibliography } from '../bibliography';
@@ -82,7 +82,7 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
     { type: 'paragraph', html: 'Skillnaden mellan ett hållbart konstverk och en klibbig katastrof ligger i den <strong>exakta stökiometrin</strong>. Ett fel på bara 5 % i blandningsförhållandet kan förhindra härdningen permanent. Detta verktyg eliminerar matematiska gissningar så att du kan fokusera på skapandet.' },
     { type: 'grid', columns: [
       { type: 'card', icon: 'mdi:scale-balance', title: 'Volym eller vikt?', html: '<p>Det vanligaste felet bland nybörjare är att anta att 100 ml väger 100 g. <strong>Harts är tätare än härdare.</strong></p><p>Om produkten faktablad anger "100:50 i vikt", är det INTE samma sak som "2:1 i volym". Denna kalkylator arbetar med <strong>Volym</strong> (V = L × B × D), vilket är standard för att fylla formar.</p>' },
-      { type: 'card', icon: 'mdi:water-percent', title: 'Vanliga förhållanden', html: '<ul><li><strong>1:1</strong> — Beläggningar, fernissor och snabblim.</li><li><strong>2:1</strong> — Standard. River tables, smycken och medelstora gjutningar.</li><li><strong>3:1</strong> — Industrigolv och höghårda strukturella laminat.</li></ul>' },
+      { type: 'card', icon: 'mdi:water-percent', title: 'Vanliga förhållanden', html: '<ul><li><strong>1:1</strong> - Beläggningar, fernissor och snabblim.</li><li><strong>2:1</strong> - Standard. River tables, smycken och medelstora gjutningar.</li><li><strong>3:1</strong> - Industrigolv och höghårda strukturella laminat.</li></ul>' },
     ]},
     { type: 'title', text: 'Säkerhetsprotokoll och bästa praxis', level: 2 },
     { type: 'grid', columns: [
