@@ -22,6 +22,7 @@
   }
 
   .sc-root {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1100px;
     margin: 1.5rem auto;
@@ -31,7 +32,15 @@
     overflow-x: clip;
   }
 
+  .sc-root *,
+  .sc-root *::before,
+  .sc-root *::after {
+    box-sizing: border-box;
+  }
+
   .sc-card {
+    width: 100%;
+    max-width: 100%;
     background: var(--sc-bg);
     border-radius: 2rem;
     overflow: hidden;
