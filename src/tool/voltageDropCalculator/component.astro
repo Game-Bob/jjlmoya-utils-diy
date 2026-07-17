@@ -99,25 +99,25 @@ const SECTIONS = [
 
     <div class="vd-card vd-load-card">
       <div class="vd-load-top">
-        <label class="vd-field-label">{t.fieldLoad}</label>
+        <label class="vd-field-label" for="vd-load-val">{t.fieldLoad}</label>
         <div class="vd-mode-wrap">
           <button class="vd-mode-btn vd-active" data-vd-mode-btn="watts">{t.modeW}</button>
           <button class="vd-mode-btn" data-vd-mode-btn="amps">{t.modeA}</button>
         </div>
       </div>
       <div class="vd-load-input-row">
-        <input type="number" data-vd-load-val value="60" class="vd-load-input" />
+        <input type="number" id="vd-load-val" data-vd-load-val value="60" class="vd-load-input" />
         <span class="vd-load-unit" data-vd-load-unit>{t.unitWatts}</span>
       </div>
     </div>
 
     <div class="vd-card">
       <div class="vd-len-top">
-        <label class="vd-field-label">{t.fieldLength}</label>
+        <label class="vd-field-label" for="vd-len-slider">{t.fieldLength}</label>
         <span class="vd-len-info"><span data-vd-len-display>10</span> {t.unitMeters}</span>
       </div>
       <div class="vd-slider-wrap">
-        <input type="range" data-vd-len-slider min="1" max="100" step="1" value="10" class="vd-slider-input" />
+        <input type="range" id="vd-len-slider" data-vd-len-slider min="1" max="100" step="1" value="10" class="vd-slider-input" />
         <div class="vd-slider-track">
           <div class="vd-slider-fill" data-vd-len-track style="width:9.09%"></div>
         </div>

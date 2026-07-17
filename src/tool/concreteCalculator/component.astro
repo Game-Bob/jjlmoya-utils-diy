@@ -53,23 +53,23 @@ const t = (ui ?? {}) as ConcreteCalculatorUI;
       <div class="cc-dims-panel cc-active" data-cc-mode-panel="dims">
         <div class="cc-dim-inputs">
           <div class="cc-dim-field">
-            <label>{t.labelLength}</label>
+            <label for="cc-length">{t.labelLength}</label>
             <div class="cc-dim-input-wrap">
-              <input type="number" data-cc-length data-cc-dim value="5" step="0.5" />
+              <input type="number" id="cc-length" data-cc-length data-cc-dim value="5" step="0.5" />
               <span class="cc-dim-unit">m</span>
             </div>
           </div>
           <div class="cc-dim-field">
-            <label>{t.labelWidth}</label>
+            <label for="cc-width">{t.labelWidth}</label>
             <div class="cc-dim-input-wrap">
-              <input type="number" data-cc-width data-cc-dim value="3" step="0.5" />
+              <input type="number" id="cc-width" data-cc-width data-cc-dim value="3" step="0.5" />
               <span class="cc-dim-unit">m</span>
             </div>
           </div>
           <div class="cc-dim-field">
-            <label>{t.labelThickness}</label>
+            <label for="cc-thickness">{t.labelThickness}</label>
             <div class="cc-dim-input-wrap">
-              <input type="number" data-cc-thickness data-cc-dim value="10" step="1" />
+              <input type="number" id="cc-thickness" data-cc-thickness data-cc-dim value="10" step="1" />
               <span class="cc-dim-unit">cm</span>
             </div>
           </div>
@@ -78,10 +78,10 @@ const t = (ui ?? {}) as ConcreteCalculatorUI;
 
       <div class="cc-direct-panel" data-cc-mode-panel="direct">
         <div class="cc-input-header">
-          <label>{t.labelVolume}</label>
+          <label for="cc-volume">{t.labelVolume}</label>
         </div>
         <div class="cc-vol-input-wrap">
-          <input type="number" data-cc-volume value="1.5" step="0.1" min="0" />
+          <input type="number" id="cc-volume" data-cc-volume value="1.5" step="0.1" min="0" />
           <span class="cc-unit-tag">m³</span>
         </div>
       </div>
@@ -172,13 +172,14 @@ const t = (ui ?? {}) as ConcreteCalculatorUI;
       </div>
       <div class="cc-price-inputs-grid">
         <div class="cc-price-input-field">
-          <label>
+          <label for="cc-price-binder">
             {t.priceSackLabel}
             <span data-cc-binder-type>{t.binderCementLabel}</span> (25kg)
           </label>
           <div class="cc-editable-price-wrap">
             <input
               type="number"
+              id="cc-price-binder"
               data-cc-price-binder
               class="cc-editable-price"
               value="5.50"
@@ -188,10 +189,11 @@ const t = (ui ?? {}) as ConcreteCalculatorUI;
           </div>
         </div>
         <div class="cc-price-input-field">
-          <label>{t.priceSandLabel}</label>
+          <label for="cc-price-sand">{t.priceSandLabel}</label>
           <div class="cc-editable-price-wrap">
             <input
               type="number"
+              id="cc-price-sand"
               data-cc-price-sand
               class="cc-editable-price"
               value="35.00"

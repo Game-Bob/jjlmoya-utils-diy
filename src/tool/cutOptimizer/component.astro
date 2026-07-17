@@ -36,16 +36,16 @@ const t = (ui ?? {}) as CutOptimizerUI;
 
         <div class="co-fields">
           <div class="co-field">
-            <label class="co-field-label">{t.labelStockLength}</label>
-            <input type="number" data-co-stock-len data-co-cfg-inp value="2400" class="co-input" />
+            <label class="co-field-label" for="co-stock-length">{t.labelStockLength}</label>
+            <input type="number" id="co-stock-length" data-co-stock-len data-co-cfg-inp value="2400" class="co-input" />
           </div>
           <div class="co-field co-hidden" data-co-stock-wid-wrap>
-            <label class="co-field-label">{t.labelStockWidth}</label>
-            <input type="number" data-co-stock-wid data-co-cfg-inp value="1200" class="co-input" />
+            <label class="co-field-label" for="co-stock-width">{t.labelStockWidth}</label>
+            <input type="number" id="co-stock-width" data-co-stock-wid data-co-cfg-inp value="1200" class="co-input" />
           </div>
           <div class="co-field">
-            <label class="co-field-label">{t.labelKerf}</label>
-            <input type="number" data-co-kerf data-co-cfg-inp value="3" class="co-input" />
+            <label class="co-field-label" for="co-kerf">{t.labelKerf}</label>
+            <input type="number" id="co-kerf" data-co-kerf data-co-cfg-inp value="3" class="co-input" />
           </div>
         </div>
       </div>
@@ -100,15 +100,15 @@ const t = (ui ?? {}) as CutOptimizerUI;
   <template data-co-row-tmpl>
     <div class="co-row">
       <div class="co-row-len-wrap">
-        <input type="number" data-co-inp-len placeholder={t.placeholderLength} class="co-row-input" />
+        <input type="number" aria-label={t.placeholderLength} data-co-inp-len placeholder={t.placeholderLength} class="co-row-input" />
         <span class="co-row-unit">mm</span>
       </div>
       <div class="co-row-wid-wrap co-hidden" data-co-wid-wrap>
-        <input type="number" data-co-inp-wid placeholder={t.placeholderWidth} class="co-row-input co-row-input-blue" />
+        <input type="number" aria-label={t.placeholderWidth} data-co-inp-wid placeholder={t.placeholderWidth} class="co-row-input co-row-input-blue" />
         <span class="co-row-unit">mm</span>
       </div>
       <div class="co-row-qty-wrap">
-        <input type="number" data-co-inp-qty placeholder={t.placeholderQty} value="1" class="co-row-input co-row-input-qty" />
+        <input type="number" aria-label={t.placeholderQty} data-co-inp-qty placeholder={t.placeholderQty} value="1" class="co-row-input co-row-input-qty" />
       </div>
       <button class="co-btn-rm" data-co-btn-rm title={t.btnRemoveTitle}>
         <Icon name="mdi:close" />

@@ -74,7 +74,7 @@ const t = (ui ?? {}) as DrillCalculatorUI;
 
         <div class="dc-field">
           <div class="dc-diameter-header">
-            <label class="dc-field-label">{t.labelDiameter}</label>
+            <label class="dc-field-label" for="dc-diam-slider">{t.labelDiameter}</label>
             <div class="dc-unit-toggle" id="dc-unit-toggle">
               <button class="dc-unit-btn active" data-unit="mm">{t.unitMm}</button>
               <button class="dc-unit-btn" data-unit="in">{t.unitInch}</button>
@@ -101,11 +101,11 @@ const t = (ui ?? {}) as DrillCalculatorUI;
           <div class="dc-advanced-body" id="dc-adv-body">
             <div class="dc-adv-grid">
               <div>
-                <label class="dc-field-label">{t.labelLips}</label>
+                <label class="dc-field-label" for="dc-lips">{t.labelLips}</label>
                 <input type="number" id="dc-lips" class="dc-input" value="2" min="1" max="12" />
               </div>
               <div>
-                <label class="dc-field-label">{t.labelFz}</label>
+                <label class="dc-field-label" for="dc-fz">{t.labelFz}</label>
                 <input type="number" id="dc-fz" class="dc-input" placeholder="0.1" step="0.01" value="" />
               </div>
             </div>
@@ -164,7 +164,7 @@ const t = (ui ?? {}) as DrillCalculatorUI;
             <button class="dc-preset-btn" data-preset="cnc">{t.presetCnc}</button>
           </div>
           <div class="dc-manual-input">
-            <input type="number" id="dc-speed-in" class="dc-input" placeholder={t.addRpmManual} />
+            <input type="number" id="dc-speed-in" aria-label={t.addRpmManual} class="dc-input" placeholder={t.addRpmManual} />
             <button id="dc-add-btn" class="dc-add-btn">+</button>
           </div>
           <div class="dc-chips-area" id="dc-chips-area"></div>

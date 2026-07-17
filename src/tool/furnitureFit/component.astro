@@ -28,16 +28,16 @@ const t = (ui ?? {}) as FurnitureFitUI;
         </h2>
         <div class="ff-inputs-grid">
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelWidth}</label>
-            <input type="number" data-ff-con-w data-ff-inp value="120" class="ff-input" />
+            <label class="ff-label" for="ff-con-w">{t.labelWidth}</label>
+            <input type="number" id="ff-con-w" data-ff-con-w data-ff-inp value="120" class="ff-input" />
           </div>
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelHeight}</label>
-            <input type="number" data-ff-con-h data-ff-inp value="210" class="ff-input" />
+            <label class="ff-label" for="ff-con-h">{t.labelHeight}</label>
+            <input type="number" id="ff-con-h" data-ff-con-h data-ff-inp value="210" class="ff-input" />
           </div>
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelDepth}</label>
-            <input type="number" data-ff-con-d data-ff-inp value="120" class="ff-input" />
+            <label class="ff-label" for="ff-con-d">{t.labelDepth}</label>
+            <input type="number" id="ff-con-d" data-ff-con-d data-ff-inp value="120" class="ff-input" />
           </div>
         </div>
         <p class="ff-hint">{t.conHint}</p>
@@ -50,22 +50,22 @@ const t = (ui ?? {}) as FurnitureFitUI;
         </h2>
         <div class="ff-inputs-grid">
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelLength}</label>
-            <input type="number" data-ff-obj-w data-ff-inp value="220" class="ff-input" />
+            <label class="ff-label" for="ff-obj-w">{t.labelLength}</label>
+            <input type="number" id="ff-obj-w" data-ff-obj-w data-ff-inp value="220" class="ff-input" />
           </div>
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelHeight}</label>
-            <input type="number" data-ff-obj-h data-ff-inp value="90" class="ff-input" />
+            <label class="ff-label" for="ff-obj-h">{t.labelHeight}</label>
+            <input type="number" id="ff-obj-h" data-ff-obj-h data-ff-inp value="90" class="ff-input" />
           </div>
           <div class="ff-input-group">
-            <label class="ff-label">{t.labelDepth}</label>
-            <input type="number" data-ff-obj-d data-ff-inp value="80" class="ff-input" />
+            <label class="ff-label" for="ff-obj-d">{t.labelDepth}</label>
+            <input type="number" id="ff-obj-d" data-ff-obj-d data-ff-inp value="80" class="ff-input" />
           </div>
         </div>
         <div class="ff-margin-row">
           <div class="ff-margin-left">
-            <label class="ff-label">{t.labelMargin}</label>
-            <input type="range" data-ff-margin data-ff-inp min="0" max="10" value="2" class="ff-slider" />
+            <label class="ff-label" for="ff-margin">{t.labelMargin}</label>
+            <input type="range" id="ff-margin" data-ff-margin data-ff-inp min="0" max="10" value="2" class="ff-slider" />
           </div>
           <span class="ff-margin-display" data-ff-margin-display>2cm</span>
         </div>

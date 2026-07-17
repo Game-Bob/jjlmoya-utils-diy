@@ -94,7 +94,7 @@ const t = (ui ?? {}) as MortarCalculatorUI;
         <g id="mc-sack-pile"></g>
       </svg>
       <div class="mc-slider-container">
-        <input type="range" data-mc-slider min="5" max="500" value="150" step="5" class="mc-slider" />
+        <input type="range" aria-label={t.labelQuantity} data-mc-slider min="5" max="500" value="150" step="5" class="mc-slider" />
         <div class="mc-ruler-marks">
           <span>5</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span>
         </div>

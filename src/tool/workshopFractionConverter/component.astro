@@ -26,7 +26,7 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
           <label class="wfc-field-label">{t.labelFraction}</label>
           <div class="wfc-fraction-input">
             <div class="wfc-fraction-column">
-              <span class="wfc-fraction-label">{t.labelWhole}</span>
+              <label class="wfc-fraction-label" for="wfc-whole">{t.labelWhole}</label>
               <div class="wfc-stepper-group">
                 <button class="wfc-stepper-btn" data-stepper="whole-down">−</button>
                 <button class="wfc-stepper-btn" data-stepper="whole-up">+</button>
@@ -42,7 +42,7 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
               />
             </div>
             <div class="wfc-fraction-column">
-              <span class="wfc-fraction-label">{t.labelNumerator}</span>
+              <label class="wfc-fraction-label" for="wfc-numerator">{t.labelNumerator}</label>
               <div class="wfc-stepper-group">
                 <button class="wfc-stepper-btn" data-stepper="num-down">−</button>
                 <button class="wfc-stepper-btn" data-stepper="num-up">+</button>
@@ -58,7 +58,7 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
               />
             </div>
             <div class="wfc-fraction-column">
-              <span class="wfc-fraction-label">{t.labelDenominator}</span>
+              <label class="wfc-fraction-label" for="wfc-denominator">{t.labelDenominator}</label>
               <div class="wfc-stepper-group">
                 <button class="wfc-stepper-btn" data-stepper="denom-down">−</button>
                 <button class="wfc-stepper-btn" data-stepper="denom-up">+</button>
@@ -91,7 +91,7 @@ const t = (ui ?? {}) as WorkshopFractionConverterUI;
         </div>
 
         <div class="wfc-field wfc-hidden" id="wfc-reverse-input" data-reverse-input>
-          <label class="wfc-field-label">{t.reverseSearchLabel}</label>
+          <label class="wfc-field-label" for="wfc-reverse-mm">{t.reverseSearchLabel}</label>
           <div style="display: flex; gap: 0.5rem;">
             <input
               type="number"
