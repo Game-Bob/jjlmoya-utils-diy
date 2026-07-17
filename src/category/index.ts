@@ -1,18 +1,18 @@
 import type { DiyCategoryEntry } from '../types';
-import { clayCalculator } from '../tool/clayCalculator/index';
-import { epoxyCalculator } from '../tool/epoxyCalculator/index';
-import { balusterCalculator } from '../tool/balusterCalculator/index';
-import { mortarCalculator } from '../tool/mortarCalculator/index';
-import { passepartoutCalculator } from '../tool/passepartoutCalculator/index';
-import { concreteCalculator } from '../tool/concreteCalculator/index';
-import { cutOptimizer } from '../tool/cutOptimizer/index';
-import { voltageDropCalculator } from '../tool/voltageDropCalculator/index';
-import { furnitureFit } from '../tool/furnitureFit/index';
-import { thermalExpansionCalculator } from '../tool/thermalExpansionCalculator/index';
-import { drillCalculator } from '../tool/drillCalculator/index';
-import { stairCalculator } from '../tool/stairCalculator/index';
-import { drillSharpener } from '../tool/drillSharpener/index';
-import { workshopFractionConverter } from '../tool/workshopFractionConverter/index';
+import { clayCalculator } from '../tool/clayCalculator/entry';
+import { epoxyCalculator } from '../tool/epoxyCalculator/entry';
+import { balusterCalculator } from '../tool/balusterCalculator/entry';
+import { mortarCalculator } from '../tool/mortarCalculator/entry';
+import { passepartoutCalculator } from '../tool/passepartoutCalculator/entry';
+import { concreteCalculator } from '../tool/concreteCalculator/entry';
+import { cutOptimizer } from '../tool/cutOptimizer/entry';
+import { voltageDropCalculator } from '../tool/voltageDropCalculator/entry';
+import { furnitureFit } from '../tool/furnitureFit/entry';
+import { thermalExpansionCalculator } from '../tool/thermalExpansionCalculator/entry';
+import { drillCalculator } from '../tool/drillCalculator/entry';
+import { stairCalculator } from '../tool/stairCalculator/entry';
+import { drillSharpener } from '../tool/drillSharpener/entry';
+import { workshopFractionConverter } from '../tool/workshopFractionConverter/entry';
 
 export const diyCategory: DiyCategoryEntry = {
   icon: 'mdi:hand',
