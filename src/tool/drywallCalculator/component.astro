@@ -1,0 +1,324 @@
+---
+import './drywall-calculator.css';
+import type { DrywallCalculatorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+const { ui } = Astro.props;
+const t = (ui ?? {}) as DrywallCalculatorUI;
+---
+
+<div class="dw-root" data-dw-root
+  data-dw-txt-sp60-metric={t.paramSpacing60Metric}
+  data-dw-txt-sp40-metric={t.paramSpacing40Metric}
+  data-dw-txt-sp60-imperial={t.paramSpacing60Imperial}
+  data-dw-txt-sp40-imperial={t.paramSpacing40Imperial}
+>
+  <div class="dw-card-shell">
+    
+    <div class="dw-top-bar">
+      <span class="dw-header-title">{t.unitSystemLabel}</span>
+      <div class="dw-segmented-control" style="width: 220px;">
+        <button type="button" class="dw-chip-btn dw-active" data-dw-unit="metric">{t.unitMetric}</button>
+        <button type="button" class="dw-chip-btn" data-dw-unit="imperial">{t.unitImperial}</button>
+      </div>
+    </div>
+
+    <div class="dw-card-content">
+      
+      <div class="dw-form-column">
+        <div class="dw-field">
+          <label class="dw-label" for="dw-length">{t.paramLengthLabel}</label>
+          <div class="dw-input-wrap">
+            <input type="number" id="dw-length" data-dw-length value="5" step="0.1" min="0.5" />
+            <span class="dw-unit-badge" data-dw-unit-len>m</span>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label" for="dw-height">{t.paramHeightLabel}</label>
+          <div class="dw-input-wrap">
+            <input type="number" id="dw-height" data-dw-height value="2.5" step="0.1" min="0.5" />
+            <span class="dw-unit-badge" data-dw-unit-height>m</span>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label">{t.paramSpacingLabel}</label>
+          <div class="dw-segmented-control">
+            <button type="button" class="dw-chip-btn dw-active" data-dw-spacing="60" data-dw-spacing-btn="60">{t.paramSpacing60Metric}</button>
+            <button type="button" class="dw-chip-btn" data-dw-spacing="40" data-dw-spacing-btn="40">{t.paramSpacing40Metric}</button>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label">{t.paramBoardTypeLabel}</label>
+          <div class="dw-segmented-control dw-grid-4">
+            <button type="button" class="dw-chip-btn dw-active" data-dw-type="standard">{t.boardTypeStandard}</button>
+            <button type="button" class="dw-chip-btn" data-dw-type="moisture">{t.boardTypeMoisture}</button>
+            <button type="button" class="dw-chip-btn" data-dw-type="fire">{t.boardTypeFire}</button>
+            <button type="button" class="dw-chip-btn" data-dw-type="acoustic">{t.boardTypeAcoustic}</button>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label">{t.paramLayersLabel}</label>
+          <div class="dw-segmented-control">
+            <button type="button" class="dw-chip-btn dw-active" data-dw-layers="1">{t.paramSingleLayer}</button>
+            <button type="button" class="dw-chip-btn" data-dw-layers="2">{t.paramDoubleLayer}</button>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label">{t.paramSidesLabel}</label>
+          <div class="dw-segmented-control">
+            <button type="button" class="dw-chip-btn dw-active" data-dw-sides="double">{t.paramDoubleSided}</button>
+            <button type="button" class="dw-chip-btn" data-dw-sides="single">{t.paramSingleSided}</button>
+          </div>
+        </div>
+
+        <div class="dw-field">
+          <label class="dw-label" for="dw-waste">{t.paramWasteLabel}</label>
+          <div class="dw-input-wrap">
+            <input type="number" id="dw-waste" data-dw-waste value="10" step="1" min="0" max="30" />
+            <span class="dw-unit-badge">%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dw-view-column">
+        <div class="dw-cad-viewport">
+          <div class="dw-cad-header">
+            <span class="dw-cad-title">{t.diagramWallTitle}</span>
+            <div class="dw-segmented-control" style="width: 180px;">
+              <button type="button" class="dw-chip-btn dw-active" data-dw-view="board">{t.diagramModeBoard}</button>
+              <button type="button" class="dw-chip-btn" data-dw-view="frame">{t.diagramModeStructure}</button>
+            </div>
+          </div>
+
+          <div class="dw-cad-canvas">
+            <div class="dw-cad-frame">
+              <div class="dw-cad-studs-layer" data-dw-studs-visual>
+              </div>
+              <div class="dw-cad-boards-overlay" data-dw-boards-overlay>
+                <div class="dw-cad-board-panel">Panel</div>
+                <div class="dw-cad-board-panel">Panel</div>
+                <div class="dw-cad-board-panel">Panel</div>
+                <div class="dw-cad-board-panel">Panel</div>
+                <div class="dw-cad-board-panel">Panel</div>
+                <div class="dw-cad-board-panel">Panel</div>
+              </div>
+            </div>
+            <span class="dw-cad-dimension-tag" data-dw-dim-tag>5.0m × 2.5m</span>
+          </div>
+        </div>
+
+        <div class="dw-summary-strip">
+          <div class="dw-summary-box">
+            <span class="lbl">{t.summaryWallArea}</span>
+            <span class="val"><span data-dw-res-wall-area>12.50</span> <span data-dw-unit-area>m²</span></span>
+          </div>
+          <div class="dw-summary-box">
+            <span class="lbl">{t.summaryBoardArea}</span>
+            <span class="val"><span data-dw-res-board-area>27.50</span> <span data-dw-unit-area>m²</span></span>
+          </div>
+        </div>
+
+        <div class="dw-material-dashboard">
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-boards>12</span>
+            <span class="dw-mat-title">{t.resBoardsLabel}</span>
+            <span class="dw-mat-sub">{t.resBoardsUnit}</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-studs>11</span>
+            <span class="dw-mat-title">{t.resStudsLabel}</span>
+            <span class="dw-mat-sub">{t.resStudsUnit}</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-tracks>4</span>
+            <span class="dw-mat-title">{t.resTracksLabel}</span>
+            <span class="dw-mat-sub">{t.resTracksUnit}</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-dw-screws>375</span>
+            <span class="dw-mat-title">{t.resDrywallScrewsLabel}</span>
+            <span class="dw-mat-sub">{t.resDrywallScrewsUnit}</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-frame-screws>44</span>
+            <span class="dw-mat-title">{t.resFramingScrewsLabel}</span>
+            <span class="dw-mat-sub">{t.resFramingScrewsUnit}</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-tape>42</span>
+            <span class="dw-mat-title">{t.resJointTapeLabel}</span>
+            <span class="dw-mat-sub" data-dw-res-tape-unit>m</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-compound>22</span>
+            <span class="dw-mat-title">{t.resJointCompoundLabel}</span>
+            <span class="dw-mat-sub" data-dw-res-compound-unit>kg</span>
+          </div>
+
+          <div class="dw-mat-card">
+            <span class="dw-mat-num" data-dw-res-band>15</span>
+            <span class="dw-mat-title">{t.resAcousticBandLabel}</span>
+            <span class="dw-mat-sub" data-dw-res-band-unit>m</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  import { calculateDrywall } from './logic';
+  import type { DrywallInput } from './ui';
+
+  function bindBtn(root: Element, sel: string, fn: (el: HTMLElement) => void) {
+    root.querySelectorAll(sel).forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        root.querySelectorAll(sel).forEach((b) => b.classList.remove('dw-active'));
+        const target = e.currentTarget as HTMLElement;
+        target.classList.add('dw-active');
+        fn(target);
+      });
+    });
+  }
+
+  function getFormValues(root: Element, s: Record<string, unknown>): DrywallInput {
+    const len = root.querySelector('[data-dw-length]') as HTMLInputElement;
+    const hgt = root.querySelector('[data-dw-height]') as HTMLInputElement;
+    const wst = root.querySelector('[data-dw-waste]') as HTMLInputElement;
+    return {
+      unitSystem: s.unit as 'metric' | 'imperial',
+      length: parseFloat(len?.value || '0'),
+      height: parseFloat(hgt?.value || '0'),
+      studSpacingCm: s.spacing as 40 | 60,
+      layers: s.layers as 1 | 2,
+      doubleSided: s.doubleSided as boolean,
+      boardType: s.type as 'standard' | 'moisture' | 'fire' | 'acoustic',
+      wastePercentage: parseFloat(wst?.value || '0'),
+    };
+  }
+
+  function updateVisuals(root: Element, count: number, view: string, boardType: string) {
+    const studsVis = root.querySelector('[data-dw-studs-visual]');
+    const overlay = root.querySelector('[data-dw-boards-overlay]') as HTMLElement | null;
+    if (studsVis) {
+      studsVis.innerHTML = '';
+      const cnt = Math.min(24, Math.max(3, count));
+      for (let i = 0; i < cnt; i++) {
+        const d = document.createElement('div');
+        d.className = 'dw-cad-stud-element';
+        studsVis.appendChild(d);
+      }
+    }
+    if (overlay) {
+      overlay.style.display = view === 'board' ? 'grid' : 'none';
+      const colors: Record<string, string> = { standard: '#fef3c7', moisture: '#dcfce7', fire: '#ffe4e6', acoustic: '#dbeafe' };
+      overlay.querySelectorAll('.dw-cad-board-panel').forEach((p) => {
+        (p as HTMLElement).style.background = colors[boardType] || '#fef3c7';
+      });
+    }
+  }
+
+  function getSpacingText(root: Element, key: string, fallback: string): string {
+    return root.getAttribute(key) || fallback;
+  }
+
+  function updateSpacingButtons(root: Element, isImp: boolean) {
+    const sp60 = root.querySelector('[data-dw-spacing-btn="60"]');
+    const sp40 = root.querySelector('[data-dw-spacing-btn="40"]');
+    if (sp60) {
+      sp60.textContent = getSpacingText(root, isImp ? 'data-dw-txt-sp60-imperial' : 'data-dw-txt-sp60-metric', isImp ? '24 in' : '60 cm');
+    }
+    if (sp40) {
+      sp40.textContent = getSpacingText(root, isImp ? 'data-dw-txt-sp40-imperial' : 'data-dw-txt-sp40-metric', isImp ? '16 in' : '40 cm');
+    }
+  }
+
+  function updateUnitsDOM(root: Element, isImp: boolean) {
+    updateSpacingButtons(root, isImp);
+    root.querySelectorAll('[data-dw-unit-len], [data-dw-unit-height]').forEach((el) => { el.textContent = isImp ? 'ft' : 'm'; });
+    root.querySelectorAll('[data-dw-unit-area]').forEach((el) => { el.textContent = isImp ? 'sq ft' : 'm²'; });
+  }
+
+  function renderTakeoff(root: Element, s: Record<string, unknown>) {
+    const isImp = s.unit === 'imperial';
+    const res = calculateDrywall(getFormValues(root, s));
+    const setT = (sel: string, val: string | number) => {
+      const el = root.querySelector(sel);
+      if (el) el.textContent = String(val);
+    };
+
+    setT('[data-dw-res-wall-area]', res.wallArea.toFixed(2));
+    setT('[data-dw-res-board-area]', res.totalBoardArea.toFixed(2));
+    setT('[data-dw-res-boards]', res.drywallBoards);
+    setT('[data-dw-res-studs]', res.studsCount);
+    setT('[data-dw-res-tracks]', res.tracksStandardLengths);
+    setT('[data-dw-res-dw-screws]', res.drywallScrews);
+    setT('[data-dw-res-frame-screws]', res.framingScrews);
+    setT('[data-dw-res-tape]', res.jointTapeLength);
+    setT('[data-dw-res-compound]', res.jointCompoundWeight);
+    setT('[data-dw-res-band]', res.acousticBandLength);
+
+    updateUnitsDOM(root, isImp);
+
+    setT('[data-dw-res-tape-unit]', isImp ? 'ft' : 'm');
+    setT('[data-dw-res-compound-unit]', isImp ? 'lb' : 'kg');
+    setT('[data-dw-res-band-unit]', isImp ? 'ft' : 'm');
+
+    updateVisuals(root, res.studsCount, String(s.view), String(s.type));
+  }
+
+  function attachListeners(root: Element, s: Record<string, unknown>) {
+    const lenInp = root.querySelector('[data-dw-length]') as HTMLInputElement;
+    const hgtInp = root.querySelector('[data-dw-height]') as HTMLInputElement;
+    const wstInp = root.querySelector('[data-dw-waste]') as HTMLInputElement;
+
+    [lenInp, hgtInp, wstInp].forEach((el) => el?.addEventListener('input', () => renderTakeoff(root, s)));
+
+    bindBtn(root, '[data-dw-unit]', (el) => {
+      const prev = s.unit;
+      s.unit = el.dataset.dwUnit || 'metric';
+      if (prev !== s.unit) {
+        const factor = s.unit === 'imperial' ? 3.28084 : 0.3048;
+        lenInp.value = (parseFloat(lenInp.value || '5') * factor).toFixed(1);
+        hgtInp.value = (parseFloat(hgtInp.value || '2.5') * factor).toFixed(1);
+      }
+      renderTakeoff(root, s);
+    });
+
+    bindBtn(root, '[data-dw-spacing]', (el) => { s.spacing = parseInt(el.dataset.dwSpacing || '60', 10); renderTakeoff(root, s); });
+    bindBtn(root, '[data-dw-type]', (el) => { s.type = el.dataset.dwType || 'standard'; renderTakeoff(root, s); });
+    bindBtn(root, '[data-dw-layers]', (el) => { s.layers = parseInt(el.dataset.dwLayers || '1', 10); renderTakeoff(root, s); });
+    bindBtn(root, '[data-dw-sides]', (el) => { s.doubleSided = el.dataset.dwSides === 'double'; renderTakeoff(root, s); });
+    bindBtn(root, '[data-dw-view]', (el) => { s.view = el.dataset.dwView || 'board'; renderTakeoff(root, s); });
+  }
+
+  function initDrywallCalculator(root: Element) {
+    const state: Record<string, unknown> = {
+      unit: 'metric',
+      spacing: 60,
+      layers: 1,
+      doubleSided: true,
+      type: 'standard',
+      view: 'board',
+    };
+    attachListeners(root, state);
+    renderTakeoff(root, state);
+  }
+
+  document.querySelectorAll('[data-dw-root]').forEach(initDrywallCalculator);
+</script>
