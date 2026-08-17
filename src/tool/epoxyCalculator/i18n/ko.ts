@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: '중요 온도', html: '<p>항상 <strong>21°C에서 25°C</strong> 사이에서 작업하세요. 추위는 반응을 멈추게 하여 결과물을 탁하게 만들 수 있습니다. 과도한 열은 방열 반응을 위험할 정도로 가속화합니다(플래시 큐어).</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: '더블 컵 기법', html: '<p>한 번의 혼합을 너무 믿지 마세요. 벽면과 바닥을 잘 긁어낸 뒤 혼합물을 <strong>두 번째 깨끗한 컵</strong>에 옮겨 닮아 다시 섞어주세요. 이렇게 하면 촉매가 섞이지 않은 재료가 남지 않습니다.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },],
   ui: {
     shapeRect: '직사각형',
     shapeCylinder: '원기둥',

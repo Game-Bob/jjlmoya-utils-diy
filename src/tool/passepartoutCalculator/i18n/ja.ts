@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: '幾何学的中心の視覚的錯覚', html: '<p>人間の目は、垂直方向の幾何学的中心を実際よりもわずかに低い位置にあると知覚する傾向があります。作品を正確な中央に額装すると、下に「落ちて」見えることがあります。</p><p><strong>ボトムウェイティング</strong>は、下のマージンをわずかに大きく残すことでこの錯覚を補正し、作品を視覚的に持ち上げて完璧な中央に見えるようにします。</p>' },
     { type: 'title', text: 'マット紙の保存素材', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: '保存用の中性紙・アシッドフリーボード', html: '<p>ボードを選ぶ際は、必ず<strong>「Acid-Free（アシッドフリー）」</strong>や<strong>「Museum Quality（ミュージアムクオリティ）」</strong>という言葉を探してください。安価な木材パルプのボードは時間が経つと黄変し、作品を台無しにする酸を放出する可能性があります。</p>' },
-  ],
+
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },
+  { type: 'paragraph', html: "結果は計画や条件比較に使えますが、公式計算や専門家の助言の代わりにはなりません。" },
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },],
   ui: {
     sectionTitle: '寸法',
     sectionDesc: '寸法をセンチメートルで入力してください。',

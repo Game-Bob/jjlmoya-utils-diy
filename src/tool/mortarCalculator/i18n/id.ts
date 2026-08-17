@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'Kualitas mortir kapur sangat bergantung pada granulometri agregat. Untuk <strong>Trullissatio</strong> (plester dasar), digunakan pasir sungai kasar 2-5 mm. Untuk <strong>Arenato</strong> (plester menengah), pasir sedang dicuci 0,5-2 mm. Untuk <strong>Marmorato</strong> (acian halus), bubuk marmer kurang dari 0,5 mm.' },
     { type: 'title', text: 'Misteri Ikatan Mekanis', level: 3 },
     { type: 'paragraph', html: 'Ikatan ini bukan kimia, melainkan <strong>mekanis</strong>. Bayangkan jutaan akar mikroskopis. Mortir harus menembus ke dalam pori-pori bata untuk menciptakan "kunci" fisik. Tanpa porositas, tidak ada jangkar.' },
-  ],
+
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },],
   ui: {
     leftTitle: 'Sistem Vitruvius',
     centerTitle: 'Bahan Tersedia',

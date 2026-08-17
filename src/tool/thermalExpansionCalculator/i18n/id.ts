@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>Pemuaian panas</strong> adalah proses fisik di mana suatu material bertambah panjang sebagai respons terhadap kenaikan suhunya. Pada tingkat mikroskopis, partikel bergetar dengan lebih banyak energi dan membutuhkan ruang rata-rata yang lebih besar antar partikel. Dalam konstruksi, fenomena ini adalah kekuatan yang dapat merusak beton, merusak balok baja, dan membengkokkan rel kereta api.' },
     { type: 'title', text: 'Rumus Pemuaian Linier', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Rumus Pemuaian Linier', html: '<p>Ekspansi dari suatu elemen struktural dihitung dengan: <code>ΔL = L₀ · α · ΔT</code>. Di mana <strong>ΔL</strong> adalah total pemuaian, <strong>L₀</strong> adalah panjang asli, <strong>α</strong> adalah koefisien ekspansi material (dalam °C⁻¹), dan <strong>ΔT</strong> adalah perbedaan suhu.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },],
   ui: {
     configTitle: 'Konfigurasi',
     labelMaterial: 'Material',

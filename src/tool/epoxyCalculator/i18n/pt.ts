@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Temperatura Vital', html: '<p>Trabalhe sempre entre <strong>21°C e 25°C</strong>. O frio pode parar a reação, deixando a peça turva. O calor excessivo acelera a reação exotérmica perigosamente ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Técnica do Copo Duplo', html: '<p>Não confie numa única mistura. Raspe bem os lados e o fundo, verta a mistura num <strong>segundo copo limpo</strong> e volte a misturar. Isto assegura que não resta material sem catalisar.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },],
   ui: {
     shapeRect: 'Retangular',
     shapeCylinder: 'Cilíndrico',

@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>Thermische expansie</strong> is het fysieke proces waarbij een materiaal langer wordt als reactie op een temperatuurstijging. In de bouw is dit fenomeen geen curiositeit: het is een kracht die beton kan breken, stalen balken kan vervormen en treinrails kan doen verbuigen.' },
     { type: 'title', text: 'De Formule voor Lineaire Uitzetting', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Formule voor Lineaire Uitzetting', html: '<p>De uitzetting van een structureel element wordt berekend met: <code>ΔL = L₀ · α · ΔT</code>. Waar <strong>ΔL</strong> de totale groei is, <strong>L₀</strong> de oorspronkelijke lengte, <strong>α</strong> de uitzettingscoëfficiënt van het materiaal (in °C⁻¹) en <strong>ΔT</strong> het temperatuurverschil.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },],
   ui: {
     configTitle: 'Configuratie',
     labelMaterial: 'Materiaal',

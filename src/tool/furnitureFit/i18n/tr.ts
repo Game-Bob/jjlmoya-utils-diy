@@ -85,7 +85,8 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'card', icon: 'mdi:sofa', title: 'Manevra Payı', html: '<p>Mobilya 80 cm ve boşluk 80 cm ise geçeceğini varsaymak yaygın bir hatadır. Öyle değildir. Taşıyıcıların elleri, kumaşın esnekliği ve duvarlardaki kusurlar en az <strong>2 ila 5 cm</strong> pay gerektirir. Bu pay olmadan mobilya çizilir veya baskı nedeniyle sıkışıp kalır.</p>' },
     { type: 'title', text: 'Taşınmayı Mahveden 3 Hata', level: 3 },
     { type: 'paragraph', html: 'Doğru ölçümlerle bile bu görünmez faktörler felaketlere yol açar: <strong>Tavan Lambası</strong> - diyagonal dönüş sırasında unutulur; <strong>Mobilya Dönüş Yarıçapı</strong> - sert mobilyalar bükülmez; <strong>Paketleme</strong> - balonlu naylon her iki tarafa da 1-3 cm ekleyebilir.' },
-  ],
+
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },],
   ui: {
     conTitle: 'Alan Boyutları',
     conHint: 'Örn: Standart asansör, kapı kasası veya kamyonet.',

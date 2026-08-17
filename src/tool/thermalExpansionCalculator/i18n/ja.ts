@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>熱膨張</strong>とは、温度の上昇に伴って材料の長さが増加する物理的なプロセスです。微視的なレベルでは、粒子がより大きなエネルギーで振動し、粒子間の平均的なスペースがより多く必要になります。建設において、この現象はコンクリートを破壊し、鋼梁を変形させ、鉄道のレールを歪ませる力となります。' },
     { type: 'title', text: '線膨張の公式', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: '線膨張の計算式', html: '<p>構造部材の膨張は次のように計算されます：<code>ΔL = L₀ · α · ΔT</code>。ここで、<strong>ΔL</strong>は総増加量、<strong>L₀</strong>は元の長さ、<strong>α</strong>は材料の膨張係数（単位：℃⁻¹）、<strong>ΔT</strong>は温度差です。この公式は、橋や屋根、外壁の伸縮継手設計の基本となります。</p>' },
-  ],
+
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },
+  { type: 'paragraph', html: "結果は計画や条件比較に使えますが、公式計算や専門家の助言の代わりにはなりません。" },
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },
+  { type: 'paragraph', html: "結果は計画や条件比較に使えますが、公式計算や専門家の助言の代わりにはなりません。" },
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },],
   ui: {
     configTitle: '設定',
     labelMaterial: '材料',

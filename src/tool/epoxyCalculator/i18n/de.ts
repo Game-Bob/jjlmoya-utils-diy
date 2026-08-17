@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Überlebenswichtige Temperatur', html: '<p>Arbeiten Sie immer zwischen <strong>21°C und 25°C</strong>. Kälte kann die Reaktion stoppen und das Teil trüb machen. Übermäßige Hitze beschleunigt die exotherme Reaktion gefährlich ("Flash Cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Zwei Becher Methode', html: '<p>Vertrauen Sie nicht auf eine einzige Mischung. Kratzen Sie die Seiten und den Boden gut ab, gießen Sie die Mischung in einen <strong>zweiten sauberen Becher</strong> und mischen Sie erneut. Dies stellt sicher, dass kein unkatalysiertes Material zurückbleibt.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },],
   ui: {
     shapeRect: 'Rechteckig',
     shapeCylinder: 'Zylindrisch',

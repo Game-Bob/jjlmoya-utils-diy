@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Se stai allestendo un camper, progettando un impianto solare o tirando cavi nel giardino, c\'è un nemico invisibile: la <strong>caduta di tensione</strong>. Non è solo un fatto tecnico; è la differenza tra un frigo che raffredda e uno che si spegne, o tra un impianto sicuro e un rischio incendio.' },
     { type: 'title', text: 'La Formula della Caduta di Tensione', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Calcolo Esatto con la Legge di Ohm', html: '<p>La formula è <strong>ΔV = (2 × L × I × ρ) / S</strong>, dove L è la lunghezza di andata, I la corrente, ρ la resistività (0,0178 per il rame) e S la sezione del cavo.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },],
   ui: {
     heroDropLabel: 'Caduta di Tensione Totale',
     heroVoltsUnit: 'Volt',

@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Untuk pelaksanaan profesional, penting untuk mempertimbangkan pelat beton. Mengabaikan volume ini akan menghasilkan pemesanan beton yang tidak mencukupi. Kalkulator mengintegrasikan perhitungan ini secara otomatis.' },
     { type: 'title', text: 'Kesalahan Kumulatif dalam Pengukuran', level: 3 },
     { type: 'paragraph', html: 'Dalam konstruksi, musuh terbesar adalah kesalahan milimeter. Jika Anda mengukur setiap anak tangga secara terpisah, total kesalahan kecil dapat membuat anak tangga terakhir jauh lebih tinggi atau lebih rendah dari yang pertama.' },
-  ],
+
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },],
   ui: {
     labelGeometry: 'Geometri dan Ruang',
     labelTotalHeight: 'Tinggi Total (H)',

@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'De optische illusie van het geometrische midden', html: '<p>Het menselijk oog heeft de neiging om het verticale geometrische midden iets lager waar te nemen dan het in werkelijkheid is. Als je een werk exact in het midden inlijst, lijkt het alsof het "naar beneden valt".</p><p><strong>Bottom Weighting</strong> corrigeert deze illusie door de onderste marge iets groter te maken, waardoor het werk visueel wordt opgetild zodat het perfect gecentreerd lijkt.</p>' },
     { type: 'title', text: 'Conserveringsmaterialen voor Passepartouts', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Zuurvrij karton voor conservering', html: '<p>Zoek bij het kiezen van je karton altijd naar termen als <strong>"Acid-Free"</strong> of <strong>"Museum Quality"</strong>. Goedkoop karton van houtpulp kan na verloop van tijd vergelen en zuren afgeven die je kunstwerk "verbranden" (foxing), waardoor het onherstelbaar beschadigd raakt.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },],
   ui: {
     sectionTitle: 'Afmetingen',
     sectionDesc: 'Voer de maten in centimeters in.',

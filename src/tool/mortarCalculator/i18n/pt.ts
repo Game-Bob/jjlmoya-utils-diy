@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'A qualidade de uma argamassa de cal depende em grande medida da granulometria do árido. Para o <strong>Trullissatio</strong> (emboço base), usa-se areia grossa de rio de 2-5 mm. Para o <strong>Arenato</strong> (camada intermédia), areia média lavada de 0,5-2 mm. Para o <strong>Marmorato</strong> (acabamento fino), pó de mármore menor de 0,5 mm.' },
     { type: 'title', text: 'O Mistério da Aderência Mecânica', level: 3 },
     { type: 'paragraph', html: 'A aderência não é química, é <strong>mecânica</strong>. Imagine milhões de raízes microscópicas. A argamassa deve penetrar nos poros do tijolo para criar uma "chave" física. Sem porosidade, não há ancoragem.' },
-  ],
+
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },],
   ui: {
     leftTitle: 'Sistema Vitruviano',
     centerTitle: 'Materiais Disponíveis',

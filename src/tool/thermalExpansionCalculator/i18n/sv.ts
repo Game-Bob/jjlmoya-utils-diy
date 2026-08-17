@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>Termisk expansion</strong> är den fysikaliska process där ett material ökar sin längd som svar på en ökning av dess temperatur. I konstruktionsvärlden är detta en kraft som kan spräcka betong, deformera stålbalkar och böja tågräls.' },
     { type: 'title', text: 'Formeln för linjär expansion', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Formel för linjär expansion', html: '<p>Expansionen av ett strukturelement beräknas med: <code>ΔL = L₀ · α · ΔT</code>. Där <strong>ΔL</strong> är den totala tillväxten, <strong>L₀</strong> är den ursprungliga längden, <strong>α</strong> är materialets utvidgningskoefficient (i °C⁻¹) och <strong>ΔT</strong> är temperaturskillnaden.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },],
   ui: {
     configTitle: 'Konfiguration',
     labelMaterial: 'Material',

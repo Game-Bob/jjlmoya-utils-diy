@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: '車中泊仕様のバンを製作したり、ソーラー設置を設計したり、庭に照明を引いたりする場合、あなたのプロジェクトを台無しにする可能性のある見えない敵がいます。それが<strong>電圧降下</strong>です。これは単なる技術的な問題ではありません。冷蔵庫が冷えるか止まってしまうか、安全な設置か火災のリスクかの違いです。' },
     { type: 'title', text: '電圧降下の計算式', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'オームの法則による正確な計算', html: '<p>式は <strong>ΔV = (2 × L × I × ρ) / S</strong> です。ここで L は片道の長さ、I は電流、ρ は抵抗率（銅は 0.0178）、S は断面積です。2をかけるのは電気が往復するためです。</p>' },
-  ],
+
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },
+  { type: 'paragraph', html: "結果は計画や条件比較に使えますが、公式計算や専門家の助言の代わりにはなりません。" },
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },
+  { type: 'paragraph', html: "結果は計画や条件比較に使えますが、公式計算や専門家の助言の代わりにはなりません。" },
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },],
   ui: {
     heroDropLabel: '総電圧降下',
     heroVoltsUnit: 'ボルト',

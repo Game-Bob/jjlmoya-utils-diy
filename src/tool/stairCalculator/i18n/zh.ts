@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: '对于专业施工，考虑混凝土斜板（支撑台阶的斜面）至关重要。忽略这部分体积会导致混凝土订购不足。计算器已自动整合此项计算。' },
     { type: 'title', text: '放样与累积误差', level: 3 },
     { type: 'paragraph', html: '在建筑施工中，最大的敌人是毫米级的误差。如果分开测量每个台阶，微小误差的累积可能会导致最后一步比第一步高或低 5 厘米。' },
-  ],
+
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },],
   ui: {
     labelGeometry: '几何形状与空间',
     labelTotalHeight: '总落差 (H)',

@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'L\'illusione ottica del centro geometrico', html: '<p>L\'occhio umano tende a percepire il centro verticale geometrico come se fosse leggermente più basso di quanto sia in realtà. Se incornici un\'opera esattamente al centro, sembrerà che stia "cadendo".</p><p>Il <strong>Bottom Weighting</strong> corregge questa illusione lasciando un margine inferiore leggermente maggiore, elevando l\'opera visivamente affinché appaia perfettamente centrata.</p>' },
     { type: 'title', text: 'Materiali di Conservazione per Passepartout', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Il cartone privo di acido per la conservazione', html: '<p>Scegliendo il tuo cartone, cerca sempre termini come <strong>"Acid-Free"</strong> o <strong>"Museum Quality"</strong>. I cartoncini economici di pasta di legno possono ingiallire nel tempo e rilasciare acidi che bruceranno la tua opera d\'arte, rovinandola irreversibilmente.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },],
   ui: {
     sectionTitle: 'Dimensioni',
     sectionDesc: 'Inserisci le misure in centimetri.',

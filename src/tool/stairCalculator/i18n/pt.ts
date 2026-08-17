@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Para uma execução profissional, é vital considerar a laje de betão. Ignorar este volume resultaria num pedido de betão insuficiente. A calculadora integra automaticamente este cálculo.' },
     { type: 'title', text: 'Marcação e Erro Acumulado', level: 3 },
     { type: 'paragraph', html: 'Na construção, o maior inimigo é o erro milimétrico. Se medir cada degrau separadamente, a soma de pequenos erros pode deixar o último degrau 5 cm mais alto ou mais baixo que o primeiro.' },
-  ],
+
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },],
   ui: {
     labelGeometry: 'Geometria e Espaço',
     labelTotalHeight: 'Desnível Total (H)',

@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'Den optiska illusionen av det geometriska centrumet', html: '<p>Det mänskliga ögat tenderar att uppfatta det vertikala geometriska centrumet som något lägre än det faktiskt är. Om du ramar in ett verk exakt i mitten ser det ut som om det "sjunker".</p><p><strong>Bottom Weighting</strong> korrigerar denna illusion genom att lämna en något större nedre marginal, vilket lyfter verket visuellt så att det ser perfekt centrerat ut.</p>' },
     { type: 'title', text: 'Konserveringsmaterial för passepartouter', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Syrafri kartong för konservering', html: '<p>När du väljer kartong ska du alltid leta efter termer som <strong>"Acid-Free"</strong> eller <strong>"Museum Quality"</strong>. Billig kartong av trämassa kan gulna med tiden och frigöra syror som "bränner" ditt konstverk (foxing), vilket förstör det oåterkalleligt.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },],
   ui: {
     sectionTitle: 'Dimensioner',
     sectionDesc: 'Ange måtten i centimeter.',

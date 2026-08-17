@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: '如果您正在改装房车、设计太阳能系统或在花园里铺设电缆，有一个不可见的敌人可能会破坏您的项目：<strong>电压降</strong>。这不仅是一个技术问题；它关系到冰箱是能正常工作还是会自动断电，也关系到安装的系统是安全的还是存在火灾隐患。' },
     { type: 'title', text: '电压降计算公式', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: '基于欧姆定律的精确计算', html: '<p>公式为 <strong>ΔV = (2 × L × I × ρ) / S</strong>，其中 L 是单程长度，I 是电流，ρ 是电阻率（铜为 0.0178），S 是电缆截面积。乘以 2 是因为电流需要流经回路（来回）。</p>' },
-  ],
+
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },],
   ui: {
     heroDropLabel: '总电压降',
     heroVoltsUnit: '伏特',

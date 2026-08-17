@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: '关键温度', html: '<p>始终在 <strong>21°C 至 25°C</strong> 之间操作。寒冷会中止反应，使作品变得混浊。热量过高会危险地加速放热反应（爆聚）。</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: '双杯混合法', html: '<p>不要依赖单次混合。彻底刮净杯壁和杯底，将混合物倒入<strong>第二个干净的杯子</strong>中再次搅拌。这可以确保没有未反应的材料残留。</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },],
   ui: {
     shapeRect: '矩形',
     shapeCylinder: '圆柱形',

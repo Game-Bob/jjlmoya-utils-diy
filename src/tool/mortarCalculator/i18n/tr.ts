@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'Bir kireç harcının kalitesi büyük ölçüde agreganın tane boyutuna bağlıdır. <strong>Trullissatio</strong> (kaba sıva) için 2-5 mm kalın nehir kumu kullanılır. <strong>Arenato</strong> (ara katman) için 0,5-2 mm yıkanmış orta kum. <strong>Marmorato</strong> (ince sıva) için 0,5 mm\'den küçük mermer tozu kullanılır.' },
     { type: 'title', text: 'Mekanik Tutunma Gizemi', level: 3 },
     { type: 'paragraph', html: 'Tutunma kimyasal değil, <strong>mekaniktir</strong>. Milyonlarca mikroskobik kök hayal edin. Harç, fiziksel bir "anahtar" oluşturmak için tuğlanın gözeneklerine nüfuz etmelidir. Gözeneklilik yoksa tutunma da yoktur.' },
-  ],
+
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },],
   ui: {
     leftTitle: 'Vitruvius Sistemi',
     centerTitle: 'Mevcut Malzemeler',

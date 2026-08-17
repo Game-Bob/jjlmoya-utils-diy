@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Vitale Temperatuur', html: '<p>Werk altijd tussen de <strong>21°C en 25°C</strong>. Kou kan de reactie stoppen, waardoor het werkstuk troebel wordt. Overmatige hitte versnelt de exotherme reactie gevaarlijk ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Dubbele Beker Techniek', html: '<p>Vertrouw niet op één enkele menging. Schraap de zijkanten en bodem goed af, giet het mengsel in een <strong>tweede schone beker</strong> en meng opnieuw. Dit zorgt ervoor dat er geen ongekatalyseerd materiaal achterblijft.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },],
   ui: {
     shapeRect: 'Rechthoekig',
     shapeCylinder: 'Cilindrisch',

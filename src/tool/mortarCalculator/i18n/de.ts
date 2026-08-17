@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'Die Qualität eines Kalkmörtels hängt maßgeblich von der Korngröße des Zuschlags ab. Für das <strong>Trullissatio</strong> (Grundputz) wird grober Flusssand von 2-5 mm verwendet. Für das <strong>Arenato</strong> (Zwischenputz) gewaschener Mittelsand von 0,5-2 mm. Für das <strong>Marmorato</strong> (Feinputz) Marmormehl unter 0,5 mm.' },
     { type: 'title', text: 'Der Reiz der mechanischen Haftung', level: 3 },
     { type: 'paragraph', html: 'Die Haftung ist nicht chemisch, sondern <strong>mechanisch</strong>. Stellen Sie sich Millionen mikroskopisch kleiner Wurzeln vor. Der Mörtel muss in die Poren des Ziegels eindringen, um eine physikalische "Verzahnung" zu schaffen. Ohne Porosität gibt es keine Verankerung.' },
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },
+  { type: 'paragraph', html: "Prüfen Sie Eingaben, Einheiten, Rundung, Datum und Recht, weil jedes Element die Schätzung verändern kann." },
+  { type: 'paragraph', html: "Nutzen Sie das Ergebnis zur Planung und zum Szenarienvergleich; es ersetzt keine offizielle Berechnung oder Fachberatung." },
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },],
   ui: {
     leftTitle: 'Vitruvianisches System',
     centerTitle: 'Verfügbare Materialien',

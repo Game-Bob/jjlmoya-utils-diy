@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: '캠핑카를 제작하거나, 태양광 설비를 설계하거나, 정원에 조명을 설치할 때 당신의 프로젝트를 망칠 수 있는 보이지 않는 적이 있습니다. 바로 <strong>전압 강하</strong>입니다. 이는 단순한 기술적 문제가 아닙니다. 냉장고가 제대로 작동하느냐 꺼지느냐, 혹은 안전한 설치냐 화재 위험이냐의 차이입니다.' },
     { type: 'title', text: '전압 강하 계산 공식', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: '옴의 법칙을 통한 정확한 계산', html: '<p>공식은 <strong>ΔV = (2 × L × I × ρ) / S</strong>입니다. 여기서 L은 편도 길이, I는 전류, ρ는 비저항(구리는 0.0178), S는 단면적입니다. 2를 곱하는 이유는 전기가 왕복하기 때문입니다.</p>' },
-  ],
+
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },],
   ui: {
     heroDropLabel: '총 전압 강하',
     heroVoltsUnit: '볼트',

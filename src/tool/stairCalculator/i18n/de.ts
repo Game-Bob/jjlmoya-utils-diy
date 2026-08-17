@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Für eine professionelle Ausführung ist es wichtig, die Betonlaufplatte zu berücksichtigen. Ein Ignorieren dieses Volumens führt zu Fehlbestellungen beim Beton. Der Rechner integriert diese Berechnung automatisch.' },
     { type: 'title', text: 'Vermeidung kumulierter Fehler', level: 3 },
     { type: 'paragraph', html: 'Im Bauwesen ist der Millimeterfehler der größte Feind. Wenn Sie jede Stufe einzeln messen, können sich kleine Fehler so summieren, dass die letzte Stufe 5 cm höher oder niedriger als die erste ist.' },
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },
+  { type: 'paragraph', html: "Prüfen Sie Eingaben, Einheiten, Rundung, Datum und Recht, weil jedes Element die Schätzung verändern kann." },],
   ui: {
     labelGeometry: 'Geometrie und Platzbedarf',
     labelTotalHeight: 'Gesamthöhe (H)',

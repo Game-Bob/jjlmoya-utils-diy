@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Of je nu een camper bouwt, een zonnesysteem ontwerpt of kabels trekt voor je tuin, er is een onzichtbare vijand: <strong>spanningsverlies</strong>. Dit is niet alleen een technisch dingetje; het is het verschil tussen een koelkast die koelt en een die uitgaat, of tussen een veilige installatie en een brandrisico.' },
     { type: 'title', text: 'De Formule voor Spanningsverlies', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Nauwkeurige Berekening met de Wet van Ohm', html: '<p>De formule is <strong>ΔV = (2 × L × I × ρ) / S</strong>, waarbij L de enkele lengte is, I de stroom, ρ de resistiviteit (0,0178 voor koper) en S de kabeldoorsnede.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },],
   ui: {
     heroDropLabel: 'Totaal Spanningsverlies',
     heroVoltsUnit: 'Volt',

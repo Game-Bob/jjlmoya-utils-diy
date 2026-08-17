@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Do profesjonalnego wykonania niezbędne jest uwzględnienie płyty betonowej. Zignorowanie tej objętości skutkowałoby niedoborem betonu i wadliwym wykonaniem. Kalkulator automatycznie integruje te obliczenia.' },
     { type: 'title', text: 'Tyczenie i Błąd Skumulowany', level: 3 },
     { type: 'paragraph', html: 'W budownictwie największym wrogiem jest błąd milimetrowy. Jeśli mierzysz każdy stopień oddzielnie, suma małych błędów może sprawić, że ostatni stopień będzie o 5 cm wyższy lub niższy od pierwszego.' },
-  ],
+
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },],
   ui: {
     labelGeometry: 'Geometria i Miejsce',
     labelTotalHeight: 'Wysokość całkowita (H)',

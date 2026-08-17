@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'La qualità di una malta di calce dipende in gran parte dalla granulometria dell\'inerte. Per il <strong>Trullissatio</strong> (rinzaffo), si usa sabbia grossa di fiume da 2-5 mm. Per l\'<strong>Arenato</strong> (arriccio), sabbia media lavata da 0,5-2 mm. Per il <strong>Marmorato</strong> (lastra fine), polvere di marmo minore di 0,5 mm.' },
     { type: 'title', text: 'Il Mistero della Presa Meccanica', level: 3 },
     { type: 'paragraph', html: 'L\'aggancio non è chimico, è <strong>meccanico</strong>. Immagina milioni di radici microscopiche. La malta deve penetrare nei pori del mattone per creare una "chiave" fisica. Senza porosità, non c\'è ancoraggio.' },
-  ],
+
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },],
   ui: {
     leftTitle: 'Sistema Vitruviano',
     centerTitle: 'Materiali Disponibili',

@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Per un\'esecuzione professionale, è vitale considerare la soletta di calcestruzzo. Ignorare questo volume risulterebbe in un ordine di materiale insufficiente. Il calcolatore integra automaticamente questo calcolo.' },
     { type: 'title', text: 'Tracciamento e Errore Accumulato', level: 3 },
     { type: 'paragraph', html: 'In costruzione, il peggior nemico è l\'errore millimetrico. Se misuri ogni gradino separatamente, la somma di piccoli errori può lasciare l\'ultimo gradino 5 cm più alto o più basso del previsto.' },
-  ],
+
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },],
   ui: {
     labelGeometry: 'Geometria e Ingombro',
     labelTotalHeight: 'Dislivello Totale (H)',

@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: '기하학적 중심의 시각적 착시', html: '<p>사람의 눈은 수직 기하학적 중심을 실제보다 약간 낮은 위치에 있는 것으로 인식하는 경향이 있습니다. 작품을 정확한 중앙에 배치하면 아래로 처져 보일 수 있습니다.</p><p><strong>보텀 웨이팅</strong>은 하단 여백을 약간 더 크게 두어 이 착시를 보정함으로써, 작품을 시각적으로 들어 올려 완벽한 중앙에 있는 것처럼 보이게 합니다.</p>' },
     { type: 'title', text: '보존용 매트지 소재', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: '보존용 무산성 보드', html: '<p>보드를 선택할 때는 항상 <strong>"Acid-Free"</strong> 또는 <strong>"Museum Quality"</strong>라는 용어를 확인하세요. 저렴한 목재 펄프 보드는 시간이 지나면 황변하고 산성을 방출하여 작품을 영구적으로 손상시킬 수 있습니다.</p>' },
-  ],
+
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },],
   ui: {
     sectionTitle: '치수',
     sectionDesc: '치수를 센티미터 단위로 입력하세요.',

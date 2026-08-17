@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: '几何中心的视觉错觉', html: '<p>人类的眼睛往往会将垂直几何中心感知为比实际位置略低一点。如果您将作品完全放在正中心，它看起来会像是在"下坠"。</p><p><strong>底部加权</strong>通过多预留一点底部边距来修正这种错觉，从而在视觉上提升作品，使其看起来完美居中。</p>' },
     { type: 'title', text: '卡纸的保护材料', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: '用于保存的无酸卡纸', html: '<p>选择卡纸时，请始终寻找 <strong>"Acid-Free"</strong>（无酸）或 <strong>"Museum Quality"</strong>（博物馆品质）等术语。廉价的木浆卡纸会随时间变黄，并释放酸性物质，从而"烧坏"您的艺术品（产生狐斑），造成不可逆转的损坏。</p>' },
-  ],
+
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },],
   ui: {
     sectionTitle: '尺寸',
     sectionDesc: '以厘米为单位输入尺寸。',

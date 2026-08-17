@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Jika Anda sedang membangun sistem campervan, merancang instalasi solar, atau menarik kabel untuk taman, ada musuh tak terlihat yang bisa merusak proyek Anda: <strong>jatuh tegangan</strong>. Ini bukan sekadar masalah teknis; ini perbedaan antara kulkas yang dingin dan yang mati, atau antara instalasi aman dan risiko kebakaran.' },
     { type: 'title', text: 'Rumus Jatuh Tegangan', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Perhitungan Akurat dengan Hukum Ohm', html: '<p>Rumusnya adalah <strong>ΔV = (2 × L × I × ρ) / S</strong>, di mana L adalah panjang kabel satu arah, I adalah arus, ρ adalah resistivitas (0,0178 untuk tembaga), dan S adalah luas penampang kabel.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },],
   ui: {
     heroDropLabel: 'Total Jatuh Tegangan',
     heroVoltsUnit: 'Volt',

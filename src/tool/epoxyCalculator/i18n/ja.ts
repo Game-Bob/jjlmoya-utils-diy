@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: '重要な温度', html: '<p>常に <strong>21°C から 25°C</strong> の間で作業してください。寒さは反応を止め、作品を白濁させることがあります。過度の熱は放熱反応を危険なほど加速させます（フラッシュキュア）。</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'ダブルカップ法', html: '<p>一度の混合を過信しないでください。カップの側面と底をよく削り、混合物を<strong>2つ目の清潔なカップ</strong>に移して再度混ぜます。これにより、未反応の材料が残るのを防ぎます。</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },],
   ui: {
     shapeRect: '長方形',
     shapeCylinder: '円柱形',

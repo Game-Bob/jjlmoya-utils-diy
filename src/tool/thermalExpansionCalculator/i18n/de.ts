@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'card', icon: 'mdi:math-log', title: 'Formel für die lineare Ausdehnung', html: '<p>Die Ausdehnung eines Bauteils berechnet sich mit: <code>ΔL = L₀ · α · ΔT</code>. Dabei ist <strong>ΔL</strong> die Gesamtausdehnung, <strong>L₀</strong> die ursprüngliche Länge, <strong>α</strong> der Ausdehnungskoeffizient des Materials (in °C⁻¹) und <strong>ΔT</strong> die Temperaturdifferenz. Dies ist die Basis für das Design von Dehnungsfugen.</p>' },
     { type: 'title', text: 'Ausdehnungskoeffizienten nach Material', level: 3 },
     { type: 'card', icon: 'mdi:table', title: 'Tabelle gängiger Koeffizienten', html: '<p>Nicht alle Materialien dehnen sich gleich aus. <strong>Aluminium</strong> (23 ppm/°C) dehnt sich fast doppelt so stark aus wie <strong>Stahl</strong> (12 ppm/°C). <strong>Beton</strong> hat fast den gleichen Koeffizienten wie Stahl (12 ppm/°C), weshalb Stahlbeton stabil ist.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },
+  { type: 'paragraph', html: "Prüfen Sie Eingaben, Einheiten, Rundung, Datum und Recht, weil jedes Element die Schätzung verändern kann." },
+  { type: 'paragraph', html: "Nutzen Sie das Ergebnis zur Planung und zum Szenarienvergleich; es ersetzt keine offizielle Berechnung oder Fachberatung." },
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },],
   ui: {
     configTitle: 'Konfiguration',
     labelMaterial: 'Material',

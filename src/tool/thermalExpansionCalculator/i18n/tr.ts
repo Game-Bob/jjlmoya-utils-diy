@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>Termal genleşme</strong>, bir malzemenin sıcaklığındaki artışa yanıt olarak uzunluğunun artması fiziksel sürecidir. İnşaatta bu olay bir merak konusu değil; betonu kırabilen, çelik kirişleri deforme edebilen ve tren raylarını bükebilen bir kuvvettir.' },
     { type: 'title', text: 'Lineer Genleşme Formülü', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Lineer Genleşme Formülü', html: '<p>Yapısal bir elemanın genleşmesi şu şekilde hesaplanır: <code>ΔL = L₀ · α · ΔT</code>. Burada <strong>ΔL</strong> toplam uzama, <strong>L₀</strong> orijinal uzunluk, <strong>α</strong> malzemenin genleşme katsayısı (1/°C cinsinden) ve <strong>ΔT</strong> sıcaklık farkıdır.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },],
   ui: {
     configTitle: 'Konfigürasyon',
     labelMaterial: 'Malzeme',

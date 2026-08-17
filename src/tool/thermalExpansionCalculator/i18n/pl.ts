@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>Rozszerzalność cieplna</strong> to proces fizyczny, w którym materiał zwiększa swoją długość w odpowiedzi na wzrost temperatury. W budownictwie zjawisko to jest siłą, która może kruszyć beton, deformować stalowe belki i wyginać szyny kolejowe.' },
     { type: 'title', text: 'Wzór na Rozszerzalność Liniową', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Wzór na Rozszerzalność Liniową', html: '<p>Rozszerzenie elementu strukturalnego oblicza się ze wzoru: <code>ΔL = L₀ · α · ΔT</code>. Gdzie <strong>ΔL</strong> to całkowity przyrost, <strong>L₀</strong> to długość początkowa, <strong>α</strong> to współczynnik rozszerzalności materiału (w °C⁻¹) a <strong>ΔT</strong> to różnica temperatur.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },],
   ui: {
     configTitle: 'Konfiguracja',
     labelMaterial: 'Materiał',

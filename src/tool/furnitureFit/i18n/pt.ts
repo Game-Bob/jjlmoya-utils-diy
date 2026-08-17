@@ -85,7 +85,8 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'card', icon: 'mdi:sofa', title: 'Margem de Manobra', html: '<p>Um erro comum é assumir que se o móvel mede 80cm e o vão 80cm, passará. Não é assim. As mãos dos transportadores, a elasticidade do tecido e as imperfeições das paredes requerem uma margem mínima de <strong>2 a 5 cm</strong>. Sem esta margem, o móvel ficará riscado ou encravado por pressão.</p>' },
     { type: 'title', text: 'Os 3 Erros que Arruínam uma Mudança', level: 3 },
     { type: 'paragraph', html: 'Mesmo com medidas corretas, estes fatores invisíveis costumam causar desastres: <strong>O Candeeiro do Teto</strong> - esquecido durante a rotação diagonal. <strong>O Raio de Rotação do Móvel</strong> - um móvel rígido não se dobra. <strong>A Embalagem</strong> - o plástico de bolhas pode adicionar de 1 a 3 cm a cada lado.' },
-  ],
+
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },],
   ui: {
     conTitle: 'Dimensões do Espaço',
     conHint: 'Ex: Elevador padrão, ombreira de porta ou furgão.',

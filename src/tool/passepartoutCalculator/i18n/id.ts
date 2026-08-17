@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'Ilusi optik pusat geometris', html: '<p>Mata manusia cenderung melihat pusat vertikal geometris seolah-olah sedikit lebih rendah dari yang sebenarnya. Jika Anda membingkai karya tepat di tengah, karya akan tampak "turun".</p><p><strong>Bottom Weighting</strong> mengoreksi ilusi ini dengan menyisakan margin bawah yang sedikit lebih besar, mengangkat karya secara visual agar tampak terpusat dengan sempurna.</p>' },
     { type: 'title', text: 'Bahan Pengawetan untuk Passepartout', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Karton bebas asam untuk pengawetan', html: '<p>Saat memilih karton, selalu cari istilah seperti <strong>"Acid-Free"</strong> atau <strong>"Museum Quality"</strong>. Karton murah dapat menguning seiring waktu dan melepaskan asam yang akan merusak karya seni Anda secara permanen.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },
+  { type: 'paragraph', html: "Periksa input, satuan, pembulatan, tanggal, dan yurisdiksi karena semuanya dapat mengubah estimasi." },
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },],
   ui: {
     sectionTitle: 'Dimensi',
     sectionDesc: 'Masukkan ukuran dalam sentimeter.',

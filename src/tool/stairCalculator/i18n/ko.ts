@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: '전문적인 시공을 위해서는 콘크리트 슬래브(단을 지지하는 경사면)를 반드시 고려해야 합니다. 이 부피를 무시하면 발주 부족이나 부실 시공의 원인이 됩니다. 계산기는 이 과정을 자동으로 처리합니다.' },
     { type: 'title', text: '먹매김과 오차 누적', level: 3 },
     { type: 'paragraph', html: '건설 현장에서 최대의 적은 밀리미터 단위의 오차입니다. 각 단을 따로 측정하면 오차가 쌓여 마지막 단이 처음보다 5cm 높거나 낮아질 수 있습니다.' },
-  ],
+
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },],
   ui: {
     labelGeometry: '기하학 및 공간',
     labelTotalHeight: '전체 높이 (H)',

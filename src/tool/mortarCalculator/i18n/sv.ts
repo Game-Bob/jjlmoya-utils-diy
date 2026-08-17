@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'Kvaliteten på ett kalkbruk beror till stor del på ballastens kornstorlek. För <strong>Trullissatio</strong> (grundputs) används grov flodsand på 2-5 mm. För <strong>Arenato</strong> (grovputs), tvättad mellansand på 0,5-2 mm. För <strong>Marmorato</strong> (finputs), marmormjöl mindre än 0,5 mm.' },
     { type: 'title', text: 'Mysteriet med mekanisk vidhäftning', level: 3 },
     { type: 'paragraph', html: 'Vidhäftningen är inte kemisk, den är <strong>mekanisk</strong>. Tänk dig miljontals mikroskopiska rötter. Bruket måste tränga in i teglets porer för att skapa en fysisk "nyckel". Utan porositet finns ingen förankring.' },
-  ],
+
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },],
   ui: {
     leftTitle: 'Vitruvianskt system',
     centerTitle: 'Tillgängligt material',

@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Suhu Vital', html: '<p>Bekerjalah selalu antara <strong>21°C hingga 25°C</strong>. Suhu dingin dapat menghentikan reaksi, membuat benda menjadi keruh. Panas berlebih mempercepat reaksi eksotermik secara berbahaya ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Teknik Dua Wadah', html: '<p>Jangan mengandalkan satu pengadukan. Bersihkan sisi dan dasar wadah dengan baik, tuang campuran ke <strong>wadah bersih kedua</strong> dan aduk kembali. Ini memastikan tidak ada bahan yang tidak terkatalis tertinggal.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Tafsirkan hasil bersama asumsi yang ditampilkan kalkulator sebelum menggunakannya." },],
   ui: {
     shapeRect: 'Persegi Panjang',
     shapeCylinder: 'Silinder',

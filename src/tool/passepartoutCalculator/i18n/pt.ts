@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'A ilusão ótica do centro geométrico', html: '<p>O olho humano tende a perceber o centro vertical geométrico como se estivesse ligeiramente mais baixo do que realmente está. Se emoldurar uma obra exatamente no centro, parecerá que se está "a cair".</p><p>O <strong>Bottom Weighting</strong> corrige esta ilusão ótica deixando uma margem inferior ligeiramente maior, elevando a obra visualmente para que pareça perfeitamente centrada.</p>' },
     { type: 'title', text: 'Materiais de Conservação para Passepartout', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'O cartão sem ácido para conservação', html: '<p>Ao escolher o seu cartão, procure sempre termos como <strong>"Acid-Free"</strong> ou <strong>"Museum Quality"</strong>. Os cartões baratos de polpa de madeira podem amarelecer com o tempo e libertar ácidos que queimarão a sua obra de arte (foxing), arruinando-a irreversivelmente.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },],
   ui: {
     sectionTitle: 'Dimensões',
     sectionDesc: 'Introduza as medidas em centímetros.',

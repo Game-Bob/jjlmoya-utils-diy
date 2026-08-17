@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'Die optische Täuschung der geometrischen Mitte', html: '<p>Das menschliche Auge tendiert dazu, die vertikale geometrische Mitte etwas tiefer wahrzunehmen, als sie tatsächlich ist. Rahmen Sie ein Werk exakt in der Mitte ein, wirkt es, als ob es "absinkt".</p><p>Das <strong>Bottom Weighting</strong> korrigiert diese Täuschung, indem der untere Rand etwas größer gelassen wird, was das Werk visuell anhebt.</p>' },
     { type: 'title', text: 'Konservierungsmaterialien für Passepartouts', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Säurefreier Karton für die Konservierung', html: '<p>Suchen Sie beim Kauf immer nach Begriffen wie <strong>"Acid-Free"</strong> (säurefrei) oder <strong>"Museum Quality"</strong>. Billige Kartons aus Holzschliff können vergilben und Säuren freisetzen, die Ihr Kunstwerk irreversibel schädigen (Stockflecken).</p>' },
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },
+  { type: 'paragraph', html: "Prüfen Sie Eingaben, Einheiten, Rundung, Datum und Recht, weil jedes Element die Schätzung verändern kann." },
+  { type: 'paragraph', html: "Nutzen Sie das Ergebnis zur Planung und zum Szenarienvergleich; es ersetzt keine offizielle Berechnung oder Fachberatung." },
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },],
   ui: {
     sectionTitle: 'Abmessungen',
     sectionDesc: 'Geben Sie die Maße in Zentimetern ein.',

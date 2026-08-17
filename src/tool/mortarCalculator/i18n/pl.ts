@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'Jakość zaprawy wapiennej zależy w dużej mierze od granulacji kruszywa. Dla <strong>Trullissatio</strong> (tynk podkładowy) stosuje się gruby piasek rzeczny 2-5 mm. Dla <strong>Arenato</strong> (narzut pośredni) piasek średni płukany 0,5-2 mm. Dla <strong>Marmorato</strong> (gładź cienka) pył marmurowy poniżej 0,5 mm.' },
     { type: 'title', text: 'Tajemnica Przyczepności Mechanicznej', level: 3 },
     { type: 'paragraph', html: 'Przyczepność nie jest chemiczna, lecz <strong>mechaniczna</strong>. Wyobraź sobie miliony mikroskopijnych korzeni. Zaprawa musi wniknąć w pory cegły, aby stworzyć fizyczny "klucz". Bez porowatości nie ma zakotwiczenia.' },
-  ],
+
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },],
   ui: {
     leftTitle: 'System Witruwiański',
     centerTitle: 'Dostępne Materiały',

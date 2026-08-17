@@ -85,7 +85,8 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'card', icon: 'mdi:sofa', title: '操作余量', html: '<p>一个常见的错误是假设如果家具宽 80 厘米，门洞宽 80 厘米，就能通过。并非如此。工人的手、织物的弹性以及墙面的不平整都需要至少 <strong>2 到 5 厘米</strong> 的余量。如果没有这个余量，家具会被刮花或被挤住。</p>' },
     { type: 'title', text: '毁掉搬家的 3 个错误', level: 3 },
     { type: 'paragraph', html: '即使尺寸正确，这些看不见的因素也常会导致灾难：<strong>吸顶灯</strong> - 在对角线旋转期间常被遗忘；<strong>家具的转弯半径</strong> - 硬家具不会弯曲；<strong>包装</strong> - 气泡膜和保护纸板会在每边增加 1 到 3 厘米。' },
-  ],
+
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },],
   ui: {
     conTitle: '空间尺寸',
     conHint: '例如：标准电梯、门框或货车。',

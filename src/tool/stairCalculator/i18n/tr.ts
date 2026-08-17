@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Profesyonel bir uygulama için beton plağı (basamakları taşıyan eğim) dikkate almak hayati önem taşır. Bu hacmin ihmal edilmesi eksik beton siparişi ve kötü uygulamaya yol açar.' },
     { type: 'title', text: 'Aplikasyon ve Kümülatif Hata', level: 3 },
     { type: 'paragraph', html: 'İnşaatta en büyük düşman milimetrik hatadır. Her basamağı ayrı ölçerseniz, küçük hataların toplamı son basamağı ilkinden 5 cm yüksek veya alçak bırakabilir.' },
-  ],
+
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },],
   ui: {
     labelGeometry: 'Geometri ve Alan',
     labelTotalHeight: 'Toplam Yükseklik (H)',

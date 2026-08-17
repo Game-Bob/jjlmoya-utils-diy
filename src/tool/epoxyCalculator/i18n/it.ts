@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Temperatura Vitale', html: '<p>Lavora sempre tra <strong>21°C e 25°C</strong>. Il freddo può fermare la reazione, lasciando il pezzo torbido. Il calore eccessivo accelera pericolosamente la reazione esotermica ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Tecnica del Doppio Bicchiere', html: '<p>Non fidarti di una sola miscelazione. Raschia bene i lati e il fondo, versa la miscela in un <strong>secondo bicchiere pulito</strong> e mescola di nuovo. Questo assicura che non rimanga materiale non catalizzato.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },],
   ui: {
     shapeRect: 'Rettangolare',
     shapeCylinder: 'Cilindrico',

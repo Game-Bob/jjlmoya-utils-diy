@@ -133,12 +133,8 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
       html: '<p>El fratasado no es solo alisar; es preparar el futuro. El uso del <strong>fratás de madera</strong> es crucial en las capas base porque "abre el poro", dejando una textura rugosa ideal para que la siguiente capa se agarre. La llana de acero cierra el poro y saca el agua a la superficie ("quemar" el mortero), técnica reservada solo para el enlucido final o estucos.</p><p>El secreto está en el <em>tempo</em>: saber esperar a que el mortero haya "tirado" (endurecido ligeramente) pero siga húmedo. Es un diálogo silencioso entre la herramienta y la cal.</p>',
     },
     {
-      type: 'title',
-      text: 'El Ciclo de la Cal: Un Material Vivo',
-      level: 3,
-    },
-    {
-      type: 'paragraph',
+      type: 'card',
+      title: 'El Ciclo de la Cal: Un Material Vivo',
       html: 'A diferencia del cemento moderno, la cal es un material "vivo". Fragua lentamente mediante <strong>carbonatación</strong>: absorbe el CO₂ del aire para volver a convertirse en piedra caliza. Es un ciclo eterno: de la piedra venimos y a la piedra volvemos. Esta respiración permite que el edificio se adapte a los movimientos sin agrietarse, sanando sus propias heridas con el tiempo.',
     },
     {

@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Jeśli budujesz kampera, projektujesz instalację solarną lub kładziesz kable w ogrodzie, istnieje niewidzialny wróg: <strong>spadek napięcia</strong>. To nie tylko kwestia techniczna; to różnica między lodówką, która chłodzi, a taką, która się wyłącza, oraz między bezpieczną instalacją a ryzykiem pożaru.' },
     { type: 'title', text: 'Wzór na Spadek Napięcia', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Dokładne Obliczenia z Prawem Ohma', html: '<p>Wzór to <strong>ΔV = (2 × L × I × ρ) / S</strong>, gdzie L to długość w jedną stronę, I to prąd, ρ to rezystywność (0,0178 dla miedzi), a S to przekrój kabla.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },],
   ui: {
     heroDropLabel: 'Całkowity Spadek Napięcia',
     heroVoltsUnit: 'Wolty',

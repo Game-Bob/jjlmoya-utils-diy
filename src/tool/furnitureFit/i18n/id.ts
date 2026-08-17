@@ -85,7 +85,8 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'card', icon: 'mdi:sofa', title: 'Margin Manuver', html: '<p>Kesalahan umum adalah mengasumsikan jika furnitur berukuran 80cm dan celahnya 80cm, maka akan muat. Tidak seperti itu. Tangan pengangkut, elastisitas kain, dan ketidaksempurnaan dinding memerlukan margin minimal <strong>2 hingga 5 cm</strong>. Tanpa margin ini, furnitur akan tergores atau terjepit karena tekanan.</p>' },
     { type: 'title', text: '3 Kesalahan yang Merusak Pindahan', level: 3 },
     { type: 'paragraph', html: 'Meskipun dengan ukuran yang benar, faktor tak kasat mata ini sering menyebabkan bencana: <strong>Lampu Langit-langit</strong> - terlupakan saat pemutaran diagonal; <strong>Radius Putar Furnitur</strong> - furnitur yang kaku tidak bisa ditekuk; <strong>Kemasan</strong> - bubble wrap dan kardus pelindung dapat menambah 1 hingga 3 cm di setiap sisi.' },
-  ],
+
+  { type: 'paragraph', html: "Gunakan hasil untuk perencanaan dan perbandingan skenario; hasil ini bukan pengganti perhitungan resmi atau nasihat ahli." },],
   ui: {
     conTitle: 'Dimensi Ruang',
     conHint: 'Contoh: Lift standar, kusen pintu, atau mobil boks.',

@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'Złudzenie optyczne środka geometrycznego', html: '<p>Ludzkie oko ma tendencję do postrzegania pionowego środka geometrycznego nieco niżej niż znajduje się on w rzeczywistości. Jeśli oprawisz pracę dokładnie w środku, będzie się wydawać, że "opada".</p><p><strong>Bottom Weighting</strong> koryguje to złudzenie, pozostawiając nieco większy dolny margines, optycznie unosząc dzieło, aby wydawało się idealnie wyśrodkowane.</p>' },
     { type: 'title', text: 'Materiały Konserwatorskie do Passe-partout', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Bezkwasowy karton do konserwacji', html: '<p>Wybierając karton, zawsze szukaj terminów takich jak <strong>"Acid-Free"</strong> lub <strong>"Museum Quality"</strong>. Tanie kartony z miazgi drzewnej mogą z czasem żółknąć i uwalniać kwasy, które "przypalą" Twoje dzieło (foxing), nieodwracalnie je niszcząc.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },
+  { type: 'paragraph', html: "Sprawdź dane, jednostki, zaokrąglenie, datę i jurysdykcję, ponieważ każdy element może zmienić szacunek." },
+  { type: 'paragraph', html: "Używaj wyniku do planowania i porównywania scenariuszy; nie zastępuje obliczeń urzędowych ani porady specjalisty." },
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },],
   ui: {
     sectionTitle: 'Wymiary',
     sectionDesc: 'Wprowadź wymiary w centymetrach.',

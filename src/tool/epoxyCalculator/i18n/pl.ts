@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Kluczowa Temperatura', html: '<p>Zawsze pracuj w temperaturze między <strong>21°C a 25°C</strong>. Zimno może zatrzymać reakcję, sprawiając, że element będzie mętny. Nadmierne ciepło niebezpiecznie przyspiesza reakcję egzotermiczną ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Technika Dwóch Kubków', html: '<p>Nie ufaj jednokrotnemu wymieszaniu. Dobrze zeskrob boki i dno naczynia, przelej mieszankę do <strong>drugiego czystego kubka</strong> i wymieszaj ponownie. Zapewnia to, że nie pozostanie żaden nieskatalizowany materiał.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Przed użyciem zinterpretuj wynik razem z założeniami pokazanymi przez kalkulator." },],
   ui: {
     shapeRect: 'Prostokątny',
     shapeCylinder: 'Cylindryczny',

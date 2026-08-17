@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: 'De kwaliteit van een kalkmortel hangt grotendeels af van de korrelgrootte van de toeslag. Voor het <strong>Trullissatio</strong> (basis raapwerk) wordt grof rivierzand van 2-5 mm gebruikt. Voor de <strong>Arenato</strong> (tussenlaag), gewassen medium zand van 0,5-2 mm. Voor de <strong>Marmorato</strong> (fijnpleister), marmerpoeder kleiner dan 0,5 mm.' },
     { type: 'title', text: 'Het Mysterie van de Mechanische Hechting', level: 3 },
     { type: 'paragraph', html: 'De hechting is niet chemisch, maar <strong>mechanisch</strong>. Stel je miljoenen microscopisch kleine wortels voor. De mortel moet diep in de poriën van de baksteen dringen om een fysieke "sleutel" te creëren. Zonder porositeit is er geen verankering.' },
-  ],
+
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },
+  { type: 'paragraph', html: "Gebruik het resultaat voor planning en scenariokeuze; het vervangt geen officiële berekening of professioneel advies." },
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },],
   ui: {
     leftTitle: 'Vitruviaans Systeem',
     centerTitle: 'Beschikbare Materialen',

@@ -118,7 +118,9 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
       type: 'paragraph',
       html: 'Référence rapide pour le câblage 12V DC: <strong>1,5mm²</strong> éclairage léger jusqu\'à 10A, <strong>2,5mm²</strong> réfrigérateurs et prises USB jusqu\'à 20A, <strong>6mm²</strong> panneaux solaires jusqu\'à 40A, <strong>16mm²</strong> batteries auxiliaires jusqu\'à 80A, <strong>25mm²</strong> circuits principaux de van jusqu\'à 120A. Utilisez toujours le calculateur avec votre longueur et courant exacts.',
     },
-  ],
+
+  { type: 'paragraph', html: "Utilisez le résultat pour planifier et comparer des scénarios ; il ne remplace ni un calcul officiel ni un avis professionnel." },
+  { type: 'paragraph', html: "Interprétez le résultat avec les hypothèses affichées par le calculateur avant de l'utiliser." },],
   ui: {
     heroDropLabel: 'Chute de Tension Totale',
     heroVoltsUnit: 'Volts',

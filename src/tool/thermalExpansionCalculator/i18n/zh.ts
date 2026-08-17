@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>热膨胀</strong>是材料因温度升高而增加长度的物理过程。在建筑中，这种现象是一种能够破坏混凝土、使钢梁变形甚至扭曲火车轨道的巨大力量。' },
     { type: 'title', text: '线膨胀公式', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: '线膨胀公式', html: '<p>结构元件的膨胀计算公式为：<code>ΔL = L₀ · α · ΔT</code>。其中 <strong>ΔL</strong> 是总增长量，<strong>L₀</strong> 是原始长度，<strong>α</strong> 是材料的膨胀系数（单位为 °C⁻¹），<strong>ΔT</strong> 是温差。</p>' },
-  ],
+
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },],
   ui: {
     configTitle: '配置',
     labelMaterial: '材料',

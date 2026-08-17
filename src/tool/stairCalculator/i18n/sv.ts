@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'För ett professionellt utförande är det viktigt att räkna med betongplattan (den sneda ytan som bär upp stegen). Om den volymen glöms bort blir betongbeställningen för liten.' },
     { type: 'title', text: 'Utsättning och kumulativa fel', level: 3 },
     { type: 'paragraph', html: 'I byggbranschen är millimeterfel den största fienden. Om man mäter varje steg separat kan småfel summeras så att sista steget blir 5 cm för högt eller för lågt.' },
-  ],
+
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },],
   ui: {
     labelGeometry: 'Geometri och utrymme',
     labelTotalHeight: 'Total höjdskillnad (H)',

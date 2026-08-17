@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'card', icon: 'mdi:function-variant', title: 'Exakte Berechnung mit dem Ohmschen Gesetz', html: '<p>Die Formel lautet <strong>ΔV = (2 × L × I × ρ) / S</strong>, wobei L die einfache Länge in Metern, I der Strom in Ampere, ρ der spezifische Widerstand (0,0178 Ω·mm²/m für Kupfer) und S der Kabelquerschnitt in mm² ist.</p>' },
     { type: 'title', text: 'Das Paradoxon der niedrigen Spannung', level: 3 },
     { type: 'card', icon: 'mdi:alert-circle-outline', title: 'Warum 12V dickere Kabel benötigt als 230V', html: '<p>Um die gleiche Leistung (1000W) zu übertragen, benötigen Sie bei 230V nur 4,3A und ein 1,5mm² Kabel. Bei 12V benötigen Sie 83,3A und ein 25mm² Kabel. Je niedriger die Spannung, <strong>desto dicker muss das Kabel sein</strong>.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },
+  { type: 'paragraph', html: "Prüfen Sie Eingaben, Einheiten, Rundung, Datum und Recht, weil jedes Element die Schätzung verändern kann." },
+  { type: 'paragraph', html: "Nutzen Sie das Ergebnis zur Planung und zum Szenarienvergleich; es ersetzt keine offizielle Berechnung oder Fachberatung." },
+  { type: 'paragraph', html: "Deuten Sie das Ergebnis gemeinsam mit den angezeigten Annahmen, bevor Sie es verwenden." },],
   ui: {
     heroDropLabel: 'Gesamter Spannungsabfall',
     heroVoltsUnit: 'Volt',

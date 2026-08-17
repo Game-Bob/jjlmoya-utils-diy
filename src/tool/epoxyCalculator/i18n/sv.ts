@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Livsviktig temperatur', html: '<p>Arbeta alltid mellan <strong>21°C och 25°C</strong>. Kyla kan stoppa reaktionen och göra biten grumlig. Överdriven värme accelererar den exoterma reaktionen farligt mycket ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Dubbelbägarmetoden', html: '<p>Lita inte på en enda blandning. Skrapa noga sidorna och botten, häll blandningen i en <strong>andra ren bägare</strong> und blanda igen. Detta säkerställer att inget okatalyserat material blir kvar.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },],
   ui: {
     shapeRect: 'Rektangulär',
     shapeCylinder: 'Cylindrisk',

@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: 'A <strong>dilatação térmica</strong> é o processo físico pelo qual um material aumenta o seu comprimento como resposta a um incremento na sua temperatura. Na construção, este fenómeno é uma força que pode quebrar o betão, deformar vigas de aço e retorcer as vias de um comboio.' },
     { type: 'title', text: 'A Fórmula da Dilatação Linear', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Fórmula da Dilatação Linear', html: '<p>A expansão de um elemento estrutural calcula-se com: <code>ΔL = L₀ · α · ΔT</code>. Onde <strong>ΔL</strong> é o crescimento total, <strong>L₀</strong> é o comprimento original, <strong>α</strong> é o coeficiente de expansão do material (em °C⁻¹) e <strong>ΔT</strong> é a diferença de temperatura.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },],
   ui: {
     configTitle: 'Configuração',
     labelMaterial: 'Material',

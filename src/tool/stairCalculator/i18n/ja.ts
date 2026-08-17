@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'プロフェッショナルな施工には、コンクリートスラブ（段を支える斜面）の考慮が不可欠です。この体積を無視すると発注不足や施工不良を招きます。計算機はこの計算を自動で行います。' },
     { type: 'title', text: '墨出しと誤差の蓄積', level: 3 },
     { type: 'paragraph', html: '建設において最大の敵はミリ単位の誤差です。各段を個別に測ると、誤差が蓄積され、最後の段が最初より5cm高くなったり低くなったりすることがあります。' },
-  ],
+
+  { type: 'paragraph', html: "利用する前に、計算機が示す前提条件と結果を一緒に確認してください。" },
+  { type: 'paragraph', html: "入力値、単位、丸め、日付、地域を確認してください。どれも推定結果を変える可能性があります。" },],
   ui: {
     labelGeometry: '幾何学とスペース',
     labelTotalHeight: '全高 (H)',

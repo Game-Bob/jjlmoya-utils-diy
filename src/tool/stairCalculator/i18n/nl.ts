@@ -87,7 +87,9 @@ export const content: ToolLocaleContent<StairCalculatorUI> = {
     { type: 'paragraph', html: 'Voor een professionele uitvoering is het essentieel om de betonplaat (het schuine vlak dat de treden draagt) mee te nemen. Het negeren van dit volume leidt tot onvoldoende beton en slechte uitvoering. De calculator integreert deze berekening automatisch.' },
     { type: 'title', text: 'Uitzetten en de Cumulatieve Fout', level: 3 },
     { type: 'paragraph', html: 'In de bouw is de millimeterfout de grootste vijand. Als je elke trede afzonderlijk meet, kan de som van kleine foutjes ervoor zorgen dat de laatste trede 5 cm hoger of lager uitvalt dan de eerste.' },
-  ],
+
+  { type: 'paragraph', html: "Interpreteer het resultaat samen met de aannames van de calculator voordat u het gebruikt." },
+  { type: 'paragraph', html: "Controleer invoer, eenheden, afronding, datum en jurisdictie, want elk onderdeel kan de schatting wijzigen." },],
   ui: {
     labelGeometry: 'Geometrie en Ruimte',
     labelTotalHeight: 'Totale Hoogte (H)',

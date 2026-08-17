@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: '석회 모르타르의 품질은 골재의 입도에 크게 좌우됩니다. <strong>Trullissatio</strong>(초벌)에는 2-5mm의 굵은 강모래가 사용됩니다. <strong>Arenato</strong>(중벌)에는 세척된 0.5-2mm의 중간 모래가 사용됩니다. <strong>Marmorato</strong>(정벌)에는 0.5mm 이하의 대리석 가루가 사용됩니다.' },
     { type: 'title', text: '기계적 접착의 신비', level: 3 },
     { type: 'paragraph', html: '접착은 화학적인 것이 아니라 <strong>기계적</strong>인 것입니다. 수백만 개의 미세한 뿌리를 상상해 보세요. 모르타르는 벽돌의 기공으로 침투하여 물리적인 "열쇠" 역할을 해야 합니다. 다공성이 없으면 정착이 불가능합니다.' },
-  ],
+
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },],
   ui: {
     leftTitle: '비트루비우스 시스템',
     centerTitle: '사용 가능한 재료',

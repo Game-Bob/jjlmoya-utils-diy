@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<MortarCalculatorUI> = {
     { type: 'paragraph', html: '石灰砂浆的质量在很大程度上取决于骨料的粒径。对于 <strong>Trullissatio</strong>（基层粉刷），使用 2-5 毫米的粗河沙。对于 <strong>Arenato</strong>（中层抹灰），使用 0.5-2 毫米的洗净中沙。对于 <strong>Marmorato</strong>（精抹灰），使用小于 0.5 毫米的石灰石粉。' },
     { type: 'title', text: '机械嵌锁的奥秘', level: 3 },
     { type: 'paragraph', html: '这种结合不是化学性的，而是<strong>机械性</strong>的。想象一下数以百万计的微观根须。砂浆必须渗透到砖块的孔隙中，创造一个物理"锁扣"。没有孔隙，就没有锚固。' },
-  ],
+
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },
+  { type: 'paragraph', html: "请检查输入值、单位、四舍五入方式、日期和司法辖区，因为每项都可能改变估算。" },
+  { type: 'paragraph', html: "结果可用于规划和比较方案，但不能替代官方计算或专业建议。" },
+  { type: 'paragraph', html: "使用前请结合计算器显示的假设一起解读结果。" },],
   ui: {
     leftTitle: '维特鲁威系统',
     centerTitle: '可用材料',

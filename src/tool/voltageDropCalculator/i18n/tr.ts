@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Bir karavan yapıyorsanız, güneş enerjisi sistemi tasarlıyorsanız veya bahçenize kablo çekiyorsanız, projenizi mahvedebilecek görünmez bir düşman vardır: <strong>gerilim düşümü</strong>. Bu sadece teknik bir konu değil; soğutan bir buzdolabı ile kapanan bir buzdolabı arasındaki veya güvenli bir tesisat ile yangın riski arasındaki farktır.' },
     { type: 'title', text: 'Gerilim Düşümü Formülü', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Ohm Yasası ile Kesin Hesaplama', html: '<p>Formül <strong>ΔV = (2 × L × I × ρ) / S</strong> şeklindedir. Burada L tek yönlü uzunluk, I akım, ρ özdirenç (bakır için 0,0178) ve S kablo kesitidir.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },],
   ui: {
     heroDropLabel: 'Toplam Gerilim Düşümü',
     heroVoltsUnit: 'Volt',

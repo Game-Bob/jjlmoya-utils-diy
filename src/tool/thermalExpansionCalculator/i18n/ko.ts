@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: '<strong>열팽창</strong>은 온도가 상승함에 따라 재료의 길이가 증가하는 물리적 과정입니다. 미세한 수준에서 입자들은 더 많은 에너지로 진동하며 입자 사이에 더 큰 평균 공간을 필요로 합니다. 건설에서 이 현상은 단순한 흥밋거리가 아닙니다. 이는 콘크리트를 부수고, 강철 보를 변형시키며, 기차 선로를 뒤틀 수 있는 힘입니다.' },
     { type: 'title', text: '선팽창 공식', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: '선팽창 계산식', html: '<p>구조성분의 팽창은 다음과 같이 계산됩니다: <code>ΔL = L₀ · α · ΔT</code>. 여기서 <strong>ΔL</strong>은 총 증가량, <strong>L₀</strong>은 원래 길이, <strong>α</strong>는 재료의 팽창 계수(단위: ℃⁻¹), <strong>ΔT</strong>는 온도 차이입니다.</p>' },
-  ],
+
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },
+  { type: 'paragraph', html: "입력값, 단위, 반올림, 날짜와 관할을 확인하세요. 모두 추정값을 바꿀 수 있습니다." },
+  { type: 'paragraph', html: "결과는 계획과 시나리오 비교에 사용할 수 있지만 공식 계산이나 전문가 조언을 대신하지 않습니다." },
+  { type: 'paragraph', html: "사용하기 전에 계산기가 표시한 가정과 결과를 함께 확인하세요." },],
   ui: {
     configTitle: '설정',
     labelMaterial: '재료',

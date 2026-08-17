@@ -89,7 +89,8 @@ export const content: ToolLocaleContent<EpoxyCalculatorUI> = {
       { type: 'card', icon: 'mdi:thermometer', title: 'Hayati Sıcaklık', html: '<p>Daima <strong>21°C ile 25°C</strong> arasında çalışın. Soğuk reaksiyonu durdurarak parçanın bulanık kalmasına neden olabilir. Aşırı ısı ekzotermik reaksiyonu tehlikeli bir şekilde hızlandırır ("flash cure").</p>' },
       { type: 'card', icon: 'mdi:cup-outline', title: 'Çift Bardak Tekniği', html: '<p>Tek bir karıştırmaya güvenmeyin. Kenarları ve tabanı iyice sıyırın, karışımı <strong>ikinci temiz bir bardağa</strong> dökün ve tekrar karıştırın. Bu, katalize olmamış hiçbir malzemenin kalmamasını sağlar.</p>' },
     ]},
-  ],
+
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },],
   ui: {
     shapeRect: 'Dikdörtgen',
     shapeCylinder: 'Silindirik',

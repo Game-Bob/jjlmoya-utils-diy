@@ -83,7 +83,11 @@ export const content: ToolLocaleContent<PassepartoutCalculatorUI> = {
     { type: 'card', icon: 'mdi:eye-outline', title: 'Geometrik merkezin optik illüzyonu', html: '<p>İnsan gözü, dikey geometrik merkezi gerçekte olduğundan biraz daha aşağıda algılama eğilimindedir. Bir eseri tam merkeze çerçevelerseniz, "aşağı düşüyormuş" gibi görünecektir.</p><p><strong>Bottom Weighting</strong>, alt kenar boşluğunu biraz daha geniş bırakarak bu illüzyonu düzeltir ve eseri görsel olarak yükselterek mükemmel bir şekilde ortalanmış görünmesini sağlar.</p>' },
     { type: 'title', text: 'Paspartu İçin Koruma Malzemeleri', level: 3 },
     { type: 'card', icon: 'mdi:palette-swatch-outline', title: 'Koruma için asitsiz karton', html: '<p>Kartonunuzu seçerken daima <strong>"Acid-Free"</strong> (asitsiz) veya <strong>"Museum Quality"</strong> (müze kalitesi) gibi terimleri arayın. Ucuz odun hamuru kartonlar zamanla sararabilir ve sanat eserinizi irreversibl şekilde bozacak asitler salabilir.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },
+  { type: 'paragraph', html: "Girdileri, birimleri, yuvarlamayı, tarihi ve yargı alanını kontrol edin; her biri tahmini değiştirebilir." },
+  { type: 'paragraph', html: "Sonucu planlama ve senaryo karşılaştırması için kullanın; resmî hesabın veya uzman görüşünün yerine geçmez." },
+  { type: 'paragraph', html: "Kullanmadan önce sonucu hesaplayıcının gösterdiği varsayımlarla birlikte yorumlayın." },],
   ui: {
     sectionTitle: 'Boyutlar',
     sectionDesc: 'Ölçüleri santimetre cinsinden girin.',

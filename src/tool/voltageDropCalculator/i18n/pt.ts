@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Se está a construir uma autocaravana, a desenhar uma instalação solar ou a passar cabos para o jardim, há um inimigo invisível: a <strong>queda de tensão</strong>. Não é apenas uma questão técnica; é a diferença entre um frigorífico que arrefece e um que se desliga, ou entre uma instalação segura e um risco de incêndio.' },
     { type: 'title', text: 'A Fórmula da Queda de Tensão', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Cálculo Exato com a Lei de Ohm', html: '<p>A fórmula é <strong>ΔV = (2 × L × I × ρ) / S</strong>, onde L é o comprimento de ida, I a corrente, ρ a resistividade (0,0178 para cobre) e S a secção do cabo.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },
+  { type: 'paragraph', html: "Confirme dados, unidades, arredondamento, data e jurisdição, pois cada elemento pode alterar a estimativa." },
+  { type: 'paragraph', html: "Use o resultado para planear e comparar cenários; não substitui um cálculo oficial nem aconselhamento profissional." },
+  { type: 'paragraph', html: "Interprete o resultado juntamente com as premissas apresentadas pela calculadora antes de o utilizar." },],
   ui: {
     heroDropLabel: 'Queda de Tensão Total',
     heroVoltsUnit: 'Volts',

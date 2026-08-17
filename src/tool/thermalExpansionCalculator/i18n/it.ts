@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<ThermalExpansionCalculatorUI> = {
     { type: 'paragraph', html: 'La <strong>dilatazione termica</strong> è il processo fisico per cui un materiale aumenta la propria lunghezza come risposta a un incremento della temperatura. A livello microscopico, le particelle vibrano con più energia e necessitano di maggiore spazio medio tra di esse. In edilizia, questo fenomeno è una forza che può rompere il calcestruzzo, deformare travi d\'acciaio e torcere i binari del treno.' },
     { type: 'title', text: 'La Formula della Dilatazione Lineare', level: 3 },
     { type: 'card', icon: 'mdi:math-log', title: 'Formula della Dilatazione Lineare', html: '<p>L\'espansione di un elemento strutturale si calcola con: <code>ΔL = L₀ · α · ΔT</code>. Dove <strong>ΔL</strong> è la crescita totale, <strong>L₀</strong> è la lunghezza originale, <strong>α</strong> è il coefficiente di espansione del materiale (in °C⁻¹) e <strong>ΔT</strong> è la differenza di temperatura.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },
+  { type: 'paragraph', html: "Controlla dati, unità, arrotondamento, data e giurisdizione, perché ciascun elemento può cambiare la stima." },
+  { type: 'paragraph', html: "Usa il risultato per pianificare e confrontare scenari; non sostituisce un calcolo ufficiale o una consulenza professionale." },
+  { type: 'paragraph', html: "Interpreta il risultato insieme alle ipotesi mostrate dal calcolatore prima di utilizzarlo." },],
   ui: {
     configTitle: 'Configurazione',
     labelMaterial: 'Materiale',

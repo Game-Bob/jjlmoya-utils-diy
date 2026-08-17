@@ -85,7 +85,8 @@ export const content: ToolLocaleContent<FurnitureFitUI> = {
     { type: 'card', icon: 'mdi:sofa', title: 'Manövreringsutrymme', html: '<p>Ett vanligt misstag är att anta att om möbeln mäter 80 cm och öppningen är 80 cm, så går den igenom. Så är det inte. Flyttkarlarnas händer, tygets elasticitet och väggarnas ojämnheter kräver en minsta marginal på <strong>2 till 5 cm</strong>. Utan denna marginal blir möbeln repad eller fastnar genom tryck.</p>' },
     { type: 'title', text: '3 fel som förstör en flytt', level: 3 },
     { type: 'paragraph', html: 'Även med korrekta mått orsakar dessa osynliga faktorer ofta katastrofer: <strong>Taklampan</strong> - ofta bortglömd vid diagonal rotation. <strong>Möbelns svängradie</strong> - en stel möbel böjer sig inte. <strong>Förpackningen</strong> - bubbelplast och skyddskartong kan lägga till 1 till 3 cm på varje sida.' },
-  ],
+
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },],
   ui: {
     conTitle: 'Utrymmets dimensioner',
     conHint: 'T.ex: Standardhiss, dörrkarm eller skåpbil.',

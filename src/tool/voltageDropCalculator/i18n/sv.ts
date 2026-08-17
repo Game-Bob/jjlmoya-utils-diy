@@ -81,7 +81,13 @@ export const content: ToolLocaleContent<VoltageDropCalculatorUI> = {
     { type: 'paragraph', html: 'Oavsett om du bygger en husbil, designar en solcellsanläggning eller drar kablar i trädgården finns det en osynlig fiende: <strong>spänningsfall</strong>. Det är inte bara en teknisk detalj; det är skillnaden mellan ett kylskåp som kyler och ett som stängs av, eller mellan en säker installation och en brandrisk.' },
     { type: 'title', text: 'Formeln för spänningsfall', level: 3 },
     { type: 'card', icon: 'mdi:function-variant', title: 'Exakt beräkning med Ohms lag', html: '<p>Formeln är <strong>ΔV = (2 × L × I × ρ) / S</strong>, där L är längden enkel väg, I är strömmen, ρ är resistiviteten (0,0178 för koppar) och S är kabelarean.</p>' },
-  ],
+
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },
+  { type: 'paragraph', html: "Kontrollera indata, enheter, avrundning, datum och rättsområde eftersom varje del kan ändra uppskattningen." },
+  { type: 'paragraph', html: "Använd resultatet för planering och scenariejämförelser; det ersätter inte en officiell beräkning eller professionell rådgivning." },
+  { type: 'paragraph', html: "Tolka resultatet tillsammans med kalkylatorns antaganden innan du använder det." },],
   ui: {
     heroDropLabel: 'Totalt spänningsfall',
     heroVoltsUnit: 'Volt',
