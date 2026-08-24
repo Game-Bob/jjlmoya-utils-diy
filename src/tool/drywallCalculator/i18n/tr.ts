@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Hafif bölme duvarların yapımında galvanizli çelik profillerin (C dikme ve U ray) doğru boyutlandırılması ve ek yerlerinin şaşırtmalı yerleştirilmesi TS EN 520 standartlarına göre çatlamaları önler.',
+      html: 'Hafif bölme duvarların yapımında galvanizli çelik profillerin (dikey C dikme ve yatay U ray) doğru mühendislik hesaplarıyla boyutlandırılması ve ek yerlerinin şaşırtmalı yerleştirilmesi TS EN 520 standartlarına göre duvar sehimini ve çatlamaları önler.',
     },
     {
       type: 'title',
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>60 cm eksen aralığı</strong> 120 cm genişliğindeki plakalar için standarttır. Seramik kaplama altında ve 3.0 metreden yüksek duvarlarda <strong>40 cm eksen aralığı</strong> zorunludur.',
+      html: 'Dikme aks aralığı duvarın taşıyıcı rijitliğini belirler. <strong>60 cm eksen aralığı</strong> 120 cm genişliğindeki alçı plakalar için standarttır. Ağır seramik kaplama altında, 3.0 metreden yüksek duvarlarda ve yüksek ses yalıtımı gereken hacimlerde <strong>40 cm eksen aralığı</strong> sıkılaştırması zorunludur.',
     },
     {
       type: 'card',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Kapı ve pencere boşluklarındaki kesimler için her zaman <strong>%10 fire payı</strong> ekleyin. Derz dolgusu için metrekare başına yaklaşık 0.8 kg alçı bazlı derz macunu gereklidir.',
+      html: 'Kapı ve pencere boşluklarındaki kesim kayıpları ile tavan birleşim detayları için her zaman <strong>%10 fire payı</strong> ekleyerek malzeme siparişi verin. Derzlerin profesyonel dolgusu ve yüzey hazırlığı için (Q1 ile Q4 yüzey kalitesi standartlarında) metrekare başına yaklaşık 0.8 kg alçı bazlı derz macunu ve çatlamayı önleyen derz bandı kullanılır.',
     },
   ],
   ui: {

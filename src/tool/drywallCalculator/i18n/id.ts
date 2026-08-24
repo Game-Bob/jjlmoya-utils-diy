@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Pemasangan dinding partisi ringan papan gypsum memerlukan perhitungan matang pada rangka hollow baja galvanis (stud dan runner) serta pembagian sambungan papan. Penataan rangka yang tepat mencegah lendutan dan retak pada sambungan.',
+      html: 'Pemasangan dinding partisi ringan papan gypsum memerlukan perhitungan teknis yang matang pada rangka hollow baja galvanis (stud vertikal CW dan runner horizontal UW) serta pembagian layout susunan lembaran papan. Sesuai dengan standar teknis konstruksi, penataan rangka yang presisi mencegah lendutan struktur dinding, kerusakan lendut, dan retak pada bagian sambungan antar papan.',
     },
     {
       type: 'title',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Selalu tambahkan margin <strong>10% faktor sisa</strong> untuk mengantisipasi potongan sekitar jendela dan pintu. Pengolahan sambungan membutuhkan sekitar 0.8 kg kompon per meter persegi permukaan papan.',
+      html: 'Selalu tambahkan margin <strong>10% faktor sisa pemotongan</strong> untuk mengantisipasi potongan sekitar celah jendela, bukaan pintu, dan sudut plafon. Untuk penyelesaian sambungan permukaan (tingkat finishing Q1 hingga Q4), dibutuhkan sekitar 0.8 kg kompon perekat papan gypsum per meter persegi permukaan papan beserta pita kasa penguat sambungan.',
     },
   ],
   ui: {

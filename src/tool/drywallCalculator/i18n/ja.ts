@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '開口部や端部の切りしろとして<strong>10%のロス分</strong>を見込みます。目地処理には1平米あたり約0.8kgの目地パテとジョイントテープを使用します。',
+      html: 'ドア開口部や窓枠周り、天井取り合い部分での切り落としロスに対応するため、常に<strong>10%のロス率</strong>を余分に見込んで材料を手配します。継ぎ目処理（Q1〜Q4の下地仕上げ処理）にはボード施工面積1 square meterあたり約0.8kgの目地パテと、ひび割れ防止用のグラスファイバー製またはペーパー製ジョイントテープが必要となります。',
     },
   ],
   ui: {

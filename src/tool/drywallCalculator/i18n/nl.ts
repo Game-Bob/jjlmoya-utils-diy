@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Het bouwen van lichte scheidingswanden met gipsplaten vereist het nauwkeurig berekenen van het stalen frame (C-staanders en U-liggers) en het verspringend aanbrengen van de plaatvoegen volgens de norm EN 520.',
+      html: 'Het bouwen van lichte scheidingswanden met gipsplaten vereist het nauwkeurig berekenen van het gegalvaniseerde stalen frame (C-staanders en U-liggers) en het verspringend aanbrengen van de plaatvoegen volgens de Europese norm EN 520 om wanddoorbuiging en scheurvorming op de naden te voorkomen.',
     },
     {
       type: 'title',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Reken altijd <strong>10% snijverlies</strong> voor profielen en platen. Het afvoegen kost ca. 0,8 kg voegpasta per vierkante meter wandopslag.',
+      html: 'Reken altijd een <strong>10% marge voor snijverlies</strong> voor profielen en platen om zaagafval bij deursparingen, raamuitsparingen en plafondaansluitingen op te vangen. Voor het professioneel afvoegen van de platen (voegafwerkingsniveau Q1 tot Q4) is circa 0,8 kg voegpasta per vierkante meter plaatoppervlak nodig, samen met papieren of glasvezel voegband om scheurvorming te voorkomen.',
     },
   ],
   ui: {

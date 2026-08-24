@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '문틀 및 창호 개구부 절단 자재 손실을 고려하여 <strong>10% 자재 할증률</strong>을 반영합니다. 줄눈 퍼티는 m2당 약 0.8kg이 소요됩니다.',
+      html: '문틀 및 창호 개구부, 천장 접합부의 절단 자재 손실에 대비하여 항상 <strong>10%의 자재 할증률</strong>을 추가로 계산하여 자재를 발주합니다. 석고보드 면적 1m2당 약 0.8kg의 이음매 전용 퍼티 마감재와 균열 방지용 유리섬유 테이프 또는 종이 망사 테이프가 소요됩니다.',
     },
   ],
   ui: {

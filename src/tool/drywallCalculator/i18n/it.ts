@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'La costruzione di sistemi a secco in cartongesso richiede il calcolo accurato dell\'orditura metallica in acciaio zincato (montanti C e guide U) e la sfalsatura dei giunti secondo le norme EN 520 per evitare fessurazioni.',
+      html: 'La costruzione di sistemi a secco con lastre di cartongesso richiede il calcolo accurato dell\'orditura metallica in acciaio zincato (montanti verticali C e guide orizzontali U) e la corretta sfalsatura dei giunti secondo le normative EN 520 per garantire la stabilita ed evitare fessurazioni nel tempo.',
     },
     {
       type: 'title',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Considera sempre un <strong>10% di margine per gli sfridi</strong> di taglio. La stuccatura dei giunti richiede circa 0.8 kg di stucco in polvere o pronto all\'uso per metro quadrato di superficie.',
+      html: 'Considera sempre un <strong>10% di margine per gli sfridi</strong> di taglio per compensare gli adattamenti attorno a porte, finestre e spigoli di soffitto. La stuccatura professionale dei giunti (per i livelli di finitura da Q1 a Q4) richiede circa 0.8 kg di stucco specifico per cartongesso per metro quadrato di superficie, unitamente al nastro coprigiunto in fibra di vetro o carta rinforzata.',
     },
   ],
   ui: {

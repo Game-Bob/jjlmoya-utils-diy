@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '轻钢龙骨隔墙施工中，镀锌钢板C型竖向龙骨与U型沿顶沿地龙骨的合理布置及板缝错缝排列是防止挠度变形与接缝开裂的关键。',
+      html: '在轻钢龙骨石膏板隔墙系统施工中，根据国家建筑标准规范，镀锌钢板C型竖向龙骨与U型沿顶沿地龙骨的精准尺寸计算、受力分析以及板缝交错排列是防止墙体结构挠度变形、失稳及接缝处表面开裂的核心技术保障。',
     },
     {
       type: 'title',
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>60cm间距</strong>是120cm宽石膏板的标准配置。贴饰面砖或墙高大于3.0米时必须采用<strong>40cm间距</strong>。',
+      html: '龙骨的中心间距直接决定了整体隔墙的刚度与抗冲击承载能力。<strong>60cm轴线间距</strong>是适配120cm标准宽度石膏板的最常用方案；而在粘贴重型瓷砖石材面层、墙体净高超过3.0米或对隔音性能有较高要求的空间中，则必须采取<strong>40cm间距</strong>密铺加固。',
     },
     {
       type: 'card',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '门窗洞口裁切需预留<strong>10%损耗率</strong>。接缝处理每平方米约消耗0.8kg嵌缝腻子。',
+      html: '考虑到门窗洞口裁切、墙体边角修剪以及天花板接缝等处的材料损耗，在采购石膏板和龙骨时请务必预留<strong>10%损耗率</strong>。在进行接缝嵌缝抹灰与表面修飾处理（Q1级至Q4级接缝处理标准）时，每平方米石膏板抹灰面积约需消耗0.8kg石膏板专用嵌缝腻子，并配合玻璃纤维网格布或防裂纸带进行防裂加固。',
     },
   ],
   ui: {

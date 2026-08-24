@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Planen Sie stets <strong>10% Verschnittreserve</strong> für Profile und Platten ein. Für die Fugenverspachtelung werden ca. 0,8 kg Spachtelmasse pro Quadratmeter Plattenfläche zusammen mit Fugendeckstreifen benötigt.',
+      html: 'Planen Sie stets <strong>10% Verschnittreserve</strong> für Profile und Platten ein, um Ausgleiche bei Türausschnitten, Fensterleibungen und Deckenanschlüssen abzudecken. Für die fachgerechte Fugenverspachtelung der Verspachtelungsstufen Q1 bis Q4 werden ca. 0,8 kg Fugenspachtelmasse pro Quadratmeter Plattenfläche zusammen mit passenden Glasfaser- oder Papier-Fugendeckstreifen zur Vermeidung von Spannungsrissen benötigt.',
     },
   ],
   ui: {

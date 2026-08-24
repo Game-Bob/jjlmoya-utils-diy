@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Budowa lekkich scian dzialowych w systemie suchej zabudowy wymaga dokladnego przeliczenia stelasza z profili stalowych (CW i UW) oraz mijankowego ukladu spoin zgodnie z norma PN-EN 520.',
+      html: 'Budowa lekkich scian dzialowych w systemie suchej zabudowy z plyt gipsowo-kartonowych wymaga dokladnego przeliczenia stelasza z ocynkowanych profili stalowych (pionowych CW i poziomych UW) oraz mijankowego ukladu spoin zgodnie z normą PN-EN 520 w celu zapobiegania ugieciom i peknieciom.',
     },
     {
       type: 'title',
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>Rozstaw 60 cm</strong> to standard pasujacy do plyt o szerokosci 120 cm. <strong>Rozstaw 40 cm</strong> jest wymagany pod glazure i przy wysokosciach scian powyzej 3,0 m.',
+      html: 'Osiowy rozstaw profili pionowych decyduje o sztywnosci i nośnosci calej sciany. <strong>Standardowy rozstaw 60 cm</strong> idealnie pasuje do plyt gipsowych o szerokosci 120 cm. Z kolei <strong>zagęszczony rozstaw 40 cm</strong> jest bezwzglednie wymagany pod ciezki montaz glazury i plytek ceramicznych, przy wysokosciach scian przekraczajacych 3,0 metry oraz w pomieszczeniach o podwyzszonych wymaganiach akustycznych.',
     },
     {
       type: 'card',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Dolicz <strong>10% zapasu na straty</strong> na dociecia przy drzwiach i oknach. Szpachlowanie spoin zuzywa ok. 0.8 kg masy na metr kwadratowy oplytowania.',
+      html: 'Zawsze doliczaj <strong>10% zapasu na straty</strong> na dociecia przy glifach drzwiowych, otworach okiennych oraz skosach sufitych. Do profesjonalnego szpachlowania spoin w standardzie od Q1 do Q4 zuzywa sie okolo 0.8 kg masy szpachlowej do plyt gipsowo-kartonowych na metr kwadratowy powierzchni wraz z tasmą zbrojacą z wlokna szklanego lub papierową.',
     },
   ],
   ui: {

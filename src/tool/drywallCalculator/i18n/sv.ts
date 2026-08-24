@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Att bygga latta innervaggar med gipsskivor kraver exakt dimensionering av galvaniserade stålprofiler (reglar och skenor) samt forskjutning av skivskarvar enligt EN 520.',
+      html: 'Att bygga lätta innerväggar med gipsskivor kräver exakt teknisk dimensionering av galvaniserade stålprofiler (vertikala C-reglar och horisontella U-skenor) samt förskjutning av skivskarvar enligt EN 520 för att undvika väggnedböjning och sprickor.',
     },
     {
       type: 'title',
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: '<strong>Standardavstand cc 60 cm</strong> anpassas till skivbredd 120 cm. <strong>Cc 40 cm</strong> ar obligatoriskt under kakel och vid hojder over 3,0 m.',
+      html: 'Regelavståndet bestämmer väggens stabilitet och bärförmåga. <strong>Standardavstånd cc 60 cm</strong> anpassas till skivbredd 120 cm. <strong>Cc 40 cm</strong> är obligatoriskt vid tung kakelsättning eller porslinsklinker, vid vägghöjder över 3,0 meter samt i utrymmen med förhöjda ljudisoleringskrav.',
     },
     {
       type: 'card',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Lagg alltid till <strong>10% spillmarginal</strong> for kapningar vid dorrar och fonster. Skarvspackling fordtar ca 0.8 kg spackel per kvadratmeter.',
+      html: 'Räkna alltid med en generös <strong>spillmarginal på 10%</strong> för kapningar vid dörröppningar, fönstersmygar och takanslutningar. För professionell skarvspackling av gipsskivorna (från ytfinishsteg Q1 till Q4) krävs cirka 0,8 kg gipsbaserat skarvspackel per kvadratmeter skivyta samt pappers- eller glasfiberremsa för att undvika alla former av sprickbildning.',
     },
   ],
   ui: {

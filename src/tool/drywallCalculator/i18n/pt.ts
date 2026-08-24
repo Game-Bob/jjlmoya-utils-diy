@@ -87,7 +87,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'A construção de vedações verticais leves em drywall exige o dimensionamento correto dos perfis metálicos em aço galvanizado (montantes C e guias U) e o amarramento das juntas segundo a norma EN 520.',
+      html: 'A construção de vedações verticais leves em drywall exige o dimensionamento preciso e criterioso dos perfis metálicos em aço galvanizado (montantes verticais C e guias horizontais U) e o amarramento de juntas segundo as diretrizes da norma EN 520 para evitar flexões estruturais e deformações.',
     },
     {
       type: 'title',
@@ -96,7 +96,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'O <strong>espaçamento padrão de 60 cm</strong> atende placas de 120 cm de largura. O <strong>espaçamento de 40 cm</strong> é obrigatório sob revestimentos cerâmicos e alturas superiores a 3,00 metros.',
+      html: 'O espaçamento dos montantes metálicos determina diretamente a rigidez e a capacidade de carga da parede. O <strong>espaçamento padrão de 60 cm</strong> é o mais utilizado para fixação de placas gesso acartonado com 120 cm de largura. Por outro lado, o <strong>espaçamento de 40 cm</strong> torna-se estritamente obrigatório em superfícies que receberão revestimentos cerâmicos ou porcelanatos, em paredes com pé-direito superior a 3,00 metros, bem como em divisórias com exigências acústicas elevadas.',
     },
     {
       type: 'card',
@@ -111,7 +111,7 @@ export const content: ToolLocaleContent<DrywallCalculatorUI> = {
     },
     {
       type: 'paragraph',
-      html: 'Considere <strong>10% de margem de perda</strong> para cortes em esquadrias. O tratamento de juntas consome cerca de 0,8 kg de massa por metro quadrado de superfície.',
+      html: 'Considere sempre uma <strong>margem de perda de 10%</strong> para recortes e ajustes em esquadrias de portas, janelas e cantos de forro. O tratamento profissional de juntas (para níveis de acabamento Q1 a Q4) consome cerca de 0,8 kg de massa para drywall por metro quadrado de superfície, juntamente com fita de fita de papel reforçada ou fibra de vidro para evitar trincas.',
     },
   ],
   ui: {

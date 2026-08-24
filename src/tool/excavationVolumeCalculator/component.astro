@@ -1,0 +1,80 @@
+---
+import './excavation-volume-calculator.css';
+import type { ExcavationCalculatorUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as ExcavationCalculatorUI;
+---
+
+<div class="ev-root" data-ev-root data-ev-ui={JSON.stringify(t)}>
+  <div class="ev-board">
+    <div class="ev-intro">
+      <div class="ev-intro-mark" aria-hidden="true">∿</div>
+      <p>{t.onboarding}</p>
+    </div>
+
+    <section class="ev-scene-panel" aria-labelledby="ev-scene-title">
+      <div class="ev-result-heading"><span class="ev-kicker" id="ev-scene-title">{t.sceneTitle}</span><span class="ev-status" data-ev-status>{t.soilStatusLabel}: {t.soilStatusMedium}</span></div>
+      <div class="ev-scene" data-ev-scene></div>
+      <div class="ev-metrics">
+        <div class="ev-metric ev-metric-main"><span class="ev-metric-label">{t.bankVolumeLabel}</span><strong class="ev-metric-value"><span data-ev-bank>9.98</span> <span class="ev-unit-suffix" data-ev-volume-unit>m³</span></strong><span class="ev-metric-help">{t.bankVolumeHelp}</span></div>
+        <div class="ev-metric"><span class="ev-metric-label">{t.looseVolumeLabel}</span><strong class="ev-metric-value"><span data-ev-loose-low>11.48</span> to <span data-ev-loose-high>12.47</span> <span class="ev-unit-suffix" data-ev-volume-unit>m³</span></strong><span class="ev-metric-help">{t.looseVolumeHelp}</span></div>
+      </div>
+      <div class="ev-expansion"><span>{t.expansionLabel}</span><strong data-ev-expansion>15 to 25%</strong></div>
+    </section>
+
+    <div class="ev-workbench">
+      <section class="ev-control-panel" aria-labelledby="ev-dimensions-title">
+        <div class="ev-control-heading">
+          <span class="ev-kicker" id="ev-dimensions-title">{t.dimensionLabel}</span>
+          <div class="ev-segmented" role="group" aria-label={t.unitSystemLabel}>
+            <button type="button" class="ev-active" data-ev-unit="metric">{t.unitMetric}</button>
+            <button type="button" data-ev-unit="imperial">{t.unitImperial}</button>
+          </div>
+        </div>
+
+        <fieldset class="ev-fieldset">
+          <legend>{t.dimensionLabel}</legend>
+          <div class="ev-dimensions">
+            <div class="ev-field">
+              <label for="ev-length">{t.lengthLabel}</label>
+              <div class="ev-input"><input id="ev-length" data-ev-dimension="length" type="number" min="0" step="0.01" value="4.8" inputmode="decimal" /><span class="ev-unit" data-ev-unit-label>m</span></div>
+            </div>
+            <div class="ev-field">
+              <label for="ev-width">{t.widthLabel}</label>
+              <div class="ev-input"><input id="ev-width" data-ev-dimension="width" type="number" min="0" step="0.01" value="3.2" inputmode="decimal" /><span class="ev-unit" data-ev-unit-label>m</span></div>
+            </div>
+            <div class="ev-field">
+              <label for="ev-depth">{t.depthLabel}</label>
+              <div class="ev-input"><input id="ev-depth" data-ev-dimension="depth" type="number" min="0" step="0.01" value="0.65" inputmode="decimal" /><span class="ev-unit" data-ev-unit-label>m</span></div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="ev-fieldset ev-soil-fieldset">
+          <legend>{t.soilLabel}</legend>
+          <div class="ev-soil-grid">
+            <button type="button" class="ev-soil-button" data-ev-soil="sand"><span class="ev-soil-name">{t.soilSand}</span><span class="ev-soil-band">{t.soilSandBand}</span></button>
+            <button type="button" class="ev-soil-button ev-active" data-ev-soil="topsoil"><span class="ev-soil-name">{t.soilTopsoil}</span><span class="ev-soil-band">{t.soilTopsoilBand}</span></button>
+            <button type="button" class="ev-soil-button" data-ev-soil="clay"><span class="ev-soil-name">{t.soilClay}</span><span class="ev-soil-band">{t.soilClayBand}</span></button>
+            <button type="button" class="ev-soil-button" data-ev-soil="gravel"><span class="ev-soil-name">{t.soilGravel}</span><span class="ev-soil-band">{t.soilGravelBand}</span></button>
+          </div>
+        </fieldset>
+      </section>
+    </div>
+    <div class="ev-notes"><p class="ev-interpretation"><strong>{t.interpretationTitle}</strong> {t.interpretationText}</p><p class="ev-warning">{t.warning}</p></div>
+  </div>
+</div>
+
+<script>
+  import { mountExcavationCalculator } from './controller';
+  import type { ExcavationCalculatorUI } from './ui';
+
+  const root = document.querySelector('[data-ev-root]');
+  const ui = JSON.parse(root?.getAttribute('data-ev-ui') || '{}') as ExcavationCalculatorUI;
+  if (root) mountExcavationCalculator(root, ui);
+</script>
