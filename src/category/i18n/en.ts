@@ -17,7 +17,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'From calculating the exact concrete dosage to optimizing cuts on wooden boards, our utilities eliminate material waste and guarantee the integrity of your projects.',
+      html: 'From calculating the concrete dosage to optimizing cuts on wooden boards, our utilities help reduce material waste and make project assumptions easier to review.',
     },
     {
       type: 'title',
@@ -26,7 +26,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: "The foundation of any structure is its mix. Our <strong>concrete mix calculator</strong> provides the exact dosage of cement, sand and gravel for any required volume. For fine masonry work, the <strong>mortar calculator</strong> adjusts lime-to-sand ratios for durable renders. Additionally, the stair layout tool uses <strong>Blondel's Law</strong> to guarantee comfortable, code-compliant steps.",
+      html: "The foundation of any structure is its mix. Our <strong>concrete mix calculator</strong> estimates the dosage of cement, sand and gravel for the required volume. For fine masonry work, the <strong>mortar calculator</strong> adjusts lime-to-sand ratios for durable renders. Additionally, the stair layout tool uses <strong>Blondel's Law</strong> to help you check comfortable, code-compliant proportions.",
     },
     {
       type: 'title',
@@ -67,7 +67,7 @@ export const content: CategoryLocaleContent = {
     {
       type: 'tip',
       title: 'Execution Tip for the Job Site',
-      html: '<p><strong>Perfect Mix:</strong> Always add powder (cement/lime) to water, not the other way around. You will achieve more homogeneous hydration and avoid hard-to-dissolve lumps, guaranteeing the final strength of the material.</p>',
+      html: '<p><strong>Better Mixing:</strong> Always add powder (cement/lime) to water, not the other way around. This promotes more homogeneous hydration and helps avoid hard-to-dissolve lumps that can affect the final strength of the material.</p>',
     },
     {
       type: 'title',

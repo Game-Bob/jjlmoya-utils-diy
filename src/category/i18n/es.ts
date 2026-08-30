@@ -4,7 +4,7 @@ export const content: CategoryLocaleContent = {
   slug: 'diy',
   title: 'Herramientas y Calculadoras para Proyectos DIY y Construcción',
   description:
-    'Planifica tus proyectos de bricolaje con herramientas gratuitas online. Calculadoras de contracción de arcilla, mezclas de resina, hormigón, optimizadores de corte y trazado de escaleras.',
+    'Planifica tus proyectos de bricolaje con herramientas online gratuitas para arcilla, resina, hormigón, cortes y diseño de escaleras.',
   seo: [
     {
       type: 'title',
@@ -17,7 +17,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'Desde el cálculo de la dosificación exacta del hormigón hasta la optimización de cortes en tableros de madera, nuestras utilidades eliminan el desperdicio de material y garantizan la integridad de tus proyectos.',
+      html: 'Desde el cálculo de la dosificación del hormigón hasta la optimización de cortes en tableros de madera, nuestras utilidades ayudan a reducir el desperdicio de material y hacen más fáciles de revisar las decisiones del proyecto.',
     },
     {
       type: 'title',
@@ -26,7 +26,7 @@ export const content: CategoryLocaleContent = {
     },
     {
       type: 'paragraph',
-      html: 'La base de cualquier estructura es su mezcla. Nuestra calculadora de <strong>mezcla de hormigón</strong> permite obtener la dosificación exacta de cemento, arena y grava según el volumen necesario. Para trabajos de albañilería fina, la <strong>calculadora de morteros</strong> ajusta las proporciones de cal y arena para revocos duraderos. Además, el trazado de escaleras utiliza la <strong>Ley de Blondel</strong> para garantizar peldaños cómodos y normativos.',
+      html: 'La base de cualquier estructura es su mezcla. Nuestra calculadora de <strong>mezcla de hormigón</strong> estima la dosificación de cemento, arena y grava según el volumen necesario. Para trabajos de albañilería fina, la <strong>calculadora de morteros</strong> ajusta las proporciones de cal y arena para revocos duraderos. Además, el trazado de escaleras utiliza la <strong>Ley de Blondel</strong> para ayudarte a comprobar proporciones cómodas y normativas.',
     },
     {
       type: 'title',
@@ -67,7 +67,7 @@ export const content: CategoryLocaleContent = {
     {
       type: 'tip',
       title: 'Tip de Ejecución en Obra',
-      html: '<p><strong>Mezcla Perfecta:</strong> Siempre añade los polvos (cemento/cal) al agua, no al revés. Lograrás una hidratación más homogénea y evitarás la formación de grumos difíciles de disolver, garantizando la resistencia final del material.</p>',
+      html: '<p><strong>Mejor Mezcla:</strong> Siempre añade los polvos (cemento/cal) al agua, no al revés. Esto favorece una hidratación más homogénea y ayuda a evitar grumos difíciles de disolver que pueden afectar a la resistencia final del material.</p>',
     },
     {
       type: 'title',
