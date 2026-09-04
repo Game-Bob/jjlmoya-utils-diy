@@ -1,0 +1,1146 @@
+{
+  "version": 1,
+  "generatedAt": "2026-09-04T11:11:16.898Z",
+  "pages": {
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/aushubvolumen-bodenauflockerungs-rechner/": {
+      "hash": "2c2b55112bc333cc509eeca32fb849884f6751aa344e74768f0760af0cee3d91",
+      "route": "/de/werkzeuge/kategorien/diy/aushubvolumen-bodenauflockerungs-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/baluster-rechner/": {
+      "hash": "32133aa1dff40cd23976bd3570325e53990729fd87e4f2bfcd5ce4e32a91e254",
+      "route": "/de/werkzeuge/kategorien/diy/baluster-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/beton-moertel-rechner/": {
+      "hash": "3abaf2061c9cce84d43ad658b64113c064b3011f7a0594f322526c57ad12242a",
+      "route": "/de/werkzeuge/kategorien/diy/beton-moertel-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/bohrer-schleifen-meister/": {
+      "hash": "ae4f5c361e243cd876ca360367bdcadb729cb2ca257addf9b27bf2792bb749df",
+      "route": "/de/werkzeuge/kategorien/diy/bohrer-schleifen-meister/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/drehzahlrechner-bohren-fraesen/": {
+      "hash": "5a167b1c775ebd44a0e6f0b984a292a94511051f502280fa520bef30c3130d5e",
+      "route": "/de/werkzeuge/kategorien/diy/drehzahlrechner-bohren-fraesen/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/epoxidharz-rechner/": {
+      "hash": "d097a8a584741b92e8e8902d3e1477737d310e53e051a7aa7e9c572403549546",
+      "route": "/de/werkzeuge/kategorien/diy/epoxidharz-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/": {
+      "hash": "a367078118ad88cf320dc799f542ce2c48997ac485355000d54a69255fe81b7b",
+      "route": "/de/werkzeuge/kategorien/diy/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/moebel-platz-rechner/": {
+      "hash": "535a1029f8cde7abc3decfd857d851eaddd5a26e7d0913c998499d72ec2d0d5e",
+      "route": "/de/werkzeuge/kategorien/diy/moebel-platz-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/moertel-rechner/": {
+      "hash": "d3b4312264a5f5ae609c9925ee92adba1dc7158daf13e429cd71a4e55fdfab21",
+      "route": "/de/werkzeuge/kategorien/diy/moertel-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/passepartout-rechner/": {
+      "hash": "fc0456171f8f6020ed1475dca9df479ade90a3c4be806da9f42c73e8b8142359",
+      "route": "/de/werkzeuge/kategorien/diy/passepartout-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/satz-des-pythagoras-rechter-winkel-rechner-3-4-5-regel/": {
+      "hash": "cfc23c59c73299f1321515aedb23e0aae6c8cfd973119e74a2bc6448c6ebd83f",
+      "route": "/de/werkzeuge/kategorien/diy/satz-des-pythagoras-rechter-winkel-rechner-3-4-5-regel/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/schnittoptimierung/": {
+      "hash": "cd3e37ed0acd0a46f4acc49d93e159a6b68bce37cb074ad006f82ffcf5a54e85",
+      "route": "/de/werkzeuge/kategorien/diy/schnittoptimierung/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/spannungsabfall-rechner/": {
+      "hash": "81bdcfb93c4558abbb5c60229885b65a30ceee64e99612ca610e6d1ae77707f7",
+      "route": "/de/werkzeuge/kategorien/diy/spannungsabfall-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/ton-schwindungsrechner/": {
+      "hash": "88bcd3a735f968eff5592b97b185555616ed59bfcfbdd3d42af9affa77e52a19",
+      "route": "/de/werkzeuge/kategorien/diy/ton-schwindungsrechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/treppen-rechner/": {
+      "hash": "ac1dcb32309008bc21fb1a5ddc189d173e56b4d1a6356e70a31e04d0f8e70f1c",
+      "route": "/de/werkzeuge/kategorien/diy/treppen-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/trockenbau-rechner/": {
+      "hash": "e173a17727c15706ef4cc544bdd597f7b6463dfed6c9fb88e6d7a46d9142b9e9",
+      "route": "/de/werkzeuge/kategorien/diy/trockenbau-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/waermeausdehnungs-rechner/": {
+      "hash": "132ab3eab69d39fcfac1215e427ad0f3df4a93c4868fcc6afc55dbbfc2a1ba99",
+      "route": "/de/werkzeuge/kategorien/diy/waermeausdehnungs-rechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/werkstatt-bruch-metrisch-umrechner/": {
+      "hash": "dd7abda35ce368935113e2cbff6c131184c490be458c65281d53346df6038dd9",
+      "route": "/de/werkzeuge/kategorien/diy/werkstatt-bruch-metrisch-umrechner/"
+    },
+    "https://www.gamebob.dev/de/werkzeuge/kategorien/diy/zweitakt-gemischrechner/": {
+      "hash": "fc7c2dcaa4905d0646b91c9f95d2417c13a6dcb748d13c500d8e4660eb38a711",
+      "route": "/de/werkzeuge/kategorien/diy/zweitakt-gemischrechner/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/baluster-calculator/": {
+      "hash": "bfb06c071412b235e006c65ebeb85476faf7af3d95d15e3c13dbca2408880d25",
+      "route": "/en/utilities/categories/diy/baluster-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/clay-shrinkage-calculator/": {
+      "hash": "56293887ac7b5237618d3b00fb84138e20c3d261040eb672b2d3170506cba07d",
+      "route": "/en/utilities/categories/diy/clay-shrinkage-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/concrete-mortar-calculator/": {
+      "hash": "97661344449c1140c8b98573b6df52e4b4bbfa4e978953caff9a62bb6b849981",
+      "route": "/en/utilities/categories/diy/concrete-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/cut-optimizer/": {
+      "hash": "317900c11a0d193e52d60d1097caec8d6a1327b964e3d767d177b96f63618f3e",
+      "route": "/en/utilities/categories/diy/cut-optimizer/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/drill-rpm-calculator/": {
+      "hash": "3e8ab17728ba46e24cebafb2f10f6a38177dbc2d8d7adaf865389be44b4695ae",
+      "route": "/en/utilities/categories/diy/drill-rpm-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/drill-sharpening-master/": {
+      "hash": "ea7001b06719c647072dd92e4e47b5f60967349cdddf3f9e8ace3af548e89d58",
+      "route": "/en/utilities/categories/diy/drill-sharpening-master/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/drywall-calculator/": {
+      "hash": "67dc1bca8a579cdd713f9930588201d7c034ed309389e9fb031419d5a6c5f27c",
+      "route": "/en/utilities/categories/diy/drywall-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/epoxy-resin-calculator/": {
+      "hash": "2356919c27cbc058ffa4e3b5482ef268b9ba0ad1a13d8525ebe8fb25a255015e",
+      "route": "/en/utilities/categories/diy/epoxy-resin-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/excavation-volume-soil-swell-calculator/": {
+      "hash": "c62029cb8686aef46375add8f84be6d334d0d5ce8d17f9db79f3754e8e67e6a4",
+      "route": "/en/utilities/categories/diy/excavation-volume-soil-swell-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/furniture-fit-calculator/": {
+      "hash": "5d20e85123f1f4a81918deaae8766966282e4b5eab06a4378923074d7fe6f6ff",
+      "route": "/en/utilities/categories/diy/furniture-fit-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/": {
+      "hash": "b9244a67c7b45d5c08e09ac5fa047075ed8a7eab66c5e24965afe7ca7ee199f6",
+      "route": "/en/utilities/categories/diy/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/lime-mortar-calculator/": {
+      "hash": "9591d35bc685964c405a6e88ff7e82dafed9425e445a1873e85a26ee78096ce4",
+      "route": "/en/utilities/categories/diy/lime-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/passepartout-calculator/": {
+      "hash": "e55c97d364a2a6373a96d5dd0e03356a744800aa1e29a267a723d34c5646049d",
+      "route": "/en/utilities/categories/diy/passepartout-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/": {
+      "hash": "f724435f85ce03a4c1c74ef29696f7e6322f7c742163d22593a6687b2491df6b",
+      "route": "/en/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/stair-calculator/": {
+      "hash": "2373961a6273c75c154640f79469748e076387447b5fd03eeb8a99d38c893b7e",
+      "route": "/en/utilities/categories/diy/stair-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/thermal-expansion-calculator/": {
+      "hash": "6d68b4d6be19421150548891bd43541dbbc64c309697aeb8adc83b756a8caaef",
+      "route": "/en/utilities/categories/diy/thermal-expansion-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/two-stroke-fuel-mixture-calculator/": {
+      "hash": "685d8250db4412d3e6328e723796ea3c1e231623eb9512aa0cafdfa8696817b5",
+      "route": "/en/utilities/categories/diy/two-stroke-fuel-mixture-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/voltage-drop-calculator/": {
+      "hash": "03b094f2a44f5ffad7f80f77c1862bed5974141983f812809ff14ec188f0dd4e",
+      "route": "/en/utilities/categories/diy/voltage-drop-calculator/"
+    },
+    "https://www.gamebob.dev/en/utilities/categories/diy/workshop-fraction-converter/": {
+      "hash": "b7828a5255baba0bf82e8872ef6e2c4b23097db6aa0feb09d983e0ab0cda7e30",
+      "route": "/en/utilities/categories/diy/workshop-fraction-converter/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/affuteur-maitrise-forets/": {
+      "hash": "068dce643fa9da79b06baf9d1e686aca94940099ddaf033c708e415097706718",
+      "route": "/fr/utilitaires/categories/diy/affuteur-maitrise-forets/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-balustres/": {
+      "hash": "58d843899c74ccc8e85c851dd5fac1a4df665c64bea9ccbb4a42701c90d52e26",
+      "route": "/fr/utilitaires/categories/diy/calculateur-balustres/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-beton-mortier/": {
+      "hash": "00a6b129b573487397dd9f1356f70153ce5827ca2197dc1acb0e0afdc2ab248a",
+      "route": "/fr/utilitaires/categories/diy/calculateur-beton-mortier/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-chute-tension/": {
+      "hash": "680c7d18f3ac76ce348596e4a4d8831f97a906df9dc5c64be8fa3a0f5bcd750d",
+      "route": "/fr/utilitaires/categories/diy/calculateur-chute-tension/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-dilatation-thermique/": {
+      "hash": "2d1c38717b5852f564802b76c503096f44ccf46c5236ef94d7db2e5662f711b7",
+      "route": "/fr/utilitaires/categories/diy/calculateur-dilatation-thermique/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-encombrement-meubles/": {
+      "hash": "fc7480f86495f52e2d2ab4b3b895c67f0d0615c9cb6ee8aec8e0b432a44a16b2",
+      "route": "/fr/utilitaires/categories/diy/calculateur-encombrement-meubles/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-melange-2-temps/": {
+      "hash": "77f14d1c1f6fb7629785b86a54c2b2d07fbebd926c4c1aa2a9104e35128cc480",
+      "route": "/fr/utilitaires/categories/diy/calculateur-melange-2-temps/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-passe-partout/": {
+      "hash": "d9e72d029fdac685d4ab66917742144c9947b37041b3557f179d22c38565b4c0",
+      "route": "/fr/utilitaires/categories/diy/calculateur-passe-partout/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-plaque-de-platre/": {
+      "hash": "b09aee2972bf7e740f1e90c16bf5a034de1637704179b2678dc29e42379a9003",
+      "route": "/fr/utilitaires/categories/diy/calculateur-plaque-de-platre/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-resine-epoxy/": {
+      "hash": "bc9d3427587046adb8d6390bb07f0627a3c75999bb7520eeb70968dd1d36ac10",
+      "route": "/fr/utilitaires/categories/diy/calculateur-resine-epoxy/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-retrait-argile/": {
+      "hash": "9b8c5519c07d5881de9f352523837dd7fd0f0717b4fddcd7a3437f2cafac24e9",
+      "route": "/fr/utilitaires/categories/diy/calculateur-retrait-argile/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-tours-taraudage/": {
+      "hash": "91025dd26be606241400bef05fda77a0694b5b7f9cec0b5ef3c2d0aec1d5b9df",
+      "route": "/fr/utilitaires/categories/diy/calculateur-tours-taraudage/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculateur-volume-excavation-foisonnement-terre/": {
+      "hash": "78cf06b385852547dfd49f0b635eca8fea980fd60e4099884b37f177b71d83fd",
+      "route": "/fr/utilitaires/categories/diy/calculateur-volume-excavation-foisonnement-terre/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculatrice-angle-droit-pythagore-regle-3-4-5/": {
+      "hash": "a3d70ee92a1c0b9b90231a15d0379eddff3678f70d5455142bf98f209bf56b97",
+      "route": "/fr/utilitaires/categories/diy/calculatrice-angle-droit-pythagore-regle-3-4-5/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/calculatrice-escaliers/": {
+      "hash": "05ee50ad5b4ecfd23eae4af82be2221c70419f257f93dcf34656bd90cdfb92df",
+      "route": "/fr/utilitaires/categories/diy/calculatrice-escaliers/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/convertisseur-fractions-pouces-millimetres/": {
+      "hash": "828b669b75704f4a3234e333fe1dfed947a3576a8fe7890d268c7fe1b36f4288",
+      "route": "/fr/utilitaires/categories/diy/convertisseur-fractions-pouces-millimetres/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/dosage-mortier-chaux-nhl/": {
+      "hash": "ed3d1eaf658ea6cd86aa10ae6332119f2b253550d18d2f391c15d5972302ff9a",
+      "route": "/fr/utilitaires/categories/diy/dosage-mortier-chaux-nhl/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/": {
+      "hash": "261e3f4768e4d1a370561d7f9fae072a34c2556445e23081b85f0f6537e45966",
+      "route": "/fr/utilitaires/categories/diy/"
+    },
+    "https://www.gamebob.dev/fr/utilitaires/categories/diy/optimiseur-decoupe/": {
+      "hash": "2e04bed1500234011b0cb8ad97f127c5b4fba08020295cb3cafebac24a19544e",
+      "route": "/fr/utilitaires/categories/diy/optimiseur-decoupe/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/": {
+      "hash": "c484cb02c94636a4eaff056bec49ad5c38111e0d2a59482cff2e7d7128411983",
+      "route": "/id/utilitas/kategori/diy/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-baluster/": {
+      "hash": "c86a7799871daca7612ab51666e4341d70a9b200af0d88055e929442a841533b",
+      "route": "/id/utilitas/kategori/diy/kalkulator-baluster/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-beton-mortar/": {
+      "hash": "19a2b2e47313deae35e97a83635939898fca167d1d2957b16692f173aba450c0",
+      "route": "/id/utilitas/kategori/diy/kalkulator-beton-mortar/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-campuran-bahan-bakar-2-tak/": {
+      "hash": "0ce93e3450e1a04df08105168d6d19111c0b1482e8684f53b4a134f83429a273",
+      "route": "/id/utilitas/kategori/diy/kalkulator-campuran-bahan-bakar-2-tak/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-gypsum-drywall/": {
+      "hash": "669dcc6de6b9b2ba3108ae7b329287655b0163524223ebc9034905455f73537f",
+      "route": "/id/utilitas/kategori/diy/kalkulator-gypsum-drywall/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-jatuh-tegangan/": {
+      "hash": "1521399091d176d6dc35fb583c4f9bf43fb9413a56485bb4f70de08b25adf285",
+      "route": "/id/utilitas/kategori/diy/kalkulator-jatuh-tegangan/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-kecepatan-bor-frais/": {
+      "hash": "115e24bd48ff1a13c620bed8a7d00993ab667ad31c0bde60180ed3dccbb5d726",
+      "route": "/id/utilitas/kategori/diy/kalkulator-kecepatan-bor-frais/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-mortir/": {
+      "hash": "94de9cbd6e488a6d249772507dbe1c3c41fe2e08e1ac1484fa38b7b4dec4a0f5",
+      "route": "/id/utilitas/kategori/diy/kalkulator-mortir/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-passepartout/": {
+      "hash": "83b387f30321d4bc432b697a67b532e2ffdaf99648195e17d2e21e13356b4210",
+      "route": "/id/utilitas/kategori/diy/kalkulator-passepartout/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-pemuaian-panas/": {
+      "hash": "e142bcd724328aee6fd20b998ca0950cfe004225589d7c8f87ed686bce9b4e2f",
+      "route": "/id/utilitas/kategori/diy/kalkulator-pemuaian-panas/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-penyusutan-tanah-liat/": {
+      "hash": "b3d0e62bf22696cbd589bf2558f71a17c981ca835b6fe84f4c5907281def9b65",
+      "route": "/id/utilitas/kategori/diy/kalkulator-penyusutan-tanah-liat/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-resin-epoksi/": {
+      "hash": "6eab1035eb7530e851c29a30ba69ff86cb3536132f2378d35ff8239b6f06f8de",
+      "route": "/id/utilitas/kategori/diy/kalkulator-resin-epoksi/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-ruang-furnitur/": {
+      "hash": "58f9ba7cf5bd9c753e2f267b66dfac1e0a3ba6fc34510b6da25e8284391bf600",
+      "route": "/id/utilitas/kategori/diy/kalkulator-ruang-furnitur/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-sudut-siku-siku-pythagoras-aturan-3-4-5/": {
+      "hash": "5c6ccdd5ffc9b2e030603cc9ae836a6b00ffbc7fae36e448d1d7976802cb1f86",
+      "route": "/id/utilitas/kategori/diy/kalkulator-sudut-siku-siku-pythagoras-aturan-3-4-5/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-tangga/": {
+      "hash": "af6d99d91e2ac40673d9e769070dfa685325ef161c26d3978719a1a273104e53",
+      "route": "/id/utilitas/kategori/diy/kalkulator-tangga/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/kalkulator-volume-galian-pengembangan-tanah/": {
+      "hash": "d9427f94cde8f881e75af0f6ea48bcb3d107feedb5dbd3f29822daa2e90b123b",
+      "route": "/id/utilitas/kategori/diy/kalkulator-volume-galian-pengembangan-tanah/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/konverter-pecahan-inci-ke-milimeter/": {
+      "hash": "6dafd656ad3d130acf531249e252b7477ec164033ad20569f566153bf75f9328",
+      "route": "/id/utilitas/kategori/diy/konverter-pecahan-inci-ke-milimeter/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/pengasah-mata-bor-presisi/": {
+      "hash": "47ccb53548fb2684ef370cee6cd26143446d2aab5cec6dd95a32056d44eb18d8",
+      "route": "/id/utilitas/kategori/diy/pengasah-mata-bor-presisi/"
+    },
+    "https://www.gamebob.dev/id/utilitas/kategori/diy/pengoptimal-potongan/": {
+      "hash": "743471a7fd403d3cf59cfa02f7c03aa341deea43f7b443c48e85324f0ea3740f",
+      "route": "/id/utilitas/kategori/diy/pengoptimal-potongan/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/affilatura-maestra-punte/": {
+      "hash": "4cb3c29e6999671043b4782b11475029b0484ece5e7710b1984d5fcbaa0ce7db",
+      "route": "/it/utilita/categorie/diy/affilatura-maestra-punte/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-caduta-tensione/": {
+      "hash": "76fb283c4d95ae10a45ca936339c7f799fa4c674b3d5c9937813eb5bbecae83d",
+      "route": "/it/utilita/categorie/diy/calcolatore-caduta-tensione/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-cartongesso/": {
+      "hash": "6385ef5b025401365dc8520e5fe5a51e78d50b06fdb263cfd51b72049eb93ecf",
+      "route": "/it/utilita/categorie/diy/calcolatore-cartongesso/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-dilatazione-termica/": {
+      "hash": "c70b68d1f1a92d7fbcf747654a4a9829ce5e30a5341735a260b7d35cbcd695da",
+      "route": "/it/utilita/categorie/diy/calcolatore-dilatazione-termica/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-giri-trapano-fresa/": {
+      "hash": "cd07f926b289463c2e51d2add39f11b3292ef3bc53adeacc78ae7fb0c7a6f807",
+      "route": "/it/utilita/categorie/diy/calcolatore-giri-trapano-fresa/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-malte/": {
+      "hash": "a1dea987ace8ce93596ed673550ffdd80a1eab2946484d186c5e581b88367ec5",
+      "route": "/it/utilita/categorie/diy/calcolatore-malte/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-miscela-2-tempi/": {
+      "hash": "64d5269efcebacf9ad60a5c7a96919cb52ff794d6b9f366471715ca9b6371de9",
+      "route": "/it/utilita/categorie/diy/calcolatore-miscela-2-tempi/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-passepartout/": {
+      "hash": "c0b20289fd58fd241f2f9da5a7194e11f3a8db888d25e6375b60a49e74ea786b",
+      "route": "/it/utilita/categorie/diy/calcolatore-passepartout/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-resina-epossidica/": {
+      "hash": "0f81250dd9cd31653c2329d7bbf9d5d0a637fcf0423e72027c03e08a1fd6dbcd",
+      "route": "/it/utilita/categorie/diy/calcolatore-resina-epossidica/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-scale/": {
+      "hash": "6c3d423f72e065830d84cfd7b21c35a4417d06e2225c50558a96e06783e11484",
+      "route": "/it/utilita/categorie/diy/calcolatore-scale/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-spazio-mobili/": {
+      "hash": "698d5e3f9dd83755f4e03bff5a403bb71beef3c775de45bc8e60479be3aa5162",
+      "route": "/it/utilita/categorie/diy/calcolatore-spazio-mobili/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatore-volume-scavo-rigonfiamento-terreno/": {
+      "hash": "a23b157ffc8950f5640b514728e4a91a84142f12678fa4d3353e8e0420b60fb2",
+      "route": "/it/utilita/categorie/diy/calcolatore-volume-scavo-rigonfiamento-terreno/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatrice-angolo-retto-pitagora-regola-3-4-5/": {
+      "hash": "882dc82e2aff24ca56649a213051a96a7544c9911b55e1a975c3314b5e513123",
+      "route": "/it/utilita/categorie/diy/calcolatrice-angolo-retto-pitagora-regola-3-4-5/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatrice-argilla/": {
+      "hash": "647cc05ff08e9b22e44e2fe656bfac33ab70fe55fe01069d849484b10c666bd1",
+      "route": "/it/utilita/categorie/diy/calcolatrice-argilla/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatrice-balaustre/": {
+      "hash": "01f570e4a474d5493abbf4b7fa177bc478d0986099ef48265ab60040d49a8223",
+      "route": "/it/utilita/categorie/diy/calcolatrice-balaustre/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/calcolatrice-calcestruzzo-malta/": {
+      "hash": "a2106daa14e0bc2b82ef7c92c2c99f3e10d1166ee8bc45648923107ee62e94ee",
+      "route": "/it/utilita/categorie/diy/calcolatrice-calcestruzzo-malta/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/convertitore-frazioni-pollici-millimetri/": {
+      "hash": "a62c637190392c7af855b6fb54da4b9b6fecd914886ffa5d9fa1560fecd37413",
+      "route": "/it/utilita/categorie/diy/convertitore-frazioni-pollici-millimetri/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/": {
+      "hash": "60023dd66f0808e3dcac618a1937b7ad5123e063a998ff0a59628f56fab2968b",
+      "route": "/it/utilita/categorie/diy/"
+    },
+    "https://www.gamebob.dev/it/utilita/categorie/diy/ottimizzatore-taglio/": {
+      "hash": "ee124a66984d0b66be1fe29baf63645825eb2bb3e1744323d7a5def4e849b9c4",
+      "route": "/it/utilita/categorie/diy/ottimizzatore-taglio/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/baluster-calculator/": {
+      "hash": "01ba2d510597f81eb3d3a65cdcde0867e1650e27b893476aa6431128af8306be",
+      "route": "/ja/utilities/categories/diy/baluster-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/clay-shrinkage-calculator/": {
+      "hash": "f11c8241ff4a6b428b2d8b83ad00bf3d39e10803c4b8d3b0fc0bb1bca8a0e683",
+      "route": "/ja/utilities/categories/diy/clay-shrinkage-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/concrete-mortar-calculator/": {
+      "hash": "f448770d51f6faadd636ac43e84feff852bfec7603a4717dd3ad95a056beb8d7",
+      "route": "/ja/utilities/categories/diy/concrete-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/cut-optimizer/": {
+      "hash": "0d013fc6691948c3f38f2db4b948c76d1c6865c21c919e868d783cf9320e44a0",
+      "route": "/ja/utilities/categories/diy/cut-optimizer/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/drill-rpm-calculator/": {
+      "hash": "cde2ed502429a2cbec21663f96f2244ee6f1e7892e039e3a5f71d6d8ca9b4dac",
+      "route": "/ja/utilities/categories/diy/drill-rpm-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/drill-sharpening-master/": {
+      "hash": "2f62e15d8ca97f068f31be4c180484e37413e5b2b50b771e8608aa3b84f3ee27",
+      "route": "/ja/utilities/categories/diy/drill-sharpening-master/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/drywall-calculator/": {
+      "hash": "7bda6cc9593584eaf00c7c8b98157c22f440d3f538d2cafda3657e0e858a40e4",
+      "route": "/ja/utilities/categories/diy/drywall-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/epoxy-resin-calculator/": {
+      "hash": "81bdb30abe9ceb3b7e744c59d21f1c8e9024f5410913e0ad1df51204037071e3",
+      "route": "/ja/utilities/categories/diy/epoxy-resin-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/excavation-volume-soil-swell-calculator/": {
+      "hash": "20688479d74ac0fbe809f652f2f5dec5e66ba5d063877ccf96f0a3f2d453fee1",
+      "route": "/ja/utilities/categories/diy/excavation-volume-soil-swell-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/furniture-fit-calculator/": {
+      "hash": "9e1768878c616090b5ae606ad29781018f1fdafbbeb5e50e5995a9840aef6a30",
+      "route": "/ja/utilities/categories/diy/furniture-fit-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/": {
+      "hash": "27025362f0c21157f05db4dd5d3fe8d246df717f71ec15105dc44e030cec8ff3",
+      "route": "/ja/utilities/categories/diy/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/lime-mortar-calculator/": {
+      "hash": "479e78cf6aca3dd20e3c91d1aaf502c378cbfcf57ac64909766dc4c5a0864cf3",
+      "route": "/ja/utilities/categories/diy/lime-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/passepartout-calculator/": {
+      "hash": "0b9c93cecce5e4aa9dfd693c67a3a48d7243ac12518777564c6d3361803cbcff",
+      "route": "/ja/utilities/categories/diy/passepartout-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/": {
+      "hash": "da8da9651685089159ea40367aaea7c74d912d0b37c81a11d41b7afb59b819ea",
+      "route": "/ja/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/stair-calculator/": {
+      "hash": "bccfd1e0cae7b2387e03e0eb6abe59fbb6bfe303f8d01c413ef62c4314b6f556",
+      "route": "/ja/utilities/categories/diy/stair-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/thermal-expansion-calculator/": {
+      "hash": "c583a9606ad48289139f09a105f86b9bf2aacb0b30ab3a2980f22a1d11f7e7fa",
+      "route": "/ja/utilities/categories/diy/thermal-expansion-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/two-stroke-fuel-mixture-calculator/": {
+      "hash": "decc5ae5fb37f76f8735bc5df6cb56c4652a37094c77ed8ce4c689f1d07c96b7",
+      "route": "/ja/utilities/categories/diy/two-stroke-fuel-mixture-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/voltage-drop-calculator/": {
+      "hash": "9cbd817803e505415cbb1a24c5d568bf16e8a9e36a0cfe62fbc7a4b46782d618",
+      "route": "/ja/utilities/categories/diy/voltage-drop-calculator/"
+    },
+    "https://www.gamebob.dev/ja/utilities/categories/diy/workshop-fraction-converter/": {
+      "hash": "3bdc2224a2171c0c0e82681cc1f94657b8d04f4c8d0e741cf8b5d8639767772d",
+      "route": "/ja/utilities/categories/diy/workshop-fraction-converter/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/baluster-calculator/": {
+      "hash": "e8fb6ec8390654e08f887d3cc1858d5c9b4ea28be90783a06608fb9d915d2d06",
+      "route": "/ko/utilities/categories/diy/baluster-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/clay-shrinkage-calculator/": {
+      "hash": "e7b35ea7706111e8246b7301e8f703c5625f62dfc655e4208ae91008d7e15b3d",
+      "route": "/ko/utilities/categories/diy/clay-shrinkage-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/concrete-mortar-calculator/": {
+      "hash": "433cecf003195b3a88594228bc42241a6fd07e3030f67c3766a55c035ff866ef",
+      "route": "/ko/utilities/categories/diy/concrete-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/cut-optimizer/": {
+      "hash": "2dd2bb39de07b12a2aad4e4e252b0d43475a5073f8ab48039c2131a23bfc9048",
+      "route": "/ko/utilities/categories/diy/cut-optimizer/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/drill-rpm-calculator/": {
+      "hash": "a003feaf87294812d0e20a4cf406c2a739738fccd9029b83f3562e20fa4587c0",
+      "route": "/ko/utilities/categories/diy/drill-rpm-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/drill-sharpening-master/": {
+      "hash": "ab5d0e7e376e997304456291f75c621478ff279ab9182cbe1035e109cd9c6389",
+      "route": "/ko/utilities/categories/diy/drill-sharpening-master/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/drywall-calculator/": {
+      "hash": "77d173c00b72f6b2c32e757a4fc5f7687d578eac53fb7bd9bb46296ea36c5b9d",
+      "route": "/ko/utilities/categories/diy/drywall-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/epoxy-resin-calculator/": {
+      "hash": "44ca151e8a578ae1e180a34676b66e7b1703463e7f9fbca981ee8f1fb45c2d42",
+      "route": "/ko/utilities/categories/diy/epoxy-resin-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/excavation-volume-soil-swell-calculator/": {
+      "hash": "b4ba1f19c16ff3793088e6ce115da957b35108b6f1442dc488ecf8c2113b2c09",
+      "route": "/ko/utilities/categories/diy/excavation-volume-soil-swell-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/furniture-fit-calculator/": {
+      "hash": "4d5b9c246032bc778cc83524d0d009d83ddc1d35594905c64c0dfadc9d21d5d4",
+      "route": "/ko/utilities/categories/diy/furniture-fit-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/": {
+      "hash": "711e6893b6970ed44533b79f73645dec01d77aba9b52f8664eaec3fff1c8852f",
+      "route": "/ko/utilities/categories/diy/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/lime-mortar-calculator/": {
+      "hash": "3cd79554f79cc6bf7ea9a86c2269290a1b876f7b27e75fb4e0b9886c322608ff",
+      "route": "/ko/utilities/categories/diy/lime-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/passepartout-calculator/": {
+      "hash": "f3221b593ab59c17006a2cf64547e44b4a6a7c9d1b36d66aeaa54549800ae9fd",
+      "route": "/ko/utilities/categories/diy/passepartout-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/": {
+      "hash": "5779dd4f28da8ab02b03c6cc0c62d4cc70d71f38099824530f3396067e3ba593",
+      "route": "/ko/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/stair-calculator/": {
+      "hash": "adf8e929c54f2230fbf90e4521621a37383bc44ed9f6c67cb7ec4e751c4ba02b",
+      "route": "/ko/utilities/categories/diy/stair-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/thermal-expansion-calculator/": {
+      "hash": "cfcd7e21042ef907b32370cf8898ae6c72ce9c65b3dc1077ea0c020c78130280",
+      "route": "/ko/utilities/categories/diy/thermal-expansion-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/two-stroke-fuel-mixture-calculator/": {
+      "hash": "53d7ad289e60c5b342b576668b7f613630b31c34dac191149a45938e55418f85",
+      "route": "/ko/utilities/categories/diy/two-stroke-fuel-mixture-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/voltage-drop-calculator/": {
+      "hash": "01eca4f7c819d28b21c872ef3a761f9d2cc8f0900d489ef8d8d16214a9c53136",
+      "route": "/ko/utilities/categories/diy/voltage-drop-calculator/"
+    },
+    "https://www.gamebob.dev/ko/utilities/categories/diy/workshop-fraction-converter/": {
+      "hash": "1aa3f8b0b471717dc6564340287466dbf32d9a8f6b1dcde95ac51e8bc103e9b3",
+      "route": "/ko/utilities/categories/diy/workshop-fraction-converter/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/baluster-rekenmachine/": {
+      "hash": "4e6a6958d5f4946d58e033a247a0c6011eca346346ea5da55f327b569eadca24",
+      "route": "/nl/hulpmiddelen/categorieen/diy/baluster-rekenmachine/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/beton-mortel-calculator/": {
+      "hash": "99e2a9ea2113ff41925c836a1d2e92183c3658e2180744cab37de959e4d2e043",
+      "route": "/nl/hulpmiddelen/categorieen/diy/beton-mortel-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/boor-slijpen-master/": {
+      "hash": "63a6000e5b423748a3f825ac0b70ea1e86759f1f45fee4df19a02da0d9a2685e",
+      "route": "/nl/hulpmiddelen/categorieen/diy/boor-slijpen-master/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/epoxyhars-calculator/": {
+      "hash": "87eb1f5768a2619efa647610cd4284284121430cd173f74fd441a2071616b437",
+      "route": "/nl/hulpmiddelen/categorieen/diy/epoxyhars-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/gipsplaat-rekenmachine/": {
+      "hash": "3f1449cce16617419c0ad2e19268a4d02f8679e2dea5bb40645ba6600daeb7d2",
+      "route": "/nl/hulpmiddelen/categorieen/diy/gipsplaat-rekenmachine/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/": {
+      "hash": "f97225bd85d720a07193201a148dce9ffba59a94ddb6f5e416e88e6cc4c82712",
+      "route": "/nl/hulpmiddelen/categorieen/diy/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/klei-krimp-calculator/": {
+      "hash": "f06b2f1dfffecae9a6bbe7c89833e4f5875f3a0b64e4dc040ecb8c0c710cc0d7",
+      "route": "/nl/hulpmiddelen/categorieen/diy/klei-krimp-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/meubel-ruimte-calculator/": {
+      "hash": "3110061350315bc24bce1ab23286c2a2852b9233dfe080d44b990009d628d7fa",
+      "route": "/nl/hulpmiddelen/categorieen/diy/meubel-ruimte-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/mortel-calculator/": {
+      "hash": "1469cf9cdcff25f4c476d525f26acc97052d63f939151131e0b3025f9c323a71",
+      "route": "/nl/hulpmiddelen/categorieen/diy/mortel-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/ontgravingsvolume-gronduitzetting-rekenmachine/": {
+      "hash": "0382676e8dd4ceaa398c336a07dc8a026b7ca833459001d5d98d330e5806e41a",
+      "route": "/nl/hulpmiddelen/categorieen/diy/ontgravingsvolume-gronduitzetting-rekenmachine/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/passepartout-rekenmachine/": {
+      "hash": "e13923e127ae3b053988c1dafd9013535c12baee996e654ac32bd037c99a5a60",
+      "route": "/nl/hulpmiddelen/categorieen/diy/passepartout-rekenmachine/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/spanningsverlies-calculator/": {
+      "hash": "5a9b63213ddd2cb487336953c14622a6ee22aae26df19d13dd24076e78102d37",
+      "route": "/nl/hulpmiddelen/categorieen/diy/spanningsverlies-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/stelling-van-pythagoras-rechte-hoek-calculator-3-4-5-regel/": {
+      "hash": "35fb7a20ae5f696ac1039fce59f6cd9128b1ec337ec846e021fa0699904cba4f",
+      "route": "/nl/hulpmiddelen/categorieen/diy/stelling-van-pythagoras-rechte-hoek-calculator-3-4-5-regel/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/thermische-expansie-calculator/": {
+      "hash": "612ab876c4bfe2f91803b956625d1b52ab0e8410a14811eea6742cfbda1db345",
+      "route": "/nl/hulpmiddelen/categorieen/diy/thermische-expansie-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/toerental-rekenmachine-boren-frezen/": {
+      "hash": "90d809fc954c80fd156d085eb9c4e451b61f779e50ef38be6e63e65cc5f8a917",
+      "route": "/nl/hulpmiddelen/categorieen/diy/toerental-rekenmachine-boren-frezen/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/trap-calculator/": {
+      "hash": "5620d859748b05a743153f06c7de55927ffe87b2ba22033a1a162e25aa87d32e",
+      "route": "/nl/hulpmiddelen/categorieen/diy/trap-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/tweetakt-mengverhouding-calculator/": {
+      "hash": "d24f7b9d4f2fc39974d2f2206e85c36d0317ddfaad5ae97e7e07d88beffadbfd",
+      "route": "/nl/hulpmiddelen/categorieen/diy/tweetakt-mengverhouding-calculator/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/werkplaats-breuk-naar-millimeter-omzetter/": {
+      "hash": "079e7ad0f0b00691648731853cc7daa76aa2bc6982badf3e95da6bb9a06de64d",
+      "route": "/nl/hulpmiddelen/categorieen/diy/werkplaats-breuk-naar-millimeter-omzetter/"
+    },
+    "https://www.gamebob.dev/nl/hulpmiddelen/categorieen/diy/zaagplan-optimalisatie/": {
+      "hash": "c0f8468e7fc83ed426336859bd769daadc730e5ae42cf9227da462baf0807f21",
+      "route": "/nl/hulpmiddelen/categorieen/diy/zaagplan-optimalisatie/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/": {
+      "hash": "9fc4c176da7d94efc6d9c7334c938f79e8a5a8894c895e27b2ff676b9b42c4bb",
+      "route": "/pl/narzedzia/kategorie/diy/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-betonu-zaprawy/": {
+      "hash": "a945cbf5cd42343fbccb70cd2daa2b0fdfb805ca128bf5fef6d72c81f386ad7f",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-betonu-zaprawy/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-kata-prostego-pitagorasa-zasada-3-4-5/": {
+      "hash": "43e6f82e879fd61f5daae5c06599a2b7c26c7f2687afc778d98e619232927d80",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-kata-prostego-pitagorasa-zasada-3-4-5/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-kurczliwosci-gliny/": {
+      "hash": "bb3f9bf92a951f4562404128b6a872c4ff119a399aae8d70491df70fe0a3b205",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-kurczliwosci-gliny/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-miejsca-na-meble/": {
+      "hash": "6c8e8bb093ad968055837398a3b4832cdda2b75087c9c1a8b51f0fc3d1a3b38e",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-miejsca-na-meble/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-mieszanki-paliwa-2t/": {
+      "hash": "284ee4b1cf2cc7eb543a0eefa4283a92be17ce4aadd82bc50761d6206580612d",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-mieszanki-paliwa-2t/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-objetosci-wykopu-specznienia-gruntu/": {
+      "hash": "5426dd737aadd5a9d81096a9372501c95a61e6b19c73d373e8420e63db610608",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-objetosci-wykopu-specznienia-gruntu/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-obrotow-wiercenia-frezowania/": {
+      "hash": "5b294992ac43c8d9bec1a268640d1cf6130baf6118c56a0119533a6b10f1fbda",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-obrotow-wiercenia-frezowania/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-passe-partout/": {
+      "hash": "4e1b34e9f263a185578b65f63130491af50f55b1ee7b0b4b9b58a20fdd471cf0",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-passe-partout/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-plyt-gipsowych/": {
+      "hash": "6899975ffe4208e2d7592d8743d7fdb4814c54c6603cc980afd31dcb1e7f8e61",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-plyt-gipsowych/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-rozszerzalnosci-cieplnej/": {
+      "hash": "35d6520d6c9edd102beef8ea6a99d66a854ae48d2f0853e7de2ff2df77513537",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-rozszerzalnosci-cieplnej/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-schodow/": {
+      "hash": "c9b0893f1a9d3111f38b990e1fa0a66fcc29b4dcdc70c59aba942cc64073edc9",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-schodow/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-spadku-napiecia/": {
+      "hash": "317f440121a42ebed1e8e84ea62e2e5bced722a2ad58013ed4e3ff9cfe4a2145",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-spadku-napiecia/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-tralek/": {
+      "hash": "78a25e154c5caaa10748fb0dca9af600c2ad1aaa57e879528b2a1eaa78099bdc",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-tralek/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-zapraw/": {
+      "hash": "d74cfd64049dd3ab901bb8c70a27ab427c430dd426896badfd2c1b21397f51a4",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-zapraw/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/kalkulator-zywicy-epoksydowej/": {
+      "hash": "ca5582f3e9eefceab0226b44c2ef0ec0523d74ed8c0db051553ae5e8ff41ee06",
+      "route": "/pl/narzedzia/kategorie/diy/kalkulator-zywicy-epoksydowej/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/mistrzowskie-ostrzenie-wiertel/": {
+      "hash": "8b6defd402529d73c573475723cb5a45c0509936ac0f6fe7c7491676717de235",
+      "route": "/pl/narzedzia/kategorie/diy/mistrzowskie-ostrzenie-wiertel/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/optymalizator-ciecia/": {
+      "hash": "eba81066c3705c0a2d58cf4792cea1aff620368a09c224faaeab3baf907add1c",
+      "route": "/pl/narzedzia/kategorie/diy/optymalizator-ciecia/"
+    },
+    "https://www.gamebob.dev/pl/narzedzia/kategorie/diy/warsztatowy-konwerter-ulamkow-na-milimetry/": {
+      "hash": "71f1b955c901396abff8dddecbdadfc034921eed5996db55907dba0e93e8f02a",
+      "route": "/pl/narzedzia/kategorie/diy/warsztatowy-konwerter-ulamkow-na-milimetry/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/afiamento-mestre-brocas/": {
+      "hash": "608b4706f5c1e3c1667b8b4db2dbf29e049e9f7405d1dff8f7e4c233f716dd6c",
+      "route": "/pt/utilidades/categorias/diy/afiamento-mestre-brocas/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-angulo-reto-pitagoras-regra-3-4-5/": {
+      "hash": "d32e4c77958f9b5297ccbdb67c98c1c252555f897a8ea8fcaae8e353752dfbef",
+      "route": "/pt/utilidades/categorias/diy/calculadora-angulo-reto-pitagoras-regra-3-4-5/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-argamassas/": {
+      "hash": "c06bc9fa1c7f895a7616591d91374407450252e3b503228bc8b38ccced01edfa",
+      "route": "/pt/utilidades/categorias/diy/calculadora-argamassas/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-argila/": {
+      "hash": "e6ed080cadeb7c1d52048c3f12c529912680f5bde31ed9f7ad4dbb8ead49404e",
+      "route": "/pt/utilidades/categorias/diy/calculadora-argila/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-balaustres/": {
+      "hash": "6da4e4ff0dd18d969b8e89292b94ae3955d5252a9663cbfc73d10c2efc3eab81",
+      "route": "/pt/utilidades/categorias/diy/calculadora-balaustres/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-betao-argamassa/": {
+      "hash": "8dcfa30fa0ea5a654d37be8f3f6aa2ccdb4b09143e7c1bab9677154e6c015cf7",
+      "route": "/pt/utilidades/categorias/diy/calculadora-betao-argamassa/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-de-passepartout/": {
+      "hash": "3d1df9a6364c44266c971414d8e829ee9a33efcfee2d06e9f6fceb56dd8334af",
+      "route": "/pt/utilidades/categorias/diy/calculadora-de-passepartout/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-dilatacao-termica/": {
+      "hash": "601c3a3101b3ebe934f14be03fd83921033401a3578c8357aaa5fad44e225012",
+      "route": "/pt/utilidades/categorias/diy/calculadora-dilatacao-termica/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-escadas/": {
+      "hash": "4d0da057f525ba9995975c0f982c5a871e7462de7466d7a86f43798da13292d7",
+      "route": "/pt/utilidades/categorias/diy/calculadora-escadas/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-espaco-moveis/": {
+      "hash": "1821d84a940e3c77fcffbc542bda9dbac587ac21653d39d2885c8ac34e46f726",
+      "route": "/pt/utilidades/categorias/diy/calculadora-espaco-moveis/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-gesso-acartonado/": {
+      "hash": "d6790310901344a9587fa33ccc35166847abb1d21dbf79839d4e1326c52e67b9",
+      "route": "/pt/utilidades/categorias/diy/calculadora-gesso-acartonado/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-mistura-2-tempos/": {
+      "hash": "373ccaf3b393cd8f50fb53e59a8a7f23ae20747929218fad749140c9f73ff2b8",
+      "route": "/pt/utilidades/categorias/diy/calculadora-mistura-2-tempos/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-queda-tensao/": {
+      "hash": "f271a1b6c1f43856fd747e6a3680cf2823f86e26ef53fdc5528a16f9ff815167",
+      "route": "/pt/utilidades/categorias/diy/calculadora-queda-tensao/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-resina-epoxica/": {
+      "hash": "41ad69782bcc1db09c712910fe45b684bb882a19d5083aafe2267284f972e763",
+      "route": "/pt/utilidades/categorias/diy/calculadora-resina-epoxica/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-usinagem-furo/": {
+      "hash": "eb7f1ce57218026d636fcf8acfeea088228a9c1071c8ee2bbb608db20e219f04",
+      "route": "/pt/utilidades/categorias/diy/calculadora-usinagem-furo/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/calculadora-volume-escavacao-empolamento-solo/": {
+      "hash": "0e0c7ef2d04d446e00bae49f473476af1460e8923fca74ac0b8ee9d296ad6d17",
+      "route": "/pt/utilidades/categorias/diy/calculadora-volume-escavacao-empolamento-solo/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/conversor-fracoes-polegadas-milimetros/": {
+      "hash": "cf318942e2f5a8e70678d835fe3a69d3fdb97f6f12115bdbfe97732fe27c1285",
+      "route": "/pt/utilidades/categorias/diy/conversor-fracoes-polegadas-milimetros/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/": {
+      "hash": "bc66a31043380852422239b4ec59bef2105a881e61f5a405a05a9bdbbe2d9751",
+      "route": "/pt/utilidades/categorias/diy/"
+    },
+    "https://www.gamebob.dev/pt/utilidades/categorias/diy/otimizador-corte/": {
+      "hash": "a77a17106dbf04da75e6f3bf292137be004d97aa411c92fe62aa7ed2f09c788e",
+      "route": "/pt/utilidades/categorias/diy/otimizador-corte/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/": {
+      "hash": "37c028ee7dc0b8a5f1c94af5e52cc7392fc527253b4245845268e1f5b578d595",
+      "route": "/ru/instrumenty/kategorii/diy/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulator-dvukhtak-smesi/": {
+      "hash": "b5ec8ef73914e1a34144ac2cab6c197e2d30734cfbb29761697fb754c9393a4a",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulator-dvukhtak-smesi/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-balyasin/": {
+      "hash": "fc19d2045f76271a0b8226260525baebf678d3f1e47dffc7d658d872b423cf96",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-balyasin/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-betona-rastvora/": {
+      "hash": "b970f577de45744d19d60c024d4c52a633d42b271114edd692aa7634ba8fb385",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-betona-rastvora/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-epoksidnoj-smoly/": {
+      "hash": "ef23cfe0615da357081d25703985270bafa6cccf6282bbc0e079bf97265a5c34",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-epoksidnoj-smoly/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-gipsokartona/": {
+      "hash": "aa485aa3761d79b026a7c0a8658093cbc1eaf57a7c73a5d7ea759f49c1acaa4e",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-gipsokartona/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-lestnic/": {
+      "hash": "f5166791ef75f2ca4a232feebd6fb3319631039e39f65fa409b2c7a2c9412530",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-lestnic/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-obema-kotlovana-koeffitsienta-razryhleniya/": {
+      "hash": "3a3e7b844b0d5e5e722e2de8ae521066a03195653e0c4690781571b0ae6deb56",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-obema-kotlovana-koeffitsienta-razryhleniya/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-oborotov-sverleniya/": {
+      "hash": "b0f43bbac71b1c508b3519fda4dc7f0cafa893b6c0002bfc3b1443b2e61ded2b",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-oborotov-sverleniya/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-padeniya-napryazheniya/": {
+      "hash": "f5e0effa17fb4a490f941fe7ae5a681496a1aabfd2582ecd377b92ccae6f8839",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-padeniya-napryazheniya/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-passepartu/": {
+      "hash": "2667d848fa8e224f1eda9c6ed0ab16d7f97e562b704aba19fe0882c6a27a38e7",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-passepartu/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-prostranstva-dlya-mebeli/": {
+      "hash": "a8bec2fc37a2f9e0ea61ff1e710e07fafcb5761d18ee99b9de73e9e345776e75",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-prostranstva-dlya-mebeli/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-pryamogo-ugla-pifagora-pravilo-3-4-5/": {
+      "hash": "bf854f9864a809b0fda222e67fcf6ecbc40264faeade08bf2c948393857b73d2",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-pryamogo-ugla-pifagora-pravilo-3-4-5/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-rastvora/": {
+      "hash": "34ffe44d16a77f34bede7e29f085f7dfa3f6447175853ef90ebab5156f4c14eb",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-rastvora/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-teplovogo-rasshireniya/": {
+      "hash": "2132f74188fe00841eef8ae3c2a10e59c74688c5c094c0ea3e19bbf71e756837",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-teplovogo-rasshireniya/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/kalkulyator-usadki-gliny/": {
+      "hash": "98de39de1c5a554f403491458f6f8dca5f50f694d620fb151e07e62992c54e85",
+      "route": "/ru/instrumenty/kategorii/diy/kalkulyator-usadki-gliny/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/konverter-drobnyh-dyujmov-v-millimetry/": {
+      "hash": "d8d48d4606b1d469f21547daabef36e6ee99a4e4d20f935891f89812bb91a409",
+      "route": "/ru/instrumenty/kategorii/diy/konverter-drobnyh-dyujmov-v-millimetry/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/master-zatochki-sverl/": {
+      "hash": "47fe8264d7ced6b075756501bb8c4059246b8ecaf9a671ec07b38673ddb27bf1",
+      "route": "/ru/instrumenty/kategorii/diy/master-zatochki-sverl/"
+    },
+    "https://www.gamebob.dev/ru/instrumenty/kategorii/diy/optimizator-raskroya/": {
+      "hash": "569e9f352abd4f58bd8c0438b913b2c1d033d19d1b7cbfa66a59ad1a743f8ffa",
+      "route": "/ru/instrumenty/kategorii/diy/optimizator-raskroya/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/baluster-kalkylator/": {
+      "hash": "08ab2e5c812cefe381be69f8fd1ee61d55793d5e14bcf0601b4cd10819d8e8bd",
+      "route": "/sv/verktyg/kategorier/diy/baluster-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/betong-bruk-kalkylator/": {
+      "hash": "a9c8e6057cccc40ab722589762793581a61de75ae4cb1209885b17e1f51a380e",
+      "route": "/sv/verktyg/kategorier/diy/betong-bruk-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/borrslipningsmaster/": {
+      "hash": "c12afe083ea823a4a56db78b7ff62c435399cb5cb43c5599ca3174410169546b",
+      "route": "/sv/verktyg/kategorier/diy/borrslipningsmaster/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/bruk-kalkylator/": {
+      "hash": "f9a1f932bcc9d06dd61b6dca241b23be13cf957e65e1d613079746908106ffa1",
+      "route": "/sv/verktyg/kategorier/diy/bruk-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/epoxyharts-kalkylator/": {
+      "hash": "bba8bfafd08277d341e37b75dc646d89e04191beaf542a908b38839f8fbc0eec",
+      "route": "/sv/verktyg/kategorier/diy/epoxyharts-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/gipsskivor-kalkylator/": {
+      "hash": "ab64ebcdb62f50376022a00b7a5cb0c82e20c5d4c6e0ff4c5783f79ecf95960b",
+      "route": "/sv/verktyg/kategorier/diy/gipsskivor-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/": {
+      "hash": "97edd2eafad6e543adf675ef08aeac2ee0bb4b5a05e16b45684b3503f4b2b006",
+      "route": "/sv/verktyg/kategorier/diy/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/kalkylator-mobelutrymme/": {
+      "hash": "dd1f9c35fbdffb9ed77fe09bd086224eae673f32849c02b0521f25058148e43f",
+      "route": "/sv/verktyg/kategorier/diy/kalkylator-mobelutrymme/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/kalkylator-spanningsfall/": {
+      "hash": "e7506a7ff0c0835ffba1fcd5674c426cdd9976ac5f1edcc7c55051baa0ef93c7",
+      "route": "/sv/verktyg/kategorier/diy/kalkylator-spanningsfall/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/kalkylator-termisk-expansion/": {
+      "hash": "624f203d98e7426edd4cda22a908e1b5e0c7343e1a733a2be4dad8bbf0791483",
+      "route": "/sv/verktyg/kategorier/diy/kalkylator-termisk-expansion/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/kapoptimering/": {
+      "hash": "3214aa9b128c51166a0e77093111526186cbdeb8676fdd64e7a7d5db64c7ed26",
+      "route": "/sv/verktyg/kategorier/diy/kapoptimering/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/lerkrympskalkylator/": {
+      "hash": "5910bf016d6caf3f07d267b51db5ea2d4e641ffd31cd1c8c1833499c22207084",
+      "route": "/sv/verktyg/kategorier/diy/lerkrympskalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/passepartout-kalkylator/": {
+      "hash": "9a2e606c0ab5ea693fedd09fb42303cb8004a6d84e27fdbd81de7050acfee49e",
+      "route": "/sv/verktyg/kategorier/diy/passepartout-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/pythagoras-sats-rat-vinkel-kalkylator-3-4-5-regeln/": {
+      "hash": "ba22a43889894913a8a392876471b43c27c91f52061d96a1ed245b292139b675",
+      "route": "/sv/verktyg/kategorier/diy/pythagoras-sats-rat-vinkel-kalkylator-3-4-5-regeln/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/schaktvolymberaknare-volymokning-jord/": {
+      "hash": "ca448983dc73d79826972199d6362b65243c3b1812cebc8ad30699c0bd9a75a4",
+      "route": "/sv/verktyg/kategorier/diy/schaktvolymberaknare-volymokning-jord/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/trapp-kalkylator/": {
+      "hash": "2eb460c2061942b90f6f2170231c5c65c0dd41000763f4b0700cb10dc8b3662e",
+      "route": "/sv/verktyg/kategorier/diy/trapp-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/tvataxtsblandning-kalkylator/": {
+      "hash": "0f6c8c610936d31f61ded903818e89f68f5cf7550bafabf1258359b186ad6625",
+      "route": "/sv/verktyg/kategorier/diy/tvataxtsblandning-kalkylator/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/varvtalskalkylator-borrning/": {
+      "hash": "a3c91397022386719ce84d0e408f65657a29b76de285d904859e11e34fc94cae",
+      "route": "/sv/verktyg/kategorier/diy/varvtalskalkylator-borrning/"
+    },
+    "https://www.gamebob.dev/sv/verktyg/kategorier/diy/verkstadsomvandlare-tum-brak-till-millimeter/": {
+      "hash": "7934577fbdc5ef0c40854807462762944350c15a5bb35d4e402bb2cc884cf7da",
+      "route": "/sv/verktyg/kategorier/diy/verkstadsomvandlare-tum-brak-till-millimeter/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/2-zamanli-yakit-karisim-hesaplamasi/": {
+      "hash": "d9f0f77c4c04731acc0d74b352722bfaf8ecbc3c77953741f27d3acaefcdf3b5",
+      "route": "/tr/araclar/kategoriler/diy/2-zamanli-yakit-karisim-hesaplamasi/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/alcipan-hesaplayici/": {
+      "hash": "cf01cfa74b179e38c1bf665a8c83a05336a3d149bbd73b394a1d45800e218cbe",
+      "route": "/tr/araclar/kategoriler/diy/alcipan-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/atolye-inc-kesir-milimetre-donusturucu/": {
+      "hash": "299829b59dfb13c0117dc4fa93fe465a96583d808ea7bad8e4413ba4757bd83d",
+      "route": "/tr/araclar/kategoriler/diy/atolye-inc-kesir-milimetre-donusturucu/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/beton-harc-hesaplama/": {
+      "hash": "0701cd2dc1431bd49db803b044a736d378f33a2809cde2c3fd5d61247c1da58e",
+      "route": "/tr/araclar/kategoriler/diy/beton-harc-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/epoksi-recine-hesaplayici/": {
+      "hash": "b7dea94f65739f20451cea031022a0a804c75428dc8b0363145ac690c19bcf45",
+      "route": "/tr/araclar/kategoriler/diy/epoksi-recine-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/gerilim-dusumu-hesaplayici/": {
+      "hash": "9bf302ba1391ac108a483dd91f854e5b066f0c081f6e8201d56763356fc9e6f9",
+      "route": "/tr/araclar/kategoriler/diy/gerilim-dusumu-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/harc-hesaplayici/": {
+      "hash": "ffaa59d7439fd9b3b0606ce7423deaf1f8e8fa210216c3c55ba67fbb1648d78a",
+      "route": "/tr/araclar/kategoriler/diy/harc-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/": {
+      "hash": "208d240c604371a2e59423acfe1e46c7365ab7656900eb0cf744e452811e77c5",
+      "route": "/tr/araclar/kategoriler/diy/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/kazi-hacmi-toprak-kabarma-hesaplama/": {
+      "hash": "d78028f188bdf84e56af0095738a0316cb233a46200347d10deae89f1043ed7d",
+      "route": "/tr/araclar/kategoriler/diy/kazi-hacmi-toprak-kabarma-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/kesim-optimizasyonu/": {
+      "hash": "3066100818b0e9066856656b7b9842b0ac9fa4c9c0016c08b0eb6d031aa37b64",
+      "route": "/tr/araclar/kategoriler/diy/kesim-optimizasyonu/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/kil-cekme-hesaplama/": {
+      "hash": "5063ffa10832b9ec3bc1c3fef2804b5a7037013bf215289eb2bbc51928faec95",
+      "route": "/tr/araclar/kategoriler/diy/kil-cekme-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/korkuluk-hesaplama/": {
+      "hash": "ebdd0933b634b0a53b28dab6df0b07410e8fff18f54946f58241190a64933ce6",
+      "route": "/tr/araclar/kategoriler/diy/korkuluk-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/matkap-devir-hesaplayici/": {
+      "hash": "cf0e54a56ee5b3cf1ce81a4a81036fc9eaf74dbaa4fea5fc10666900f8920c9b",
+      "route": "/tr/araclar/kategoriler/diy/matkap-devir-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/merdiven-hesaplayici/": {
+      "hash": "78a9a9100030ab1c48a42c3b4c3dc3c28ea8d83fa7c7fa6674bb0cf2ef9d3fdd",
+      "route": "/tr/araclar/kategoriler/diy/merdiven-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/mobilya-alan-hesaplama/": {
+      "hash": "ad78d98a38464f087fc8f26e0a0141a0f4e34d9a3ad772fdb3f3a2b73dc76e7c",
+      "route": "/tr/araclar/kategoriler/diy/mobilya-alan-hesaplama/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/paspartu-hesaplayici/": {
+      "hash": "2fe537ab9a4d57fa79489221961d268e5c42ca1e15631a81bc863fa17a27f756",
+      "route": "/tr/araclar/kategoriler/diy/paspartu-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/pisagor-teoremi-dik-aci-hesaplama-3-4-5-kurali/": {
+      "hash": "467b3f0a0766866128860d2d91aaefec2e7e2914bf82aa86a8748741dcc88750",
+      "route": "/tr/araclar/kategoriler/diy/pisagor-teoremi-dik-aci-hesaplama-3-4-5-kurali/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/termal-genlesme-hesaplayici/": {
+      "hash": "7c84bafe708cdb461e21572b8bbd5f2665db60bb3250df8ab164b19614a3e77b",
+      "route": "/tr/araclar/kategoriler/diy/termal-genlesme-hesaplayici/"
+    },
+    "https://www.gamebob.dev/tr/araclar/kategoriler/diy/usta-matkap-bileme/": {
+      "hash": "2a140c37e60b957f7275e94afe05cfe8ae9209924b5120f0a14de1136a9d110e",
+      "route": "/tr/araclar/kategoriler/diy/usta-matkap-bileme/"
+    },
+    "https://www.jjlmoya.es/utilidades/afilado-maestro-brocas/": {
+      "hash": "ae9a8a364353b2e3475862d6bcbb5ddfabd67b9196f6191c7fd872f674c5ffc5",
+      "route": "/utilidades/afilado-maestro-brocas/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-angulos-rectos-pitagoras-regla-3-4-5/": {
+      "hash": "c5d66a3c18cfb874c39245987512480998ec6ad7d13aef3d180f6079265d6680",
+      "route": "/utilidades/calculadora-angulos-rectos-pitagoras-regla-3-4-5/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-arcilla/": {
+      "hash": "ea68c367864c691dde387d789da65ef85a351c6e974044b7420ab19be4fa1a7e",
+      "route": "/utilidades/calculadora-arcilla/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-balustres/": {
+      "hash": "9a054c1df0b86ea80cb277a5d911746700ab81712c5d2e5fc12123b52b993f65",
+      "route": "/utilidades/calculadora-balustres/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-caida-tension/": {
+      "hash": "aefd4b13b20ea1a57c1763dde4fbf6d6fdc8aa913c56ba9b6a71c1e5edfe6faf",
+      "route": "/utilidades/calculadora-caida-tension/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-dilatacion-termica/": {
+      "hash": "7382a2a6ecfc8ed50554aca53d46d5fdfe3c8e7c82ad370960ac255edddbb0ab",
+      "route": "/utilidades/calculadora-dilatacion-termica/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-escaleras/": {
+      "hash": "c876e02e9c5b581b0d7c014d9553960db54e2688da8bf657fb7fca96cfcddf71",
+      "route": "/utilidades/calculadora-escaleras/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-espacio-muebles/": {
+      "hash": "39accca095317d9f139db2a6a84721574bfe8064a3aeb072eb4c5a152f5249a9",
+      "route": "/utilidades/calculadora-espacio-muebles/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-hormigon-mortero/": {
+      "hash": "c7e214ceb4c55265d3f42d5f417d82c166d3abce609c6cf17216205aee705840",
+      "route": "/utilidades/calculadora-hormigon-mortero/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-mecanizado-taladro/": {
+      "hash": "3e6ba89ee1acc5aa5a851c71085aeb86b77c6ffc64d51402a2991f9e36fac77b",
+      "route": "/utilidades/calculadora-mecanizado-taladro/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-mezcla-2-tiempos/": {
+      "hash": "ca7e0e7250dfc17df11b065ab9b8c4f38a357aa0a253136e55546b017d01c3f5",
+      "route": "/utilidades/calculadora-mezcla-2-tiempos/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-passepartout/": {
+      "hash": "cf8265f06316a0072668902344908c6625b0f76f1457d83fd1cf3bf7c219c635",
+      "route": "/utilidades/calculadora-passepartout/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-placas-pladur-yeso/": {
+      "hash": "358d7af5988e0ecc9b45b4b652f9ef09a8d656c14cd549c8287798e10d2cda0c",
+      "route": "/utilidades/calculadora-placas-pladur-yeso/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-resina/": {
+      "hash": "e811aeab1ca8ff1f09381819b8e97a372681ca7f728630d0602db1d356cb4254",
+      "route": "/utilidades/calculadora-resina/"
+    },
+    "https://www.jjlmoya.es/utilidades/calculadora-volumen-excavacion-esponjamiento-terreno/": {
+      "hash": "ecde55181f9ff7c66bc2d628025b74cd80efa0c810ceb8beb7b2d63b1b94352a",
+      "route": "/utilidades/calculadora-volumen-excavacion-esponjamiento-terreno/"
+    },
+    "https://www.jjlmoya.es/utilidades/categorias/diy/": {
+      "hash": "144ce6fbbfa4d526ee54ed1de1bc3008d9186238582b6397ed6efa497f59d540",
+      "route": "/utilidades/categorias/diy/"
+    },
+    "https://www.jjlmoya.es/utilidades/conversor-fracciones-pulgadas-milimetros/": {
+      "hash": "83a0d86e4cb5f903c3e7721566eba7c411f8cdf360f123755a251622c7de535e",
+      "route": "/utilidades/conversor-fracciones-pulgadas-milimetros/"
+    },
+    "https://www.jjlmoya.es/utilidades/morteros/": {
+      "hash": "a03251efff41add2243c48ef29784f2ab2d0c7b1c8e255f90cbc34415535b842",
+      "route": "/utilidades/morteros/"
+    },
+    "https://www.jjlmoya.es/utilidades/optimizador-corte/": {
+      "hash": "f9034353832cff777e1ee91b4df343922b8fa88d806265f966641b893d60af4b",
+      "route": "/utilidades/optimizador-corte/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/baluster-calculator/": {
+      "hash": "4c7422318ed9c98497f6267e8307c026306ce278c79b476781c906d416ef8fa8",
+      "route": "/zh/utilities/categories/diy/baluster-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/clay-shrinkage-calculator/": {
+      "hash": "459f45e20a1bbeaf15649490575070a0a4270a626907c7b7602e6da4249633ff",
+      "route": "/zh/utilities/categories/diy/clay-shrinkage-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/concrete-mortar-calculator/": {
+      "hash": "f94f68329ed02fc5ea928d7e67c91a8e0747e205d3c890ed74a6ad90ff39b3f4",
+      "route": "/zh/utilities/categories/diy/concrete-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/cut-optimizer/": {
+      "hash": "6381f0d5d255f13cfe9bb1c95c8c8e2895819450219bc8ce891b6cd0e6843361",
+      "route": "/zh/utilities/categories/diy/cut-optimizer/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/drill-rpm-calculator/": {
+      "hash": "4d70d3c313ec7aea54ca4c8b4e613677b4f182b385bd8973771c6e0912a8ccea",
+      "route": "/zh/utilities/categories/diy/drill-rpm-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/drill-sharpening-master/": {
+      "hash": "b46135289b7fd68e563fef0b73e68547969e3b375635aea0e55446a89f5af13e",
+      "route": "/zh/utilities/categories/diy/drill-sharpening-master/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/drywall-calculator/": {
+      "hash": "5071252b2012c5120175618a36fc15fe7e9f54c63a9aa3a26ac3ac5d3e98039a",
+      "route": "/zh/utilities/categories/diy/drywall-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/epoxy-resin-calculator/": {
+      "hash": "28612120a6ed7b488030f18d33cee76de33f744af2e244e28974a1891b341458",
+      "route": "/zh/utilities/categories/diy/epoxy-resin-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/excavation-volume-soil-swell-calculator/": {
+      "hash": "652d1e9c292fb398ad695d7442ff7f29344a458e3e389714a2283b622f34484e",
+      "route": "/zh/utilities/categories/diy/excavation-volume-soil-swell-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/furniture-fit-calculator/": {
+      "hash": "90a6f7855b179c71762512da9c10d7935ec3a8704d5a6488cbe123bd60ed19ee",
+      "route": "/zh/utilities/categories/diy/furniture-fit-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/": {
+      "hash": "c1444cbb3c7c476784381dcf63628caf30676c41f89445cd2d78ea21562dcede",
+      "route": "/zh/utilities/categories/diy/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/lime-mortar-calculator/": {
+      "hash": "599701b828167e12283d0455fa13c736a50663a54145a2022565108162555607",
+      "route": "/zh/utilities/categories/diy/lime-mortar-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/passepartout-calculator/": {
+      "hash": "fed630885d2b12c2d2c323c75dc165d9b3bb480e51e7b55b4b03ef8c5c3162d7",
+      "route": "/zh/utilities/categories/diy/passepartout-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/": {
+      "hash": "b5c3c8fb1d9ddb4afc8501789ada908bbf6be595282414e265fda2419d615345",
+      "route": "/zh/utilities/categories/diy/pythagorean-right-angle-calculator-3-4-5-rule/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/stair-calculator/": {
+      "hash": "11396b2cebd602f3ec2e937b19d243dc4bb75cedaa1aba914a1ed9b3e190e565",
+      "route": "/zh/utilities/categories/diy/stair-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/thermal-expansion-calculator/": {
+      "hash": "b71a4133c15710282afcf4dbc55444aebf4ac82a56c752001334c1715d3dad22",
+      "route": "/zh/utilities/categories/diy/thermal-expansion-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/two-stroke-fuel-mixture-calculator/": {
+      "hash": "1503df262dabefb5cbb3c25e2d340a4edba53d6f10c63939432abcdbe81f43f2",
+      "route": "/zh/utilities/categories/diy/two-stroke-fuel-mixture-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/voltage-drop-calculator/": {
+      "hash": "023ecb84ec96c6579ae7b24bd0473b09f5b5ef15129850df7952c2c2fa041339",
+      "route": "/zh/utilities/categories/diy/voltage-drop-calculator/"
+    },
+    "https://www.gamebob.dev/zh/utilities/categories/diy/workshop-fraction-converter/": {
+      "hash": "b458e445ae899a251739cda7b280ee0951f48135b8d6515941f10f483ce716c1",
+      "route": "/zh/utilities/categories/diy/workshop-fraction-converter/"
+    }
+  }
+}
