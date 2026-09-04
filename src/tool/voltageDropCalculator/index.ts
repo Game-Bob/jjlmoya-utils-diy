@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { voltageDropCalculator } from './entry';
 export * from './entry';
 export const VOLTAGE_DROP_CALCULATOR_TOOL: ToolDefinition = {

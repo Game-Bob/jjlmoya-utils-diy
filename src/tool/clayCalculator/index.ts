@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { clayCalculator } from './entry';
 export * from './entry';
 export const CLAY_CALCULATOR_TOOL: ToolDefinition = {

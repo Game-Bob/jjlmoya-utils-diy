@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { passepartoutCalculator } from './entry';
 export * from './entry';
 export const PASSEPARTOUT_CALCULATOR_TOOL: ToolDefinition = {

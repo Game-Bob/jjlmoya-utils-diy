@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { mortarCalculator } from './entry';
 export * from './entry';
 export const MORTAR_CALCULATOR_TOOL: ToolDefinition = {

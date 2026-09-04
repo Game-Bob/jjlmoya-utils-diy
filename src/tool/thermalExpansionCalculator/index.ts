@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { thermalExpansionCalculator } from './entry';
 export * from './entry';
 export const THERMAL_EXPANSION_CALCULATOR_TOOL: ToolDefinition = {

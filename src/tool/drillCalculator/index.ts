@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { drillCalculator } from './entry';
 export * from './entry';
 export const DRILL_CALCULATOR_TOOL: ToolDefinition = {

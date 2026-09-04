@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { concreteCalculator } from './entry';
 export * from './entry';
 export const CONCRETE_CALCULATOR_TOOL: ToolDefinition = {

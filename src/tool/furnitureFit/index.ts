@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { furnitureFit } from './entry';
 export * from './entry';
 export const FURNITURE_FIT_TOOL: ToolDefinition = {

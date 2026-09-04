@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { cutOptimizer } from './entry';
 export * from './entry';
 export const CUT_OPTIMIZER_TOOL: ToolDefinition = {

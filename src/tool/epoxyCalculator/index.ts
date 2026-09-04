@@ -1,3 +1,4 @@
+import type { ToolDefinition } from '../../types';
 import { epoxyCalculator } from './entry';
 export * from './entry';
 export const EPOXY_CALCULATOR_TOOL: ToolDefinition = {
