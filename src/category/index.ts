@@ -14,10 +14,11 @@ import { stairCalculator } from '../tool/stairCalculator/entry';
 import { drillSharpener } from '../tool/drillSharpener/entry';
 import { workshopFractionConverter } from '../tool/workshopFractionConverter/entry';
 import { excavationVolumeCalculator } from '../tool/excavationVolumeCalculator/entry';
+import { ladderAngleReachCalculator } from '../tool/ladderAngleReachCalculator/entry';
 
 export const diyCategory: DiyCategoryEntry = {
   icon: 'mdi:hand',
-  tools: [clayCalculator, epoxyCalculator, balusterCalculator, mortarCalculator, passepartoutCalculator, concreteCalculator, cutOptimizer, voltageDropCalculator, furnitureFit, thermalExpansionCalculator, drillCalculator, stairCalculator, drillSharpener, workshopFractionConverter, excavationVolumeCalculator],
+  tools: [clayCalculator, epoxyCalculator, balusterCalculator, mortarCalculator, passepartoutCalculator, concreteCalculator, cutOptimizer, voltageDropCalculator, furnitureFit, thermalExpansionCalculator, drillCalculator, stairCalculator, drillSharpener, workshopFractionConverter, excavationVolumeCalculator, ladderAngleReachCalculator],
   i18n: {
     de: () => import('./i18n/de').then((m) => m.content),
     en: () => import('./i18n/en').then((m) => m.content),

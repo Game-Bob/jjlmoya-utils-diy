@@ -1,0 +1,68 @@
+---
+import './ladder-angle-and-reach-calculator.css';
+import type { LadderAngleReachUI } from './ui';
+
+interface Props {
+  ui?: Record<string, unknown>;
+}
+
+const { ui } = Astro.props;
+const t = (ui ?? {}) as LadderAngleReachUI;
+---
+
+<div class="la-root" data-la-root data-la-ui={JSON.stringify(t)}>
+  <div class="la-card">
+    <div class="la-intro">
+      <span class="la-intro-mark" aria-hidden="true">2→1</span>
+      <p>{t.intro}</p>
+    </div>
+
+    <section class="la-controls" aria-labelledby="la-solve-title">
+      <div class="la-controls-head">
+        <span class="la-kicker" id="la-solve-title">{t.solveTitle}</span>
+        <div class="la-segmented" role="group" aria-label={t.unitSystemLabel}>
+          <button type="button" class="la-active" data-la-unit="metric" aria-pressed="true">{t.unitMetric}</button>
+          <button type="button" data-la-unit="imperial" aria-pressed="false">{t.unitImperial}</button>
+        </div>
+      </div>
+      <div class="la-modes" role="group" aria-label={t.solveTitle}>
+        <button type="button" class="la-mode la-active" data-la-mode="height-and-length" aria-pressed="true"><strong>{t.modeHeightLength}</strong><span>{t.modeHeightLengthHint}</span></button>
+        <button type="button" class="la-mode" data-la-mode="height-and-base" aria-pressed="false"><strong>{t.modeHeightBase}</strong><span>{t.modeHeightBaseHint}</span></button>
+        <button type="button" class="la-mode" data-la-mode="length-and-base" aria-pressed="false"><strong>{t.modeLengthBase}</strong><span>{t.modeLengthBaseHint}</span></button>
+      </div>
+      <div class="la-fields">
+        <div class="la-field"><label for="la-known-one" data-la-field-one-label>{t.fieldHeight}</label><div class="la-input"><input id="la-known-one" data-la-input="knownOne" type="number" min="0.01" step="0.01" value="3" inputmode="decimal" /><span data-la-length-unit>m</span></div><small data-la-field-one-help>{t.fieldHeightHelp}</small></div>
+        <div class="la-field"><label for="la-known-two" data-la-field-two-label>{t.fieldLength}</label><div class="la-input"><input id="la-known-two" data-la-input="knownTwo" type="number" min="0.01" step="0.01" value="4" inputmode="decimal" /><span data-la-length-unit>m</span></div><small data-la-field-two-help>{t.fieldLengthHelp}</small></div>
+      </div>
+      <p class="la-error" data-la-error role="alert" hidden></p>
+    </section>
+
+    <section class="la-result" aria-labelledby="la-calculated-title">
+      <div class="la-primary">
+        <div><span class="la-kicker" id="la-calculated-title">{t.calculatedTitle}</span><strong><span data-la-derived-label>{t.calculatedBase}</span></strong><em data-la-derived-help>{t.calculatedBaseHelp}</em></div>
+        <strong class="la-derived-value"><span data-la-derived>0.78</span> <small data-la-length-unit>m</small></strong>
+      </div>
+      <div class="la-diagram-head"><span class="la-kicker">{t.diagramTitle}</span><span class="la-status" data-la-angle-status>{t.angleWithinGuide}</span></div>
+      <div class="la-scene" data-la-scene aria-label={t.angleGuide}></div>
+      <div class="la-metrics">
+        <div class="la-metric la-metric-main"><span>{t.angleTitle}</span><strong><span data-la-angle>75.5</span>{t.angleUnit}</strong><em data-la-angle-help>{t.angleWithinGuide}</em></div>
+        <div class="la-metric"><span>{t.reachTitle}</span><strong><span data-la-reach>3.87</span> <small data-la-length-unit>m</small></strong><em>{t.reachHelp}</em></div>
+        <div class="la-metric"><span>{t.targetTitle}</span><strong><span data-la-target>3.00</span> <small data-la-length-unit>m</small></strong><em>{t.targetHelp}</em></div>
+      </div>
+      <div class="la-verdict" data-la-verdict-wrap aria-live="polite"><strong data-la-verdict>{t.verdictReach}</strong><span data-la-verdict-help>{t.verdictReachHelp}</span></div>
+      <div class="la-reference"><span>{t.guideDistanceTitle}</span><strong><span data-la-guide-base>0.78</span> <small data-la-length-unit>m</small></strong><em>{t.guideDistanceHelp}</em></div>
+      <div class="la-reference"><span>{t.requiredLengthTitle}</span><strong><span data-la-required>3.10</span> <small data-la-length-unit>m</small></strong><em>{t.requiredLengthHelp}</em></div>
+    </section>
+
+    <p class="la-warning">{t.warning}</p>
+  </div>
+</div>
+
+<script>
+  import { mountLadderAngleReachCalculator } from './controller';
+  import type { LadderAngleReachUI } from './ui';
+
+  const root = document.querySelector('[data-la-root]');
+  const ui = JSON.parse(root?.getAttribute('data-la-ui') || '{}') as LadderAngleReachUI;
+  if (root) mountLadderAngleReachCalculator(root, ui);
+</script>
